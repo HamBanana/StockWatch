@@ -514,6 +514,59 @@
           "drug_platform": true,
           "multiple_programs": true
         }
+      },
+      "sectorCatalystResponse": {
+        "w": 0.3,
+        "t": [
+          85,
+          95,
+          100
+        ],
+        "description": "Major sector validation catalyst",
+        "keywords": [
+          "breakthrough",
+          "validation",
+          "industry leader endorsement"
+        ],
+        "conditions": {
+          "external_validation": true,
+          "sector_wide_impact": true
+        }
+      },
+      "strategicPartnershipMega": {
+        "w": 0.35,
+        "t": [
+          80,
+          95,
+          100
+        ],
+        "keywords": [
+          "billion",
+          "strategic",
+          "multi-year"
+        ],
+        "conditions": {
+          "partnership_value": "> 1B",
+          "major_tech_partner": true,
+          "infrastructure_focus": true
+        }
+      },
+      "emergingTechPivot": {
+        "w": 0.25,
+        "t": [
+          75,
+          90,
+          95
+        ],
+        "keywords": [
+          "quantum",
+          "AI",
+          "emerging technology"
+        ],
+        "conditions": {
+          "pure_play": true,
+          "first_mover": true
+        }
       }
     },
     "biotech": {
@@ -663,6 +716,45 @@
           "market_cap": "1B-15B",
           "validated_platform": true,
           "commercial_product": true
+        }
+      },
+      "ultraNanoPartnership": {
+        "w": 0.35,
+        "t": [
+          85,
+          95,
+          100
+        ],
+        "conditions": {
+          "market_cap": "< 100M",
+          "big_pharma_deal": true,
+          "late_stage_asset": true
+        }
+      },
+      "phase3Momentum": {
+        "w": 0.4,
+        "t": [
+          80,
+          95,
+          100
+        ],
+        "conditions": {
+          "trial_success": true,
+          "large_indication": true,
+          "statistical_significance": true
+        }
+      },
+      "assetRevival": {
+        "w": 0.25,
+        "t": [
+          75,
+          90,
+          95
+        ],
+        "conditions": {
+          "previously_shelved": true,
+          "new_indication": true,
+          "management_expertise": true
         }
       }
     },
@@ -983,6 +1075,48 @@
           "institutional_ownership": "> 60%",
           "recent_accumulation": true
         }
+      },
+      "quietBeforeExplosion": {
+        "w": 0.3,
+        "t": [
+          80,
+          90,
+          100
+        ],
+        "description": "Extended low volume before massive surge",
+        "conditions": {
+          "volume_vs_avg": "< 0.5x",
+          "duration_days": "> 3",
+          "followed_by": "> 10x spike"
+        }
+      },
+      "sustainedMomentum": {
+        "w": 0.25,
+        "t": [
+          75,
+          90,
+          100
+        ],
+        "description": "Multi-day elevated volume",
+        "conditions": {
+          "days_elevated": "> 3",
+          "volume_multiplier": "> 5x",
+          "price_correlation": true
+        }
+      },
+      "afterHoursGap": {
+        "w": 0.2,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "description": "After-hours catalyst with gap up",
+        "conditions": {
+          "announcement_timing": "after_hours",
+          "gap_percent": "> 25%",
+          "volume_confirmation": true
+        }
       }
     },
     "tech": {
@@ -1121,6 +1255,47 @@
           "rsi": "< 25",
           "near_52_week_low": true,
           "beta": "> 2.0"
+        }
+      },
+      "multiYearBreakout": {
+        "w": 0.35,
+        "t": [
+          80,
+          95,
+          100
+        ],
+        "conditions": {
+          "pattern_duration": "> 18 months",
+          "volume_confirmation": "> 5x",
+          "clean_breakout": true,
+          "catalyst_aligned": true
+        }
+      },
+      "extremeOversoldReversal": {
+        "w": 0.3,
+        "t": [
+          75,
+          90,
+          100
+        ],
+        "conditions": {
+          "rsi": "< 25",
+          "near_52_week_low": true,
+          "volume_reversal": true,
+          "catalyst_present": true
+        }
+      },
+      "highBetaMomentum": {
+        "w": 0.35,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "conditions": {
+          "beta": "> 3.0",
+          "adx": "> 40",
+          "breakout_confirmed": true
         }
       }
     },
@@ -1303,6 +1478,57 @@
           "upgrade_cycle",
           "conference_presentations"
         ]
+      },
+      "sectorMomentumViral": {
+        "w": 0.4,
+        "t": [
+          75,
+          90,
+          100
+        ],
+        "indicators": [
+          "sector_trending",
+          "peer_movement",
+          "influencer_coverage"
+        ],
+        "conditions": {
+          "mentions_growth": "> 500%",
+          "mainstream_coverage": true
+        }
+      },
+      "memeSqueezeCombination": {
+        "w": 0.35,
+        "t": [
+          80,
+          90,
+          100
+        ],
+        "indicators": [
+          "wsb_trending",
+          "twitter_viral",
+          "retail_fomo"
+        ],
+        "conditions": {
+          "short_squeeze_narrative": true,
+          "social_amplification": true
+        }
+      },
+      "emergingTechHype": {
+        "w": 0.25,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "keywords": [
+          "quantum",
+          "AI",
+          "next generation"
+        ],
+        "conditions": {
+          "technology_trending": true,
+          "sector_rotation": true
+        }
       }
     },
     "ipo": {
@@ -1612,6 +1838,46 @@
           "bid_ask_spread": "> 5%",
           "float_turnover": "< 10%"
         }
+      },
+      "extremeShortSqueeze": {
+        "w": 0.4,
+        "t": [
+          85,
+          95,
+          100
+        ],
+        "conditions": {
+          "short_interest": "> 25%",
+          "borrow_rate": "> 200%",
+          "days_to_cover": "> 3",
+          "float": "< 20M"
+        }
+      },
+      "nanoCapVolatility": {
+        "w": 0.35,
+        "t": [
+          80,
+          90,
+          100
+        ],
+        "conditions": {
+          "market_cap": "< 100M",
+          "beta": "> 3.0",
+          "volatility_30d": "> 30%"
+        }
+      },
+      "effectiveFloatSqueeze": {
+        "w": 0.25,
+        "t": [
+          75,
+          85,
+          95
+        ],
+        "conditions": {
+          "insider_lockup": "> 60%",
+          "institutional_holdings": "< 30%",
+          "retail_dominated": true
+        }
       }
     }
   },
@@ -1649,10 +1915,10 @@
         "conditions": "phase_advancement"
       },
       "clinical_success": {
-        "hl": 7,
-        "dr": 0.25,
-        "min": 0.4,
-        "conditions": "Phase 3 success with survival benefit"
+        "hl": 10,
+        "dr": 0.2,
+        "min": 0.5,
+        "conditions": "phase3Success && largeIndication"
       },
       "regulatory_filing": {
         "hl": 14,
@@ -1665,6 +1931,12 @@
         "dr": 0.1,
         "min": 0.6,
         "conditions": "Multiple indication success"
+      },
+      "partnership": {
+        "hl": 7,
+        "dr": 0.3,
+        "min": 0.4,
+        "conditions": "bigPharmaPartner && milestones"
       }
     },
     "treasury": {
@@ -1799,13 +2071,13 @@
           "hl": 14,
           "dr": 0.15,
           "min": 0.4,
-          "conditions": "quantumBreakthrough && sectorMomentum"
+          "conditions": "sectorMomentum && externalValidation"
         },
         "speculative": {
-          "hl": 7,
-          "dr": 0.3,
+          "hl": 5,
+          "dr": 0.4,
           "min": 0.2,
-          "conditions": "memeCharacteristics && extremeVolume"
+          "conditions": "memeCharacteristics && noFundamentals"
         }
       }
     },
@@ -1829,6 +2101,22 @@
         "dr": 0.1,
         "min": 0.6,
         "conditions": "newCoverage && buyRating"
+      }
+    },
+    "ai_infrastructure": {
+      "partnership": {
+        "hl": 21,
+        "dr": 0.1,
+        "min": 0.6,
+        "conditions": "megaDeal && longTermContract"
+      }
+    },
+    "government": {
+      "contract": {
+        "hl": 14,
+        "dr": 0.15,
+        "min": 0.5,
+        "conditions": "majorContract && soleSource"
       }
     }
   },
@@ -2679,6 +2967,165 @@
         "validated_pipeline": true,
         "strategic_value": "high"
       }
+    },
+    "quantumSectorExplosion": {
+      "cat": [
+        "corp",
+        "volume",
+        "social",
+        "tech"
+      ],
+      "scores": [
+        85,
+        90,
+        80,
+        75
+      ],
+      "min_cat": 3,
+      "multiplier": 3.5,
+      "conditions": {
+        "quantum_sector": true,
+        "external_catalyst": true,
+        "volume_explosion": "> 10x",
+        "social_viral": true
+      },
+      "decay": {
+        "type": "sustained",
+        "half_life": 10,
+        "min_retention": 0.4
+      }
+    },
+    "aiInfrastructureMega": {
+      "cat": [
+        "corp",
+        "volume",
+        "tech",
+        "micro"
+      ],
+      "scores": [
+        90,
+        85,
+        75,
+        70
+      ],
+      "min_cat": 3,
+      "multiplier": 3.2,
+      "conditions": {
+        "ai_infrastructure": true,
+        "partnership_value": "> 1B",
+        "technical_breakout": true,
+        "high_beta": true
+      }
+    },
+    "biotechUltraNanoExplosion": {
+      "cat": [
+        "biotech",
+        "micro",
+        "volume",
+        "corp"
+      ],
+      "scores": [
+        90,
+        95,
+        85,
+        80
+      ],
+      "min_cat": 4,
+      "multiplier": 4,
+      "conditions": {
+        "market_cap": "< 100M",
+        "clinical_catalyst": true,
+        "partnership_announced": true,
+        "volume_spike": "> 10x"
+      }
+    },
+    "governmentDefenseAI": {
+      "cat": [
+        "corp",
+        "volume",
+        "social",
+        "micro"
+      ],
+      "scores": [
+        85,
+        80,
+        75,
+        70
+      ],
+      "min_cat": 3,
+      "multiplier": 2.8,
+      "conditions": {
+        "government_contracts": true,
+        "ai_defense_focus": true,
+        "short_interest": "> 15%",
+        "executive_catalyst": true
+      }
+    },
+    "ipoStrategicPartnership": {
+      "cat": [
+        "ipo",
+        "corp",
+        "micro",
+        "volume"
+      ],
+      "scores": [
+        85,
+        90,
+        85,
+        80
+      ],
+      "min_cat": 3,
+      "multiplier": 3.5,
+      "conditions": {
+        "days_from_ipo": "< 90",
+        "strategic_investor": true,
+        "float_constraints": true,
+        "borrow_rate": "> 200%"
+      }
+    },
+    "sectorValidationSurge": {
+      "cat": [
+        "corp",
+        "volume",
+        "social",
+        "tech"
+      ],
+      "scores": [
+        90,
+        85,
+        80,
+        70
+      ],
+      "min_cat": 3,
+      "multiplier": 3,
+      "conditions": {
+        "external_validation": true,
+        "sector_leader_endorsement": true,
+        "peer_movement": true,
+        "volume_explosion": true
+      }
+    },
+    "clinicalSuccessNano": {
+      "cat": [
+        "biotech",
+        "micro",
+        "volume",
+        "corp"
+      ],
+      "scores": [
+        95,
+        90,
+        85,
+        80
+      ],
+      "min_cat": 3,
+      "multiplier": 3.8,
+      "conditions": {
+        "phase_3_success": true,
+        "market_cap": "< 20B",
+        "volume_spike": "> 10x",
+        "survival_benefit": true
+      }
     }
   },
   "alerts": {
@@ -2957,6 +3404,46 @@
           "regulatory_precedent": true,
           "volume_confirmation": true
         }
+      },
+      "quantum_sector_surge": {
+        "score": 200,
+        "acc": "75-85%",
+        "fp": "10-15%",
+        "conditions": {
+          "sector": "quantum_computing",
+          "external_catalyst": true,
+          "volume_explosion": "> 10x"
+        }
+      },
+      "ai_infrastructure_mega": {
+        "score": 180,
+        "acc": "70-80%",
+        "fp": "12-18%",
+        "conditions": {
+          "ai_infrastructure": true,
+          "partnership_value": "> 1B",
+          "technical_breakout": true
+        }
+      },
+      "biotech_nano_explosion": {
+        "score": 160,
+        "acc": "65-75%",
+        "fp": "15-20%",
+        "conditions": {
+          "market_cap": "< 100M",
+          "biotech_catalyst": true,
+          "volume_spike": "> 15x"
+        }
+      },
+      "ipo_squeeze_setup": {
+        "score": 170,
+        "acc": "70-80%",
+        "fp": "12-17%",
+        "conditions": {
+          "days_from_ipo": "< 90",
+          "short_interest": "> 25%",
+          "strategic_investor": true
+        }
       }
     }
   },
@@ -3078,14 +3565,12 @@
     "quantum_computing": {
       "baseMult": 3.5,
       "catalystMult": 5,
-      "externalValidationMult": 4.5,
+      "externalValidationMult": 5,
       "peerCorrelationMult": 3,
       "keywords": [
         "quantum",
         "qubit",
-        "QPU",
-        "gate fidelity",
-        "superconducting",
+        "commercial deployment",
         "error correction"
       ],
       "peerSymbols": [
@@ -3100,8 +3585,9 @@
       ],
       "quantumMult": 4.5,
       "aiConvergenceMult": 3.8,
-      "purePlayMult": 4,
-      "speculativeMult": 3.5
+      "purePlayMult": 4.5,
+      "speculativeMult": 4,
+      "convergenceMult": 3.8
     },
     "quantum": {
       "baseMult": 3,
@@ -3149,12 +3635,33 @@
     },
     "emerging_technology": {
       "breakthroughMult": 3.5,
-      "convergenceMult": 3,
-      "analystMult": 2.8
+      "convergenceMult": 3.8,
+      "analystMult": 2.8,
+      "firstMoverMult": 4,
+      "sectorCatalystMult": 4.5,
+      "analystInitiationMult": 3.2
     },
     "cybersecurity": {
       "governmentMult": 3.8,
       "aiIntegrationMult": 3.2
+    },
+    "ai_infrastructure": {
+      "megaDealMult": 5,
+      "ecosystemMult": 4.5,
+      "geographicAdvantageMult": 3.5,
+      "hyperscalerMult": 4.2
+    },
+    "defense_ai": {
+      "governmentContractMult": 4,
+      "executiveAppointmentMult": 3.5,
+      "shortSqueezeMult": 3,
+      "administrationChangeMult": 2.8
+    },
+    "biotech_nano": {
+      "ultraNanoMult": 5,
+      "lateStageAssetMult": 4.5,
+      "orphanIndicationMult": 4,
+      "bigPharmaPartnerMult": 4.8
     }
   },
   "filters": {
@@ -3244,9 +3751,9 @@
       "multiplier": 1.5
     },
     "aiInfrastructureValidation": {
-      "condition": "hasKeywords(['AI', 'infrastructure', 'data center']) && partnershipValue > 500M",
+      "condition": "hasKeywords(['AI', 'infrastructure', 'data center']) && partnershipValue > 1B",
       "action": "boost_score",
-      "multiplier": 2
+      "multiplier": 1.8
     },
     "ecosystemPartnershipBonus": {
       "condition": "majorTechBacking && strategicPartnership && multiYearDeal",
@@ -3364,6 +3871,36 @@
       "condition": "institutionalOwnership > 60% && recentAccumulation",
       "action": "boost_score",
       "multiplier": 1.3
+    },
+    "quantumSectorBoost": {
+      "condition": "sector == 'quantum_computing' && externalValidation && peerMovement",
+      "action": "boost_score",
+      "multiplier": 2
+    },
+    "biotechNanoCatalyst": {
+      "condition": "marketCap < 100M && biotechSector && clinicalCatalyst",
+      "action": "boost_score",
+      "multiplier": 2.2
+    },
+    "governmentMomentum": {
+      "condition": "governmentContracts && aiDefense && executiveChange",
+      "action": "boost_score",
+      "multiplier": 1.6
+    },
+    "multiYearTechnical": {
+      "condition": "patternDuration > 2years && volumeBreakout > 5x && catalyst",
+      "action": "boost_score",
+      "multiplier": 1.5
+    },
+    "extremeShortMetrics": {
+      "condition": "shortInterest > 25% && borrowRate > 200% && daysFromIPO < 90",
+      "action": "boost_score",
+      "multiplier": 2
+    },
+    "sectorRotationAmplifier": {
+      "condition": "sectorCatalyst && peersSurging && volumeConfirmation",
+      "action": "boost_score",
+      "multiplier": 1.7
     }
   },
   "validation": {
@@ -4003,6 +4540,68 @@
           ],
           "trend": "consolidating"
         }
+      },
+      "surge_pattern_matrix": {
+        "ipo_strategic_squeeze": {
+          "examples": [
+            "CRWV",
+            "DGNX"
+          ],
+          "key_factors": [
+            "< 90 days from IPO",
+            "strategic investor",
+            "extreme short metrics"
+          ],
+          "expected_magnitude": "100-300%"
+        },
+        "quantum_sector_explosion": {
+          "examples": [
+            "RGTI",
+            "QUBT",
+            "QBTS"
+          ],
+          "key_factors": [
+            "external validation",
+            "sector catalyst",
+            "pure play"
+          ],
+          "expected_magnitude": "150-1500%"
+        },
+        "ai_infrastructure_mega": {
+          "examples": [
+            "APLD",
+            "CRWV"
+          ],
+          "key_factors": [
+            "billion dollar deals",
+            "ecosystem partners",
+            "technical breakout"
+          ],
+          "expected_magnitude": "50-150%"
+        },
+        "biotech_nano_catalyst": {
+          "examples": [
+            "MNPR",
+            "CORT"
+          ],
+          "key_factors": [
+            "< 100M cap",
+            "clinical success",
+            "partnership"
+          ],
+          "expected_magnitude": "100-600%"
+        },
+        "government_defense_ai": {
+          "examples": [
+            "BBAI"
+          ],
+          "key_factors": [
+            "government contracts",
+            "executive catalyst",
+            "AI pivot"
+          ],
+          "expected_magnitude": "200-500%"
+        }
       }
     }
   },
@@ -4125,6 +4724,50 @@
       "multiplier": 2.5,
       "with_partnership": 3,
       "volatility_expectation": "> 100%"
+    },
+    "ultraNanoIPO": {
+      "range": [
+        0,
+        5000000
+      ],
+      "multiplier": 4.5,
+      "conditions": {
+        "days_from_ipo": "< 120",
+        "lockup_percent": "> 75%"
+      }
+    },
+    "extremeShortSqueeze": {
+      "range": [
+        5000000,
+        20000000
+      ],
+      "multiplier": 3.8,
+      "conditions": {
+        "short_interest": "> 25%",
+        "borrow_rate": "> 200%"
+      }
+    },
+    "biotechNanoFloat": {
+      "range": [
+        1000000,
+        15000000
+      ],
+      "multiplier": 4,
+      "conditions": {
+        "sector": "biotech",
+        "clinical_catalyst": true
+      }
+    },
+    "highBetaConstrained": {
+      "range": [
+        10000000,
+        50000000
+      ],
+      "multiplier": 3.5,
+      "conditions": {
+        "beta": "> 3.0",
+        "volatility_30d": "> 30%"
+      }
     }
   },
   "technicalIndicators": {
@@ -4389,6 +5032,48 @@
         "analyst_upgrades": "> 2"
       },
       "score_boost": 12
+    },
+    "sectorCorrelationMomentum": {
+      "weight": 0.25,
+      "detection": {
+        "peer_correlation": "> 0.7",
+        "sector_etf_movement": "> 5%",
+        "leading_indicator": true
+      },
+      "score_boost": 25
+    },
+    "extremeOversoldReversal": {
+      "weight": 0.3,
+      "detection": {
+        "rsi": "< 25",
+        "near_low": "52_week",
+        "volume_reversal": "> 3x",
+        "catalyst_aligned": true
+      },
+      "score_boost": 30
+    },
+    "multiYearPatternBreakout": {
+      "weight": 0.35,
+      "detection": {
+        "pattern_type": [
+          "triangle",
+          "channel",
+          "flag"
+        ],
+        "duration": "> 18 months",
+        "volume_surge": "> 5x",
+        "clean_break": true
+      },
+      "score_boost": 35
+    },
+    "afterHoursGapSetup": {
+      "weight": 0.2,
+      "detection": {
+        "announcement": "after_hours",
+        "expected_gap": "> 25%",
+        "low_float": true
+      },
+      "score_boost": 20
     }
   },
   "volumePatterns": {
@@ -4551,6 +5236,30 @@
         "detection": "block trades > 100k shares && institutional source",
         "weight": 0.2,
         "predictive_value": "medium"
+      },
+      "sustainedExplosion": {
+        "description": "Multi-day extreme volume elevation",
+        "detection": "3+ days > 10x average",
+        "weight": 0.35,
+        "predictive_value": "very high"
+      },
+      "sectorRotationVolume": {
+        "description": "Sector-wide volume increase",
+        "detection": "3+ peers with 5x+ volume",
+        "weight": 0.25,
+        "predictive_value": "high"
+      },
+      "preAnnouncementCompression": {
+        "description": "Volume dries up before major catalyst",
+        "detection": "5+ days < 0.5x before known event",
+        "weight": 0.3,
+        "predictive_value": "very high"
+      },
+      "shortCoveringAcceleration": {
+        "description": "Accelerating volume with short squeeze",
+        "detection": "volume doubles daily for 3+ days",
+        "weight": 0.4,
+        "predictive_value": "extreme"
       }
     }
   },
@@ -4715,6 +5424,33 @@
       "base_multiplier": 2.2,
       "clinical_success_boost": 3,
       "volatility_factor": 1.8
+    },
+    "quantum_speculative": {
+      "range": [
+        100000000,
+        5000000000
+      ],
+      "quantum_mult": 4.5,
+      "catalyst_mult": 5,
+      "pure_play_bonus": 1.5
+    },
+    "biotech_ultra_nano": {
+      "range": [
+        0,
+        100000000
+      ],
+      "clinical_mult": 5,
+      "partnership_mult": 6,
+      "volatility_expected": "> 200%"
+    },
+    "ai_infrastructure_growth": {
+      "range": [
+        1000000000,
+        10000000000
+      ],
+      "partnership_mult": 4,
+      "ecosystem_mult": 3.5,
+      "scaling_bonus": 1.3
     }
   },
   "catalystScoring": {
@@ -4881,6 +5617,34 @@
       "biotech_clinical": 1.4,
       "rare_disease": 1.3,
       "orphan_drug": 1.5
+    },
+    "catalyst_hierarchy": {
+      "sector_validation": {
+        "base_score": 50,
+        "external_leader": 70,
+        "paradigm_shift": 60
+      },
+      "mega_partnership": {
+        "base_score": 45,
+        "billion_plus": 65,
+        "ecosystem_backing": 55
+      },
+      "clinical_success": {
+        "base_score": 40,
+        "phase_3_primary": 60,
+        "survival_benefit": 70
+      },
+      "government_contract": {
+        "base_score": 35,
+        "sole_source": 50,
+        "AI_defense": 45
+      }
+    },
+    "timing_amplifiers": {
+      "after_hours": 1.5,
+      "pre_market": 1.3,
+      "sector_momentum": 1.8,
+      "low_float": 2
     }
   }
 }
