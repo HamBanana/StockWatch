@@ -1,0 +1,1333 @@
+{
+  "exportInfo": {
+    "timestamp": "2025-06-12T15:37:55.024882",
+    "tool": "Stock Signals Analyzer",
+    "version": "2.0"
+  },
+  "stockData": {
+    "address1": "7901 Stoneridge Drive",
+    "address2": "Suite 220",
+    "city": "Pleasanton",
+    "state": "CA",
+    "zip": "94588",
+    "country": "United States",
+    "phone": "925 270 4812",
+    "website": "https://www.healthcaretriangle.com",
+    "industry": "Health Information Services",
+    "industryKey": "health-information-services",
+    "industryDisp": "Health Information Services",
+    "sector": "Healthcare",
+    "sectorKey": "healthcare",
+    "sectorDisp": "Healthcare",
+    "longBusinessSummary": "Healthcare Triangle, Inc., a healthcare information technology company, focuses on developing solutions in the sectors of cloud services, data science, and professional and managed services for the electronic health record, and healthcare and life sciences industry. It provides a suite of software, solutions, platforms, and services that enables healthcare and pharma organizations to deliver personalized healthcare, precision medicine, advances in drug discovery, development and efficacy, collaborative research and development, respond to evidence, and accelerate their digital transformation. The company's software platforms include CloudEz, an enterprise multi-cloud transformation and management platform that enables customers to manage their cloud infrastructure in private, hybrid, and public cloud infrastructures; DataEz, a cloud-based data analytics and data science platform for the data analytics and data science requirements of life sciences/pharmaceutical and healthcare provider organizations; Blockchain; and Cybersecurity navigator. It also provides Readabl.AI, a Software-as-a-Service solution that uses public cloud artificial intelligence and machine learning to recognize and extract healthcare information from documents, faxes, and narrative reports. In addition, the company offers cloud IT services; and healthcare IT services, such as electronic health records and software implementation, optimization, and extension to community partners, as well as application managed services, and backup and disaster recovery capabilities on public cloud. It also serves healthcare delivery organizations, healthcare insurance companies, pharmaceutical and life sciences, biotech companies, and medical device manufacturers. The company was incorporated in 2019 and is based in Pleasanton, California. Healthcare Triangle, Inc. operates as a subsidiary of SecureKloud Technologies, Inc.",
+    "fullTimeEmployees": 44,
+    "companyOfficers": [
+      {
+        "maxAge": 1,
+        "name": "Mr. Lakshmanan  Kannappan",
+        "age": 57,
+        "title": "Chief Information & Security Officer",
+        "yearBorn": 1967,
+        "exercisedValue": 0,
+        "unexercisedValue": 0
+      },
+      {
+        "maxAge": 1,
+        "name": "Mr. Shibu  Kizhakevilayil",
+        "age": 51,
+        "title": "Head of M&A",
+        "yearBorn": 1973,
+        "fiscalYear": 2024,
+        "totalPay": 157884,
+        "exercisedValue": 0,
+        "unexercisedValue": 0
+      },
+      {
+        "maxAge": 1,
+        "name": "Mr. David  Ayanoglou",
+        "age": 47,
+        "title": "Chief Financial Officer",
+        "yearBorn": 1977,
+        "fiscalYear": 2024,
+        "exercisedValue": 0,
+        "unexercisedValue": 0
+      },
+      {
+        "maxAge": 1,
+        "name": "Ms. Sujatha  Ramesh",
+        "age": 53,
+        "title": "COO & Executive Director",
+        "yearBorn": 1971,
+        "fiscalYear": 2024,
+        "exercisedValue": 0,
+        "unexercisedValue": 0
+      }
+    ],
+    "compensationAsOfEpochDate": 1735603200,
+    "executiveTeam": [],
+    "maxAge": 86400,
+    "priceHint": 4,
+    "previousClose": 0.0092,
+    "open": 0.0331,
+    "dayLow": 0.033,
+    "dayHigh": 0.0434,
+    "regularMarketPreviousClose": 0.0092,
+    "regularMarketOpen": 0.0331,
+    "regularMarketDayLow": 0.033,
+    "regularMarketDayHigh": 0.0434,
+    "payoutRatio": 0.0,
+    "beta": -0.18,
+    "forwardPE": -0.32666668,
+    "volume": 2153801024,
+    "regularMarketVolume": 2153801024,
+    "averageVolume": 183193696,
+    "averageVolume10days": 598612260,
+    "averageDailyVolume10Day": 598612260,
+    "bid": 0.0395,
+    "ask": 0.0405,
+    "bidSize": 1,
+    "askSize": 6,
+    "marketCap": 16011084,
+    "fiftyTwoWeekLow": 0.006,
+    "fiftyTwoWeekHigh": 1.9,
+    "priceToSalesTrailing12Months": 1.4180394,
+    "fiftyDayAverage": 0.13456,
+    "twoHundredDayAverage": 0.559785,
+    "trailingAnnualDividendRate": 0.0,
+    "trailingAnnualDividendYield": 0.0,
+    "currency": "USD",
+    "tradeable": false,
+    "enterpriseValue": 5141699,
+    "profitMargins": -0.5143,
+    "floatShares": 407939124,
+    "sharesOutstanding": 408446016,
+    "sharesShort": 6827669,
+    "sharesShortPriorMonth": 3054546,
+    "sharesShortPreviousMonthDate": 1745971200,
+    "dateShortInterest": 1748563200,
+    "sharesPercentSharesOut": 0.0167,
+    "heldPercentInsiders": 0.00992,
+    "heldPercentInstitutions": 0.00133,
+    "shortRatio": 0.03,
+    "shortPercentOfFloat": 0.0168,
+    "impliedSharesOutstanding": 414118016,
+    "bookValue": 0.071,
+    "priceToBook": 0.55211264,
+    "lastFiscalYearEnd": 1735603200,
+    "nextFiscalYearEnd": 1767139200,
+    "mostRecentQuarter": 1743379200,
+    "netIncomeToCommon": -5807000,
+    "trailingEps": -0.88,
+    "forwardEps": -0.12,
+    "lastSplitFactor": "1:10",
+    "lastSplitDate": 1685059200,
+    "enterpriseToRevenue": 0.455,
+    "enterpriseToEbitda": -1.263,
+    "52WeekChange": -0.98662704,
+    "SandP52WeekChange": 0.10830474,
+    "quoteType": "EQUITY",
+    "currentPrice": 0.0392,
+    "recommendationKey": "none",
+    "totalCash": 6826000,
+    "totalCashPerShare": 0.017,
+    "ebitda": -4071000,
+    "totalDebt": 775000,
+    "quickRatio": 2.722,
+    "currentRatio": 3.067,
+    "totalRevenue": 11291000,
+    "debtToEquity": 9.036,
+    "revenuePerShare": 1.704,
+    "returnOnAssets": -0.29721,
+    "returnOnEquity": -1.43987,
+    "grossProfits": 2205000,
+    "freeCashflow": -3870625,
+    "operatingCashflow": -6588000,
+    "revenueGrowth": -0.099,
+    "grossMargins": 0.19529,
+    "ebitdaMargins": -0.36055002,
+    "operatingMargins": -0.37743,
+    "financialCurrency": "USD",
+    "symbol": "HCTI",
+    "language": "en-US",
+    "region": "US",
+    "typeDisp": "Equity",
+    "quoteSourceName": "Nasdaq Real Time Price",
+    "triggerable": true,
+    "customPriceAlertConfidence": "HIGH",
+    "corporateActions": [],
+    "regularMarketTime": 1749735473,
+    "exchange": "NCM",
+    "messageBoardId": "finmb_701091442",
+    "exchangeTimezoneName": "America/New_York",
+    "exchangeTimezoneShortName": "EDT",
+    "gmtOffSetMilliseconds": -14400000,
+    "market": "us_market",
+    "esgPopulated": false,
+    "marketState": "REGULAR",
+    "sourceInterval": 15,
+    "exchangeDataDelayedBy": 0,
+    "ipoExpectedDate": "2021-10-13",
+    "cryptoTradeable": false,
+    "hasPrePostMarketData": true,
+    "firstTradeDateMilliseconds": 1634131800000,
+    "regularMarketChange": 0.030000001,
+    "regularMarketDayRange": "0.033 - 0.0434",
+    "fullExchangeName": "NasdaqCM",
+    "averageDailyVolume3Month": 183193696,
+    "fiftyTwoWeekLowChange": 0.0332,
+    "fiftyTwoWeekLowChangePercent": 5.5333333,
+    "fiftyTwoWeekRange": "0.006 - 1.9",
+    "fiftyTwoWeekHighChange": -1.8608,
+    "fiftyTwoWeekHighChangePercent": -0.97936845,
+    "fiftyTwoWeekChangePercent": -98.662704,
+    "epsTrailingTwelveMonths": -0.88,
+    "epsForward": -0.12,
+    "fiftyDayAverageChange": -0.09536,
+    "fiftyDayAverageChangePercent": -0.70868015,
+    "twoHundredDayAverageChange": -0.520585,
+    "twoHundredDayAverageChangePercent": -0.9299731,
+    "shortName": "Healthcare Triangle, Inc.",
+    "longName": "Healthcare Triangle, Inc.",
+    "regularMarketChangePercent": 326.08698,
+    "regularMarketPrice": 0.0392,
+    "trailingPegRatio": null
+  },
+  "analysisResults": {
+    "symbol": "HCTI",
+    "totalScore": 18.0775,
+    "maxPossibleScore": 87.1975,
+    "categoryResults": {
+      "corporateTransformation": {
+        "name": "Corporate Transformation & Strategic Pivots",
+        "description": "Business model changes, sector pivots, and transformational events",
+        "weight": 0.25,
+        "score": 29.749999999999996,
+        "maxScore": 90.75,
+        "signals": [
+          {
+            "name": "Defense/Government Sector Pivot",
+            "description": "Company pivoting to defense or government contracting",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 100,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "defense sector announcement OR government contract award",
+                "met": false,
+                "score": 70,
+                "description": "Initial defense sector entry"
+              },
+              {
+                "condition": "defense acquisition > marketCap * 0.3 OR multiple government contracts",
+                "met": false,
+                "score": 90,
+                "description": "Significant defense transformation"
+              },
+              {
+                "condition": "NATO/DOD approved vendor status OR critical infrastructure designation",
+                "met": false,
+                "score": 100,
+                "description": "Full defense sector validation"
+              }
+            ]
+          },
+          {
+            "name": "Transformational Acquisition Pattern",
+            "description": "Acquisitions that fundamentally change company trajectory",
+            "triggered": true,
+            "score": 85,
+            "maxScore": 85,
+            "details": [
+              "High-value sector acquisition"
+            ],
+            "conditions": [
+              {
+                "condition": "acquisition in higher-multiple sector AND size > 50% of market cap",
+                "met": false,
+                "score": 60,
+                "description": "Significant strategic acquisition"
+              },
+              {
+                "condition": "AI/biotech/defense acquisition AND immediate revenue accretion",
+                "met": true,
+                "score": 85,
+                "description": "High-value sector acquisition"
+              }
+            ]
+          },
+          {
+            "name": "Float Reduction Mechanics",
+            "description": "Mechanical float reduction for volatility amplification",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 80,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "reverse split ratio >= 10:1 AND post-split float < 30M shares",
+                "met": false,
+                "score": 50,
+                "description": "Significant float compression"
+              },
+              {
+                "condition": "reverse split AND catalyst within 90 days AND float < 20M",
+                "met": false,
+                "score": 80,
+                "description": "Optimal surge setup conditions"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 32.78236914600551
+      },
+      "volume": {
+        "name": "Advanced Volume Intelligence",
+        "description": "Sustained accumulation patterns with reduced false positive triggers",
+        "weight": 0.28,
+        "score": 38.0,
+        "maxScore": 84.5,
+        "signals": [
+          {
+            "name": "Multi-Day Institutional Loading",
+            "description": "Sustained volume increases indicating smart money accumulation",
+            "triggered": true,
+            "score": 95,
+            "maxScore": 95,
+            "details": [
+              "Early accumulation pattern",
+              "Major institutional positioning"
+            ],
+            "conditions": [
+              {
+                "condition": "volume >= avgVolume * 2.0 for 3+ consecutive days AND price change < 15%",
+                "met": true,
+                "score": 60,
+                "description": "Early accumulation pattern"
+              },
+              {
+                "condition": "volume >= avgVolume * 3.0 for 5+ days AND dark pool ratio > 0.30",
+                "met": false,
+                "score": 85,
+                "description": "Confirmed institutional accumulation"
+              },
+              {
+                "condition": "volume >= avgVolume * 2.5 for 7+ days AND 13F new positions",
+                "met": true,
+                "score": 95,
+                "description": "Major institutional positioning"
+              }
+            ]
+          },
+          {
+            "name": "Volume Dry-Up Before Explosion",
+            "description": "Extremely low volume preceding major moves",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 75,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "volume < avgVolume * 0.4 for 5+ days AND known catalyst < 14 days",
+                "met": false,
+                "score": 55,
+                "description": "Pre-catalyst quiet period"
+              },
+              {
+                "condition": "volume < avgVolume * 0.25 for 7+ days AND bollinger band squeeze",
+                "met": false,
+                "score": 75,
+                "description": "Extreme compression setup"
+              }
+            ]
+          },
+          {
+            "name": "Float Turnover Analysis",
+            "description": "Measuring speed of float rotation",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 80,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "3-day cumulative volume > float * 2.0",
+                "met": false,
+                "score": 50,
+                "description": "Rapid float rotation beginning"
+              },
+              {
+                "condition": "single day volume > float * 1.5 AND price increase > 20%",
+                "met": false,
+                "score": 80,
+                "description": "Explosive float turnover"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 44.97041420118343
+      },
+      "technical": {
+        "name": "Pattern Recognition & Technical Setups",
+        "description": "Enhanced technical patterns with combination scoring",
+        "weight": 0.3,
+        "score": 0.0,
+        "maxScore": 84.5,
+        "signals": [
+          {
+            "name": "Oversold Bounce Pattern",
+            "description": "Recovery from extreme oversold with volume confirmation",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 90,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "RSI < 30 for 5+ days AND volume increase > 50% AND price stabilizing",
+                "met": false,
+                "score": 50,
+                "description": "Oversold stabilization"
+              },
+              {
+                "condition": "RSI recovery from < 25 to > 35 AND volume > 2x average",
+                "met": false,
+                "score": 75,
+                "description": "Confirmed oversold reversal"
+              },
+              {
+                "condition": "RSI < 20 AND positive divergence AND catalyst approaching",
+                "met": false,
+                "score": 90,
+                "description": "Extreme oversold with catalyst"
+              }
+            ]
+          },
+          {
+            "name": "KDJ Golden Cross Pattern",
+            "description": "KDJ indicator golden cross in oversold territory",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 85,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "K crosses above D below 20 level AND J curve turning up",
+                "met": false,
+                "score": 60,
+                "description": "KDJ golden cross in oversold"
+              },
+              {
+                "condition": "KDJ golden cross AND volume surge AND float < 50M",
+                "met": false,
+                "score": 85,
+                "description": "High probability reversal setup"
+              }
+            ]
+          },
+          {
+            "name": "Volatility Compression Breakout",
+            "description": "Breakout from extended compression periods",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 85,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "Bollinger Band width < 5th percentile for 30+ days",
+                "met": false,
+                "score": 55,
+                "description": "Significant volatility compression"
+              },
+              {
+                "condition": "BB squeeze > 45 days AND volume building AND catalyst known",
+                "met": false,
+                "score": 85,
+                "description": "Coiled spring with catalyst"
+              }
+            ]
+          },
+          {
+            "name": "Delisting Compliance Catalyst",
+            "description": "Technical reversal under delisting pressure",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 70,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "price < $1 AND compliance deadline < 90 days AND positive news",
+                "met": false,
+                "score": 70,
+                "description": "Delisting pressure reversal setup"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      },
+      "catalyst": {
+        "name": "Catalyst Events & Fundamental Drivers",
+        "description": "Expanded catalyst detection including commercial validations",
+        "weight": 0.1,
+        "score": 0.0,
+        "maxScore": 88.5,
+        "signals": [
+          {
+            "name": "Reimbursement Tipping Point",
+            "description": "Insurance coverage reaching critical mass",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 90,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "2+ major payers approve coverage",
+                "met": false,
+                "score": 60,
+                "description": "Initial reimbursement momentum"
+              },
+              {
+                "condition": "3+ payers including Medicare/Medicaid OR national coverage",
+                "met": false,
+                "score": 90,
+                "description": "Reimbursement tipping point reached"
+              }
+            ]
+          },
+          {
+            "name": "Regulatory Approval Cascade",
+            "description": "FDA and international regulatory approvals",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 85,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "FDA approval decision < 30 days OR positive Phase 3 data",
+                "met": false,
+                "score": 65,
+                "description": "Near-term regulatory catalyst"
+              },
+              {
+                "condition": "FDA breakthrough designation OR accelerated approval pathway",
+                "met": false,
+                "score": 85,
+                "description": "High-probability approval path"
+              }
+            ]
+          },
+          {
+            "name": "Commercial Validation Events",
+            "description": "First sales, major contracts, strategic partnerships",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 90,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "first commercial sale > $10M OR Fortune 500 partnership",
+                "met": false,
+                "score": 70,
+                "description": "Initial commercial validation"
+              },
+              {
+                "condition": "government contract OR recurring revenue deal > $50M",
+                "met": false,
+                "score": 90,
+                "description": "Major commercial breakthrough"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      },
+      "microstructure": {
+        "name": "Market Microstructure Dynamics",
+        "description": "Float dynamics, short interest, and structural amplifiers",
+        "weight": 0.07,
+        "score": 0.0,
+        "maxScore": 95.0,
+        "signals": [
+          {
+            "name": "Short Squeeze Amplification",
+            "description": "Extreme short interest creating forced buying",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 100,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "shortInterest > 30% AND daysToCover > 5 AND catalyst approaching",
+                "met": false,
+                "score": 60,
+                "description": "Moderate squeeze potential"
+              },
+              {
+                "condition": "shortInterest > 50% AND daysToCover > 7 AND borrow rate > 30%",
+                "met": false,
+                "score": 85,
+                "description": "High squeeze probability"
+              },
+              {
+                "condition": "shortInterest > 100% AND utilization > 95% AND positive catalyst",
+                "met": false,
+                "score": 100,
+                "description": "GME-level squeeze setup"
+              }
+            ]
+          },
+          {
+            "name": "Effective Float Scarcity",
+            "description": "Limited tradeable float creating volatility",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 90,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "effective float < 30M shares AND daily volume > float * 0.5",
+                "met": false,
+                "score": 65,
+                "description": "Float scarcity developing"
+              },
+              {
+                "condition": "effective float < 20M AND insider buying AND short interest > 20%",
+                "met": false,
+                "score": 90,
+                "description": "Extreme float squeeze conditions"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      }
+    },
+    "triggeredSignals": [
+      {
+        "category": "Corporate Transformation & Strategic Pivots",
+        "signal": "Transformational Acquisition Pattern",
+        "score": 85,
+        "description": "Acquisitions that fundamentally change company trajectory"
+      },
+      {
+        "category": "Advanced Volume Intelligence",
+        "signal": "Multi-Day Institutional Loading",
+        "score": 95,
+        "description": "Sustained volume increases indicating smart money accumulation"
+      }
+    ],
+    "missingDataFields": [
+      "insiderOwnership",
+      "institutionalOwnership"
+    ],
+    "scorePercentage": 20.73167235299177
+  },
+  "signalsConfig": {
+    "metadata": {
+      "version": "4.0",
+      "lastUpdated": "2025-01-11",
+      "description": "Enhanced surge detection framework with reduced false positives based on 20+ documented surges including DRUG, NUKK, VTAK, HSDT, HCTI, GME",
+      "author": "Enhanced Framework Based on Surge Document Analysis",
+      "backtestedPeriod": "2020-2025",
+      "enhancementBasis": "Comprehensive analysis of surge documents with focus on false positive reduction",
+      "accuracyTarget": "58-62% (up from 55%)",
+      "falsePositiveTarget": "14-16% (down from 20%)",
+      "keyImprovements": [
+        "Market cap range optimization ($100M-$500M sweet spot)",
+        "Sustained volume accumulation prioritization",
+        "Corporate transformation signal enhancement",
+        "New reimbursement approval category",
+        "Signal decay functions",
+        "Multi-signal confirmation requirements"
+      ]
+    },
+    "marketStructureRequirements": {
+      "description": "Pre-screening criteria that must be met before signal evaluation",
+      "floatRequirements": {
+        "minimum": 15000000,
+        "maximum": 150000000,
+        "optimalRange": {
+          "explosive": {
+            "min": 20000000,
+            "max": 60000000,
+            "description": "Optimal for explosive surges (200%+)"
+          },
+          "sustained": {
+            "min": 60000000,
+            "max": 120000000,
+            "description": "Better for sustained momentum plays"
+          }
+        }
+      },
+      "marketCapBands": {
+        "microCapExplosive": {
+          "min": 1000000,
+          "max": 50000000,
+          "surgeMultiplier": 3.0,
+          "riskMultiplier": 2.5,
+          "description": "Extreme volatility zone, highest percentage gains but highest risk"
+        },
+        "smallCapPrime": {
+          "min": 50000000,
+          "max": 500000000,
+          "surgeMultiplier": 2.0,
+          "riskMultiplier": 1.0,
+          "description": "Sweet spot - 73% of successful surges occurred here"
+        },
+        "midCapMomentum": {
+          "min": 500000000,
+          "max": 2000000000,
+          "surgeMultiplier": 1.2,
+          "riskMultiplier": 0.7,
+          "description": "Sustainable surges with institutional participation"
+        }
+      },
+      "volumeRequirements": {
+        "minimumDailyDollarVolume": 5000000,
+        "sustainedAccumulationThreshold": 3.0,
+        "surgeConfirmationVolume": 10.0
+      }
+    },
+    "signalCategories": {
+      "corporateTransformation": {
+        "name": "Corporate Transformation & Strategic Pivots",
+        "description": "Business model changes, sector pivots, and transformational events",
+        "weight": 0.25,
+        "priority": 1,
+        "signals": {
+          "defensePivotCatalyst": {
+            "id": "CORP_001",
+            "name": "Defense/Government Sector Pivot",
+            "description": "Company pivoting to defense or government contracting",
+            "weight": 0.45,
+            "dataRequired": [
+              "sectorChange",
+              "governmentContracts",
+              "defenseAcquisitions"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "defense sector announcement OR government contract award",
+                "score": 70,
+                "description": "Initial defense sector entry"
+              },
+              "trigger2": {
+                "condition": "defense acquisition > marketCap * 0.3 OR multiple government contracts",
+                "score": 90,
+                "description": "Significant defense transformation"
+              },
+              "trigger3": {
+                "condition": "NATO/DOD approved vendor status OR critical infrastructure designation",
+                "score": 100,
+                "description": "Full defense sector validation"
+              }
+            },
+            "exampleSurges": [
+              "NUKK: 5535% after defense pivot",
+              "Multiple 1000%+ defense transformations"
+            ]
+          },
+          "strategicAcquisitionValidation": {
+            "id": "CORP_002",
+            "name": "Transformational Acquisition Pattern",
+            "description": "Acquisitions that fundamentally change company trajectory",
+            "weight": 0.35,
+            "dataRequired": [
+              "acquisitionSize",
+              "targetSector",
+              "synergies"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "acquisition in higher-multiple sector AND size > 50% of market cap",
+                "score": 60,
+                "description": "Significant strategic acquisition"
+              },
+              "trigger2": {
+                "condition": "AI/biotech/defense acquisition AND immediate revenue accretion",
+                "score": 85,
+                "description": "High-value sector acquisition"
+              }
+            }
+          },
+          "reverseSplitOptimization": {
+            "id": "CORP_003",
+            "name": "Float Reduction Mechanics",
+            "description": "Mechanical float reduction for volatility amplification",
+            "weight": 0.2,
+            "dataRequired": [
+              "reverseSplitRatio",
+              "postSplitFloat",
+              "upcomingCatalysts"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "reverse split ratio >= 10:1 AND post-split float < 30M shares",
+                "score": 50,
+                "description": "Significant float compression"
+              },
+              "trigger2": {
+                "condition": "reverse split AND catalyst within 90 days AND float < 20M",
+                "score": 80,
+                "description": "Optimal surge setup conditions"
+              }
+            }
+          }
+        }
+      },
+      "volume": {
+        "name": "Advanced Volume Intelligence",
+        "description": "Sustained accumulation patterns with reduced false positive triggers",
+        "weight": 0.28,
+        "priority": 1,
+        "signals": {
+          "sustainedAccumulation": {
+            "id": "VOL_001",
+            "name": "Multi-Day Institutional Loading",
+            "description": "Sustained volume increases indicating smart money accumulation",
+            "weight": 0.4,
+            "dataRequired": [
+              "volume",
+              "avgVolume30d",
+              "consecutiveDays",
+              "priceStability"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "volume >= avgVolume * 2.0 for 3+ consecutive days AND price change < 15%",
+                "score": 60,
+                "description": "Early accumulation pattern"
+              },
+              "trigger2": {
+                "condition": "volume >= avgVolume * 3.0 for 5+ days AND dark pool ratio > 0.30",
+                "score": 85,
+                "description": "Confirmed institutional accumulation"
+              },
+              "trigger3": {
+                "condition": "volume >= avgVolume * 2.5 for 7+ days AND 13F new positions",
+                "score": 95,
+                "description": "Major institutional positioning"
+              }
+            },
+            "falsePositiveFilters": {
+              "singleDaySpike": "Ignore if volume returns to normal within 2 days",
+              "priceDecline": "Invalidate if price drops >10% during accumulation",
+              "newsReactive": "Discount if volume follows negative news"
+            }
+          },
+          "preBreakoutCompression": {
+            "id": "VOL_002",
+            "name": "Volume Dry-Up Before Explosion",
+            "description": "Extremely low volume preceding major moves",
+            "weight": 0.3,
+            "dataRequired": [
+              "volume",
+              "avgVolume20d",
+              "volatility",
+              "upcomingCatalysts"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "volume < avgVolume * 0.4 for 5+ days AND known catalyst < 14 days",
+                "score": 55,
+                "description": "Pre-catalyst quiet period"
+              },
+              "trigger2": {
+                "condition": "volume < avgVolume * 0.25 for 7+ days AND bollinger band squeeze",
+                "score": 75,
+                "description": "Extreme compression setup"
+              }
+            }
+          },
+          "floatRotationVelocity": {
+            "id": "VOL_003",
+            "name": "Float Turnover Analysis",
+            "description": "Measuring speed of float rotation",
+            "weight": 0.3,
+            "dataRequired": [
+              "volume",
+              "floatShares",
+              "timeFrame"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "3-day cumulative volume > float * 2.0",
+                "score": 50,
+                "description": "Rapid float rotation beginning"
+              },
+              "trigger2": {
+                "condition": "single day volume > float * 1.5 AND price increase > 20%",
+                "score": 80,
+                "description": "Explosive float turnover"
+              }
+            }
+          }
+        }
+      },
+      "technical": {
+        "name": "Pattern Recognition & Technical Setups",
+        "description": "Enhanced technical patterns with combination scoring",
+        "weight": 0.3,
+        "priority": 2,
+        "signals": {
+          "extremeOversoldRecovery": {
+            "id": "TECH_001",
+            "name": "Oversold Bounce Pattern",
+            "description": "Recovery from extreme oversold with volume confirmation",
+            "weight": 0.35,
+            "dataRequired": [
+              "rsi14",
+              "volumeIncrease",
+              "priceAction",
+              "support"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "RSI < 30 for 5+ days AND volume increase > 50% AND price stabilizing",
+                "score": 50,
+                "description": "Oversold stabilization"
+              },
+              "trigger2": {
+                "condition": "RSI recovery from < 25 to > 35 AND volume > 2x average",
+                "score": 75,
+                "description": "Confirmed oversold reversal"
+              },
+              "trigger3": {
+                "condition": "RSI < 20 AND positive divergence AND catalyst approaching",
+                "score": 90,
+                "description": "Extreme oversold with catalyst"
+              }
+            }
+          },
+          "kdjGoldenCross": {
+            "id": "TECH_002",
+            "name": "KDJ Golden Cross Pattern",
+            "description": "KDJ indicator golden cross in oversold territory",
+            "weight": 0.25,
+            "dataRequired": [
+              "kValue",
+              "dValue",
+              "jValue",
+              "crossoverLocation"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "K crosses above D below 20 level AND J curve turning up",
+                "score": 60,
+                "description": "KDJ golden cross in oversold"
+              },
+              "trigger2": {
+                "condition": "KDJ golden cross AND volume surge AND float < 50M",
+                "score": 85,
+                "description": "High probability reversal setup"
+              }
+            }
+          },
+          "compressionBreakout": {
+            "id": "TECH_003",
+            "name": "Volatility Compression Breakout",
+            "description": "Breakout from extended compression periods",
+            "weight": 0.25,
+            "dataRequired": [
+              "bollingerWidth",
+              "atr",
+              "compressionDays"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "Bollinger Band width < 5th percentile for 30+ days",
+                "score": 55,
+                "description": "Significant volatility compression"
+              },
+              "trigger2": {
+                "condition": "BB squeeze > 45 days AND volume building AND catalyst known",
+                "score": 85,
+                "description": "Coiled spring with catalyst"
+              }
+            }
+          },
+          "delistingPressureReversal": {
+            "id": "TECH_004",
+            "name": "Delisting Compliance Catalyst",
+            "description": "Technical reversal under delisting pressure",
+            "weight": 0.15,
+            "dataRequired": [
+              "priceLevel",
+              "complianceDeadline",
+              "technicalSetup"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "price < $1 AND compliance deadline < 90 days AND positive news",
+                "score": 70,
+                "description": "Delisting pressure reversal setup"
+              }
+            }
+          }
+        }
+      },
+      "catalyst": {
+        "name": "Catalyst Events & Fundamental Drivers",
+        "description": "Expanded catalyst detection including commercial validations",
+        "weight": 0.1,
+        "priority": 2,
+        "signals": {
+          "reimbursementApproval": {
+            "id": "CAT_001",
+            "name": "Reimbursement Tipping Point",
+            "description": "Insurance coverage reaching critical mass",
+            "weight": 0.35,
+            "dataRequired": [
+              "payerCount",
+              "coverageTier",
+              "marketSize"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "2+ major payers approve coverage",
+                "score": 60,
+                "description": "Initial reimbursement momentum"
+              },
+              "trigger2": {
+                "condition": "3+ payers including Medicare/Medicaid OR national coverage",
+                "score": 90,
+                "description": "Reimbursement tipping point reached"
+              }
+            }
+          },
+          "fdaApprovalChain": {
+            "id": "CAT_002",
+            "name": "Regulatory Approval Cascade",
+            "description": "FDA and international regulatory approvals",
+            "weight": 0.3,
+            "dataRequired": [
+              "fdaStatus",
+              "clinicalResults",
+              "marketSize"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "FDA approval decision < 30 days OR positive Phase 3 data",
+                "score": 65,
+                "description": "Near-term regulatory catalyst"
+              },
+              "trigger2": {
+                "condition": "FDA breakthrough designation OR accelerated approval pathway",
+                "score": 85,
+                "description": "High-probability approval path"
+              }
+            }
+          },
+          "commercialMilestone": {
+            "id": "CAT_003",
+            "name": "Commercial Validation Events",
+            "description": "First sales, major contracts, strategic partnerships",
+            "weight": 0.35,
+            "dataRequired": [
+              "contractValue",
+              "partnerCredibility",
+              "recurringRevenue"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "first commercial sale > $10M OR Fortune 500 partnership",
+                "score": 70,
+                "description": "Initial commercial validation"
+              },
+              "trigger2": {
+                "condition": "government contract OR recurring revenue deal > $50M",
+                "score": 90,
+                "description": "Major commercial breakthrough"
+              }
+            }
+          }
+        }
+      },
+      "microstructure": {
+        "name": "Market Microstructure Dynamics",
+        "description": "Float dynamics, short interest, and structural amplifiers",
+        "weight": 0.07,
+        "priority": 3,
+        "signals": {
+          "extremeShortSqueeze": {
+            "id": "MICRO_001",
+            "name": "Short Squeeze Amplification",
+            "description": "Extreme short interest creating forced buying",
+            "weight": 0.5,
+            "dataRequired": [
+              "shortInterest",
+              "daysToCover",
+              "borrowRate",
+              "utilization"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "shortInterest > 30% AND daysToCover > 5 AND catalyst approaching",
+                "score": 60,
+                "description": "Moderate squeeze potential"
+              },
+              "trigger2": {
+                "condition": "shortInterest > 50% AND daysToCover > 7 AND borrow rate > 30%",
+                "score": 85,
+                "description": "High squeeze probability"
+              },
+              "trigger3": {
+                "condition": "shortInterest > 100% AND utilization > 95% AND positive catalyst",
+                "score": 100,
+                "description": "GME-level squeeze setup"
+              }
+            }
+          },
+          "floatLockupDynamics": {
+            "id": "MICRO_002",
+            "name": "Effective Float Scarcity",
+            "description": "Limited tradeable float creating volatility",
+            "weight": 0.5,
+            "dataRequired": [
+              "floatShares",
+              "insiderHoldings",
+              "institutionalLockup"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "effective float < 30M shares AND daily volume > float * 0.5",
+                "score": 65,
+                "description": "Float scarcity developing"
+              },
+              "trigger2": {
+                "condition": "effective float < 20M AND insider buying AND short interest > 20%",
+                "score": 90,
+                "description": "Extreme float squeeze conditions"
+              }
+            }
+          }
+        }
+      }
+    },
+    "signalDecayFunctions": {
+      "description": "Time-based signal strength decay to reduce stale false positives",
+      "technical": {
+        "halfLife": 5,
+        "decayRate": 0.5,
+        "minimumWeight": 0.2
+      },
+      "volume": {
+        "halfLife": 3,
+        "decayRate": 0.25,
+        "minimumWeight": 0.3
+      },
+      "catalyst": {
+        "halfLife": 14,
+        "decayRate": 0.1,
+        "minimumWeight": 0.7
+      },
+      "fundamental": {
+        "halfLife": 30,
+        "decayRate": 0.05,
+        "minimumWeight": 0.8
+      }
+    },
+    "multiSignalConfirmation": {
+      "description": "Require multiple signal categories to reduce false positives",
+      "minimumCategories": 2,
+      "minimumTotalScore": 140,
+      "categoryRequirements": {
+        "ultraHigh": {
+          "requiredCategories": [
+            "volume",
+            "technical",
+            "catalyst"
+          ],
+          "minimumCategoryScores": {
+            "volume": 60,
+            "technical": 50,
+            "catalyst": 40
+          }
+        },
+        "high": {
+          "requiredCategories": [
+            "volume",
+            "technical"
+          ],
+          "minimumCategoryScores": {
+            "volume": 50,
+            "technical": 40
+          }
+        }
+      }
+    },
+    "falsePositiveFilters": {
+      "volumeFilters": {
+        "singleDayReversion": {
+          "description": "Eliminate signals from single-day volume spikes that revert",
+          "condition": "volume > 10x average AND next_day_volume < 2x average",
+          "action": "invalidate_signal"
+        },
+        "newsReactiveVolume": {
+          "description": "Filter reactive volume following negative news",
+          "condition": "volume spike AND negative news within 24 hours",
+          "action": "reduce_weight_50%"
+        }
+      },
+      "technicalFilters": {
+        "overboughtRejection": {
+          "description": "Reject signals in extreme overbought conditions",
+          "condition": "RSI > 70 AND no fundamental catalyst",
+          "action": "invalidate_signal"
+        },
+        "downtrendContinuation": {
+          "description": "Filter bounces in established downtrends",
+          "condition": "price < 200MA AND 50MA < 200MA AND no catalyst",
+          "action": "reduce_weight_75%"
+        }
+      },
+      "structuralFilters": {
+        "pennyStockManipulation": {
+          "description": "Enhanced filtering for manipulation-prone stocks",
+          "condition": "price < $1 AND market_cap < $10M AND social_media_pump_detected",
+          "action": "invalidate_signal"
+        }
+      }
+    },
+    "enhancedAlertConfiguration": {
+      "ultraCritical": {
+        "name": "Ultra-Critical Surge Alerts",
+        "minimumScore": 280,
+        "requiredConditions": [
+          "market_cap between $50M and $500M",
+          "float between 20M and 60M shares",
+          "sustained volume accumulation > 5 days",
+          "multiple signal categories triggered",
+          "known catalyst within 14 days"
+        ],
+        "expectedAccuracy": "75-80%",
+        "falsePositiveRate": "8-10%"
+      },
+      "critical": {
+        "name": "Critical Priority Alerts",
+        "minimumScore": 220,
+        "requiredConditions": [
+          "market_cap > $25M",
+          "volume confirmation",
+          "technical setup present",
+          "at least 2 signal categories"
+        ],
+        "expectedAccuracy": "60-65%",
+        "falsePositiveRate": "12-15%"
+      },
+      "high": {
+        "name": "High Interest Alerts",
+        "minimumScore": 160,
+        "requiredConditions": [
+          "legitimate float dynamics",
+          "some volume activity",
+          "catalyst potential"
+        ],
+        "expectedAccuracy": "45-50%",
+        "falsePositiveRate": "18-22%"
+      }
+    },
+    "sectorSpecificOptimizations": {
+      "biotech": {
+        "catalystMultiplier": 2.5,
+        "fdaWeighting": 3.0,
+        "clinicalDataSensitivity": "extreme",
+        "optimalMarketCap": "$200M-$2B",
+        "averageSurgeMultiple": 3.5
+      },
+      "defense": {
+        "contractMultiplier": 4.0,
+        "governmentValidation": 5.0,
+        "geopoliticalSensitivity": "high",
+        "optimalMarketCap": "$50M-$500M",
+        "averageSurgeMultiple": 8.5
+      },
+      "medicalDevice": {
+        "reimbursementMultiplier": 3.5,
+        "commercialValidation": 2.5,
+        "regulatorySensitivity": "moderate",
+        "optimalMarketCap": "$100M-$1B",
+        "averageSurgeMultiple": 2.8
+      },
+      "technology": {
+        "partnershipMultiplier": 2.0,
+        "aiPivotBonus": 3.0,
+        "hypeSensitivity": "extreme",
+        "optimalMarketCap": "$500M-$5B",
+        "averageSurgeMultiple": 2.2
+      }
+    },
+    "backtestingValidation": {
+      "documentedSurges": {
+        "DRUG": {
+          "surge": "2000%",
+          "detectedSignals": [
+            "sustained_accumulation",
+            "oversold_recovery",
+            "catalyst_proximity"
+          ],
+          "leadTime": "5 days",
+          "accuracy": "excellent"
+        },
+        "NUKK": {
+          "surge": "5535%",
+          "detectedSignals": [
+            "defense_pivot",
+            "extreme_float_scarcity",
+            "transformation"
+          ],
+          "leadTime": "2 days",
+          "accuracy": "excellent"
+        },
+        "VTAK": {
+          "surge": "173%",
+          "detectedSignals": [
+            "volume_spike",
+            "technical_setup",
+            "catalyst_announcement"
+          ],
+          "leadTime": "8 days",
+          "accuracy": "good"
+        },
+        "GME": {
+          "surge": "2700%",
+          "detectedSignals": [
+            "extreme_short_squeeze",
+            "retail_momentum",
+            "gamma_squeeze"
+          ],
+          "leadTime": "14 days",
+          "accuracy": "excellent"
+        }
+      },
+      "projectedPerformance": {
+        "overallAccuracy": "58-62%",
+        "falsePositiveRate": "14-16%",
+        "averageLeadTime": "5-7 days",
+        "expectedSharpeRatio": 3.2
+      }
+    },
+    "implementationNotes": {
+      "criticalSuccess": [
+        "Market cap filtering dramatically reduces false positives",
+        "Sustained volume accumulation is the most reliable early indicator",
+        "Corporate transformations generate the largest surges",
+        "Float between 20M-60M shares optimizes explosive potential",
+        "Multi-signal confirmation prevents isolated false triggers"
+      ],
+      "monitoringRequirements": [
+        "Real-time volume tracking with 3-day lookback",
+        "Daily float and short interest updates",
+        "Catalyst calendar maintenance",
+        "Sector rotation monitoring",
+        "Signal decay tracking"
+      ],
+      "riskManagement": [
+        "Never act on single signal category",
+        "Implement 48-hour confirmation period for non-catalyst signals",
+        "Maximum 5% portfolio allocation per signal",
+        "Stop loss at technical support or -15%",
+        "Scale out: 30% at +50%, 40% at +100%, hold 30% for runners"
+      ]
+    }
+  }
+}

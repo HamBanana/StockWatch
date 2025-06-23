@@ -1,0 +1,650 @@
+#!/usr/bin/env python3
+"""
+Stock Analysis Report Visualizer
+Analyzes multiple stock signal reports and creates visual representations
+"""
+
+import json
+import os
+import glob
+from datetime import datetime
+import pandas as pd
+import matplotlib.pyplot as plt
+import matplotlib.dates as mdates
+from matplotlib.gridspec import GridSpec
+import seaborn as sns
+import numpy as np
+from collections import defaultdict
+import warnings
+warnings.filterwarnings('ignore')
+
+class StockAnalysisVisualizer:
+    def __init__(self, reports_dir="reports"):
+        self.reports_dir = reports_dir
+        self.data = defaultdict(list)
+        self.stocks = set()
+        
+        # Set style
+        plt.style.use('dark_background')
+        sns.set_palette("husl")
+        
+    def load_reports(self):
+        """Load all JSON reports from the reports directory"""
+        pattern = os.path.join(self.reports_dir, "*_analysis_*.json")
+        files = glob.glob(pattern)
+        
+        if not files:
+            print(f"No analysis files found in {self.reports_dir}")
+            return False
+            
+        print(f"Found {len(files)} analysis files")
+        
+        for file_path in files:
+            try:
+                with open(file_path, 'r') as f:
+                    report = json.load(f)
+                    
+                # Extract timestamp and symbol
+                timestamp = datetime.fromisoformat(report['exportInfo']['timestamp'].replace('Z', '+00:00'))
+                symbol = report['stockData']['symbol']
+                
+                self.stocks.add(symbol)
+                
+                # Store the data
+                self.data[symbol].append({
+                    'timestamp': timestamp,
+                    'file': os.path.basename(file_path),
+                    'data': report
+                })
+                    
+            except Exception as e:
+                print(f"Error loading {file_path}: {e}")
+                
+        # Sort data by timestamp for each stock
+        for symbol in self.data:
+            self.data[symbol].sort(key=lambda x: x['timestamp'])
+            
+        print(f"Loaded data for stocks: {', '.join(sorted(self.stocks))}")
+        return True
+        
+    def create_overview_dashboard(self):
+        """Create an overview dashboard showing all stocks"""
+        if not self.stocks:
+            print("No data to visualize")
+            return
+            
+        # Create figure with subplots
+        fig = plt.figure(figsize=(20, 12))
+        fig.suptitle('Stock Signals Analysis Overview', fontsize=20, fontweight='bold')
+        
+        gs = GridSpec(3, 3, figure=fig, hspace=0.3, wspace=0.3)
+        
+        # 1. Signal Score Trends
+        ax1 = fig.add_subplot(gs[0, :2])
+        self.plot_signal_scores(ax1)
+        
+        # 2. Latest Scores Comparison
+        ax2 = fig.add_subplot(gs[0, 2])
+        self.plot_latest_scores_comparison(ax2)
+        
+        # 3. Category Performance Heatmap
+        ax3 = fig.add_subplot(gs[1, :])
+        self.plot_category_heatmap(ax3)
+        
+        # 4. Triggered Signals Count
+        ax4 = fig.add_subplot(gs[2, 0])
+        self.plot_triggered_signals_count(ax4)
+        
+        # 5. Market Cap vs Score
+        ax5 = fig.add_subplot(gs[2, 1])
+        self.plot_market_cap_vs_score(ax5)
+        
+        # 6. Volume Analysis
+        ax6 = fig.add_subplot(gs[2, 2])
+        self.plot_volume_analysis(ax6)
+        
+        plt.tight_layout()
+        plt.show()
+        
+    def plot_signal_scores(self, ax):
+        """Plot signal score trends over time for all stocks"""
+        ax.set_title('Signal Score Trends Over Time', fontsize=14, fontweight='bold')
+        
+        for symbol in sorted(self.stocks):
+            timestamps = []
+            scores = []
+            
+            for report in self.data[symbol]:
+                timestamps.append(report['timestamp'])
+                scores.append(report['data']['analysisResults']['scorePercentage'])
+                
+            ax.plot(timestamps, scores, marker='o', linewidth=2, markersize=8, label=symbol)
+            
+            # Add score labels
+            for i, (ts, score) in enumerate(zip(timestamps, scores)):
+                if i == len(timestamps) - 1:  # Only label the last point
+                    ax.annotate(f'{score:.1f}%', 
+                              xy=(ts, score), 
+                              xytext=(5, 5), 
+                              textcoords='offset points',
+                              fontsize=9)
+        
+        ax.set_xlabel('Date')
+        ax.set_ylabel('Signal Score (%)')
+        ax.legend()
+        ax.grid(True, alpha=0.3)
+        
+        # Format x-axis
+        if len(timestamps) > 0:
+            ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d'))
+            ax.xaxis.set_major_locator(mdates.AutoDateLocator())
+            plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, ha='right')
+            
+    def plot_latest_scores_comparison(self, ax):
+        """Bar chart comparing latest scores for all stocks"""
+        ax.set_title('Latest Signal Scores', fontsize=14, fontweight='bold')
+        
+        symbols = []
+        scores = []
+        colors = []
+        
+        for symbol in sorted(self.stocks):
+            if self.data[symbol]:
+                latest = self.data[symbol][-1]
+                score = latest['data']['analysisResults']['scorePercentage']
+                symbols.append(symbol)
+                scores.append(score)
+                
+                # Color based on score
+                if score >= 80:
+                    colors.append('#8b5cf6')  # Purple - Critical
+                elif score >= 60:
+                    colors.append('#22c55e')  # Green - High
+                elif score >= 40:
+                    colors.append('#f59e0b')  # Orange - Medium
+                else:
+                    colors.append('#ef4444')  # Red - Low
+                    
+        bars = ax.bar(symbols, scores, color=colors)
+        
+        # Add value labels on bars
+        for bar, score in zip(bars, scores):
+            height = bar.get_height()
+            ax.text(bar.get_x() + bar.get_width()/2., height + 1,
+                   f'{score:.1f}%', ha='center', va='bottom', fontsize=10)
+                   
+        ax.set_ylabel('Signal Score (%)')
+        ax.set_ylim(0, max(scores) * 1.15 if scores else 100)
+        ax.grid(True, alpha=0.3, axis='y')
+        
+    def plot_category_heatmap(self, ax):
+        """Heatmap showing category scores across stocks and time"""
+        ax.set_title('Category Performance Heatmap', fontsize=14, fontweight='bold')
+        
+        # Prepare data for heatmap
+        category_data = {}
+        
+        for symbol in sorted(self.stocks):
+            if not self.data[symbol]:
+                continue
+                
+            latest = self.data[symbol][-1]
+            categories = latest['data']['analysisResults']['categoryResults']
+            
+            for cat_key, cat_data in categories.items():
+                cat_name = cat_data['name']
+                score = cat_data['normalizedScore']
+                
+                if cat_name not in category_data:
+                    category_data[cat_name] = {}
+                    
+                category_data[cat_name][symbol] = score
+                
+        # Convert to DataFrame
+        df = pd.DataFrame(category_data).T
+        
+        if not df.empty:
+            # Create heatmap
+            sns.heatmap(df, 
+                       annot=True, 
+                       fmt='.0f', 
+                       cmap='RdYlGn', 
+                       center=50,
+                       ax=ax,
+                       cbar_kws={'label': 'Score (%)'},
+                       linewidths=0.5)
+                       
+            ax.set_xlabel('Stock Symbol')
+            ax.set_ylabel('Category')
+        else:
+            ax.text(0.5, 0.5, 'No category data available', 
+                   ha='center', va='center', transform=ax.transAxes)
+            
+    def plot_triggered_signals_count(self, ax):
+        """Plot count of triggered signals for each stock"""
+        ax.set_title('Triggered Signals Count', fontsize=14, fontweight='bold')
+        
+        symbols = []
+        counts = []
+        
+        for symbol in sorted(self.stocks):
+            if self.data[symbol]:
+                latest = self.data[symbol][-1]
+                triggered = latest['data']['analysisResults'].get('triggeredSignals', [])
+                symbols.append(symbol)
+                counts.append(len(triggered))
+                
+        if symbols:
+            bars = ax.bar(symbols, counts, color='#3b82f6')
+            
+            # Add value labels
+            for bar, count in zip(bars, counts):
+                height = bar.get_height()
+                ax.text(bar.get_x() + bar.get_width()/2., height + 0.1,
+                       str(count), ha='center', va='bottom', fontsize=10)
+                       
+            ax.set_ylabel('Number of Triggered Signals')
+            ax.set_ylim(0, max(counts) * 1.2 if counts else 5)
+            ax.grid(True, alpha=0.3, axis='y')
+            
+    def plot_market_cap_vs_score(self, ax):
+        """Scatter plot of market cap vs signal score"""
+        ax.set_title('Market Cap vs Signal Score', fontsize=14, fontweight='bold')
+        
+        market_caps = []
+        scores = []
+        symbols = []
+        
+        for symbol in self.stocks:
+            if self.data[symbol]:
+                latest = self.data[symbol][-1]
+                market_cap = latest['data']['stockData'].get('marketCap', 0)
+                score = latest['data']['analysisResults']['scorePercentage']
+                
+                if market_cap > 0:
+                    market_caps.append(market_cap / 1e6)  # Convert to millions
+                    scores.append(score)
+                    symbols.append(symbol)
+                    
+        if market_caps:
+            scatter = ax.scatter(market_caps, scores, s=100, alpha=0.6, c=scores, 
+                               cmap='RdYlGn', vmin=0, vmax=100)
+                               
+            # Add labels
+            for i, symbol in enumerate(symbols):
+                ax.annotate(symbol, (market_caps[i], scores[i]), 
+                          xytext=(5, 5), textcoords='offset points', fontsize=9)
+                          
+            ax.set_xlabel('Market Cap (Millions $)')
+            ax.set_ylabel('Signal Score (%)')
+            ax.set_xscale('log')
+            ax.grid(True, alpha=0.3)
+            
+            # Add colorbar
+            cbar = plt.colorbar(scatter, ax=ax)
+            cbar.set_label('Score (%)', fontsize=9)
+            
+    def plot_volume_analysis(self, ax):
+        """Plot volume metrics"""
+        ax.set_title('Volume Analysis', fontsize=14, fontweight='bold')
+        
+        symbols = []
+        volume_ratios = []
+        
+        for symbol in sorted(self.stocks):
+            if self.data[symbol]:
+                latest = self.data[symbol][-1]
+                stock_data = latest['data']['stockData']
+                
+                volume = stock_data.get('volume', 0)
+                avg_volume = stock_data.get('averageVolume', 1)
+                
+                if avg_volume > 0:
+                    ratio = volume / avg_volume
+                    symbols.append(symbol)
+                    volume_ratios.append(ratio)
+                    
+        if symbols:
+            bars = ax.bar(symbols, volume_ratios, color='#06b6d4')
+            
+            # Add horizontal line at 1.0
+            ax.axhline(y=1.0, color='white', linestyle='--', alpha=0.5, label='Average')
+            
+            # Add value labels
+            for bar, ratio in zip(bars, volume_ratios):
+                height = bar.get_height()
+                ax.text(bar.get_x() + bar.get_width()/2., height + 0.05,
+                       f'{ratio:.1f}x', ha='center', va='bottom', fontsize=10)
+                       
+            ax.set_ylabel('Volume / Avg Volume')
+            ax.legend()
+            ax.grid(True, alpha=0.3, axis='y')
+            
+    def create_stock_detail_report(self, symbol):
+        """Create detailed report for a specific stock"""
+        if symbol not in self.stocks:
+            print(f"No data found for {symbol}")
+            return
+            
+        reports = self.data[symbol]
+        
+        # Create figure
+        fig = plt.figure(figsize=(20, 14))
+        fig.suptitle(f'{symbol} - Detailed Analysis Report', fontsize=20, fontweight='bold')
+        
+        gs = GridSpec(4, 3, figure=fig, hspace=0.3, wspace=0.3)
+        
+        # 1. Score trend with annotations
+        ax1 = fig.add_subplot(gs[0, :])
+        self.plot_detailed_score_trend(ax1, reports)
+        
+        # 2. Category scores over time
+        ax2 = fig.add_subplot(gs[1, :])
+        self.plot_category_trends(ax2, reports)
+        
+        # 3. Triggered signals timeline
+        ax3 = fig.add_subplot(gs[2, :])
+        self.plot_triggered_signals_timeline(ax3, reports)
+        
+        # 4. Price and volume
+        ax4 = fig.add_subplot(gs[3, 0])
+        self.plot_price_history(ax4, reports)
+        
+        # 5. Key metrics
+        ax5 = fig.add_subplot(gs[3, 1])
+        self.plot_key_metrics(ax5, reports)
+        
+        # 6. Latest signal breakdown
+        ax6 = fig.add_subplot(gs[3, 2])
+        self.plot_latest_signal_breakdown(ax6, reports[-1])
+        
+        plt.tight_layout()
+        plt.show()
+        
+    def plot_detailed_score_trend(self, ax, reports):
+        """Plot detailed score trend with event annotations"""
+        ax.set_title('Signal Score Trend with Key Events', fontsize=14, fontweight='bold')
+        
+        timestamps = []
+        scores = []
+        
+        for report in reports:
+            timestamps.append(report['timestamp'])
+            scores.append(report['data']['analysisResults']['scorePercentage'])
+            
+        ax.plot(timestamps, scores, marker='o', linewidth=3, markersize=10, color='#3b82f6')
+        
+        # Add score labels and color-coded regions
+        for i, (ts, score) in enumerate(zip(timestamps, scores)):
+            ax.annotate(f'{score:.1f}%', 
+                      xy=(ts, score), 
+                      xytext=(0, 10), 
+                      textcoords='offset points',
+                      ha='center',
+                      fontsize=10,
+                      fontweight='bold')
+                      
+        # Add colored regions
+        ax.axhspan(0, 40, alpha=0.1, color='red', label='Low Signal')
+        ax.axhspan(40, 60, alpha=0.1, color='orange', label='Moderate Signal')
+        ax.axhspan(60, 80, alpha=0.1, color='green', label='High Signal')
+        ax.axhspan(80, 100, alpha=0.1, color='purple', label='Critical Signal')
+        
+        ax.set_xlabel('Date')
+        ax.set_ylabel('Signal Score (%)')
+        ax.set_ylim(0, 100)
+        ax.legend(loc='upper left')
+        ax.grid(True, alpha=0.3)
+        
+        # Format dates
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%Y-%m-%d %H:%M'))
+        plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, ha='right')
+        
+    def plot_category_trends(self, ax, reports):
+        """Plot category score trends over time"""
+        ax.set_title('Category Score Trends', fontsize=14, fontweight='bold')
+        
+        # Extract category data
+        category_scores = defaultdict(lambda: {'timestamps': [], 'scores': []})
+        
+        for report in reports:
+            timestamp = report['timestamp']
+            categories = report['data']['analysisResults']['categoryResults']
+            
+            for cat_key, cat_data in categories.items():
+                cat_name = cat_data['name']
+                score = cat_data['normalizedScore']
+                
+                category_scores[cat_name]['timestamps'].append(timestamp)
+                category_scores[cat_name]['scores'].append(score)
+                
+        # Plot each category
+        for cat_name, data in category_scores.items():
+            ax.plot(data['timestamps'], data['scores'], 
+                   marker='o', linewidth=2, markersize=6, label=cat_name)
+                   
+        ax.set_xlabel('Date')
+        ax.set_ylabel('Category Score (%)')
+        ax.legend(bbox_to_anchor=(1.05, 1), loc='upper left')
+        ax.grid(True, alpha=0.3)
+        
+        # Format dates
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d %H:%M'))
+        plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, ha='right')
+        
+    def plot_triggered_signals_timeline(self, ax, reports):
+        """Plot timeline of triggered signals"""
+        ax.set_title('Triggered Signals Timeline', fontsize=14, fontweight='bold')
+        
+        # Collect all unique signals
+        all_signals = set()
+        timeline_data = []
+        
+        for report in reports:
+            timestamp = report['timestamp']
+            triggered = report['data']['analysisResults'].get('triggeredSignals', [])
+            
+            for signal in triggered:
+                signal_name = signal['signal']
+                all_signals.add(signal_name)
+                timeline_data.append({
+                    'timestamp': timestamp,
+                    'signal': signal_name,
+                    'score': signal['score']
+                })
+                
+        if not timeline_data:
+            ax.text(0.5, 0.5, 'No triggered signals', 
+                   ha='center', va='center', transform=ax.transAxes)
+            return
+            
+        # Create timeline visualization
+        signal_list = sorted(list(all_signals))
+        signal_positions = {sig: i for i, sig in enumerate(signal_list)}
+        
+        # Plot signals
+        for data in timeline_data:
+            y_pos = signal_positions[data['signal']]
+            ax.scatter(data['timestamp'], y_pos, s=200, alpha=0.7, 
+                      c=data['score'], cmap='RdYlGn', vmin=0, vmax=100)
+                      
+        # Set y-axis labels
+        ax.set_yticks(range(len(signal_list)))
+        ax.set_yticklabels(signal_list)
+        ax.set_xlabel('Date')
+        ax.grid(True, alpha=0.3, axis='x')
+        
+        # Format dates
+        ax.xaxis.set_major_formatter(mdates.DateFormatter('%m-%d %H:%M'))
+        plt.setp(ax.xaxis.get_majorticklabels(), rotation=45, ha='right')
+        
+    def plot_price_history(self, ax, reports):
+        """Plot price history"""
+        ax.set_title('Price History', fontsize=14, fontweight='bold')
+        
+        timestamps = []
+        prices = []
+        
+        for report in reports:
+            timestamp = report['timestamp']
+            price = report['data']['stockData'].get('currentPrice') or \
+                   report['data']['stockData'].get('regularMarketPrice', 0)
+                   
+            if price > 0:
+                timestamps.append(timestamp)
+                prices.append(price)
+                
+        if prices:
+            ax.plot(timestamps, prices, marker='o', linewidth=2, markersize=8, color='#22c55e')
+            
+            # Add price labels
+            for i, (ts, price) in enumerate(zip(timestamps, prices)):
+                if i == 0 or i == len(prices) - 1:
+                    ax.annotate(f'${price:.2f}', 
+                              xy=(ts, price), 
+                              xytext=(0, 10), 
+                              textcoords='offset points',
+                              ha='center',
+                              fontsize=10)
+                              
+            ax.set_ylabel('Price ($)')
+            ax.grid(True, alpha=0.3)
+            
+            # Calculate and display change
+            if len(prices) > 1:
+                change = ((prices[-1] - prices[0]) / prices[0]) * 100
+                ax.text(0.05, 0.95, f'Change: {change:+.1f}%', 
+                       transform=ax.transAxes, fontsize=12, 
+                       color='green' if change > 0 else 'red',
+                       bbox=dict(boxstyle='round', facecolor='black', alpha=0.8))
+                       
+    def plot_key_metrics(self, ax, reports):
+        """Plot key metrics comparison"""
+        ax.set_title('Key Metrics', fontsize=14, fontweight='bold')
+        
+        latest = reports[-1]['data']['stockData']
+        
+        metrics = {
+            'Market Cap': f"${latest.get('marketCap', 0) / 1e6:.1f}M",
+            'Float': f"{latest.get('floatShares', 0) / 1e6:.1f}M",
+            'Short %': f"{latest.get('shortPercentOfFloat', 0) * 100:.1f}%",
+            'Beta': f"{latest.get('beta', 0):.2f}",
+            'Volume Ratio': f"{latest.get('volume', 0) / max(latest.get('averageVolume', 1), 1):.1f}x"
+        }
+        
+        # Create table-like visualization
+        y_positions = list(range(len(metrics)))
+        y_positions.reverse()
+        
+        for i, (metric, value) in enumerate(metrics.items()):
+            ax.text(0.1, y_positions[i], metric + ':', fontsize=12, fontweight='bold')
+            ax.text(0.6, y_positions[i], value, fontsize=12)
+            
+        ax.set_xlim(0, 1)
+        ax.set_ylim(-0.5, len(metrics) - 0.5)
+        ax.axis('off')
+        
+    def plot_latest_signal_breakdown(self, ax, latest_report):
+        """Plot breakdown of latest signals"""
+        ax.set_title('Latest Signal Breakdown', fontsize=14, fontweight='bold')
+        
+        categories = latest_report['data']['analysisResults']['categoryResults']
+        
+        names = []
+        scores = []
+        weights = []
+        
+        for cat_data in categories.values():
+            names.append(cat_data['name'].replace(' ', '\n'))
+            scores.append(cat_data['normalizedScore'])
+            weights.append(cat_data['weight'])
+            
+        if names:
+            # Create pie chart
+            colors = plt.cm.Set3(np.linspace(0, 1, len(names)))
+            wedges, texts, autotexts = ax.pie(scores, labels=names, autopct='%1.0f%%',
+                                              colors=colors, startangle=90)
+                                              
+            # Enhance text
+            for text in texts:
+                text.set_fontsize(9)
+            for autotext in autotexts:
+                autotext.set_color('white')
+                autotext.set_fontsize(10)
+                autotext.set_fontweight('bold')
+                
+    def generate_summary_report(self):
+        """Generate a text summary report"""
+        print("\n" + "="*80)
+        print("STOCK SIGNALS ANALYSIS SUMMARY")
+        print("="*80)
+        print(f"Report Generated: {datetime.now().strftime('%Y-%m-%d %H:%M:%S')}")
+        print(f"Total Stocks Analyzed: {len(self.stocks)}")
+        print(f"Total Reports Processed: {sum(len(reports) for reports in self.data.values())}")
+        print("\n")
+        
+        for symbol in sorted(self.stocks):
+            reports = self.data[symbol]
+            if not reports:
+                continue
+                
+            latest = reports[-1]
+            first = reports[0]
+            
+            print(f"\n{symbol} - {latest['data']['stockData'].get('longName', 'Unknown Company')}")
+            print("-" * 60)
+            
+            # Score evolution
+            latest_score = latest['data']['analysisResults']['scorePercentage']
+            first_score = first['data']['analysisResults']['scorePercentage']
+            score_change = latest_score - first_score
+            
+            print(f"Latest Signal Score: {latest_score:.1f}% ({score_change:+.1f}% change)")
+            print(f"Analysis Period: {first['timestamp'].strftime('%Y-%m-%d')} to {latest['timestamp'].strftime('%Y-%m-%d')}")
+            print(f"Number of Reports: {len(reports)}")
+            
+            # Latest triggered signals
+            triggered = latest['data']['analysisResults'].get('triggeredSignals', [])
+            print(f"Active Signals: {len(triggered)}")
+            
+            if triggered:
+                print("Top Signals:")
+                for signal in sorted(triggered, key=lambda x: x['score'], reverse=True)[:3]:
+                    print(f"  - {signal['signal']} (Score: {signal['score']})")
+                    
+            # Key metrics
+            stock_data = latest['data']['stockData']
+            print(f"Market Cap: ${stock_data.get('marketCap', 0) / 1e6:.1f}M")
+            print(f"Current Price: ${stock_data.get('currentPrice', 0):.2f}")
+            print(f"Volume Ratio: {stock_data.get('volume', 0) / max(stock_data.get('averageVolume', 1), 1):.1f}x average")
+            
+        print("\n" + "="*80)
+
+def main():
+    # Create visualizer instance
+    visualizer = StockAnalysisVisualizer("reports")
+    
+    # Load all reports
+    if not visualizer.load_reports():
+        return
+        
+    # Generate summary report
+    visualizer.generate_summary_report()
+    
+    # Create overview dashboard
+    print("\nGenerating overview dashboard...")
+    visualizer.create_overview_dashboard()
+    
+    # Create detailed reports for each stock
+    for symbol in sorted(visualizer.stocks):
+        print(f"\nGenerating detailed report for {symbol}...")
+        visualizer.create_stock_detail_report(symbol)
+        
+        # Ask if user wants to continue
+        if len(visualizer.stocks) > 1:
+            response = input(f"\nPress Enter to continue to next stock or 'q' to quit: ")
+            if response.lower() == 'q':
+                break
+
+if __name__ == "__main__":
+    main()

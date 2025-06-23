@@ -1,0 +1,23 @@
+{
+  "name": "signal-updater",
+  "version": "1.0.0",
+  "description": "Intelligent updater for stock surge detection signals",
+  "main": "signal-updater.js",
+  "scripts": {
+    "update": "node signal-updater.js signals.json full-update.json",
+    "update-save": "node signal-updater.js signals.json full-update.json signals-updated.json",
+    "test": "node signal-updater.js signals.json full-update.json test-output.json"
+  },
+  "keywords": [
+    "stock",
+    "signals",
+    "trading",
+    "surge-detection",
+    "updater"
+  ],
+  "author": "StockWatch Project",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}

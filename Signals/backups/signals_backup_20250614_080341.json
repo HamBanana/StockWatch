@@ -1,0 +1,1313 @@
+{
+  "metadata": {
+    "version": "4.2.0",
+    "lastUpdated": "2025-06-13",
+    "description": "Enhanced surge detection framework with geopolitical, sector-specific, and micro-cap optimizations",
+    "author": "Enhanced Framework with Sector-Specific and Event-Driven Signals",
+    "backtestedPeriod": "2020-2025",
+    "updateHistory": [
+      {
+        "date": "2025-06-13 18:23:23",
+        "changes": 11,
+        "updateFiles": [
+          "update.json"
+        ],
+        "backup": "backups/signals_backup_20250613_182323.json"
+      },
+      {
+        "date": "2025-06-13 21:20:56",
+        "changes": 15,
+        "updateFiles": [
+          "update.json"
+        ],
+        "backup": "backups/signals_backup_20250613_212056.json"
+      }
+    ],
+    "enhancements": [
+      "Geopolitical event-driven signals for energy and defense sectors",
+      "Micro-cap extreme volatility patterns",
+      "Sector-specific signals (tankers, biotech, spin-offs)",
+      "Information asymmetry detection",
+      "Catalyst proximity scoring",
+      "Enhanced risk-adjusted scoring"
+    ],
+    "targetAccuracy": "62-67%",
+    "falsePositiveTarget": "12-14%"
+  },
+  "signalCategories": {
+    "volume": {
+      "name": "Volume-Based Early Warning Signals",
+      "description": "Volume accumulation patterns that precede major price movements",
+      "weight": 0.4,
+      "priority": 1,
+      "signals": {
+        "abnormalVolumeSpike": {
+          "id": "VOL_001",
+          "name": "Abnormal Volume Spike",
+          "description": "Trading volume exceeding historical averages",
+          "weight": 0.35,
+          "dataRequired": [
+            "volume",
+            "avgVolume30d"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "volume >= avgVolume30d * 5",
+              "score": 25,
+              "description": "Volume 5x+ above 30-day average"
+            },
+            "trigger2": {
+              "condition": "volume >= avgVolume30d * 10",
+              "score": 50,
+              "description": "Volume 10x+ above 30-day average"
+            },
+            "trigger3": {
+              "condition": "volume >= avgVolume30d * 25",
+              "score": 85,
+              "description": "Volume 25x+ above 30-day average"
+            }
+          },
+          "validationRules": {
+            "minimumDays": 1,
+            "maximumGap": 2,
+            "requiresFollowThrough": true
+          }
+        },
+        "sustainedVolumeBuilding": {
+          "id": "VOL_002",
+          "name": "Sustained Volume Building",
+          "description": "Continued elevated volume over multiple days",
+          "weight": 0.3,
+          "dataRequired": [
+            "volume",
+            "avgVolume30d"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "volume >= avgVolume30d * 3 for 3+ consecutive days",
+              "score": 30,
+              "description": "3x volume for 3+ days"
+            },
+            "trigger2": {
+              "condition": "volume >= avgVolume30d * 5 for 3+ consecutive days",
+              "score": 60,
+              "description": "5x volume for 3+ days"
+            }
+          },
+          "validationRules": {
+            "minimumDays": 3,
+            "consecutiveRequired": true
+          }
+        },
+        "institutionalAccumulation": {
+          "id": "VOL_003",
+          "name": "Institutional Accumulation Pattern",
+          "description": "Large block trades during off-peak hours",
+          "weight": 0.2,
+          "dataRequired": [
+            "blockTrades",
+            "timeOfTrades",
+            "volume"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "blockTrades > avgBlockTrades * 10 AND offPeakVolume > 60%",
+              "score": 40,
+              "description": "Unusual institutional activity"
+            }
+          }
+        },
+        "volumePriceDivergence": {
+          "id": "VOL_004",
+          "name": "Volume vs Price Divergence",
+          "description": "Rising volume with stable or declining prices",
+          "weight": 0.15,
+          "dataRequired": [
+            "volume",
+            "price",
+            "avgVolume30d"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "volume >= avgVolume30d * 3 AND priceChange <= 0.05",
+              "score": 25,
+              "description": "High volume, stable price"
+            }
+          }
+        }
+      }
+    },
+    "technical": {
+      "name": "Technical Pattern Recognition",
+      "description": "Technical indicators showing pre-surge setup patterns",
+      "weight": 0.25,
+      "priority": 2,
+      "signals": {
+        "rsiRecovery": {
+          "id": "TECH_001",
+          "name": "RSI Recovery Pattern",
+          "description": "RSI climbing from oversold territory",
+          "weight": 0.25,
+          "dataRequired": [
+            "rsi14"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "rsi14 >= 35 AND rsi14_previous < 30 within 10 days",
+              "score": 30,
+              "description": "RSI recovery from oversold"
+            },
+            "trigger2": {
+              "condition": "rsi14 >= 45 AND rsi14_min_30d < 25",
+              "score": 50,
+              "description": "Strong RSI recovery"
+            }
+          }
+        },
+        "macdMomentum": {
+          "id": "TECH_002",
+          "name": "MACD Momentum Shift",
+          "description": "MACD turning positive or showing bullish divergence",
+          "weight": 0.2,
+          "dataRequired": [
+            "macd",
+            "macdSignal",
+            "macdHistogram"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "macd > macdSignal AND macd_previous <= macdSignal_previous",
+              "score": 35,
+              "description": "MACD bullish crossover"
+            },
+            "trigger2": {
+              "condition": "macdHistogram > 0 AND macdHistogram_trend = 'increasing'",
+              "score": 25,
+              "description": "MACD histogram improvement"
+            }
+          }
+        },
+        "priceConsolidation": {
+          "id": "TECH_003",
+          "name": "Price Consolidation Pattern",
+          "description": "Trading in tight range before breakout",
+          "weight": 0.25,
+          "dataRequired": [
+            "high",
+            "low",
+            "close"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "priceRange30d <= avgRange90d * 0.6",
+              "score": 30,
+              "description": "Tight consolidation pattern"
+            }
+          }
+        },
+        "movingAverageBreakout": {
+          "id": "TECH_004",
+          "name": "Moving Average Position",
+          "description": "Price testing or breaking above key moving averages",
+          "weight": 0.3,
+          "dataRequired": [
+            "close",
+            "ema20",
+            "ema50",
+            "sma200"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "close > ema20 AND ema20_previous >= close_previous",
+              "score": 20,
+              "description": "Breaking above 20 EMA"
+            },
+            "trigger2": {
+              "condition": "close > ema50 AND volume > avgVolume30d * 2",
+              "score": 40,
+              "description": "Breaking above 50 EMA with volume"
+            },
+            "trigger3": {
+              "condition": "close > sma200 AND volume > avgVolume30d * 3",
+              "score": 60,
+              "description": "Breaking above 200 SMA with volume"
+            }
+          }
+        }
+      }
+    },
+    "microstructure": {
+      "name": "Market Microstructure Criteria",
+      "description": "Market cap, float, and structural characteristics",
+      "weight": 0.15,
+      "priority": 3,
+      "signals": {
+        "optimalMarketCap": {
+          "id": "MICRO_001",
+          "name": "Optimal Market Cap Range",
+          "description": "Market cap in sweet spot for explosive moves",
+          "weight": 0.4,
+          "dataRequired": [
+            "marketCap"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "marketCap >= 5000000 AND marketCap <= 1000000000",
+              "score": 30,
+              "description": "Market cap $5M - $1B"
+            },
+            "trigger2": {
+              "condition": "marketCap >= 50000000 AND marketCap <= 500000000",
+              "score": 50,
+              "description": "Market cap $50M - $500M (sweet spot)"
+            }
+          }
+        },
+        "lowFloat": {
+          "id": "MICRO_002",
+          "name": "Low Float Size",
+          "description": "Limited float amplifies price movements",
+          "weight": 0.3,
+          "dataRequired": [
+            "floatShares"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "floatShares <= 50000000",
+              "score": 25,
+              "description": "Float under 50M shares"
+            },
+            "trigger2": {
+              "condition": "floatShares <= 20000000",
+              "score": 45,
+              "description": "Float under 20M shares"
+            }
+          },
+          "riskFactors": {
+            "extremelyLowFloat": {
+              "condition": "floatShares <= 10000000",
+              "riskScore": -20,
+              "description": "Extreme volatility risk"
+            }
+          }
+        },
+        "shortInterest": {
+          "id": "MICRO_003",
+          "name": "High Short Interest",
+          "description": "Short squeeze potential",
+          "weight": 0.3,
+          "dataRequired": [
+            "shortInterest",
+            "floatShares",
+            "daysToCover"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "shortInterest / floatShares >= 0.20",
+              "score": 35,
+              "description": "Short interest above 20%"
+            },
+            "trigger2": {
+              "condition": "shortInterest / floatShares >= 0.30 AND daysToCover >= 5",
+              "score": 60,
+              "description": "High short interest with extended cover time"
+            }
+          },
+          "riskFactors": {
+            "extremeShortInterest": {
+              "condition": "shortInterest / floatShares >= 0.50",
+              "riskScore": -15,
+              "description": "Potential manipulation risk"
+            }
+          }
+        }
+      }
+    },
+    "fundamental": {
+      "name": "Fundamental Catalyst Framework",
+      "description": "Company-specific catalysts and financial health",
+      "weight": 0.15,
+      "priority": 2,
+      "signals": {
+        "biotechCatalysts": {
+          "id": "FUND_001",
+          "name": "Biotech-Specific Catalysts",
+          "description": "Clinical trials, FDA meetings, partnerships",
+          "weight": 0.5,
+          "dataRequired": [
+            "sector",
+            "clinicalTrials",
+            "fdaMeetings",
+            "partnerships"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "clinicalTrialResults within 90 days",
+              "score": 70,
+              "description": "Phase 2/3 results pending"
+            },
+            "trigger2": {
+              "condition": "fdaMeeting within 60 days",
+              "score": 50,
+              "description": "FDA guidance meeting scheduled"
+            },
+            "trigger3": {
+              "condition": "partnershipAnnouncement within 30 days",
+              "score": 80,
+              "description": "Strategic partnership announced"
+            }
+          }
+        },
+        "financialHealth": {
+          "id": "FUND_002",
+          "name": "Financial Health Indicators",
+          "description": "Cash runway and burn rate analysis",
+          "weight": 0.3,
+          "dataRequired": [
+            "cash",
+            "burnRate",
+            "revenue"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "cashRunway >= 12 months",
+              "score": 40,
+              "description": "Cash runway extending beyond 12 months"
+            },
+            "trigger2": {
+              "condition": "burnRateReduction >= 0.25",
+              "score": 30,
+              "description": "Burn rate reduced by 25%+"
+            }
+          },
+          "riskFactors": {
+            "goingConcern": {
+              "condition": "goingConcernWarning = true",
+              "riskScore": -50,
+              "description": "Auditor going concern warning"
+            }
+          }
+        },
+        "managementChanges": {
+          "id": "FUND_003",
+          "name": "Management Changes",
+          "description": "New leadership appointments",
+          "weight": 0.2,
+          "dataRequired": [
+            "managementChanges",
+            "insiderActivity"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "newCEO OR newCMO within 90 days",
+              "score": 25,
+              "description": "New executive leadership"
+            },
+            "trigger2": {
+              "condition": "insiderBuying > insiderSelling within 60 days",
+              "score": 20,
+              "description": "Net insider buying"
+            }
+          }
+        }
+      }
+    },
+    "sentiment": {
+      "name": "Social Sentiment and Market Context",
+      "description": "Social media activity and market environment",
+      "weight": 0.05,
+      "priority": 4,
+      "signals": {
+        "socialActivity": {
+          "id": "SENT_001",
+          "name": "Social Media Activity",
+          "description": "StockTwits, Reddit, and options activity",
+          "weight": 0.5,
+          "dataRequired": [
+            "stockTwitsMentions",
+            "redditMentions",
+            "optionsVolume"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "stockTwitsMentions >= avgMentions * 5",
+              "score": 15,
+              "description": "Unusual social media attention"
+            },
+            "trigger2": {
+              "condition": "optionsVolume >= avgOptionsVolume * 10",
+              "score": 25,
+              "description": "Unusual options activity"
+            }
+          }
+        },
+        "sectorSentiment": {
+          "id": "SENT_002",
+          "name": "Sector Sentiment",
+          "description": "Biotech sector momentum and market environment",
+          "weight": 0.5,
+          "dataRequired": [
+            "xbiPerformance",
+            "vixLevel",
+            "sectorRotation"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "xbiOutperformance >= 0.05 over 30 days",
+              "score": 20,
+              "description": "Biotech sector outperforming"
+            },
+            "trigger2": {
+              "condition": "vixLevel <= 20",
+              "score": 15,
+              "description": "Low volatility environment"
+            }
+          }
+        }
+      }
+    },
+    "geopoliticalCatalysts": {
+      "name": "Geopolitical & Macro Event Catalysts",
+      "description": "Sector-wide catalysts from global events and macro shifts",
+      "weight": 0.15,
+      "priority": 1,
+      "signals": {
+        "energyCrisisAmplification": {
+          "id": "GEO_001",
+          "name": "Energy Supply Disruption",
+          "description": "Oil price spikes and energy transport opportunities",
+          "weight": 0.4,
+          "dataRequired": [
+            "oilPriceChange",
+            "sectorExposure",
+            "fleetSize"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "oil price >5% intraday AND (energy OR tanker sector)",
+              "score": 65,
+              "volatilityMultiplier": 1.5,
+              "description": "Energy disruption opportunity"
+            },
+            "trigger2": {
+              "condition": "oil >10% weekly AND tanker rates >50% AND small fleet",
+              "score": 85,
+              "volatilityMultiplier": 2.0,
+              "description": "Extreme energy transport squeeze"
+            },
+            "trigger3": {
+              "condition": "military conflict + shipping lanes AND tanker stock",
+              "score": 100,
+              "volatilityMultiplier": 3.0,
+              "description": "Critical shipping bottleneck"
+            }
+          },
+          "affectedSectors": [
+            "energy",
+            "shipping",
+            "tankers",
+            "oil_services"
+          ]
+        },
+        "defenseSpendingSurge": {
+          "id": "GEO_002",
+          "name": "Defense Budget Expansion",
+          "description": "Military conflicts driving defense spending",
+          "weight": 0.35,
+          "dataRequired": [
+            "conflictProximity",
+            "defenseExposure",
+            "contractPipeline"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "new military conflict AND defense contractor",
+              "score": 60,
+              "description": "Defense spending catalyst"
+            },
+            "trigger2": {
+              "condition": "NATO Article 5 OR major escalation AND defense pure-play",
+              "score": 90,
+              "description": "Emergency defense procurement"
+            }
+          }
+        },
+        "supplyChainRerouting": {
+          "id": "GEO_003",
+          "name": "Supply Chain Disruption Premium",
+          "description": "Sanctions or blockades creating opportunities",
+          "weight": 0.25,
+          "dataRequired": [
+            "sanctionImpact",
+            "alternativeRoutes",
+            "marketShare"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "major sanctions AND alternative supplier position",
+              "score": 70,
+              "description": "Supply chain beneficiary"
+            }
+          }
+        }
+      }
+    },
+    "microCapDynamics": {
+      "name": "Extreme Micro-Cap Volatility Patterns",
+      "description": "Ultra-low float and market cap creating explosive conditions",
+      "weight": 0.12,
+      "priority": 2,
+      "signals": {
+        "nanoFloatExplosion": {
+          "id": "MICRO_001",
+          "name": "Nano-Float Squeeze",
+          "description": "Sub-2M float creating extreme volatility",
+          "weight": 0.5,
+          "dataRequired": [
+            "floatShares",
+            "dailyVolume",
+            "marketCap"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "float < 2M AND volume > float * 3 AND catalyst",
+              "score": 75,
+              "volatilityMultiplier": 3.0,
+              "description": "Nano-float volatility setup"
+            },
+            "trigger2": {
+              "condition": "float < 1M AND market cap < $20M AND news",
+              "score": 90,
+              "volatilityMultiplier": 5.0,
+              "riskAdjustment": "+8",
+              "description": "Extreme micro-cap conditions"
+            }
+          }
+        },
+        "thinTradingBreakout": {
+          "id": "MICRO_002",
+          "name": "Illiquidity Premium Capture",
+          "description": "Breakout from extremely thin trading",
+          "weight": 0.5,
+          "dataRequired": [
+            "avgDailyVolume",
+            "bidAskSpread",
+            "priceAction"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "avg volume < $100k AND sudden 10x volume",
+              "score": 65,
+              "description": "Illiquidity breakout beginning"
+            },
+            "trigger2": {
+              "condition": "spread > 5% narrows to < 1% AND volume surge",
+              "score": 85,
+              "description": "Liquidity transformation"
+            }
+          }
+        }
+      }
+    },
+    "sectorSpecificPatterns": {
+      "name": "Industry-Specific Surge Patterns",
+      "description": "Unique patterns for specific sectors",
+      "weight": 0.1,
+      "priority": 2,
+      "signals": {
+        "tankerRateSqueeze": {
+          "id": "SECTOR_001",
+          "name": "Shipping Rate Explosion",
+          "description": "Freight rate spikes driving tanker stocks",
+          "weight": 0.25,
+          "dataRequired": [
+            "freightRates",
+            "vesselCount",
+            "charterBacklog"
+          ],
+          "applicableSectors": [
+            "shipping",
+            "tankers"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "freight rates >50% weekly AND small fleet",
+              "score": 70,
+              "description": "Rate spike opportunity"
+            },
+            "trigger2": {
+              "condition": "rates >100% AND single vessel AND spot exposure",
+              "score": 95,
+              "concentrationPenalty": -3,
+              "description": "Extreme rate squeeze"
+            }
+          }
+        },
+        "biotechBinaryEvent": {
+          "id": "SECTOR_002",
+          "name": "Clinical Binary Catalyst",
+          "description": "Make-or-break clinical trial events",
+          "weight": 0.25,
+          "dataRequired": [
+            "trialPhase",
+            "pdufa",
+            "cashRunway"
+          ],
+          "applicableSectors": [
+            "biotech",
+            "pharma"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "Phase 3 data < 30 days AND single asset",
+              "score": 80,
+              "binaryMultiplier": 4.0,
+              "description": "Binary trial event"
+            }
+          }
+        },
+        "spinoffDiscovery": {
+          "id": "SECTOR_003",
+          "name": "Post-Spinoff Revaluation",
+          "description": "Information asymmetry in recent spinoffs",
+          "weight": 0.25,
+          "dataRequired": [
+            "daysSinceSpinoff",
+            "parentCompany",
+            "analystCoverage"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "spinoff < 90 days AND no analyst coverage",
+              "score": 65,
+              "informationBonus": "+4",
+              "description": "Spinoff discovery phase"
+            },
+            "trigger2": {
+              "condition": "spinoff < 30 days AND forced selling ended",
+              "score": 85,
+              "discoveryMultiplier": 1.5,
+              "description": "Post-spinoff inflection"
+            }
+          }
+        },
+        "spaceDefensePivot": {
+          "id": "SECTOR_004",
+          "name": "Space/Satellite Defense Play",
+          "description": "Space technology military applications",
+          "weight": 0.25,
+          "dataRequired": [
+            "spaceTech",
+            "militaryContracts",
+            "satelliteAssets"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "space assets AND new defense contract",
+              "score": 75,
+              "description": "Space defense validation"
+            }
+          }
+        }
+      }
+    },
+    "informationAsymmetry": {
+      "name": "Information Edge Detection",
+      "description": "Detecting information asymmetries and discovery opportunities",
+      "weight": 0.08,
+      "priority": 3,
+      "signals": {
+        "darkPoolAccumulation": {
+          "id": "INFO_001",
+          "name": "Hidden Institutional Loading",
+          "description": "Dark pool activity revealing smart money",
+          "weight": 0.4,
+          "dataRequired": [
+            "darkPoolRatio",
+            "blockTrades",
+            "priceStability"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "dark pool > 40% AND price stable AND low volume",
+              "score": 60,
+              "description": "Stealth accumulation detected"
+            },
+            "trigger2": {
+              "condition": "dark pool > 60% for 5+ days AND block trades",
+              "score": 85,
+              "description": "Major hidden positioning"
+            }
+          }
+        },
+        "insiderClusterBuying": {
+          "id": "INFO_002",
+          "name": "Insider Conviction Cluster",
+          "description": "Multiple insiders buying aggressively",
+          "weight": 0.35,
+          "dataRequired": [
+            "insiderCount",
+            "purchaseSize",
+            "insiderHistory"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "3+ insiders buying within 30 days",
+              "score": 65,
+              "description": "Insider cluster forming"
+            },
+            "trigger2": {
+              "condition": "CEO + CFO buying > 5% salary AND near 52w low",
+              "score": 90,
+              "description": "C-suite conviction buy"
+            }
+          }
+        },
+        "socialSentimentDivergence": {
+          "id": "INFO_003",
+          "name": "Sentiment Arbitrage",
+          "description": "Price lagging extreme sentiment shifts",
+          "weight": 0.25,
+          "dataRequired": [
+            "socialMentions",
+            "sentimentScore",
+            "priceAction"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "mentions >1000% AND sentiment >80 AND price flat",
+              "score": 55,
+              "description": "Sentiment-price divergence"
+            }
+          }
+        }
+      }
+    },
+    "catalystProximity": {
+      "name": "Time-Sensitive Catalyst Scoring",
+      "description": "Weighting signals by catalyst proximity and certainty",
+      "weight": 0.05,
+      "priority": 3,
+      "signals": {
+        "imminentCatalyst": {
+          "id": "TIME_001",
+          "name": "Sub-7 Day Catalyst",
+          "description": "Known catalyst within one week",
+          "weight": 0.5,
+          "dataRequired": [
+            "catalystDate",
+            "catalystType",
+            "marketAwareness"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "catalyst < 7 days AND low awareness",
+              "score": 70,
+              "timingMultiplier": 2.0,
+              "description": "Imminent catalyst setup"
+            },
+            "trigger2": {
+              "condition": "catalyst < 3 days AND binary outcome",
+              "score": 90,
+              "timingMultiplier": 3.0,
+              "description": "Immediate catalyst trigger"
+            }
+          }
+        },
+        "catalystChain": {
+          "id": "TIME_002",
+          "name": "Sequential Catalyst Series",
+          "description": "Multiple catalysts in succession",
+          "weight": 0.5,
+          "dataRequired": [
+            "catalystCount",
+            "timeframe",
+            "catalystTypes"
+          ],
+          "thresholds": {
+            "trigger1": {
+              "condition": "3+ catalysts within 30 days",
+              "score": 75,
+              "description": "Catalyst momentum building"
+            }
+          }
+        }
+      }
+    }
+  },
+  "alertConfiguration": {
+    "highPriority": {
+      "name": "High Priority Alerts",
+      "minimumScore": 150,
+      "requiredCategories": [
+        "volume"
+      ],
+      "conditions": [
+        {
+          "type": "volumeSpike",
+          "condition": "volume >= avgVolume30d * 15 for 2+ consecutive days",
+          "alertLevel": "CRITICAL"
+        },
+        {
+          "type": "combinationTrigger",
+          "condition": "3+ tier1 signals active simultaneously",
+          "alertLevel": "CRITICAL"
+        },
+        {
+          "type": "catalystProximity",
+          "condition": "major catalyst within 7 days AND technical setup",
+          "alertLevel": "HIGH"
+        }
+      ]
+    },
+    "mediumPriority": {
+      "name": "Medium Priority Monitoring",
+      "minimumScore": 100,
+      "conditions": [
+        {
+          "type": "technicalSetup",
+          "condition": "2+ technical indicators aligning",
+          "alertLevel": "MEDIUM"
+        },
+        {
+          "type": "fundamentalImprovement",
+          "condition": "cash position OR partnership developments",
+          "alertLevel": "MEDIUM"
+        }
+      ]
+    },
+    "lowPriority": {
+      "name": "Low Priority Watch",
+      "minimumScore": 75,
+      "conditions": [
+        {
+          "type": "earlyWarning",
+          "condition": "1-2 signals showing positive trend",
+          "alertLevel": "LOW"
+        }
+      ]
+    }
+  },
+  "riskManagement": {
+    "falsePositiveFilters": {
+      "newsDrivenSpikes": {
+        "description": "Single-day volume without follow-through",
+        "filter": "volume spike must persist 2+ days",
+        "riskReduction": 0.3
+      },
+      "pumpSchemes": {
+        "description": "Coordinated social media campaigns",
+        "filter": "excessive social media activity without fundamental support",
+        "riskReduction": 0.5
+      },
+      "earningsReactions": {
+        "description": "Temporary volume around quarterly reports",
+        "filter": "exclude 3 days before/after earnings",
+        "riskReduction": 0.25
+      },
+      "sectorRotations": {
+        "description": "Broad-based sector moves",
+        "filter": "require individual stock strength vs sector",
+        "riskReduction": 0.2
+      }
+    },
+    "validationRules": {
+      "multiDayConfirmation": {
+        "description": "Signals must persist for 3+ trading days",
+        "required": true
+      },
+      "crossValidation": {
+        "description": "Multiple signal categories must align",
+        "minimumCategories": 2
+      },
+      "fundamentalSupport": {
+        "description": "Technical signals require fundamental backing",
+        "required": true
+      }
+    }
+  },
+  "dataRequirements": {
+    "realTimeStreams": [
+      "price",
+      "volume",
+      "trades",
+      "optionsVolume",
+      "level2Data"
+    ],
+    "historicalData": [
+      "priceHistory200d",
+      "volumeHistory200d",
+      "financialStatements",
+      "insiderActivity",
+      "shortInterest",
+      "clinicalTrials"
+    ],
+    "fundamentalData": [
+      "marketCap",
+      "floatShares",
+      "sharesOutstanding",
+      "cash",
+      "burnRate",
+      "revenue",
+      "sector",
+      "industry"
+    ],
+    "alternativeData": [
+      "socialMediaMentions",
+      "newsFlow",
+      "fdaCalendar",
+      "conferenceCalendar",
+      "managementChanges"
+    ]
+  },
+  "performanceMetrics": {
+    "backtestingCriteria": {
+      "successDefinition": "25%+ gain within 90 days of signal",
+      "minimumSampleSize": 100,
+      "testPeriod": "2020-2024",
+      "benchmarkComparison": "random stock selection"
+    },
+    "targetMetrics": {
+      "signalAccuracy": 0.35,
+      "averageLeadTime": 14,
+      "falsePositiveRate": 0.25,
+      "sharpeRatio": 1.5
+    }
+  },
+  "implementationNotes": {
+    "scanningFrequency": "Real-time during market hours, end-of-day batch processing",
+    "positionSizing": "0.5-1% initial, max 5% per position",
+    "stopLossStrategy": "Technical stops below recent support",
+    "profitTaking": "Scale out during surge, maintain core position",
+    "reviewCycle": "Weekly signal performance review, monthly parameter optimization"
+  },
+  "geopolitical_sector_signals": {
+    "description": "Sector-wide catalysts from geopolitical events",
+    "signals": {
+      "oil_price_spike": {
+        "threshold": ">5% intraday",
+        "sectors": [
+          "energy",
+          "shipping",
+          "tankers"
+        ],
+        "multiplier": 1.5
+      },
+      "military_conflict_premium": {
+        "regions": [
+          "middle_east",
+          "eastern_europe"
+        ],
+        "impact_sectors": [
+          "defense",
+          "energy_transport",
+          "commodities"
+        ],
+        "alert_level": "critical"
+      }
+    }
+  },
+  "micro_cap_amplification": {
+    "market_cap_threshold": "<$50M",
+    "float_threshold": "<2M shares",
+    "volatility_multiplier": 3,
+    "risk_score_adjustment": "+5"
+  },
+  "tanker_specific_signals": {
+    "freight_rate_surge": {
+      "threshold": ">100% weekly",
+      "signal_strength": "extreme"
+    },
+    "vessel_utilization": {
+      "single_vessel_risk": true,
+      "concentration_penalty": -2
+    }
+  },
+  "spin_off_momentum": {
+    "days_since_spinoff": "<90",
+    "information_asymmetry_bonus": "+3",
+    "discovery_phase_multiplier": 1.25
+  },
+  "husa_surge_patterns": {
+    "description": "Patterns identified from HUSA surge on June 12-13, 2025",
+    "surge_magnitude": "190%+ in 2 days",
+    "date_analyzed": "2025-06-13"
+  },
+  "reverse_split_amplification": {
+    "description": "Extreme volatility following reverse splits creating ultra-low floats",
+    "signals": {
+      "recent_reverse_split": {
+        "days_since_split": "<30",
+        "split_ratio": ">=1:10",
+        "resulting_float": "<5M shares",
+        "signal_strength": "extreme",
+        "weight": 0.4
+      },
+      "ultra_micro_float": {
+        "float_threshold": "<2M shares",
+        "market_cap": "<$20M",
+        "volatility_multiplier": 5.0,
+        "signal_strength": "critical"
+      }
+    }
+  },
+  "geopolitical_energy_catalyst": {
+    "description": "Energy sector surge from geopolitical tensions",
+    "signals": {
+      "embassy_withdrawals": {
+        "regions": [
+          "middle_east"
+        ],
+        "impact_sectors": [
+          "oil_gas",
+          "energy_exploration"
+        ],
+        "alert_level": "critical",
+        "multiplier": 2.0
+      },
+      "oil_diplomatic_tensions": {
+        "oil_price_move": ">3% intraday",
+        "news_keywords": [
+          "nuclear",
+          "sanctions",
+          "embargo",
+          "conflict"
+        ],
+        "sector_correlation": 0.8
+      }
+    }
+  },
+  "pre_surge_momentum_shift": {
+    "description": "Technical patterns 1-2 weeks before explosive moves",
+    "signals": {
+      "extended_bottom_rally": {
+        "gain_from_bottom": ">500%",
+        "timeframe": "<15 days",
+        "continued_momentum": true,
+        "signal_strength": "high",
+        "weight": 0.35
+      },
+      "pivot_bottom_confirmation": {
+        "rsi_recovery": "from <30 to >45",
+        "macd_bullish_cross": true,
+        "volume_trend": "increasing",
+        "days_since_pivot": "<10"
+      }
+    }
+  },
+  "transformational_m&a_catalyst": {
+    "description": "Major business model shifts through acquisitions",
+    "signals": {
+      "sector_pivot_acquisition": {
+        "from_sector": [
+          "traditional_energy"
+        ],
+        "to_sector": [
+          "renewable_energy",
+          "clean_tech"
+        ],
+        "ownership_change": ">50%",
+        "signal_strength": "high"
+      },
+      "pre_closing_momentum": {
+        "days_to_closing": "<90",
+        "shareholder_approval": ">80%",
+        "strategic_narrative": [
+          "esg",
+          "renewable",
+          "sustainable"
+        ],
+        "multiplier": 1.5
+      }
+    }
+  },
+  "volume_explosion_pattern": {
+    "description": "Extreme volume surges indicating institutional activity",
+    "signals": {
+      "mega_volume_spike": {
+        "volume_multiple": ">40x average",
+        "sustained_days": ">=1",
+        "price_action": "gap_up",
+        "signal_strength": "extreme",
+        "weight": 0.5
+      },
+      "pre_market_frenzy": {
+        "pm_gain": ">50%",
+        "pm_volume": ">500k shares",
+        "news_driven": false,
+        "technical_breakout": true
+      }
+    }
+  },
+  "social_contagion_effect": {
+    "description": "Retail trading frenzy indicators",
+    "signals": {
+      "trending_ticker": {
+        "platforms": [
+          "stocktwits",
+          "reddit",
+          "twitter"
+        ],
+        "mention_spike": ">1000%",
+        "sentiment": "extremely_bullish",
+        "meme_potential": true
+      },
+      "retail_accessible": {
+        "share_price": "<$10",
+        "options_available": true,
+        "high_short_interest": true
+      }
+    }
+  },
+  "short_squeeze_perfect_storm": {
+    "description": "Optimal conditions for violent short squeezes",
+    "signals": {
+      "squeeze_setup": {
+        "short_interest": ">20%",
+        "float": "<5M shares",
+        "catalyst_present": true,
+        "borrow_fee": ">50%",
+        "signal_strength": "extreme"
+      },
+      "forced_covering": {
+        "volume_vs_short_interest": ">2x",
+        "price_acceleration": ">25% intraday",
+        "trading_halts": "multiple"
+      }
+    }
+  },
+  "warning_indicators": {
+    "description": "Pre-surge accumulation patterns",
+    "early_signals": {
+      "quiet_accumulation": {
+        "timeframe": "10-30 days before",
+        "volume_trend": "gradual_increase",
+        "price_action": "higher_lows",
+        "insider_activity": "monitor"
+      },
+      "technical_setup": {
+        "moving_average_alignment": "bullish",
+        "momentum_oscillators": "turning_positive",
+        "resistance_tests": "multiple",
+        "breakout_pending": true
+      }
+    }
+  },
+  "risk_factors": {
+    "description": "Conditions that amplify both opportunity and danger",
+    "extreme_volatility": {
+      "negative_earnings": true,
+      "cash_burn": "high",
+      "penny_stock_status": true,
+      "regulatory_risks": [
+        "delisting",
+        "compliance"
+      ],
+      "reversal_probability": "very_high"
+    }
+  },
+  "implementation_notes": {
+    "scanning_priority": "Focus on recent reverse splits + sector catalysts",
+    "position_sizing": "Maximum 0.25% due to extreme volatility",
+    "exit_strategy": "Scale out aggressively into strength",
+    "risk_management": "Tight stops, prepared for 50%+ drawdowns",
+    "holding_period": "Hours to days maximum"
+  },
+  "enhancedRiskScoring": {
+    "description": "Dynamic risk adjustment based on market conditions",
+    "microCapPenalty": {
+      "threshold": "<$10M market cap",
+      "scoreAdjustment": -15,
+      "volatilityWarning": "extreme"
+    },
+    "singleAssetRisk": {
+      "condition": "single product/vessel/asset",
+      "concentrationPenalty": -10
+    },
+    "liquidityRisk": {
+      "thinTrading": {
+        "avgVolume": "<$50k daily",
+        "scoreAdjustment": -5
+      },
+      "wideSpread": {
+        "bidAskSpread": ">3%",
+        "scoreAdjustment": -8
+      }
+    }
+  },
+  "multiFactorConfirmation": {
+    "description": "Enhanced multi-signal requirements",
+    "minimumCategories": 3,
+    "minimumTotalScore": 180,
+    "categoryWeighting": {
+      "critical": {
+        "requiredCategories": [
+          "volume",
+          "catalyst",
+          "technical"
+        ],
+        "bonusCategories": [
+          "geopolitical",
+          "microCap",
+          "information"
+        ],
+        "minimumScores": {
+          "primary": 60,
+          "secondary": 45,
+          "tertiary": 30
+        }
+      }
+    }
+  },
+  "adaptiveThresholds": {
+    "description": "Market condition-based threshold adjustments",
+    "volatilityRegimes": {
+      "high": {
+        "vixThreshold": ">25",
+        "scoreMultiplier": 0.8,
+        "note": "Higher bar in volatile markets"
+      },
+      "low": {
+        "vixThreshold": "<15",
+        "scoreMultiplier": 1.2,
+        "note": "Lower bar in calm markets"
+      }
+    },
+    "sectorRotation": {
+      "hotSector": {
+        "recentPerformance": ">20% monthly",
+        "scoreMultiplier": 0.9,
+        "note": "Reduce scores in overheated sectors"
+      }
+    }
+  },
+  "alertPrioritization": {
+    "ultraCritical": {
+      "minimumScore": 300,
+      "requiredConditions": [
+        "3+ signal categories",
+        "catalyst < 14 days",
+        "sustained volume pattern",
+        "no risk penalties"
+      ],
+      "expectedHitRate": "70-75%"
+    },
+    "critical": {
+      "minimumScore": 220,
+      "requiredConditions": [
+        "2+ signal categories",
+        "volume confirmation",
+        "market cap > $25M"
+      ],
+      "expectedHitRate": "55-60%"
+    },
+    "elevated": {
+      "minimumScore": 160,
+      "requiredConditions": [
+        "strong single category",
+        "improving technicals"
+      ],
+      "expectedHitRate": "40-45%"
+    }
+  }
+}

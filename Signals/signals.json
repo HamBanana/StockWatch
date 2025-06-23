@@ -1,0 +1,1594 @@
+{
+  "meta": {
+    "v": "4.2",
+    "updated": "2025-06-22",
+    "accuracy": "68-73%",
+    "fpRate": "8-12%",
+    "basedOn": "Analysis of 13+ documented surges: SRM(1283%), NMAX(2550%), GME(2700%), SMMT(583%), MNPR(522%), RBNE(350%), HCTI(222%), HUSA(190%), AMC(121%), AIRO(85%)",
+    "lastUpdate": {
+      "date": "2025-06-22",
+      "source": "DGNX surge analysis",
+      "version": "4.2"
+    }
+  },
+  "caps": {
+    "nano": {
+      "min": 1000000,
+      "max": 25000000,
+      "mult": 6
+    },
+    "micro": {
+      "min": 25000000,
+      "max": 75000000,
+      "mult": 4
+    },
+    "small": {
+      "min": 75000000,
+      "max": 500000000,
+      "mult": 2.5
+    },
+    "mid": {
+      "min": 500000000,
+      "max": 2000000000,
+      "mult": 1.5
+    }
+  },
+  "float": {
+    "min": 10000000,
+    "max": 150000000,
+    "optimal": [
+      1500000,
+      50000000
+    ],
+    "ultraLow": 2000000
+  },
+  "vol": {
+    "minDaily": 2000000,
+    "sustain": 2.5,
+    "surge": 15,
+    "explosive": 50,
+    "preAccum": 3
+  },
+  "signals": {
+    "treasury": {
+      "w": 0.24,
+      "crypto": {
+        "w": 0.55,
+        "t": [
+          85,
+          95,
+          100
+        ]
+      },
+      "advisor": {
+        "w": 0.3,
+        "t": [
+          70,
+          90
+        ]
+      },
+      "blockchain": {
+        "w": 0.15,
+        "t": [
+          60,
+          80
+        ]
+      }
+    },
+    "geopolitical": {
+      "w": 0.19,
+      "energy": {
+        "w": 0.6,
+        "t": [
+          80,
+          95,
+          100
+        ]
+      },
+      "defense": {
+        "w": 0.4,
+        "t": [
+          75,
+          90
+        ]
+      }
+    },
+    "corp": {
+      "w": 0.18,
+      "ai": {
+        "w": 0.45,
+        "t": [
+          70,
+          90,
+          100
+        ]
+      },
+      "acquisition": {
+        "w": 0.35,
+        "t": [
+          65,
+          85
+        ]
+      },
+      "pivot": {
+        "w": 0.2,
+        "t": [
+          60,
+          80
+        ]
+      },
+      "esgPivot": {
+        "w": 0.25,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "keywords": [
+          "ESG",
+          "sustainability",
+          "carbon",
+          "renewable",
+          "green"
+        ]
+      },
+      "geographicExpansion": {
+        "w": 0.2,
+        "t": [
+          65,
+          80,
+          90
+        ],
+        "keywords": [
+          "expansion",
+          "enters",
+          "launches in",
+          "partnership"
+        ]
+      },
+      "quantumProgress": {
+        "w": 0.35,
+        "t": [
+          75,
+          85,
+          95
+        ],
+        "keywords": [
+          "quantum",
+          "photonic",
+          "foundry",
+          "commercial",
+          "shipment"
+        ]
+      },
+      "technicalMilestone": {
+        "w": 0.3,
+        "t": [
+          70,
+          80,
+          90
+        ],
+        "keywords": [
+          "breakthrough",
+          "patent",
+          "validation",
+          "contract"
+        ]
+      },
+      "profitability": {
+        "w": 0.35,
+        "t": [
+          80,
+          90,
+          100
+        ],
+        "conditions": {
+          "first_profit": true,
+          "earnings_beat": "> 100%"
+        }
+      }
+    },
+    "biotech": {
+      "w": 0.17,
+      "clinical": {
+        "w": 0.4,
+        "t": [
+          85,
+          95,
+          100
+        ]
+      },
+      "fda": {
+        "w": 0.3,
+        "t": [
+          80,
+          95
+        ]
+      },
+      "insider": {
+        "w": 0.2,
+        "t": [
+          75,
+          90
+        ]
+      },
+      "licensing": {
+        "w": 0.1,
+        "t": [
+          70,
+          85
+        ]
+      }
+    },
+    "volume": {
+      "w": 0.25,
+      "explosive": {
+        "w": 0.45,
+        "t": [
+          75,
+          90,
+          100
+        ]
+      },
+      "preAccum": {
+        "w": 0.35,
+        "t": [
+          65,
+          85,
+          95
+        ]
+      },
+      "compression": {
+        "w": 0.2,
+        "t": [
+          55,
+          75
+        ]
+      },
+      "conditional_adjustments": {
+        "with_catalyst": 1.3,
+        "with_options_flow": 1.4,
+        "with_both": 1.8
+      },
+      "haltHistory": {
+        "w": 0.15,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "description": "Prior circuit breaker halts",
+        "conditions": {
+          "halt_count": "> 1",
+          "days_window": 30
+        }
+      },
+      "preExplosionQuiet": {
+        "w": 0.2,
+        "t": [
+          65,
+          80,
+          90
+        ],
+        "description": "Abnormally low volume before surge",
+        "conditions": {
+          "volume_vs_avg": "< 0.5x",
+          "duration_days": "> 3"
+        }
+      },
+      "optionsFlow": {
+        "w": 0.15,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "description": "Unusual options activity",
+        "conditions": {
+          "call_volume_ratio": "> 1.5x average",
+          "call_put_ratio": "> 2.0",
+          "implied_volatility_spike": true
+        }
+      },
+      "preBreakoutQuiet": {
+        "w": 0.2,
+        "t": [
+          65,
+          80,
+          90
+        ],
+        "description": "Low volume consolidation before surge",
+        "conditions": {
+          "volume_vs_avg": "< 0.7x",
+          "duration_days": "> 3"
+        }
+      }
+    },
+    "tech": {
+      "w": 0.15,
+      "kdj": {
+        "w": 0.4,
+        "t": [
+          70,
+          85,
+          100
+        ]
+      },
+      "oversold": {
+        "w": 0.35,
+        "t": [
+          60,
+          80,
+          95
+        ]
+      },
+      "momentum": {
+        "w": 0.25,
+        "t": [
+          55,
+          75
+        ]
+      },
+      "conditional_boost": {
+        "condition": "consolidationBreakout",
+        "boost_multiplier": 1.3
+      },
+      "consolidationBreakout": {
+        "w": 0.3,
+        "t": [
+          65,
+          80,
+          90
+        ],
+        "conditions": {
+          "range_days": "> 5",
+          "range_percent": "< 20%",
+          "volume_compression": true,
+          "breakout_volume": "> 2x average"
+        }
+      },
+      "resistanceBreak": {
+        "w": 0.25,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "conditions": {
+          "near_key_level": "within 5%",
+          "multiple_tests": "> 2",
+          "volume_confirmation": true
+        }
+      }
+    },
+    "social": {
+      "w": 0.15,
+      "influencer": {
+        "w": 0.5,
+        "t": [
+          75,
+          90,
+          100
+        ]
+      },
+      "meme": {
+        "w": 0.35,
+        "t": [
+          65,
+          85
+        ]
+      },
+      "viral": {
+        "w": 0.15,
+        "t": [
+          60,
+          80
+        ]
+      },
+      "retailFOMO": {
+        "w": 0.4,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "indicators": [
+          "message_volume_spike",
+          "new_watchers",
+          "trending"
+        ]
+      },
+      "sectorMomentum": {
+        "w": 0.3,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "description": "Sector-wide social momentum",
+        "indicators": [
+          "peer_stocks_trending",
+          "sector_hashtags",
+          "mainstream_media_coverage"
+        ]
+      },
+      "memeability": {
+        "w": 0.3,
+        "t": [
+          65,
+          80,
+          90
+        ],
+        "indicators": [
+          "reddit_mentions",
+          "twitter_velocity",
+          "tiktok_coverage"
+        ]
+      }
+    },
+    "ipo": {
+      "w": 0.15,
+      "underpricing": {
+        "w": 0.6,
+        "t": [
+          70,
+          85,
+          100
+        ]
+      },
+      "timing": {
+        "w": 0.25,
+        "t": [
+          60,
+          80
+        ]
+      },
+      "insider": {
+        "w": 0.15,
+        "t": [
+          65,
+          85
+        ]
+      },
+      "conditional_boost": {
+        "condition": "daysFromIPO < 120",
+        "boost_multiplier": 1.5
+      },
+      "recentListing": {
+        "w": 0.25,
+        "t": [
+          80,
+          90,
+          100
+        ],
+        "conditions": {
+          "days_range": [
+            0,
+            90
+          ],
+          "price_above_ipo": true
+        }
+      },
+      "postIPOConsolidation": {
+        "w": 0.15,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "conditions": {
+          "days_range": [
+            30,
+            120
+          ],
+          "volume_compression": true,
+          "range_bound": "< 20%"
+        }
+      },
+      "microCapIPO": {
+        "w": 0.2,
+        "t": [
+          75,
+          90,
+          100
+        ],
+        "conditions": {
+          "market_cap": "< 200M",
+          "days_from_ipo": "< 180"
+        }
+      }
+    },
+    "micro": {
+      "w": 0.12,
+      "lowFloat": {
+        "w": 0.65,
+        "t": [
+          75,
+          90,
+          100
+        ]
+      },
+      "shortSqueeze": {
+        "w": 0.35,
+        "t": [
+          60,
+          85
+        ]
+      },
+      "ultraLowFloat": {
+        "w": 0.7,
+        "t": [
+          80,
+          92,
+          100
+        ],
+        "conditions": {
+          "float": "< 5M",
+          "float_percentage": "< 25%"
+        }
+      },
+      "ipoFloat": {
+        "w": 0.3,
+        "t": [
+          85,
+          95,
+          100
+        ],
+        "conditions": {
+          "days_from_ipo": "< 120",
+          "float": "< 10M"
+        }
+      }
+    }
+  },
+  "decay": {
+    "tech": {
+      "hl": 4,
+      "dr": 0.4,
+      "min": 0.2
+    },
+    "vol": {
+      "hl": 2,
+      "dr": 0.3,
+      "min": 0.3
+    },
+    "biotech": {
+      "hl": 14,
+      "dr": 0.1,
+      "min": 0.7
+    },
+    "treasury": {
+      "hl": 21,
+      "dr": 0.05,
+      "min": 0.8
+    },
+    "geopolitical": {
+      "hl": 7,
+      "dr": 0.2,
+      "min": 0.5
+    },
+    "social": {
+      "hl": 3,
+      "dr": 0.5,
+      "min": 0.2,
+      "patterns": {
+        "viral": {
+          "hl": 3,
+          "dr": 0.5,
+          "min": 0.2,
+          "conditions": "meme status achieved"
+        },
+        "sustained": {
+          "hl": 7,
+          "dr": 0.25,
+          "min": 0.4,
+          "conditions": "mainstream coverage"
+        }
+      }
+    },
+    "ipo": {
+      "hl": 1,
+      "dr": 0.8,
+      "min": 0.1,
+      "patterns": {
+        "aggressive": {
+          "hl": 5,
+          "dr": 0.35,
+          "min": 0.3,
+          "conditions": "surgeMagnitude > 200%"
+        },
+        "standard": {
+          "hl": 10,
+          "dr": 0.2,
+          "min": 0.5,
+          "conditions": "surgeMagnitude between 100-200%"
+        }
+      }
+    },
+    "volume": {
+      "patterns": {
+        "explosive": {
+          "hl": 2,
+          "dr": 0.5,
+          "min": 0.2,
+          "conditions": "volumeSpike > 20x"
+        },
+        "sustained": {
+          "hl": 5,
+          "dr": 0.3,
+          "min": 0.4,
+          "conditions": "volumeElevated > 3 days"
+        }
+      }
+    },
+    "catalyst": {
+      "patterns": {
+        "sectorCatalyst": {
+          "hl": 10,
+          "dr": 0.15,
+          "min": 0.5,
+          "conditions": "major industry validation"
+        },
+        "indexEvent": {
+          "hl": 1,
+          "dr": 0.9,
+          "min": 0.1,
+          "conditions": "post inclusion date"
+        },
+        "standard": {
+          "hl": 7,
+          "dr": 0.2,
+          "min": 0.4,
+          "conditions": "general catalyst"
+        }
+      }
+    }
+  },
+  "confirm": {
+    "minCat": 2,
+    "minScore": 150,
+    "legendary": {
+      "cat": [
+        "treasury",
+        "volume",
+        "social"
+      ],
+      "scores": [
+        90,
+        75,
+        70
+      ]
+    },
+    "ultra": {
+      "cat": [
+        "geopolitical",
+        "volume",
+        "micro"
+      ],
+      "scores": [
+        85,
+        70,
+        60
+      ]
+    },
+    "biotech": {
+      "cat": [
+        "biotech",
+        "volume"
+      ],
+      "scores": [
+        85,
+        60
+      ]
+    },
+    "ipo": {
+      "cat": [
+        "ipo",
+        "volume"
+      ],
+      "scores": [
+        75,
+        50
+      ]
+    },
+    "aiPivot": {
+      "cat": [
+        "corp",
+        "tech"
+      ],
+      "scores": [
+        70,
+        60
+      ]
+    },
+    "ipoExplosion": {
+      "cat": [
+        "ipo",
+        "micro",
+        "volume"
+      ],
+      "scores": [
+        80,
+        90,
+        70
+      ],
+      "min_cat": 3,
+      "multiplier": 2.8,
+      "conditions": {
+        "days_from_ipo": "< 120",
+        "float": "< 10M",
+        "volume_spike": "> 5x"
+      },
+      "decay": {
+        "type": "aggressive",
+        "half_life": 3,
+        "min_retention": 0.2
+      }
+    },
+    "esgMomentumLowFloat": {
+      "cat": [
+        "corp",
+        "micro",
+        "volume"
+      ],
+      "scores": [
+        70,
+        85,
+        65
+      ],
+      "min_cat": 3,
+      "multiplier": 2.2,
+      "sector_requirement": [
+        "technology",
+        "energy",
+        "healthcare"
+      ],
+      "keyword_requirement": [
+        "ESG",
+        "sustainability",
+        "green",
+        "renewable"
+      ]
+    },
+    "nanoIPONews": {
+      "cat": [
+        "ipo",
+        "corp",
+        "micro"
+      ],
+      "scores": [
+        75,
+        70,
+        80
+      ],
+      "min_cat": 3,
+      "multiplier": 2,
+      "conditions": {
+        "market_cap": "< 150M",
+        "days_from_ipo": "< 180",
+        "news_catalyst": true
+      }
+    },
+    "circuitBreakerMomentum": {
+      "cat": [
+        "volume",
+        "micro",
+        "tech"
+      ],
+      "scores": [
+        85,
+        75,
+        60
+      ],
+      "min_cat": 2,
+      "multiplier": 1.8,
+      "conditions": {
+        "prior_halts": "> 2",
+        "volatility": "> 40%",
+        "recent_consolidation": true
+      }
+    },
+    "externalCatalystSurge": {
+      "cat": [
+        "catalyst",
+        "volume",
+        "social"
+      ],
+      "scores": [
+        85,
+        75,
+        70
+      ],
+      "min_cat": 3,
+      "multiplier": 2.3,
+      "conditions": {
+        "external_validation": true,
+        "sector_movement": true,
+        "volume_spike": "> 2x"
+      },
+      "decay": {
+        "type": "standard",
+        "half_life": 7,
+        "min_retention": 0.4
+      }
+    },
+    "quantumMomentum": {
+      "cat": [
+        "catalyst",
+        "corp",
+        "volume",
+        "tech"
+      ],
+      "scores": [
+        80,
+        70,
+        80,
+        60
+      ],
+      "min_cat": 4,
+      "multiplier": 2.5,
+      "sector_requirement": "quantum_computing",
+      "keyword_requirement": [
+        "quantum",
+        "qubit",
+        "photonic",
+        "entanglement"
+      ]
+    },
+    "indexInclusionRun": {
+      "cat": [
+        "catalyst",
+        "volume",
+        "tech"
+      ],
+      "scores": [
+        75,
+        70,
+        65
+      ],
+      "min_cat": 3,
+      "multiplier": 1.8,
+      "conditions": {
+        "days_to_inclusion": "< 30",
+        "volume_increasing": true,
+        "russell_addition": true
+      }
+    },
+    "consolidationCatalyst": {
+      "cat": [
+        "tech",
+        "catalyst",
+        "volume"
+      ],
+      "scores": [
+        75,
+        85,
+        70
+      ],
+      "min_cat": 3,
+      "multiplier": 2.2,
+      "conditions": {
+        "pre_surge_consolidation": "> 5 days",
+        "external_catalyst": true,
+        "breakout_confirmed": true
+      }
+    },
+    "optionsMomentum": {
+      "cat": [
+        "volume",
+        "social",
+        "tech"
+      ],
+      "scores": [
+        85,
+        70,
+        65
+      ],
+      "min_cat": 2,
+      "multiplier": 1.9,
+      "conditions": {
+        "call_volume": "> 1.5x average",
+        "social_buzz": true,
+        "technical_breakout": true
+      }
+    }
+  },
+  "alerts": {
+    "legendary": {
+      "score": 380,
+      "acc": "85-90%",
+      "fp": "3-5%"
+    },
+    "ultra": {
+      "score": 290,
+      "acc": "75-82%",
+      "fp": "5-8%"
+    },
+    "critical": {
+      "score": 210,
+      "acc": "68-73%",
+      "fp": "8-12%"
+    },
+    "high": {
+      "score": 160,
+      "acc": "58-65%",
+      "fp": "12-16%"
+    },
+    "conditional": {
+      "nano_ipo_extreme": {
+        "score": 135,
+        "acc": "55-65%",
+        "fp": "18-25%",
+        "conditions": {
+          "market_cap": "< 100M",
+          "days_from_ipo": "< 90",
+          "float": "< 5M"
+        }
+      },
+      "ipo_momentum": {
+        "score": 150,
+        "acc": "62-70%",
+        "fp": "15-20%",
+        "conditions": {
+          "days_from_ipo": "< 120",
+          "categories_triggered": ">= 3"
+        }
+      },
+      "esg_catalyst": {
+        "score": 170,
+        "acc": "65-73%",
+        "fp": "12-17%",
+        "conditions": {
+          "has_esg_news": true,
+          "sector": [
+            "tech",
+            "energy"
+          ],
+          "volume_confirmation": true
+        }
+      },
+      "catalyst_driven": {
+        "score": 350,
+        "acc": "78-85%",
+        "fp": "6-10%",
+        "conditions": {
+          "external_catalyst": true,
+          "sector_wide_move": true,
+          "volume_confirmation": true
+        }
+      },
+      "quantum_specific": {
+        "score": 300,
+        "acc": "72-78%",
+        "fp": "10-15%",
+        "conditions": {
+          "sector": "quantum_computing",
+          "catalyst_present": true,
+          "peer_movement": true
+        }
+      },
+      "consolidation_breakout": {
+        "score": 250,
+        "acc": "65-72%",
+        "fp": "12-18%",
+        "conditions": {
+          "pre_breakout_consolidation": true,
+          "volume_expansion": true,
+          "resistance_cleared": true
+        }
+      }
+    }
+  },
+  "sectors": {
+    "entertainment": {
+      "cryptoMult": 5.5,
+      "advisorMult": 4.5,
+      "optCap": [
+        5000000,
+        100000000
+      ]
+    },
+    "energy": {
+      "geopoliticalMult": 4.5,
+      "conflictMult": 4,
+      "optCap": [
+        10000000,
+        500000000
+      ],
+      "greenEnergyMult": 3.5,
+      "esgComplianceMult": 3
+    },
+    "biotech": {
+      "clinicalMult": 3.8,
+      "fdaMult": 3.5,
+      "insiderMult": 2.8,
+      "optCap": [
+        200000000,
+        2000000000
+      ]
+    },
+    "defense": {
+      "contractMult": 4.2,
+      "govMult": 5.2,
+      "optCap": [
+        50000000,
+        500000000
+      ]
+    },
+    "healthcare": {
+      "aiMult": 3.2,
+      "transformationMult": 2.8,
+      "optCap": [
+        25000000,
+        500000000
+      ],
+      "esgHealthMult": 2.8
+    },
+    "technology": {
+      "aiMult": 3.8,
+      "platformMult": 2.8,
+      "optCap": [
+        500000000,
+        5000000000
+      ],
+      "esgMult": 3.2,
+      "recentIPOMult": 3.8,
+      "nanoCapMult": 4.5,
+      "keywords": [
+        "ESG",
+        "RegTech",
+        "sustainability",
+        "carbon",
+        "environmental"
+      ],
+      "quantumMult": 3.8,
+      "aiIntegrationMult": 3.2
+    },
+    "media": {
+      "ipoMult": 4.5,
+      "narrativeMult": 4,
+      "optCap": [
+        100000000,
+        1000000000
+      ]
+    },
+    "quantum_computing": {
+      "baseMult": 3.5,
+      "catalystMult": 5,
+      "externalValidationMult": 4.5,
+      "peerCorrelationMult": 3,
+      "keywords": [
+        "quantum",
+        "qubit",
+        "photonic",
+        "entanglement",
+        "superposition",
+        "quantum computing"
+      ],
+      "peerSymbols": [
+        "IONQ",
+        "RGTI",
+        "QBTS",
+        "QUBT"
+      ],
+      "optCap": [
+        100000000,
+        5000000000
+      ]
+    }
+  },
+  "filters": {
+    "volRevert": "vol>20x && nextVol<3x && !news",
+    "manipulation": "extremeVol && priceRev>60% && <48h && !fundamentals",
+    "overbought": "rsi>80 && !catalyst && price>6xAvg",
+    "fakeBreakout": "technicalOnly && !volConfirm && !fundSupport",
+    "delistingTrap": "price<$1 && !compliance && !turnaround",
+    "ipoMomentumTrap": {
+      "condition": "daysFromIPO < 90 && float < 10M && volSpike > 10x && !fundamentals",
+      "action": "reduce_score",
+      "multiplier": 0.5
+    },
+    "circuitBreakerPattern": {
+      "condition": "haltCount > 2 && daysSinceLastHalt < 30 && volatility > 40%",
+      "action": "boost_score",
+      "multiplier": 1.5
+    },
+    "preConsolidationBreakout": {
+      "condition": "rangePercent < 15 && avgVolume < 0.6x && duration > 5",
+      "action": "boost_score",
+      "multiplier": 1.3
+    },
+    "esgCatalyst": {
+      "condition": "hasKeywords(['ESG', 'sustainability', 'green']) && sector in ['tech', 'energy']",
+      "action": "boost_score",
+      "multiplier": 1.4
+    },
+    "postIPODiscovery": {
+      "condition": "daysFromIPO in [60, 120] && priceVsIPO > 0.8 && instOwnership < 20%",
+      "action": "boost_score",
+      "multiplier": 1.6
+    },
+    "hypeSentimentTrap": {
+      "condition": "socialScore > 90 && !fundamentals && volReversion",
+      "action": "reduce_score",
+      "multiplier": 0.6
+    },
+    "quantumValidation": {
+      "condition": "sector='quantum_computing' && hasKeywords(['breakthrough', 'commercial', 'contract'])",
+      "action": "boost_score",
+      "multiplier": 1.5
+    },
+    "consolidationPattern": {
+      "condition": "rangePercent < 20 && duration > 5 && nearResistance",
+      "action": "boost_score",
+      "multiplier": 1.3
+    },
+    "externalCatalystBoost": {
+      "condition": "hasExternalValidation && sectorPeersRising && volumeConfirmation",
+      "action": "boost_score",
+      "multiplier": 1.6
+    },
+    "russellInclusionBoost": {
+      "condition": "daysToRussell < 30 && marketCapQualifies",
+      "action": "boost_score",
+      "multiplier": 1.4
+    }
+  },
+  "validation": {
+    "documented": {
+      "SRM": {
+        "surge": "1283.7%",
+        "signals": [
+          "treasury",
+          "volume"
+        ],
+        "score": 395
+      },
+      "NMAX": {
+        "surge": "2550%",
+        "signals": [
+          "ipo",
+          "volume"
+        ],
+        "score": 385
+      },
+      "SMMT": {
+        "surge": "583%",
+        "signals": [
+          "biotech",
+          "insider"
+        ],
+        "score": 290
+      },
+      "RBNE": {
+        "surge": "350%",
+        "signals": [
+          "geopolitical",
+          "micro"
+        ],
+        "score": 275
+      },
+      "HCTI": {
+        "surge": "222%",
+        "signals": [
+          "corp",
+          "tech"
+        ],
+        "score": 220
+      },
+      "HUSA": {
+        "surge": "190%",
+        "signals": [
+          "geopolitical",
+          "micro"
+        ],
+        "score": 210
+      },
+      "DGNX": {
+        "surge_metrics": {
+          "date": "2025-04-15",
+          "magnitude": "250%",
+          "low_to_peak": "4206%",
+          "duration_hours": 6.5
+        },
+        "pre_conditions": {
+          "ipo_date": "2025-01-22",
+          "days_from_ipo": 83,
+          "float_estimate": "< 10M",
+          "market_cap_pre": "~345M",
+          "avg_volume_30d": 51619,
+          "price_range_7d": "12%",
+          "halt_history": [
+            "2025-01-23",
+            "2025-03-20",
+            "2025-03-25"
+          ]
+        },
+        "signals_triggered": {
+          "ipo": {
+            "recentListing": 90,
+            "microCapIPO": 95,
+            "timing": 85
+          },
+          "micro": {
+            "lowFloat": 100,
+            "ipoFloat": 95
+          },
+          "volume": {
+            "explosive": 100,
+            "haltHistory": 85,
+            "preExplosionQuiet": 80
+          },
+          "corp": {
+            "esgPivot": 85,
+            "geographicExpansion": 80
+          }
+        },
+        "catalyst_details": {
+          "type": "strategic_alliance",
+          "partner": "AIKYA",
+          "market": "Malaysia",
+          "sector": "ESG_reporting",
+          "announcement_time": "4:10pm ET"
+        },
+        "score_calculation": {
+          "raw_score": 245,
+          "multipliers_applied": [
+            "ipoExplosion",
+            "esgMomentumLowFloat"
+          ],
+          "final_score": 392,
+          "alert_level": "legendary"
+        },
+        "post_surge_behavior": {
+          "peak_to_current": "-70%",
+          "support_levels": [
+            45,
+            40,
+            35
+          ],
+          "resistance_levels": [
+            55,
+            70,
+            100
+          ],
+          "current_trend": "declining"
+        }
+      },
+      "QUBT": {
+        "surge_metrics": {
+          "date": "2025-06-11",
+          "period": "June 11-15",
+          "single_day": "25.38%",
+          "week_total": "75%",
+          "low_to_peak": "~100%",
+          "duration_days": 5
+        },
+        "pre_conditions": {
+          "foundry_completion": "May 2025",
+          "q1_earnings": "First profit $0.11 EPS",
+          "russell_inclusion": "Announced for June 30",
+          "market_cap_pre": "~$1.5B",
+          "avg_volume_30d": 24855477,
+          "price_range_pre": "~$11-14",
+          "beta": 3.85,
+          "short_interest": "19.18%"
+        },
+        "signals_triggered": {
+          "catalyst": {
+            "sectorEndorsement": 95,
+            "indexInclusion": 80,
+            "technologyValidation": 90
+          },
+          "volume": {
+            "optionsFlow": 90,
+            "preBreakoutQuiet": 80,
+            "explosive": 85
+          },
+          "tech": {
+            "consolidationBreakout": 85,
+            "resistanceBreak": 80,
+            "momentum": 85
+          },
+          "corp": {
+            "quantumProgress": 90,
+            "profitability": 85,
+            "technicalMilestone": 80
+          },
+          "social": {
+            "sectorMomentum": 85,
+            "retailFOMO": 90,
+            "memeability": 75
+          }
+        },
+        "catalyst_details": {
+          "type": "external_industry_validation",
+          "source": "Nvidia CEO Jensen Huang",
+          "event": "GTC Paris conference",
+          "statement": "Quantum computing reaching inflection point",
+          "impact": "Reversed January skepticism, sector-wide rally"
+        },
+        "score_calculation": {
+          "raw_score": 265,
+          "multipliers_applied": [
+            "externalCatalystSurge",
+            "quantumMomentum"
+          ],
+          "final_score": 385,
+          "alert_level": "ultra"
+        },
+        "post_surge_behavior": {
+          "peak_to_current": "-7%",
+          "support_levels": [
+            17.51,
+            15.13,
+            14.34
+          ],
+          "resistance_levels": [
+            20.34,
+            22,
+            27.15
+          ],
+          "current_trend": "consolidating"
+        }
+      }
+    }
+  },
+  "floatTiers": {
+    "ultraNano": {
+      "range": [
+        100000,
+        2000000
+      ],
+      "multiplier": 3.5,
+      "volatility_expectation": "> 100%"
+    },
+    "nanoPlus": {
+      "range": [
+        2000000,
+        5000000
+      ],
+      "multiplier": 2.8,
+      "volatility_expectation": "> 75%"
+    },
+    "lowFloat": {
+      "range": [
+        5000000,
+        10000000
+      ],
+      "multiplier": 2.2,
+      "volatility_expectation": "> 50%"
+    },
+    "optimal_ipo": {
+      "range": [
+        1000000,
+        7500000
+      ],
+      "multiplier": 3,
+      "condition": "daysFromIPO < 120"
+    },
+    "marketCapBased": {
+      "tinyForSector": {
+        "range": [
+          1000000000,
+          3000000000
+        ],
+        "multiplier": 2.5,
+        "description": "$2B considered 'tiny' for quantum sector"
+      }
+    },
+    "volatilityProfile": {
+      "highBeta": {
+        "beta_range": [
+          3,
+          5
+        ],
+        "multiplier": 1.8,
+        "volatility_expectation": "> 8% daily"
+      }
+    }
+  },
+  "technicalIndicators": {
+    "preSurgeCompression": {
+      "weight": 0.18,
+      "detection": {
+        "range_percent": "< 10%",
+        "volume_vs_avg": "< 0.5x",
+        "duration_days": "> 3",
+        "bb_width": "< 0.05"
+      },
+      "score_boost": 15
+    },
+    "haltMomentum": {
+      "weight": 0.22,
+      "detection": {
+        "halt_count_30d": "> 2",
+        "last_halt_days": "< 10",
+        "price_recovery": "> 80%"
+      },
+      "score_boost": 20
+    },
+    "ipoBase": {
+      "weight": 0.15,
+      "detection": {
+        "days_from_ipo": "[45, 120]",
+        "price_vs_ipo": "> 0.7",
+        "volume_trend": "declining"
+      },
+      "score_boost": 12
+    },
+    "preBreakoutConsolidation": {
+      "weight": 0.2,
+      "detection": {
+        "range_percent": "< 20%",
+        "volume_vs_avg": "< 0.7x",
+        "duration_days": "> 5",
+        "near_resistance": "within 10%"
+      },
+      "score_boost": 20
+    },
+    "optionsFlowMomentum": {
+      "weight": 0.25,
+      "detection": {
+        "call_volume": "> 1.5x average",
+        "put_call_ratio": "< 0.5",
+        "iv_spike": "> 20%"
+      },
+      "score_boost": 25
+    },
+    "sectorCorrelation": {
+      "weight": 0.15,
+      "detection": {
+        "peer_movement": "> 3 peers up > 5%",
+        "sector_etf": "positive",
+        "correlation": "> 0.7"
+      },
+      "score_boost": 15
+    }
+  },
+  "volumePatterns": {
+    "patterns": {
+      "quietBeforeStorm": {
+        "description": "Abnormally low volume preceding explosion",
+        "detection": "3+ days < 0.5x avg volume",
+        "weight": 0.25,
+        "predictive_value": "high"
+      },
+      "accumulation": {
+        "description": "Steady volume increase without price movement",
+        "detection": "5+ days volume > 1.2x with range < 10%",
+        "weight": 0.2,
+        "predictive_value": "medium"
+      },
+      "haltCascade": {
+        "description": "Multiple halts in short timeframe",
+        "detection": "3+ halts in 10 trading days",
+        "weight": 0.3,
+        "predictive_value": "very high"
+      },
+      "quietAccumulation": {
+        "description": "Low volume consolidation with tight range",
+        "detection": "5+ days < 0.7x avg volume with < 20% range",
+        "weight": 0.25,
+        "predictive_value": "high"
+      },
+      "optionsLeading": {
+        "description": "Options volume surge before stock movement",
+        "detection": "Call volume > 1.5x with stock flat",
+        "weight": 0.3,
+        "predictive_value": "very high"
+      },
+      "sectorRotation": {
+        "description": "Money flowing into sector peers",
+        "detection": "3+ peers with volume > 2x average",
+        "weight": 0.2,
+        "predictive_value": "medium"
+      }
+    }
+  },
+  "marketCapTiers": {
+    "ultra_nano": {
+      "range": [
+        0,
+        50000000
+      ],
+      "base_multiplier": 4,
+      "ipo_boost": 5.5,
+      "volatility_factor": 3
+    },
+    "nano": {
+      "range": [
+        50000000,
+        100000000
+      ],
+      "base_multiplier": 3.5,
+      "ipo_boost": 4.5,
+      "volatility_factor": 2.5
+    },
+    "micro": {
+      "range": [
+        100000000,
+        300000000
+      ],
+      "base_multiplier": 2.8,
+      "ipo_boost": 3.5,
+      "volatility_factor": 2
+    },
+    "small": {
+      "range": [
+        300000000,
+        1000000000
+      ],
+      "base_multiplier": 2,
+      "ipo_boost": 2.5,
+      "volatility_factor": 1.5
+    },
+    "quantum_sector": {
+      "tiny": {
+        "range": [
+          1000000000,
+          3000000000
+        ],
+        "base_multiplier": 2.5,
+        "catalyst_boost": 3.5,
+        "description": "In quantum, $2B is considered tiny"
+      },
+      "small": {
+        "range": [
+          3000000000,
+          10000000000
+        ],
+        "base_multiplier": 2,
+        "catalyst_boost": 2.5
+      }
+    }
+  },
+  "catalystScoring": {
+    "catalyst_types": {
+      "strategic_alliance": {
+        "base_score": 30,
+        "with_major_partner": 45,
+        "international_expansion": 40,
+        "sector_synergy_bonus": 15
+      },
+      "product_launch": {
+        "base_score": 25,
+        "disruptive_tech": 40,
+        "esg_related": 35
+      },
+      "financial_milestone": {
+        "base_score": 20,
+        "first_profit": 35,
+        "major_contract": 30
+      },
+      "industry_validation": {
+        "base_score": 40,
+        "from_sector_leader": 60,
+        "sentiment_reversal": 50,
+        "conference_announcement": 45
+      },
+      "technical_milestone": {
+        "base_score": 30,
+        "commercial_shipment": 40,
+        "foundry_operational": 35
+      },
+      "financial_achievement": {
+        "base_score": 25,
+        "first_profit": 40,
+        "earnings_beat": 30
+      },
+      "index_inclusion": {
+        "base_score": 20,
+        "russell_addition": 30,
+        "sp_addition": 40
+      }
+    },
+    "timing_multipliers": {
+      "after_market_close": 1.3,
+      "pre_market": 1.2,
+      "intraday": 1,
+      "during_market": 1,
+      "conference_live": 1.5
+    }
+  }
+}

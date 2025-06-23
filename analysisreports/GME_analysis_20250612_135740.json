@@ -1,0 +1,1364 @@
+{
+  "exportInfo": {
+    "timestamp": "2025-06-12T13:57:40.222585",
+    "tool": "Stock Signals Analyzer",
+    "version": "2.0"
+  },
+  "stockData": {
+    "address1": "625 Westport Parkway",
+    "city": "Grapevine",
+    "state": "TX",
+    "zip": "76051",
+    "country": "United States",
+    "phone": "817 424 2000",
+    "website": "https://www.gamestop.com",
+    "industry": "Specialty Retail",
+    "industryKey": "specialty-retail",
+    "industryDisp": "Specialty Retail",
+    "sector": "Consumer Cyclical",
+    "sectorKey": "consumer-cyclical",
+    "sectorDisp": "Consumer Cyclical",
+    "longBusinessSummary": "GameStop Corp., a specialty retailer, provides games and entertainment products through its stores and e-commerce platforms in the United States, Canada, Australia, and Europe. The company sells new and pre-owned gaming platforms; accessories, such as controllers, and gaming headsets; new and pre-owned gaming software; and in-game digital currency, digital downloadable content, and full-game downloads. It sells collectibles comprising apparel, toys, trading cards, gadgets, and other retail products for pop culture and technology enthusiasts. The company operates stores and e-commerce sites under the GameStop, EB Games, and Micromania brands; and pop culture themed stores that sell collectibles, apparel, gadgets, electronics, toys, and other retail products under the Zing Pop Culture brand. The company was formerly known as GSC Holdings Corp. GameStop Corp. was founded in 1996 and is headquartered in Grapevine, Texas.",
+    "fullTimeEmployees": 6000,
+    "companyOfficers": [
+      {
+        "maxAge": 1,
+        "name": "Mr. Ryan  Cohen",
+        "age": 38,
+        "title": "President, CEO & Executive Chairman",
+        "yearBorn": 1986,
+        "fiscalYear": 2024,
+        "totalPay": 268553,
+        "exercisedValue": 0,
+        "unexercisedValue": 0
+      },
+      {
+        "maxAge": 1,
+        "name": "Mr. Daniel William Moore",
+        "age": 40,
+        "title": "Principal Accounting Officer & Principal Financial Officer",
+        "yearBorn": 1984,
+        "fiscalYear": 2024,
+        "totalPay": 221492,
+        "exercisedValue": 0,
+        "unexercisedValue": 0
+      },
+      {
+        "maxAge": 1,
+        "name": "Mr. Mark Haymond Robinson",
+        "age": 45,
+        "title": "General Counsel & Secretary",
+        "yearBorn": 1979,
+        "fiscalYear": 2024,
+        "totalPay": 200000,
+        "exercisedValue": 0,
+        "unexercisedValue": 0
+      }
+    ],
+    "auditRisk": 8,
+    "boardRisk": 8,
+    "compensationRisk": 6,
+    "shareHolderRightsRisk": 3,
+    "overallRisk": 6,
+    "governanceEpochDate": 1748736000,
+    "compensationAsOfEpochDate": 1735603200,
+    "irWebsite": "http://phx.corporate-ir.net/phoenix.zhtml?c=130125&p=irol-irhome",
+    "executiveTeam": [],
+    "maxAge": 86400,
+    "priceHint": 2,
+    "previousClose": 30.15,
+    "open": 29.02,
+    "dayLow": 28.42,
+    "dayHigh": 29.4138,
+    "regularMarketPreviousClose": 30.15,
+    "regularMarketOpen": 29.02,
+    "regularMarketDayLow": 28.42,
+    "regularMarketDayHigh": 29.4138,
+    "exDividendDate": 1552521600,
+    "payoutRatio": 0.0,
+    "fiveYearAvgDividendYield": 9.52,
+    "beta": -0.652,
+    "trailingPE": 53.867928,
+    "forwardPE": -2855.0,
+    "volume": 14469105,
+    "regularMarketVolume": 14469105,
+    "averageVolume": 12673207,
+    "averageVolume10days": 9241060,
+    "averageDailyVolume10Day": 9241060,
+    "bid": 25.1,
+    "ask": 24.92,
+    "bidSize": 11,
+    "askSize": 3,
+    "marketCap": 12771442688,
+    "fiftyTwoWeekLow": 18.73,
+    "fiftyTwoWeekHigh": 35.81,
+    "priceToSalesTrailing12Months": 3.476547,
+    "fiftyDayAverage": 27.6572,
+    "twoHundredDayAverage": 25.80975,
+    "trailingAnnualDividendRate": 0.0,
+    "trailingAnnualDividendYield": 0.0,
+    "currency": "USD",
+    "tradeable": false,
+    "enterpriseValue": 8147451392,
+    "profitMargins": 0.05673,
+    "floatShares": 408494095,
+    "sharesOutstanding": 447336000,
+    "sharesShort": 47491887,
+    "sharesShortPriorMonth": 48711464,
+    "sharesShortPreviousMonthDate": 1745971200,
+    "dateShortInterest": 1748563200,
+    "sharesPercentSharesOut": 0.1062,
+    "heldPercentInsiders": 0.08605,
+    "heldPercentInstitutions": 0.3457,
+    "shortRatio": 3.84,
+    "shortPercentOfFloat": 0.1163,
+    "impliedSharesOutstanding": 450119008,
+    "bookValue": 11.15,
+    "priceToBook": 2.560538,
+    "lastFiscalYearEnd": 1738368000,
+    "nextFiscalYearEnd": 1769904000,
+    "mostRecentQuarter": 1746230400,
+    "netIncomeToCommon": 208400000,
+    "trailingEps": 0.53,
+    "forwardEps": -0.01,
+    "lastSplitFactor": "4:1",
+    "lastSplitDate": 1658448000,
+    "enterpriseToRevenue": 2.218,
+    "enterpriseToEbitda": 95.181,
+    "52WeekChange": -0.019574165,
+    "SandP52WeekChange": 0.10830474,
+    "lastDividendValue": 0.095,
+    "lastDividendDate": 1552521600,
+    "quoteType": "EQUITY",
+    "currentPrice": 28.55,
+    "targetHighPrice": 13.5,
+    "targetLowPrice": 13.5,
+    "targetMeanPrice": 13.5,
+    "targetMedianPrice": 13.5,
+    "recommendationMean": 5.0,
+    "recommendationKey": "sell",
+    "numberOfAnalystOpinions": 1,
+    "totalCash": 6385800192,
+    "totalCashPerShare": 14.275,
+    "ebitda": 85600000,
+    "totalDebt": 1761799936,
+    "quickRatio": 7.589,
+    "currentRatio": 8.387,
+    "totalRevenue": 3673600000,
+    "debtToEquity": 35.325,
+    "revenuePerShare": 8.555,
+    "returnOnAssets": 0.00717,
+    "returnOnEquity": 0.06621,
+    "grossProfits": 1122200064,
+    "freeCashflow": 221187504,
+    "operatingCashflow": 448000000,
+    "revenueGrowth": -0.169,
+    "grossMargins": 0.30548,
+    "ebitdaMargins": 0.0233,
+    "operatingMargins": 0.03372,
+    "financialCurrency": "USD",
+    "symbol": "GME",
+    "language": "en-US",
+    "region": "US",
+    "typeDisp": "Equity",
+    "quoteSourceName": "Nasdaq Real Time Price",
+    "triggerable": true,
+    "customPriceAlertConfidence": "HIGH",
+    "shortName": "GameStop Corporation",
+    "longName": "GameStop Corp.",
+    "corporateActions": [],
+    "preMarketTime": 1749729448,
+    "regularMarketTime": 1749672002,
+    "exchangeTimezoneShortName": "EDT",
+    "gmtOffSetMilliseconds": -14400000,
+    "market": "us_market",
+    "esgPopulated": false,
+    "regularMarketChangePercent": -5.3068,
+    "regularMarketPrice": 28.55,
+    "exchange": "NYQ",
+    "messageBoardId": "finmb_1342560",
+    "exchangeTimezoneName": "America/New_York",
+    "marketState": "PRE",
+    "fiftyTwoWeekLowChangePercent": 0.5242926,
+    "fiftyTwoWeekRange": "18.73 - 35.81",
+    "fiftyTwoWeekHighChange": -7.260002,
+    "fiftyTwoWeekHighChangePercent": -0.20273672,
+    "fiftyTwoWeekChangePercent": -1.9574165,
+    "dividendDate": 1529971200,
+    "earningsTimestamp": 1749585600,
+    "earningsTimestampStart": 1757448000,
+    "earningsTimestampEnd": 1757448000,
+    "isEarningsDateEstimate": true,
+    "epsTrailingTwelveMonths": 0.53,
+    "epsForward": -0.01,
+    "epsCurrentYear": 0.725,
+    "priceEpsCurrentYear": 39.379307,
+    "fiftyDayAverageChange": 0.8927994,
+    "fiftyDayAverageChangePercent": 0.032280903,
+    "twoHundredDayAverageChange": 2.7402496,
+    "twoHundredDayAverageChangePercent": 0.1061711,
+    "sourceInterval": 15,
+    "exchangeDataDelayedBy": 0,
+    "averageAnalystRating": "5.0 - Sell",
+    "cryptoTradeable": false,
+    "hasPrePostMarketData": true,
+    "firstTradeDateMilliseconds": 1013610600000,
+    "preMarketChange": -4.545,
+    "preMarketChangePercent": -15.933392,
+    "preMarketPrice": 23.98,
+    "regularMarketChange": -1.6,
+    "regularMarketDayRange": "28.42 - 29.4138",
+    "fullExchangeName": "NYSE",
+    "averageDailyVolume3Month": 12673207,
+    "fiftyTwoWeekLowChange": 9.82,
+    "displayName": "GameStop",
+    "trailingPegRatio": null
+  },
+  "analysisResults": {
+    "symbol": "GME",
+    "totalScore": 0.0,
+    "maxPossibleScore": 89.3175,
+    "categoryResults": {
+      "corporateTransformation": {
+        "name": "Corporate Transformation & Strategic Pivots",
+        "description": "Business model changes and transformational events - highest impact signals",
+        "weight": 0.3,
+        "score": 0.0,
+        "maxScore": 92.75,
+        "signals": [
+          {
+            "name": "Defense/Government Transformation",
+            "description": "Pivot to defense sector - NUKK pattern (5535% surge)",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 100,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "defense sector acquisition OR government contract award > $10M",
+                "met": false,
+                "score": 75,
+                "description": "Initial defense sector entry"
+              },
+              {
+                "condition": "defense acquisition > marketCap * 0.5 OR Iron Dome/critical infrastructure",
+                "met": false,
+                "score": 95,
+                "description": "Transformational defense pivot - NUKK pattern"
+              },
+              {
+                "condition": "NATO/DOD approved vendor status OR $100M+ government contracts",
+                "met": false,
+                "score": 100,
+                "description": "Full defense sector validation"
+              }
+            ]
+          },
+          {
+            "name": "Biotech/AI Transformation Catalyst",
+            "description": "High-multiple sector pivot opportunities",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 90,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "biotech/AI acquisition OR licensing deal > marketCap * 0.3",
+                "met": false,
+                "score": 70,
+                "description": "Significant high-tech transformation"
+              },
+              {
+                "condition": "FDA-approved platform OR breakthrough AI technology",
+                "met": false,
+                "score": 90,
+                "description": "Validated technology transformation"
+              }
+            ]
+          },
+          {
+            "name": "Float Compression Mechanics",
+            "description": "Reverse split creating volatility amplification - NUKK/HSDT pattern",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 85,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "reverse split ratio >= 8:1 AND post-split float < 10M shares",
+                "met": false,
+                "score": 60,
+                "description": "Significant float compression"
+              },
+              {
+                "condition": "reverse split AND catalyst within 90 days AND float < 5M",
+                "met": false,
+                "score": 85,
+                "description": "NUKK-style volatility amplification setup"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      },
+      "clinicalAndRegulatory": {
+        "name": "Clinical Excellence & Regulatory Milestones",
+        "description": "FDA approvals, clinical superiority, and regulatory catalysts",
+        "weight": 0.25,
+        "score": 0.0,
+        "maxScore": 93.0,
+        "signals": [
+          {
+            "name": "Head-to-Head Clinical Superiority",
+            "description": "Beating established standard of care - SMMT pattern",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 95,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "statistically significant improvement vs standard of care",
+                "met": false,
+                "score": 70,
+                "description": "Clinical superiority demonstrated"
+              },
+              {
+                "condition": "49%+ improvement vs Keytruda/Opdivo OR first-in-class approval",
+                "met": false,
+                "score": 95,
+                "description": "SMMT-level clinical breakthrough"
+              }
+            ]
+          },
+          {
+            "name": "Reimbursement Critical Mass",
+            "description": "3+ major payers approval - HSDT pattern (119% surge)",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 100,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "2 major payers approve reimbursement (Anthem, Aetna, UHC, etc.)",
+                "met": false,
+                "score": 60,
+                "description": "Reimbursement momentum building"
+              },
+              {
+                "condition": "3+ major payers approve reimbursement within 6 months",
+                "met": false,
+                "score": 90,
+                "description": "HSDT-style reimbursement tipping point"
+              },
+              {
+                "condition": "CMS/Medicare approval OR national coverage determination",
+                "met": false,
+                "score": 100,
+                "description": "Universal coverage catalyst"
+              }
+            ]
+          },
+          {
+            "name": "FDA Accelerated Pathway Signals",
+            "description": "Fast Track, Breakthrough, Orphan designations",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 80,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "FDA Fast Track designation OR Breakthrough Therapy",
+                "met": false,
+                "score": 65,
+                "description": "Accelerated regulatory pathway"
+              },
+              {
+                "condition": "Orphan Drug designation with market exclusivity",
+                "met": false,
+                "score": 80,
+                "description": "Protected market opportunity"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      },
+      "technicalCompression": {
+        "name": "Advanced Technical Pattern Recognition",
+        "description": "Enhanced technical patterns based on DRUG surge analysis",
+        "weight": 0.2,
+        "score": 0.0,
+        "maxScore": 86.5,
+        "signals": [
+          {
+            "name": "DRUG-Pattern Bollinger Squeeze",
+            "description": "Bollinger Band compression >30 days - DRUG 2000% pattern",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 95,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "Bollinger Band width <5th percentile for 30+ days",
+                "met": false,
+                "score": 70,
+                "description": "Significant volatility compression"
+              },
+              {
+                "condition": "BB squeeze >45 days AND RSI <30 AND catalyst approaching",
+                "met": false,
+                "score": 95,
+                "description": "DRUG-level coiled spring with catalyst"
+              }
+            ]
+          },
+          {
+            "name": "Extended Oversold Recovery Pattern",
+            "description": "RSI <30 with bullish divergence setup",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 85,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "RSI <25 for 10+ days AND volume building",
+                "met": false,
+                "score": 55,
+                "description": "Extreme oversold with accumulation"
+              },
+              {
+                "condition": "RSI bullish divergence AND MACD convergence AND catalyst proximity",
+                "met": false,
+                "score": 85,
+                "description": "Multi-indicator oversold reversal setup"
+              }
+            ]
+          },
+          {
+            "name": "Extended Base Building Pattern",
+            "description": "6+ month consolidation preceding breakout",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 75,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "6+ month base building AND multiple support tests",
+                "met": false,
+                "score": 50,
+                "description": "Solid foundation established"
+              },
+              {
+                "condition": "NUKK-style 6-month $1.30-$2.00 base AND tightening volume",
+                "met": false,
+                "score": 75,
+                "description": "Extended base with volume compression"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      },
+      "volumeIntelligence": {
+        "name": "Advanced Volume Pattern Analysis",
+        "description": "Sophisticated volume patterns from successful surges",
+        "weight": 0.15,
+        "score": 0.0,
+        "maxScore": 79.25,
+        "signals": [
+          {
+            "name": "30-Day Pre-Surge Volume Building",
+            "description": "Volume accumulation pattern from DRUG analysis",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 85,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "volume >2x average for 5+ days in 30-day window",
+                "met": false,
+                "score": 60,
+                "description": "Early accumulation pattern"
+              },
+              {
+                "condition": "volume >3x average for 7+ days AND 13F filings increase",
+                "met": false,
+                "score": 85,
+                "description": "Confirmed institutional accumulation"
+              }
+            ]
+          },
+          {
+            "name": "Extreme Volume Explosion",
+            "description": "VTAK-style volume surge (2,870% above average)",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 90,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "volume >10x average AND float turnover >50%",
+                "met": false,
+                "score": 65,
+                "description": "Significant volume surge"
+              },
+              {
+                "condition": "volume >25x average AND float turnover >100%",
+                "met": false,
+                "score": 90,
+                "description": "VTAK-level volume explosion"
+              }
+            ]
+          },
+          {
+            "name": "Institutional Dark Pool Activity",
+            "description": "Off-exchange volume indicating smart money",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 55,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "dark pool ratio >35% for 5+ days",
+                "met": false,
+                "score": 55,
+                "description": "Institutional accumulation signal"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      },
+      "commercialValidation": {
+        "name": "Commercial Breakthrough Signals",
+        "description": "First sales, partnerships, and validation milestones",
+        "weight": 0.07,
+        "score": 0.0,
+        "maxScore": 92.5,
+        "signals": [
+          {
+            "name": "First Sale/Partnership Validation",
+            "description": "VTAK-pattern first commercial order (173% surge)",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 90,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "first commercial sale from recognized institution",
+                "met": false,
+                "score": 70,
+                "description": "Initial commercial validation"
+              },
+              {
+                "condition": "first sale from major hospital/university system",
+                "met": false,
+                "score": 90,
+                "description": "VTAK-style validation milestone"
+              }
+            ]
+          },
+          {
+            "name": "Massive Insider Investment",
+            "description": "SMMT-pattern: $79M insider investment at market prices",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 95,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "insider purchases >$10M at market price within 30 days",
+                "met": false,
+                "score": 75,
+                "description": "Significant insider confidence"
+              },
+              {
+                "condition": "insider purchases >$50M at market price (SMMT-style)",
+                "met": false,
+                "score": 95,
+                "description": "SMMT-level insider conviction"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      },
+      "microstructure": {
+        "name": "Market Microstructure Amplifiers",
+        "description": "Float dynamics and structural volatility factors",
+        "weight": 0.03,
+        "score": 0.0,
+        "maxScore": 86.0,
+        "signals": [
+          {
+            "name": "NUKK-Style Float Scarcity",
+            "description": "Ultra-low float creating explosive potential",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 90,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "float <3M shares AND market cap $5M-$50M",
+                "met": false,
+                "score": 75,
+                "description": "DRUG-level volatility setup"
+              },
+              {
+                "condition": "float <2.5M shares AND recent reverse split",
+                "met": false,
+                "score": 90,
+                "description": "NUKK-level amplification potential"
+              }
+            ]
+          },
+          {
+            "name": "Short Interest Dynamics",
+            "description": "Short covering amplification factors",
+            "triggered": false,
+            "score": 0,
+            "maxScore": 80,
+            "details": [],
+            "conditions": [
+              {
+                "condition": "short interest >20% AND days to cover >3",
+                "met": false,
+                "score": 55,
+                "description": "Moderate squeeze potential"
+              },
+              {
+                "condition": "short interest >50% AND limited borrows available",
+                "met": false,
+                "score": 80,
+                "description": "High squeeze probability"
+              }
+            ]
+          }
+        ],
+        "normalizedScore": 0.0
+      }
+    },
+    "triggeredSignals": [],
+    "missingDataFields": [
+      "insiderOwnership",
+      "institutionalOwnership"
+    ],
+    "scorePercentage": 0.0
+  },
+  "signalsConfig": {
+    "metadata": {
+      "version": "5.0",
+      "lastUpdated": "2025-06-12",
+      "description": "Revolutionary surge detection framework based on analysis of 15+ documented surges including NUKK (5535%), DRUG (2000%), VTAK (173%), HSDT (119%), SMMT (583%)",
+      "author": "Enhanced Framework Based on Comprehensive Surge Document Analysis",
+      "backtestedPeriod": "2020-2025",
+      "documentedSurges": "NUKK, DRUG, VTAK, HSDT, SMMT, GME, AMC, INTZ, MNPR, ADAP, APP, NMAX, HCTI",
+      "accuracyTarget": "65-72% (up from 58-62%)",
+      "falsePositiveTarget": "10-12% (down from 14-16%)",
+      "keyBreakthroughs": [
+        "Defense pivot phenomenon identification (NUKK case study)",
+        "Reimbursement tipping point detection (HSDT pattern)",
+        "Bollinger Band compression >30 days (DRUG pattern)",
+        "Progressive catalyst accumulation scoring",
+        "Insider investment signals (SMMT pattern)",
+        "Commercial validation milestones (VTAK pattern)",
+        "Float compression amplification factors"
+      ]
+    },
+    "marketStructureRequirements": {
+      "description": "Refined pre-screening based on successful surge analysis",
+      "optimalMarketCapBands": {
+        "nanoCapExplosive": {
+          "min": 500000,
+          "max": 10000000,
+          "surgeMultiplier": 5.0,
+          "riskMultiplier": 4.0,
+          "description": "Extreme volatility zone - NUKK/DRUG territory",
+          "exampleSurges": [
+            "NUKK: 5535%",
+            "DRUG: 2000%",
+            "HCTI: 250%"
+          ]
+        },
+        "microCapPrime": {
+          "min": 10000000,
+          "max": 100000000,
+          "surgeMultiplier": 3.0,
+          "riskMultiplier": 2.0,
+          "description": "Sweet spot for sustainable surges",
+          "exampleSurges": [
+            "VTAK: 173%",
+            "HSDT: 119%"
+          ]
+        },
+        "smallCapMomentum": {
+          "min": 100000000,
+          "max": 1000000000,
+          "surgeMultiplier": 2.0,
+          "riskMultiplier": 1.0,
+          "description": "Institutional-friendly surge zone",
+          "exampleSurges": [
+            "SMMT: 583%",
+            "MNPR: 522%"
+          ]
+        }
+      },
+      "floatRequirements": {
+        "ultraLowFloat": {
+          "max": 5000000,
+          "volatilityMultiplier": 5.0,
+          "description": "NUKK-level amplification",
+          "riskNote": "Binary outcomes, extreme volatility"
+        },
+        "lowFloat": {
+          "min": 5000000,
+          "max": 20000000,
+          "volatilityMultiplier": 3.0,
+          "description": "Optimal surge potential"
+        },
+        "moderateFloat": {
+          "min": 20000000,
+          "max": 50000000,
+          "volatilityMultiplier": 2.0,
+          "description": "Sustainable momentum potential"
+        }
+      },
+      "volumeRequirements": {
+        "minimumDailyDollarVolume": 2000000,
+        "surgeTriggerVolume": 5.0,
+        "extremeSurgeVolume": 25.0,
+        "floatTurnoverThreshold": 1.0
+      }
+    },
+    "signalCategories": {
+      "corporateTransformation": {
+        "name": "Corporate Transformation & Strategic Pivots",
+        "description": "Business model changes and transformational events - highest impact signals",
+        "weight": 0.3,
+        "priority": 1,
+        "signals": {
+          "defensePivotCatalyst": {
+            "id": "CORP_001",
+            "name": "Defense/Government Transformation",
+            "description": "Pivot to defense sector - NUKK pattern (5535% surge)",
+            "weight": 0.4,
+            "dataRequired": [
+              "sectorChange",
+              "defenseAcquisitions",
+              "governmentContracts"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "defense sector acquisition OR government contract award > $10M",
+                "score": 75,
+                "description": "Initial defense sector entry"
+              },
+              "trigger2": {
+                "condition": "defense acquisition > marketCap * 0.5 OR Iron Dome/critical infrastructure",
+                "score": 95,
+                "description": "Transformational defense pivot - NUKK pattern"
+              },
+              "trigger3": {
+                "condition": "NATO/DOD approved vendor status OR $100M+ government contracts",
+                "score": 100,
+                "description": "Full defense sector validation"
+              }
+            },
+            "historicalExamples": {
+              "NUKK": "5535% surge after Iron Dome supplier acquisition",
+              "successRate": "80%+ for legitimate defense transformations"
+            }
+          },
+          "biotechPivotPattern": {
+            "id": "CORP_002",
+            "name": "Biotech/AI Transformation Catalyst",
+            "description": "High-multiple sector pivot opportunities",
+            "weight": 0.35,
+            "dataRequired": [
+              "sectorChange",
+              "acquisitionSize",
+              "technologyPlatform"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "biotech/AI acquisition OR licensing deal > marketCap * 0.3",
+                "score": 70,
+                "description": "Significant high-tech transformation"
+              },
+              "trigger2": {
+                "condition": "FDA-approved platform OR breakthrough AI technology",
+                "score": 90,
+                "description": "Validated technology transformation"
+              }
+            }
+          },
+          "reverseSplitAmplification": {
+            "id": "CORP_003",
+            "name": "Float Compression Mechanics",
+            "description": "Reverse split creating volatility amplification - NUKK/HSDT pattern",
+            "weight": 0.25,
+            "dataRequired": [
+              "reverseSplitRatio",
+              "postSplitFloat",
+              "upcomingCatalysts"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "reverse split ratio >= 8:1 AND post-split float < 10M shares",
+                "score": 60,
+                "description": "Significant float compression"
+              },
+              "trigger2": {
+                "condition": "reverse split AND catalyst within 90 days AND float < 5M",
+                "score": 85,
+                "description": "NUKK-style volatility amplification setup"
+              }
+            },
+            "mechanicsNote": "NUKK 1-for-8 split + RIMON acquisition = 5535% surge"
+          }
+        }
+      },
+      "clinicalAndRegulatory": {
+        "name": "Clinical Excellence & Regulatory Milestones",
+        "description": "FDA approvals, clinical superiority, and regulatory catalysts",
+        "weight": 0.25,
+        "priority": 1,
+        "signals": {
+          "clinicalSuperiority": {
+            "id": "CLIN_001",
+            "name": "Head-to-Head Clinical Superiority",
+            "description": "Beating established standard of care - SMMT pattern",
+            "weight": 0.4,
+            "dataRequired": [
+              "clinicalResults",
+              "comparatorDrug",
+              "statisticalSignificance"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "statistically significant improvement vs standard of care",
+                "score": 70,
+                "description": "Clinical superiority demonstrated"
+              },
+              "trigger2": {
+                "condition": "49%+ improvement vs Keytruda/Opdivo OR first-in-class approval",
+                "score": 95,
+                "description": "SMMT-level clinical breakthrough"
+              }
+            },
+            "historicalExample": "SMMT: 49% improvement vs Keytruda = 583% surge"
+          },
+          "reimbursementTippingPoint": {
+            "id": "CLIN_002",
+            "name": "Reimbursement Critical Mass",
+            "description": "3+ major payers approval - HSDT pattern (119% surge)",
+            "weight": 0.35,
+            "dataRequired": [
+              "payerApprovals",
+              "reimbursementAmounts",
+              "coverageTimeline"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "2 major payers approve reimbursement (Anthem, Aetna, UHC, etc.)",
+                "score": 60,
+                "description": "Reimbursement momentum building"
+              },
+              "trigger2": {
+                "condition": "3+ major payers approve reimbursement within 6 months",
+                "score": 90,
+                "description": "HSDT-style reimbursement tipping point"
+              },
+              "trigger3": {
+                "condition": "CMS/Medicare approval OR national coverage determination",
+                "score": 100,
+                "description": "Universal coverage catalyst"
+              }
+            },
+            "mechanicsNote": "HSDT surged 119% on 3rd payer approval (Aetna)"
+          },
+          "fdaFastTrackMomentum": {
+            "id": "CLIN_003",
+            "name": "FDA Accelerated Pathway Signals",
+            "description": "Fast Track, Breakthrough, Orphan designations",
+            "weight": 0.25,
+            "dataRequired": [
+              "fdaDesignations",
+              "trialTimelines",
+              "regulatoryMilestones"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "FDA Fast Track designation OR Breakthrough Therapy",
+                "score": 65,
+                "description": "Accelerated regulatory pathway"
+              },
+              "trigger2": {
+                "condition": "Orphan Drug designation with market exclusivity",
+                "score": 80,
+                "description": "Protected market opportunity"
+              }
+            }
+          }
+        }
+      },
+      "technicalCompression": {
+        "name": "Advanced Technical Pattern Recognition",
+        "description": "Enhanced technical patterns based on DRUG surge analysis",
+        "weight": 0.2,
+        "priority": 2,
+        "signals": {
+          "extremeVolatilityCompression": {
+            "id": "TECH_001",
+            "name": "DRUG-Pattern Bollinger Squeeze",
+            "description": "Bollinger Band compression >30 days - DRUG 2000% pattern",
+            "weight": 0.4,
+            "dataRequired": [
+              "bollingerBandWidth",
+              "compressionDuration",
+              "historicalVolatility"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "Bollinger Band width <5th percentile for 30+ days",
+                "score": 70,
+                "description": "Significant volatility compression"
+              },
+              "trigger2": {
+                "condition": "BB squeeze >45 days AND RSI <30 AND catalyst approaching",
+                "score": 95,
+                "description": "DRUG-level coiled spring with catalyst"
+              }
+            },
+            "historicalExample": "DRUG: Extreme BB squeeze preceded 2000% surge"
+          },
+          "oversoldDivergenceRecovery": {
+            "id": "TECH_002",
+            "name": "Extended Oversold Recovery Pattern",
+            "description": "RSI <30 with bullish divergence setup",
+            "weight": 0.35,
+            "dataRequired": [
+              "rsi14",
+              "macdDivergence",
+              "priceAction",
+              "volumeConfirmation"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "RSI <25 for 10+ days AND volume building",
+                "score": 55,
+                "description": "Extreme oversold with accumulation"
+              },
+              "trigger2": {
+                "condition": "RSI bullish divergence AND MACD convergence AND catalyst proximity",
+                "score": 85,
+                "description": "Multi-indicator oversold reversal setup"
+              }
+            }
+          },
+          "baseFormationBreakout": {
+            "id": "TECH_003",
+            "name": "Extended Base Building Pattern",
+            "description": "6+ month consolidation preceding breakout",
+            "weight": 0.25,
+            "dataRequired": [
+              "consolidationDuration",
+              "supportTests",
+              "volumePattern"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "6+ month base building AND multiple support tests",
+                "score": 50,
+                "description": "Solid foundation established"
+              },
+              "trigger2": {
+                "condition": "NUKK-style 6-month $1.30-$2.00 base AND tightening volume",
+                "score": 75,
+                "description": "Extended base with volume compression"
+              }
+            }
+          }
+        }
+      },
+      "volumeIntelligence": {
+        "name": "Advanced Volume Pattern Analysis",
+        "description": "Sophisticated volume patterns from successful surges",
+        "weight": 0.15,
+        "priority": 2,
+        "signals": {
+          "progressiveAccumulation": {
+            "id": "VOL_001",
+            "name": "30-Day Pre-Surge Volume Building",
+            "description": "Volume accumulation pattern from DRUG analysis",
+            "weight": 0.4,
+            "dataRequired": [
+              "volume",
+              "avgVolume30d",
+              "institutionalActivity"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "volume >2x average for 5+ days in 30-day window",
+                "score": 60,
+                "description": "Early accumulation pattern"
+              },
+              "trigger2": {
+                "condition": "volume >3x average for 7+ days AND 13F filings increase",
+                "score": 85,
+                "description": "Confirmed institutional accumulation"
+              }
+            }
+          },
+          "surgeVolumeConfirmation": {
+            "id": "VOL_002",
+            "name": "Extreme Volume Explosion",
+            "description": "VTAK-style volume surge (2,870% above average)",
+            "weight": 0.35,
+            "dataRequired": [
+              "volume",
+              "avgVolume",
+              "floatTurnover"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "volume >10x average AND float turnover >50%",
+                "score": 65,
+                "description": "Significant volume surge"
+              },
+              "trigger2": {
+                "condition": "volume >25x average AND float turnover >100%",
+                "score": 90,
+                "description": "VTAK-level volume explosion"
+              }
+            }
+          },
+          "darkPoolAccumulation": {
+            "id": "VOL_003",
+            "name": "Institutional Dark Pool Activity",
+            "description": "Off-exchange volume indicating smart money",
+            "weight": 0.25,
+            "dataRequired": [
+              "darkPoolRatio",
+              "blockTrades",
+              "institutionalFlow"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "dark pool ratio >35% for 5+ days",
+                "score": 55,
+                "description": "Institutional accumulation signal"
+              }
+            }
+          }
+        }
+      },
+      "commercialValidation": {
+        "name": "Commercial Breakthrough Signals",
+        "description": "First sales, partnerships, and validation milestones",
+        "weight": 0.07,
+        "priority": 3,
+        "signals": {
+          "firstCommercialMilestone": {
+            "id": "COMM_001",
+            "name": "First Sale/Partnership Validation",
+            "description": "VTAK-pattern first commercial order (173% surge)",
+            "weight": 0.5,
+            "dataRequired": [
+              "firstSale",
+              "customerCredibility",
+              "contractValue"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "first commercial sale from recognized institution",
+                "score": 70,
+                "description": "Initial commercial validation"
+              },
+              "trigger2": {
+                "condition": "first sale from major hospital/university system",
+                "score": 90,
+                "description": "VTAK-style validation milestone"
+              }
+            },
+            "historicalExample": "VTAK: First order from Swedish university hospital = 173% surge"
+          },
+          "insiderInvestmentSignal": {
+            "id": "COMM_002",
+            "name": "Massive Insider Investment",
+            "description": "SMMT-pattern: $79M insider investment at market prices",
+            "weight": 0.5,
+            "dataRequired": [
+              "insiderPurchases",
+              "purchasePrice",
+              "marketPrice"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "insider purchases >$10M at market price within 30 days",
+                "score": 75,
+                "description": "Significant insider confidence"
+              },
+              "trigger2": {
+                "condition": "insider purchases >$50M at market price (SMMT-style)",
+                "score": 95,
+                "description": "SMMT-level insider conviction"
+              }
+            },
+            "mechanicsNote": "SMMT executives invested $79M at $22.70 before 583% surge"
+          }
+        }
+      },
+      "microstructure": {
+        "name": "Market Microstructure Amplifiers",
+        "description": "Float dynamics and structural volatility factors",
+        "weight": 0.03,
+        "priority": 4,
+        "signals": {
+          "ultraLowFloatDynamics": {
+            "id": "MICRO_001",
+            "name": "NUKK-Style Float Scarcity",
+            "description": "Ultra-low float creating explosive potential",
+            "weight": 0.6,
+            "dataRequired": [
+              "floatShares",
+              "institutionalOwnership",
+              "insiderOwnership"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "float <3M shares AND market cap $5M-$50M",
+                "score": 75,
+                "description": "DRUG-level volatility setup"
+              },
+              "trigger2": {
+                "condition": "float <2.5M shares AND recent reverse split",
+                "score": 90,
+                "description": "NUKK-level amplification potential"
+              }
+            }
+          },
+          "shortSqueezeAmplification": {
+            "id": "MICRO_002",
+            "name": "Short Interest Dynamics",
+            "description": "Short covering amplification factors",
+            "weight": 0.4,
+            "dataRequired": [
+              "shortInterest",
+              "daysToCover",
+              "borrowRate"
+            ],
+            "thresholds": {
+              "trigger1": {
+                "condition": "short interest >20% AND days to cover >3",
+                "score": 55,
+                "description": "Moderate squeeze potential"
+              },
+              "trigger2": {
+                "condition": "short interest >50% AND limited borrows available",
+                "score": 80,
+                "description": "High squeeze probability"
+              }
+            }
+          }
+        }
+      }
+    },
+    "compositeScoring": {
+      "description": "Enhanced scoring based on successful surge patterns",
+      "weightingSystem": {
+        "corporateTransformation": 0.3,
+        "clinicalAndRegulatory": 0.25,
+        "technicalCompression": 0.2,
+        "volumeIntelligence": 0.15,
+        "commercialValidation": 0.07,
+        "microstructure": 0.03
+      },
+      "alertThresholds": {
+        "ultraCritical": {
+          "minimumScore": 300,
+          "description": "NUKK/DRUG-level setup",
+          "requiredCategories": [
+            "corporateTransformation",
+            "technicalCompression",
+            "volumeIntelligence"
+          ],
+          "expectedAccuracy": "75-85%",
+          "historicalExamples": [
+            "NUKK: 5535%",
+            "DRUG: 2000%"
+          ]
+        },
+        "critical": {
+          "minimumScore": 250,
+          "description": "VTAK/SMMT-level setup",
+          "requiredCategories": [
+            "clinicalAndRegulatory",
+            "volumeIntelligence"
+          ],
+          "expectedAccuracy": "65-75%",
+          "historicalExamples": [
+            "SMMT: 583%",
+            "VTAK: 173%"
+          ]
+        },
+        "high": {
+          "minimumScore": 200,
+          "description": "HSDT-level opportunity",
+          "expectedAccuracy": "50-65%",
+          "historicalExamples": [
+            "HSDT: 119%",
+            "MNPR: 522%"
+          ]
+        }
+      }
+    },
+    "patternMatchingLibrary": {
+      "description": "Documented surge patterns for matching",
+      "defenseTransformation": {
+        "pattern": "NUKK-style defense pivot",
+        "characteristics": [
+          "Sector transformation to defense",
+          "Microscopic float (<3M shares)",
+          "Government/military connections",
+          "Geopolitical tailwinds",
+          "Reverse split amplification"
+        ],
+        "expectedReturn": "1000-5000%",
+        "timeframe": "1-7 days",
+        "riskLevel": "Extreme"
+      },
+      "biotechSuperiorityy": {
+        "pattern": "SMMT-style clinical breakthrough",
+        "characteristics": [
+          "Head-to-head superiority vs SOC",
+          "FDA fast track designation",
+          "Massive insider investment",
+          "Multiple positive readouts",
+          "Large addressable market"
+        ],
+        "expectedReturn": "300-600%",
+        "timeframe": "30-180 days",
+        "riskLevel": "High"
+      },
+      "technicalExplosion": {
+        "pattern": "DRUG-style compression breakout",
+        "characteristics": [
+          "Bollinger Band squeeze >30 days",
+          "Ultra-low float (<5M shares)",
+          "30-day volume accumulation",
+          "RSI bullish divergence",
+          "Catalyst approaching"
+        ],
+        "expectedReturn": "500-2000%",
+        "timeframe": "1-14 days",
+        "riskLevel": "Extreme"
+      },
+      "commercialValidation": {
+        "pattern": "VTAK-style first sale",
+        "characteristics": [
+          "First commercial order",
+          "Credible customer",
+          "Oversold technical setup",
+          "Low float micro-cap",
+          "Volume explosion confirmation"
+        ],
+        "expectedReturn": "100-300%",
+        "timeframe": "1-3 days",
+        "riskLevel": "High"
+      }
+    },
+    "riskManagement": {
+      "description": "Enhanced risk controls based on surge analysis",
+      "positionSizing": {
+        "ultraCritical": "1.0-2.5% per position",
+        "critical": "0.5-1.5% per position",
+        "high": "0.25-1.0% per position",
+        "maxPortfolioAllocation": "12% total surge candidates"
+      },
+      "stopLossStrategy": {
+        "technicalStops": "15-25% below entry",
+        "timeStops": "Exit if no movement within 30 days",
+        "catalystStops": "Exit immediately if catalyst fails"
+      },
+      "profitTaking": {
+        "stage1": "25% at +100%",
+        "stage2": "35% at +300%",
+        "stage3": "25% at +700%",
+        "runner": "15% with trailing stop"
+      }
+    },
+    "implementationEnhancements": {
+      "realTimeMonitoring": {
+        "scanningFrequency": "Real-time with 15-second updates during market hours",
+        "dataFeeds": [
+          "SEC filings (8-K, 13G/D)",
+          "Press releases",
+          "FDA databases",
+          "Clinical trial registries",
+          "Insider transaction feeds",
+          "Options flow data",
+          "Social sentiment APIs"
+        ]
+      },
+      "alertPrioritization": {
+        "level1": "Defense transformation + float <3M",
+        "level2": "Clinical superiority + insider investment >$10M",
+        "level3": "BB squeeze >30 days + volume accumulation",
+        "level4": "Reimbursement tipping point + oversold setup"
+      }
+    },
+    "backtestingValidation": {
+      "documentedSuccesses": {
+        "NUKK": {
+          "signals": [
+            "defense pivot",
+            "ultra-low float",
+            "reverse split",
+            "oversold bounce"
+          ],
+          "score": "9.3/10",
+          "surge": "5535%",
+          "accuracy": "Excellent"
+        },
+        "DRUG": {
+          "signals": [
+            "bollinger squeeze",
+            "volume accumulation",
+            "ultra-low float",
+            "RSI divergence"
+          ],
+          "score": "9.1/10",
+          "surge": "2000%",
+          "accuracy": "Excellent"
+        },
+        "SMMT": {
+          "signals": [
+            "clinical superiority",
+            "insider investment",
+            "FDA fast track"
+          ],
+          "score": "8.8/10",
+          "surge": "583%",
+          "accuracy": "Excellent"
+        },
+        "VTAK": {
+          "signals": [
+            "first commercial sale",
+            "oversold setup",
+            "volume explosion"
+          ],
+          "score": "8.5/10",
+          "surge": "173%",
+          "accuracy": "Very Good"
+        }
+      },
+      "projectedPerformance": {
+        "overallAccuracy": "65-72%",
+        "falsePositiveRate": "10-12%",
+        "averageLeadTime": "3-7 days",
+        "expectedSharpeRatio": 4.2
+      }
+    }
+  }
+}

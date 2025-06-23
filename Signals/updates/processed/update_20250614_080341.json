@@ -1,0 +1,393 @@
+{
+  "update_metadata": {
+    "date": "2025-06-14",
+    "version": "1.3.0", 
+    "source_analysis": "Comprehensive surge pattern analysis from 18 documented surge events",
+    "catalyst_events": [
+      "Israel-Iran conflict June 13, 2025",
+      "Oil price surge +7%",
+      "Defense sector rally +3-4%",
+      "Geopolitical energy catalyst activation"
+    ],
+    "patterns_analyzed": [
+      "HUSA energy surge (+190%)",
+      "RBNE tanker surge (+350%)", 
+      "HCTI reverse split dynamics (+250%)",
+      "HOLO AI/quantum narrative (+110%)",
+      "HSDT medical device catalyst (+119%)"
+    ]
+  },
+
+  "new_signal_categories": {
+    "geopolitical_energy_amplifier": {
+      "name": "Geopolitical Energy Sector Amplification",
+      "description": "Energy sector surge detection during geopolitical conflicts",
+      "weight": 0.35,
+      "priority": 1,
+      "signals": {
+        "iran_israel_conflict_premium": {
+          "id": "GEO_001",
+          "name": "Middle East Conflict Energy Premium",
+          "description": "Oil price spikes during Iran-Israel tensions",
+          "weight": 0.4,
+          "dataRequired": ["oil_price_change", "geopolitical_events", "sector"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "oil_price_change >= 0.05 AND conflict_active = true",
+              "score": 60,
+              "description": "Oil +5% during active conflict"
+            },
+            "trigger2": {
+              "condition": "oil_price_change >= 0.08 AND tanker_rates > 2.0x",
+              "score": 85,
+              "description": "Major oil spike with tanker rate explosion"
+            }
+          },
+          "sector_multipliers": {
+            "energy": 2.0,
+            "tankers": 2.5,
+            "shipping": 2.0,
+            "defense": 1.5
+          }
+        },
+        
+        "tanker_freight_explosion": {
+          "id": "GEO_002", 
+          "name": "Tanker Freight Rate Surge",
+          "description": "Shipping rate spikes during supply disruptions",
+          "weight": 0.3,
+          "dataRequired": ["tanker_rates", "shipping_routes", "geopolitical_risk"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "tanker_rates >= 1.5x baseline AND middle_east_risk = high",
+              "score": 50,
+              "description": "Tanker rates 1.5x+ with ME tensions"
+            },
+            "trigger2": {
+              "condition": "tanker_rates >= 2.5x baseline AND strait_closure_risk = true",
+              "score": 90,
+              "description": "Extreme tanker rates with closure risk"
+            }
+          }
+        },
+        
+        "defense_geopolitical_premium": {
+          "id": "GEO_003",
+          "name": "Defense Sector Geopolitical Rally", 
+          "description": "Defense stock premiums during conflicts",
+          "weight": 0.3,
+          "dataRequired": ["defense_sector_performance", "military_spending", "conflict_intensity"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "defense_sector_outperformance >= 0.03 AND active_conflict = true",
+              "score": 40,
+              "description": "Defense sector +3% during conflict"
+            },
+            "trigger2": {
+              "condition": "defense_budget_increase_announced = true AND sector_rally >= 0.05",
+              "score": 70,
+              "description": "Budget increases + sector rally"
+            }
+          }
+        }
+      }
+    },
+
+    "ultra_micro_cap_amplification": {
+      "name": "Ultra Micro-Cap Amplification Effects",
+      "description": "Extreme price amplification in ultra-small caps",
+      "weight": 0.25,
+      "priority": 2,
+      "signals": {
+        "extreme_micro_structure": {
+          "id": "ULTRA_001",
+          "name": "Extreme Micro-Cap Structure",
+          "description": "Market caps under $50M with compressed floats",
+          "weight": 0.4,
+          "dataRequired": ["market_cap", "float_shares", "daily_volume"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "market_cap <= 50000000 AND float_shares <= 5000000",
+              "score": 50,
+              "description": "Sub-$50M cap with <5M float"
+            },
+            "trigger2": {
+              "condition": "market_cap <= 20000000 AND float_shares <= 2000000",
+              "score": 80,
+              "description": "Ultra-micro: <$20M cap, <2M float"
+            },
+            "trigger3": {
+              "condition": "market_cap <= 10000000 AND float_shares <= 1000000",
+              "score": 95,
+              "description": "Extreme micro: <$10M cap, <1M float"
+            }
+          },
+          "volatility_multipliers": {
+            "sub_50m": 3.0,
+            "sub_20m": 5.0,
+            "sub_10m": 8.0
+          }
+        },
+        
+        "volume_float_ratio": {
+          "id": "ULTRA_002",
+          "name": "Volume to Float Explosion",
+          "description": "Trading volume exceeding float size",
+          "weight": 0.35,
+          "dataRequired": ["daily_volume", "float_shares", "avg_volume"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "daily_volume >= float_shares * 0.5",
+              "score": 60,
+              "description": "Volume = 50%+ of float"
+            },
+            "trigger2": {
+              "condition": "daily_volume >= float_shares * 1.0",
+              "score": 85,
+              "description": "Volume exceeds entire float"
+            },
+            "trigger3": {
+              "condition": "daily_volume >= float_shares * 2.0", 
+              "score": 95,
+              "description": "Volume = 2x+ float (extreme)"
+            }
+          }
+        },
+        
+        "micro_cap_sector_catalyst": {
+          "id": "ULTRA_003",
+          "name": "Micro-Cap Sector Catalyst Amplification",
+          "description": "Sector moves amplified by micro-cap structure",
+          "weight": 0.25,
+          "dataRequired": ["sector_performance", "market_cap", "beta"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "sector_outperformance >= 0.05 AND market_cap <= 50000000",
+              "score": 45,
+              "description": "Sector +5% with micro-cap structure"
+            },
+            "trigger2": {
+              "condition": "sector_outperformance >= 0.03 AND market_cap <= 20000000 AND beta >= 2.0",
+              "score": 70,
+              "description": "High beta micro-cap in sector rally"
+            }
+          }
+        }
+      }
+    },
+
+    "reverse_split_momentum": {
+      "name": "Reverse Split Ultra-Low Float Dynamics",
+      "description": "Post-reverse split compressed float volatility",
+      "weight": 0.2,
+      "priority": 3,
+      "signals": {
+        "recent_reverse_split": {
+          "id": "REV_001",
+          "name": "Recent Reverse Split Compression",
+          "description": "Float compression from recent reverse splits",
+          "weight": 0.5,
+          "dataRequired": ["reverse_split_date", "split_ratio", "resulting_float"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "days_since_reverse_split <= 90 AND split_ratio >= 10",
+              "score": 40,
+              "description": "10:1+ split within 90 days"
+            },
+            "trigger2": {
+              "condition": "days_since_reverse_split <= 60 AND split_ratio >= 20 AND resulting_float <= 5000000",
+              "score": 70,
+              "description": "20:1+ split, <5M float, <60 days"
+            },
+            "trigger3": {
+              "condition": "days_since_reverse_split <= 30 AND split_ratio >= 40 AND resulting_float <= 2000000",
+              "score": 90,
+              "description": "40:1+ split, ultra-low float, <30 days"
+            }
+          }
+        },
+        
+        "post_split_volatility_setup": {
+          "id": "REV_002",
+          "name": "Post-Split Volatility Environment",
+          "description": "Technical setup following reverse split",
+          "weight": 0.3,
+          "dataRequired": ["price_volatility", "volume_volatility", "float_turnover"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "daily_volatility >= 0.2 AND volume_spike >= 10x",
+              "score": 50,
+              "description": "20%+ volatility with 10x volume"
+            },
+            "trigger2": {
+              "condition": "float_turnover >= 0.5 AND trading_halts >= 1",
+              "score": 75,
+              "description": "50%+ float turnover with halts"
+            }
+          }
+        },
+        
+        "split_catalyst_alignment": {
+          "id": "REV_003",
+          "name": "Reverse Split + Catalyst Alignment", 
+          "description": "Business catalysts aligning with split timing",
+          "weight": 0.2,
+          "dataRequired": ["business_catalysts", "split_timing", "news_flow"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "major_catalyst_within_30_days = true AND recent_reverse_split = true",
+              "score": 60,
+              "description": "Business catalyst + recent split"
+            }
+          }
+        }
+      }
+    },
+
+    "biotech_binary_catalyst": {
+      "name": "Biotech Binary Event Catalysts",
+      "description": "FDA and clinical trial binary events",
+      "weight": 0.15,
+      "priority": 2,
+      "signals": {
+        "fda_decision_proximity": {
+          "id": "BIO_001",
+          "name": "FDA Decision Proximity",
+          "description": "PDUFA dates and FDA meetings approaching",
+          "weight": 0.4,
+          "dataRequired": ["pdufa_date", "fda_meeting_date", "phase", "indication"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "days_to_pdufa <= 30 AND phase >= 3",
+              "score": 60,
+              "description": "Phase 3+ PDUFA within 30 days"
+            },
+            "trigger2": {
+              "condition": "days_to_pdufa <= 14 AND phase = 3 AND orphan_designation = true",
+              "score": 80,
+              "description": "Orphan drug PDUFA within 2 weeks"
+            },
+            "trigger3": {
+              "condition": "days_to_pdufa <= 7 AND breakthrough_therapy = true",
+              "score": 90,
+              "description": "Breakthrough therapy PDUFA within 1 week"
+            }
+          }
+        },
+        
+        "clinical_data_readout": {
+          "id": "BIO_002",
+          "name": "Clinical Trial Data Readouts",
+          "description": "Phase 2/3 clinical trial results pending",
+          "weight": 0.35,
+          "dataRequired": ["trial_phase", "endpoint_type", "enrollment", "completion_date"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "phase >= 2 AND primary_endpoint_reached = true AND days_to_readout <= 60",
+              "score": 50,
+              "description": "Phase 2+ readout within 60 days"
+            },
+            "trigger2": {
+              "condition": "phase = 3 AND endpoint_type = 'survival' AND days_to_readout <= 30",
+              "score": 75,
+              "description": "Phase 3 survival endpoint <30 days"
+            }
+          }
+        },
+        
+        "partnership_monetization": {
+          "id": "BIO_003",
+          "name": "Partnership and Licensing Events",
+          "description": "Strategic partnerships and licensing deals",
+          "weight": 0.25,
+          "dataRequired": ["partnership_status", "licensing_deals", "milestone_payments"],
+          "thresholds": {
+            "trigger1": {
+              "condition": "partnership_announced = true AND deal_value >= 100000000",
+              "score": 70,
+              "description": "Major partnership >$100M announced"
+            },
+            "trigger2": {
+              "condition": "milestone_payment_due = true AND amount >= 50000000",
+              "score": 55,
+              "description": "Milestone payment >$50M due"
+            }
+          }
+        }
+      }
+    }
+  },
+
+  "enhanced_risk_factors": {
+    "extreme_volatility_warning": {
+      "ultra_micro_caps": {
+        "condition": "market_cap < 20000000",
+        "risk_multiplier": 5.0,
+        "max_position_size": 0.25,
+        "stop_loss_requirement": true
+      },
+      "post_reverse_split": {
+        "condition": "days_since_reverse_split < 60",
+        "risk_multiplier": 3.0, 
+        "volatility_expectation": 0.3,
+        "liquidity_warning": true
+      },
+      "geopolitical_dependency": {
+        "condition": "geopolitical_catalyst = primary_driver",
+        "reversal_risk": "very_high",
+        "sustainability": "1-7 days",
+        "position_scaling": "aggressive_exit_required"
+      }
+    }
+  },
+
+  "updated_alert_thresholds": {
+    "critical_alerts": {
+      "geopolitical_energy_surge": {
+        "condition": "oil_price_spike >= 0.05 AND energy_stock_count >= 3",
+        "action": "scan_all_energy_micro_caps",
+        "priority": "immediate"
+      },
+      "ultra_micro_volume_explosion": {
+        "condition": "volume >= 20x_average AND market_cap <= 50000000",
+        "action": "monitor_for_sustainability",
+        "priority": "high"
+      },
+      "reverse_split_catalyst_alignment": {
+        "condition": "reverse_split_recent = true AND major_catalyst = true",
+        "action": "position_size_calculation",
+        "priority": "high"
+      }
+    }
+  },
+
+  "implementation_updates": {
+    "scanning_priorities": [
+      "Monitor Israel-Iran conflict developments daily",
+      "Track oil price movements >3% intraday", 
+      "Screen for reverse splits 30-90 days old",
+      "Monitor biotech PDUFA calendar June-August 2025",
+      "Focus on market caps <$50M during sector rallies"
+    ],
+    
+    "position_sizing_updates": {
+      "ultra_high_risk": "0.25% max (ratings 85+)",
+      "high_risk": "0.5% max (ratings 70-84)",
+      "moderate_high": "1.0% max (ratings 60-69)"
+    },
+    
+    "exit_strategy_framework": {
+      "profit_taking": "Scale out 25% at +50%, 50% at +100%",
+      "stop_losses": "Technical stops below support",
+      "maximum_hold": "30 days for surge plays",
+      "geopolitical_exits": "Monitor conflict de-escalation"
+    }
+  },
+
+  "backtest_performance_targets": {
+    "expected_accuracy": 0.4,
+    "average_surge_magnitude": 1.5,
+    "false_positive_tolerance": 0.35,
+    "risk_adjusted_return": 2.0
+  }
+}

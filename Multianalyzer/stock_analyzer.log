@@ -1,0 +1,2036 @@
+2025-06-12 15:03:47,429 - INFO - Starting Multi-Stock Signal Analyzer
+2025-06-12 15:03:47,430 - INFO - Loaded signals configuration from ../analyzer/signals.json
+2025-06-12 15:03:47,430 - INFO - Loaded 18 symbols: GME, TER, JKHY, BF-A, ILMN, ALGN, SOLV, INCY, MORN, REG, RDY, YMM, TXRH, BAH, CNA, BXP, GLPI, FTAI
+2025-06-12 15:03:47,430 - INFO - Processing GME (1/18)
+2025-06-12 15:03:47,430 - INFO - Starting analysis for GME
+2025-06-12 15:03:47,430 - INFO - Fetching data for GME (attempt 1)
+2025-06-12 15:03:47,430 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/GME
+2025-06-12 15:03:47,431 - DEBUG - Entering get()
+2025-06-12 15:03:47,431 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:47,431 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/GME
+2025-06-12 15:03:47,431 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'GME'}
+2025-06-12 15:03:47,431 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:47,431 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:47,431 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:47,431 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:47,431 - DEBUG -      Entering _load_cookie_curlCffi()
+2025-06-12 15:03:47,432 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_cookieschema" ("strategy" VARCHAR(255) NOT NULL PRIMARY KEY, "fetch_date" DATETIME NOT NULL, "cookie_bytes" BLOB NOT NULL) WITHOUT ROWID', [])
+2025-06-12 15:03:47,432 - DEBUG - ('SELECT "t1"."strategy", "t1"."fetch_date", "t1"."cookie_bytes" FROM "_cookieschema" AS "t1" WHERE ("t1"."strategy" = ?) LIMIT ? OFFSET ?', ['curlCffi', 1, 0])
+2025-06-12 15:03:47,433 - DEBUG -      Exiting _load_cookie_curlCffi()
+2025-06-12 15:03:47,433 - DEBUG - reusing persistent cookie
+2025-06-12 15:03:47,433 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:47,433 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:47,433 - DEBUG -      Entering _get_cookie_basic()
+2025-06-12 15:03:47,433 - DEBUG - reusing cookie
+2025-06-12 15:03:47,433 - DEBUG -      Exiting _get_cookie_basic()
+2025-06-12 15:03:47,903 - DEBUG - crumb = 'arsshYHOfla'
+2025-06-12 15:03:47,903 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:47,904 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:47,904 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:48,413 - DEBUG - response code=200
+2025-06-12 15:03:48,413 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:48,413 - DEBUG - Exiting get()
+2025-06-12 15:03:48,413 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:48,413 - DEBUG - Entering get()
+2025-06-12 15:03:48,413 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:48,413 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:48,413 - DEBUG - params={'symbols': 'GME', 'formatted': 'false'}
+2025-06-12 15:03:48,413 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:48,413 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:48,413 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:48,413 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:48,414 - DEBUG - reusing cookie
+2025-06-12 15:03:48,414 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:48,414 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:48,414 - DEBUG - reusing crumb
+2025-06-12 15:03:48,414 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:48,414 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:48,414 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:48,584 - DEBUG - response code=200
+2025-06-12 15:03:48,584 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:48,584 - DEBUG - Exiting get()
+2025-06-12 15:03:48,585 - DEBUG - Entering get()
+2025-06-12 15:03:48,585 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:48,585 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/GME?symbol=GME&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:03:48,585 - DEBUG - params=None
+2025-06-12 15:03:48,585 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:48,585 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:48,585 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:48,586 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:48,586 - DEBUG - reusing cookie
+2025-06-12 15:03:48,586 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:48,586 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:48,586 - DEBUG - reusing crumb
+2025-06-12 15:03:48,586 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:48,586 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:48,586 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:48,757 - DEBUG - response code=200
+2025-06-12 15:03:48,758 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:48,758 - DEBUG - Exiting get()
+2025-06-12 15:03:48,758 - DEBUG - Entering history()
+2025-06-12 15:03:48,762 - DEBUG - ('CREATE TABLE IF NOT EXISTS "_tz_kv" ("key" VARCHAR(255) NOT NULL PRIMARY KEY, "value" VARCHAR(255)) WITHOUT ROWID', [])
+2025-06-12 15:03:48,767 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GME', 1, 0])
+2025-06-12 15:03:48,768 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:03:48,768 - DEBUG -   Entering get()
+2025-06-12 15:03:48,768 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:48,768 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GME
+2025-06-12 15:03:48,768 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:03:48,768 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:48,768 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:48,768 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:48,768 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:48,768 - DEBUG - reusing cookie
+2025-06-12 15:03:48,768 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:48,768 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:48,768 - DEBUG - reusing crumb
+2025-06-12 15:03:48,768 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:48,768 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:48,768 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:48,943 - DEBUG - response code=200
+2025-06-12 15:03:48,943 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:48,943 - DEBUG -   Exiting get()
+2025-06-12 15:03:48,943 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:03:48,995 - DEBUG - ('BEGIN', None)
+2025-06-12 15:03:48,996 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['GME', 'America/New_York'])
+2025-06-12 15:03:48,998 - DEBUG -  Entering history()
+2025-06-12 15:03:48,999 - DEBUG - GME: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:48,999 - DEBUG -   Entering get()
+2025-06-12 15:03:48,999 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:48,999 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GME
+2025-06-12 15:03:48,999 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:48,999 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:48,999 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:48,999 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:48,999 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:48,999 - DEBUG - reusing cookie
+2025-06-12 15:03:48,999 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:48,999 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:48,999 - DEBUG - reusing crumb
+2025-06-12 15:03:48,999 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:48,999 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:48,999 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:49,179 - DEBUG - response code=200
+2025-06-12 15:03:49,179 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:49,179 - DEBUG -   Exiting get()
+2025-06-12 15:03:49,213 - DEBUG - GME: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:03:49,224 - DEBUG - GME: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:03:49,235 - DEBUG - GME: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:49,246 - DEBUG - GME: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:49,246 - DEBUG -  Exiting history()
+2025-06-12 15:03:49,247 - DEBUG - Exiting history()
+2025-06-12 15:03:49,247 - INFO - Successfully fetched data for GME
+2025-06-12 15:03:49,250 - INFO - Saved individual report: reports/GME_analysis_20250612_150349.json
+2025-06-12 15:03:49,250 - INFO - GME: Score 0.0%, 0 triggered signals
+2025-06-12 15:03:50,250 - INFO - Processing TER (2/18)
+2025-06-12 15:03:50,251 - INFO - Starting analysis for TER
+2025-06-12 15:03:50,251 - INFO - Fetching data for TER (attempt 1)
+2025-06-12 15:03:50,251 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/TER
+2025-06-12 15:03:50,251 - DEBUG - Entering get()
+2025-06-12 15:03:50,251 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:50,251 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/TER
+2025-06-12 15:03:50,251 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'TER'}
+2025-06-12 15:03:50,251 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:50,251 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:50,251 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:50,251 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:50,251 - DEBUG - reusing cookie
+2025-06-12 15:03:50,251 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:50,251 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:50,251 - DEBUG - reusing crumb
+2025-06-12 15:03:50,251 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:50,252 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:50,252 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:50,489 - DEBUG - response code=200
+2025-06-12 15:03:50,490 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:50,490 - DEBUG - Exiting get()
+2025-06-12 15:03:50,490 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:50,490 - DEBUG - Entering get()
+2025-06-12 15:03:50,490 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:50,490 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:50,490 - DEBUG - params={'symbols': 'TER', 'formatted': 'false'}
+2025-06-12 15:03:50,491 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:50,491 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:50,491 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:50,491 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:50,491 - DEBUG - reusing cookie
+2025-06-12 15:03:50,491 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:50,491 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:50,491 - DEBUG - reusing crumb
+2025-06-12 15:03:50,491 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:50,491 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:50,491 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:50,715 - DEBUG - response code=200
+2025-06-12 15:03:50,715 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:50,715 - DEBUG - Exiting get()
+2025-06-12 15:03:50,716 - DEBUG - Entering get()
+2025-06-12 15:03:50,716 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:50,716 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/TER?symbol=TER&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:03:50,716 - DEBUG - params=None
+2025-06-12 15:03:50,716 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:50,716 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:50,716 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:50,716 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:50,716 - DEBUG - reusing cookie
+2025-06-12 15:03:50,716 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:50,716 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:50,716 - DEBUG - reusing crumb
+2025-06-12 15:03:50,716 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:50,716 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:50,716 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:50,887 - DEBUG - response code=200
+2025-06-12 15:03:50,887 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:50,887 - DEBUG - Exiting get()
+2025-06-12 15:03:50,887 - DEBUG - Entering history()
+2025-06-12 15:03:50,887 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['TER', 1, 0])
+2025-06-12 15:03:50,888 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:03:50,888 - DEBUG -   Entering get()
+2025-06-12 15:03:50,888 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:50,888 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/TER
+2025-06-12 15:03:50,888 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:03:50,888 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:50,888 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:50,888 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:50,888 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:50,888 - DEBUG - reusing cookie
+2025-06-12 15:03:50,888 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:50,888 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:50,888 - DEBUG - reusing crumb
+2025-06-12 15:03:50,888 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:50,888 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:50,888 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:51,074 - DEBUG - response code=200
+2025-06-12 15:03:51,074 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:51,074 - DEBUG -   Exiting get()
+2025-06-12 15:03:51,074 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:03:51,074 - DEBUG - ('BEGIN', None)
+2025-06-12 15:03:51,075 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['TER', 'America/New_York'])
+2025-06-12 15:03:51,079 - DEBUG -  Entering history()
+2025-06-12 15:03:51,079 - DEBUG - TER: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:51,079 - DEBUG -   Entering get()
+2025-06-12 15:03:51,079 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:51,080 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/TER
+2025-06-12 15:03:51,080 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:51,080 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:51,080 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:51,080 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:51,080 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:51,080 - DEBUG - reusing cookie
+2025-06-12 15:03:51,080 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:51,080 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:51,080 - DEBUG - reusing crumb
+2025-06-12 15:03:51,080 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:51,080 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:51,080 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:51,281 - DEBUG - response code=200
+2025-06-12 15:03:51,282 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:51,282 - DEBUG -   Exiting get()
+2025-06-12 15:03:51,282 - DEBUG - TER: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:03:51,283 - DEBUG - TER: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:03:51,286 - DEBUG - TER: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:51,292 - DEBUG - TER: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:51,292 - DEBUG -  Exiting history()
+2025-06-12 15:03:51,292 - DEBUG - Exiting history()
+2025-06-12 15:03:51,292 - INFO - Successfully fetched data for TER
+2025-06-12 15:03:51,294 - INFO - Saved individual report: reports/TER_analysis_20250612_150351.json
+2025-06-12 15:03:51,294 - INFO - TER: Score 0.0%, 0 triggered signals
+2025-06-12 15:03:52,294 - INFO - Processing JKHY (3/18)
+2025-06-12 15:03:52,294 - INFO - Starting analysis for JKHY
+2025-06-12 15:03:52,294 - INFO - Fetching data for JKHY (attempt 1)
+2025-06-12 15:03:52,295 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/JKHY
+2025-06-12 15:03:52,295 - DEBUG - Entering get()
+2025-06-12 15:03:52,295 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:52,295 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/JKHY
+2025-06-12 15:03:52,295 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'JKHY'}
+2025-06-12 15:03:52,295 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:52,295 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:52,295 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:52,295 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:52,295 - DEBUG - reusing cookie
+2025-06-12 15:03:52,295 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:52,295 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:52,295 - DEBUG - reusing crumb
+2025-06-12 15:03:52,295 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:52,295 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:52,295 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:52,473 - DEBUG - response code=200
+2025-06-12 15:03:52,473 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:52,473 - DEBUG - Exiting get()
+2025-06-12 15:03:52,474 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:52,474 - DEBUG - Entering get()
+2025-06-12 15:03:52,474 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:52,474 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:52,474 - DEBUG - params={'symbols': 'JKHY', 'formatted': 'false'}
+2025-06-12 15:03:52,474 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:52,474 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:52,474 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:52,474 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:52,474 - DEBUG - reusing cookie
+2025-06-12 15:03:52,474 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:52,474 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:52,474 - DEBUG - reusing crumb
+2025-06-12 15:03:52,474 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:52,474 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:52,474 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:52,836 - DEBUG - response code=200
+2025-06-12 15:03:52,836 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:52,836 - DEBUG - Exiting get()
+2025-06-12 15:03:52,837 - DEBUG - Entering get()
+2025-06-12 15:03:52,837 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:52,837 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/JKHY?symbol=JKHY&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:03:52,837 - DEBUG - params=None
+2025-06-12 15:03:52,837 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:52,837 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:52,837 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:52,837 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:52,837 - DEBUG - reusing cookie
+2025-06-12 15:03:52,837 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:52,837 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:52,837 - DEBUG - reusing crumb
+2025-06-12 15:03:52,837 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:52,837 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:52,837 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:53,016 - DEBUG - response code=200
+2025-06-12 15:03:53,016 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:53,016 - DEBUG - Exiting get()
+2025-06-12 15:03:53,016 - DEBUG - Entering history()
+2025-06-12 15:03:53,017 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['JKHY', 1, 0])
+2025-06-12 15:03:53,017 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:03:53,017 - DEBUG -   Entering get()
+2025-06-12 15:03:53,017 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:53,017 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/JKHY
+2025-06-12 15:03:53,017 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:03:53,017 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:53,017 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:53,017 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:53,017 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:53,017 - DEBUG - reusing cookie
+2025-06-12 15:03:53,017 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:53,017 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:53,017 - DEBUG - reusing crumb
+2025-06-12 15:03:53,017 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:53,017 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:53,017 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:53,239 - DEBUG - response code=200
+2025-06-12 15:03:53,239 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:53,239 - DEBUG -   Exiting get()
+2025-06-12 15:03:53,239 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:03:53,240 - DEBUG - ('BEGIN', None)
+2025-06-12 15:03:53,240 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['JKHY', 'America/New_York'])
+2025-06-12 15:03:53,274 - DEBUG -  Entering history()
+2025-06-12 15:03:53,274 - DEBUG - JKHY: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:53,274 - DEBUG -   Entering get()
+2025-06-12 15:03:53,274 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:53,274 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/JKHY
+2025-06-12 15:03:53,274 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:53,274 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:53,274 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:53,275 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:53,275 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:53,275 - DEBUG - reusing cookie
+2025-06-12 15:03:53,275 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:53,275 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:53,275 - DEBUG - reusing crumb
+2025-06-12 15:03:53,275 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:53,275 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:53,275 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:53,510 - DEBUG - response code=200
+2025-06-12 15:03:53,511 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:53,511 - DEBUG -   Exiting get()
+2025-06-12 15:03:53,512 - DEBUG - JKHY: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:03:53,513 - DEBUG - JKHY: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:03:53,517 - DEBUG - JKHY: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:53,526 - DEBUG - JKHY: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:53,526 - DEBUG -  Exiting history()
+2025-06-12 15:03:53,526 - DEBUG - Exiting history()
+2025-06-12 15:03:53,526 - INFO - Successfully fetched data for JKHY
+2025-06-12 15:03:53,530 - INFO - Saved individual report: reports/JKHY_analysis_20250612_150353.json
+2025-06-12 15:03:53,530 - INFO - JKHY: Score 0.0%, 0 triggered signals
+2025-06-12 15:03:54,530 - INFO - Processing BF-A (4/18)
+2025-06-12 15:03:54,531 - INFO - Starting analysis for BF-A
+2025-06-12 15:03:54,531 - INFO - Fetching data for BF-A (attempt 1)
+2025-06-12 15:03:54,531 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/BF-A
+2025-06-12 15:03:54,531 - DEBUG - Entering get()
+2025-06-12 15:03:54,532 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:54,532 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/BF-A
+2025-06-12 15:03:54,532 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'BF-A'}
+2025-06-12 15:03:54,532 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:54,532 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:54,533 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:54,533 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:54,533 - DEBUG - reusing cookie
+2025-06-12 15:03:54,533 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:54,533 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:54,534 - DEBUG - reusing crumb
+2025-06-12 15:03:54,534 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:54,534 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:54,534 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:54,773 - DEBUG - response code=200
+2025-06-12 15:03:54,773 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:54,773 - DEBUG - Exiting get()
+2025-06-12 15:03:54,773 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:54,774 - DEBUG - Entering get()
+2025-06-12 15:03:54,774 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:54,774 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:54,774 - DEBUG - params={'symbols': 'BF-A', 'formatted': 'false'}
+2025-06-12 15:03:54,774 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:54,774 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:54,774 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:54,774 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:54,774 - DEBUG - reusing cookie
+2025-06-12 15:03:54,774 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:54,774 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:54,774 - DEBUG - reusing crumb
+2025-06-12 15:03:54,774 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:54,774 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:54,774 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:54,994 - DEBUG - response code=200
+2025-06-12 15:03:54,994 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:54,994 - DEBUG - Exiting get()
+2025-06-12 15:03:54,994 - DEBUG - Entering get()
+2025-06-12 15:03:54,995 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:54,995 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/BF-A?symbol=BF-A&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:03:54,995 - DEBUG - params=None
+2025-06-12 15:03:54,995 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:54,995 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:54,995 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:54,995 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:54,995 - DEBUG - reusing cookie
+2025-06-12 15:03:54,995 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:54,995 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:54,995 - DEBUG - reusing crumb
+2025-06-12 15:03:54,995 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:54,995 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:54,995 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:55,251 - DEBUG - response code=200
+2025-06-12 15:03:55,251 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:55,251 - DEBUG - Exiting get()
+2025-06-12 15:03:55,251 - DEBUG - Entering history()
+2025-06-12 15:03:55,251 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['BF-A', 1, 0])
+2025-06-12 15:03:55,251 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:03:55,252 - DEBUG -   Entering get()
+2025-06-12 15:03:55,252 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:55,252 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/BF-A
+2025-06-12 15:03:55,252 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:03:55,252 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:55,252 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:55,252 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:55,252 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:55,252 - DEBUG - reusing cookie
+2025-06-12 15:03:55,252 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:55,252 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:55,252 - DEBUG - reusing crumb
+2025-06-12 15:03:55,252 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:55,252 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:55,252 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:55,512 - DEBUG - response code=200
+2025-06-12 15:03:55,512 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:55,512 - DEBUG -   Exiting get()
+2025-06-12 15:03:55,513 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:03:55,513 - DEBUG - ('BEGIN', None)
+2025-06-12 15:03:55,513 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['BF-A', 'America/New_York'])
+2025-06-12 15:03:55,516 - DEBUG -  Entering history()
+2025-06-12 15:03:55,516 - DEBUG - BF-A: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:55,517 - DEBUG -   Entering get()
+2025-06-12 15:03:55,517 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:55,517 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/BF-A
+2025-06-12 15:03:55,517 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:55,517 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:55,517 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:55,517 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:55,517 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:55,517 - DEBUG - reusing cookie
+2025-06-12 15:03:55,517 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:55,517 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:55,517 - DEBUG - reusing crumb
+2025-06-12 15:03:55,517 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:55,517 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:55,517 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:55,731 - DEBUG - response code=200
+2025-06-12 15:03:55,731 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:55,731 - DEBUG -   Exiting get()
+2025-06-12 15:03:55,732 - DEBUG - BF-A: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:03:55,733 - DEBUG - BF-A: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:03:55,759 - DEBUG - BF-A: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:55,764 - DEBUG - BF-A: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:55,764 - DEBUG -  Exiting history()
+2025-06-12 15:03:55,764 - DEBUG - Exiting history()
+2025-06-12 15:03:55,764 - INFO - Successfully fetched data for BF-A
+2025-06-12 15:03:55,767 - INFO - Saved individual report: reports/BF-A_analysis_20250612_150355.json
+2025-06-12 15:03:55,767 - INFO - BF-A: Score 0.0%, 0 triggered signals
+2025-06-12 15:03:56,767 - INFO - Processing ILMN (5/18)
+2025-06-12 15:03:56,768 - INFO - Starting analysis for ILMN
+2025-06-12 15:03:56,768 - INFO - Fetching data for ILMN (attempt 1)
+2025-06-12 15:03:56,768 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/ILMN
+2025-06-12 15:03:56,768 - DEBUG - Entering get()
+2025-06-12 15:03:56,768 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:56,768 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/ILMN
+2025-06-12 15:03:56,768 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'ILMN'}
+2025-06-12 15:03:56,769 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:56,769 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:56,769 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:56,769 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:56,769 - DEBUG - reusing cookie
+2025-06-12 15:03:56,769 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:56,769 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:56,769 - DEBUG - reusing crumb
+2025-06-12 15:03:56,769 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:56,769 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:56,769 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:56,949 - DEBUG - response code=200
+2025-06-12 15:03:56,950 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:56,950 - DEBUG - Exiting get()
+2025-06-12 15:03:56,950 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:56,950 - DEBUG - Entering get()
+2025-06-12 15:03:56,950 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:56,950 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:56,950 - DEBUG - params={'symbols': 'ILMN', 'formatted': 'false'}
+2025-06-12 15:03:56,950 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:56,950 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:56,950 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:56,950 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:56,950 - DEBUG - reusing cookie
+2025-06-12 15:03:56,950 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:56,950 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:56,950 - DEBUG - reusing crumb
+2025-06-12 15:03:56,950 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:56,950 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:56,950 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:57,117 - DEBUG - response code=200
+2025-06-12 15:03:57,118 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:57,118 - DEBUG - Exiting get()
+2025-06-12 15:03:57,118 - DEBUG - Entering get()
+2025-06-12 15:03:57,118 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:57,118 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/ILMN?symbol=ILMN&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:03:57,118 - DEBUG - params=None
+2025-06-12 15:03:57,118 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:57,118 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:57,118 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:57,118 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:57,119 - DEBUG - reusing cookie
+2025-06-12 15:03:57,119 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:57,119 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:57,119 - DEBUG - reusing crumb
+2025-06-12 15:03:57,119 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:57,119 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:57,119 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:57,349 - DEBUG - response code=200
+2025-06-12 15:03:57,349 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:57,349 - DEBUG - Exiting get()
+2025-06-12 15:03:57,349 - DEBUG - Entering history()
+2025-06-12 15:03:57,350 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['ILMN', 1, 0])
+2025-06-12 15:03:57,350 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:03:57,350 - DEBUG -   Entering get()
+2025-06-12 15:03:57,350 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:57,350 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/ILMN
+2025-06-12 15:03:57,350 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:03:57,350 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:57,350 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:57,350 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:57,350 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:57,350 - DEBUG - reusing cookie
+2025-06-12 15:03:57,350 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:57,350 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:57,350 - DEBUG - reusing crumb
+2025-06-12 15:03:57,350 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:57,350 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:57,350 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:57,531 - DEBUG - response code=200
+2025-06-12 15:03:57,532 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:57,532 - DEBUG -   Exiting get()
+2025-06-12 15:03:57,532 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:03:57,532 - DEBUG - ('BEGIN', None)
+2025-06-12 15:03:57,532 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['ILMN', 'America/New_York'])
+2025-06-12 15:03:57,567 - DEBUG -  Entering history()
+2025-06-12 15:03:57,567 - DEBUG - ILMN: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:57,567 - DEBUG -   Entering get()
+2025-06-12 15:03:57,567 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:57,567 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/ILMN
+2025-06-12 15:03:57,567 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:57,567 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:57,567 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:57,568 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:57,568 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:57,568 - DEBUG - reusing cookie
+2025-06-12 15:03:57,568 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:57,568 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:57,568 - DEBUG - reusing crumb
+2025-06-12 15:03:57,568 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:57,568 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:57,568 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:57,745 - DEBUG - response code=200
+2025-06-12 15:03:57,745 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:57,745 - DEBUG -   Exiting get()
+2025-06-12 15:03:57,746 - DEBUG - ILMN: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:03:57,747 - DEBUG - ILMN: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:03:57,749 - DEBUG - ILMN: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:57,754 - DEBUG - ILMN: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:57,754 - DEBUG -  Exiting history()
+2025-06-12 15:03:57,754 - DEBUG - Exiting history()
+2025-06-12 15:03:57,755 - INFO - Successfully fetched data for ILMN
+2025-06-12 15:03:57,757 - INFO - Saved individual report: reports/ILMN_analysis_20250612_150357.json
+2025-06-12 15:03:57,757 - INFO - ILMN: Score 29.7%, 5 triggered signals
+2025-06-12 15:03:58,757 - INFO - Processing ALGN (6/18)
+2025-06-12 15:03:58,757 - INFO - Starting analysis for ALGN
+2025-06-12 15:03:58,757 - INFO - Fetching data for ALGN (attempt 1)
+2025-06-12 15:03:58,758 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/ALGN
+2025-06-12 15:03:58,758 - DEBUG - Entering get()
+2025-06-12 15:03:58,758 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:58,758 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/ALGN
+2025-06-12 15:03:58,758 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'ALGN'}
+2025-06-12 15:03:58,758 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:58,758 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:58,758 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:58,758 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:58,758 - DEBUG - reusing cookie
+2025-06-12 15:03:58,758 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:58,758 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:58,758 - DEBUG - reusing crumb
+2025-06-12 15:03:58,758 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:58,758 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:58,758 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:58,937 - DEBUG - response code=200
+2025-06-12 15:03:58,937 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:58,937 - DEBUG - Exiting get()
+2025-06-12 15:03:58,937 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:58,938 - DEBUG - Entering get()
+2025-06-12 15:03:58,938 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:58,938 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:03:58,938 - DEBUG - params={'symbols': 'ALGN', 'formatted': 'false'}
+2025-06-12 15:03:58,938 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:58,938 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:58,938 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:58,938 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:58,938 - DEBUG - reusing cookie
+2025-06-12 15:03:58,938 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:58,938 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:58,938 - DEBUG - reusing crumb
+2025-06-12 15:03:58,938 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:58,938 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:58,938 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:59,113 - DEBUG - response code=200
+2025-06-12 15:03:59,113 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:59,113 - DEBUG - Exiting get()
+2025-06-12 15:03:59,113 - DEBUG - Entering get()
+2025-06-12 15:03:59,113 - DEBUG -  Entering _make_request()
+2025-06-12 15:03:59,114 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/ALGN?symbol=ALGN&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:03:59,114 - DEBUG - params=None
+2025-06-12 15:03:59,114 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:03:59,114 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:59,114 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:59,114 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:03:59,114 - DEBUG - reusing cookie
+2025-06-12 15:03:59,114 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:03:59,114 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:03:59,114 - DEBUG - reusing crumb
+2025-06-12 15:03:59,114 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:03:59,114 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:59,114 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:59,349 - DEBUG - response code=200
+2025-06-12 15:03:59,349 - DEBUG -  Exiting _make_request()
+2025-06-12 15:03:59,349 - DEBUG - Exiting get()
+2025-06-12 15:03:59,349 - DEBUG - Entering history()
+2025-06-12 15:03:59,349 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['ALGN', 1, 0])
+2025-06-12 15:03:59,350 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:03:59,350 - DEBUG -   Entering get()
+2025-06-12 15:03:59,350 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:59,350 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/ALGN
+2025-06-12 15:03:59,350 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:03:59,350 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:59,350 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:59,350 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:59,350 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:59,350 - DEBUG - reusing cookie
+2025-06-12 15:03:59,350 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:59,350 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:59,350 - DEBUG - reusing crumb
+2025-06-12 15:03:59,350 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:59,350 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:59,350 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:59,531 - DEBUG - response code=200
+2025-06-12 15:03:59,531 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:59,531 - DEBUG -   Exiting get()
+2025-06-12 15:03:59,531 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:03:59,531 - DEBUG - ('BEGIN', None)
+2025-06-12 15:03:59,531 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['ALGN', 'America/New_York'])
+2025-06-12 15:03:59,533 - DEBUG -  Entering history()
+2025-06-12 15:03:59,533 - DEBUG - ALGN: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:59,534 - DEBUG -   Entering get()
+2025-06-12 15:03:59,534 - DEBUG -    Entering _make_request()
+2025-06-12 15:03:59,534 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/ALGN
+2025-06-12 15:03:59,534 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:03:59,534 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:03:59,534 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:03:59,534 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:03:59,534 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:03:59,534 - DEBUG - reusing cookie
+2025-06-12 15:03:59,534 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:03:59,534 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:03:59,534 - DEBUG - reusing crumb
+2025-06-12 15:03:59,534 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:03:59,534 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:03:59,534 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:03:59,705 - DEBUG - response code=200
+2025-06-12 15:03:59,705 - DEBUG -    Exiting _make_request()
+2025-06-12 15:03:59,705 - DEBUG -   Exiting get()
+2025-06-12 15:03:59,707 - DEBUG - ALGN: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:03:59,707 - DEBUG - ALGN: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:03:59,710 - DEBUG - ALGN: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:59,715 - DEBUG - ALGN: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:03:59,715 - DEBUG -  Exiting history()
+2025-06-12 15:03:59,715 - DEBUG - Exiting history()
+2025-06-12 15:03:59,715 - INFO - Successfully fetched data for ALGN
+2025-06-12 15:03:59,718 - INFO - Saved individual report: reports/ALGN_analysis_20250612_150359.json
+2025-06-12 15:03:59,718 - INFO - ALGN: Score 29.7%, 5 triggered signals
+2025-06-12 15:04:00,718 - INFO - Processing SOLV (7/18)
+2025-06-12 15:04:00,718 - INFO - Starting analysis for SOLV
+2025-06-12 15:04:00,718 - INFO - Fetching data for SOLV (attempt 1)
+2025-06-12 15:04:00,718 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/SOLV
+2025-06-12 15:04:00,718 - DEBUG - Entering get()
+2025-06-12 15:04:00,718 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:00,718 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/SOLV
+2025-06-12 15:04:00,718 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'SOLV'}
+2025-06-12 15:04:00,718 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:00,718 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:00,719 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:00,719 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:00,719 - DEBUG - reusing cookie
+2025-06-12 15:04:00,719 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:00,719 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:00,719 - DEBUG - reusing crumb
+2025-06-12 15:04:00,719 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:00,719 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:00,719 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:00,906 - DEBUG - response code=200
+2025-06-12 15:04:00,906 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:00,906 - DEBUG - Exiting get()
+2025-06-12 15:04:00,907 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:00,907 - DEBUG - Entering get()
+2025-06-12 15:04:00,907 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:00,907 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:00,907 - DEBUG - params={'symbols': 'SOLV', 'formatted': 'false'}
+2025-06-12 15:04:00,907 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:00,907 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:00,907 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:00,907 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:00,907 - DEBUG - reusing cookie
+2025-06-12 15:04:00,907 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:00,907 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:00,907 - DEBUG - reusing crumb
+2025-06-12 15:04:00,907 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:00,907 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:00,907 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:01,081 - DEBUG - response code=200
+2025-06-12 15:04:01,081 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:01,081 - DEBUG - Exiting get()
+2025-06-12 15:04:01,082 - DEBUG - Entering get()
+2025-06-12 15:04:01,082 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:01,082 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/SOLV?symbol=SOLV&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:01,082 - DEBUG - params=None
+2025-06-12 15:04:01,082 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:01,082 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:01,082 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:01,082 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:01,082 - DEBUG - reusing cookie
+2025-06-12 15:04:01,082 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:01,082 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:01,082 - DEBUG - reusing crumb
+2025-06-12 15:04:01,082 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:01,082 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:01,082 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:01,272 - DEBUG - response code=200
+2025-06-12 15:04:01,273 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:01,273 - DEBUG - Exiting get()
+2025-06-12 15:04:01,273 - DEBUG - Entering history()
+2025-06-12 15:04:01,273 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['SOLV', 1, 0])
+2025-06-12 15:04:01,273 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:01,273 - DEBUG -   Entering get()
+2025-06-12 15:04:01,273 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:01,273 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/SOLV
+2025-06-12 15:04:01,273 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:01,273 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:01,273 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:01,274 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:01,274 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:01,274 - DEBUG - reusing cookie
+2025-06-12 15:04:01,274 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:01,274 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:01,274 - DEBUG - reusing crumb
+2025-06-12 15:04:01,274 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:01,274 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:01,274 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:01,450 - DEBUG - response code=200
+2025-06-12 15:04:01,450 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:01,450 - DEBUG -   Exiting get()
+2025-06-12 15:04:01,450 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:01,450 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:01,450 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['SOLV', 'America/New_York'])
+2025-06-12 15:04:01,455 - DEBUG -  Entering history()
+2025-06-12 15:04:01,455 - DEBUG - SOLV: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:01,455 - DEBUG -   Entering get()
+2025-06-12 15:04:01,455 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:01,455 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/SOLV
+2025-06-12 15:04:01,455 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:01,455 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:01,455 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:01,455 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:01,456 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:01,456 - DEBUG - reusing cookie
+2025-06-12 15:04:01,456 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:01,456 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:01,456 - DEBUG - reusing crumb
+2025-06-12 15:04:01,456 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:01,456 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:01,456 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:01,631 - DEBUG - response code=200
+2025-06-12 15:04:01,631 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:01,631 - DEBUG -   Exiting get()
+2025-06-12 15:04:01,632 - DEBUG - SOLV: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:01,633 - DEBUG - SOLV: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:01,636 - DEBUG - SOLV: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:01,645 - DEBUG - SOLV: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:01,645 - DEBUG -  Exiting history()
+2025-06-12 15:04:01,645 - DEBUG - Exiting history()
+2025-06-12 15:04:01,645 - INFO - Successfully fetched data for SOLV
+2025-06-12 15:04:01,648 - INFO - Saved individual report: reports/SOLV_analysis_20250612_150401.json
+2025-06-12 15:04:01,648 - INFO - SOLV: Score 29.7%, 5 triggered signals
+2025-06-12 15:04:02,649 - INFO - Processing INCY (8/18)
+2025-06-12 15:04:02,649 - INFO - Starting analysis for INCY
+2025-06-12 15:04:02,649 - INFO - Fetching data for INCY (attempt 1)
+2025-06-12 15:04:02,649 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/INCY
+2025-06-12 15:04:02,649 - DEBUG - Entering get()
+2025-06-12 15:04:02,649 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:02,649 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/INCY
+2025-06-12 15:04:02,649 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'INCY'}
+2025-06-12 15:04:02,649 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:02,649 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:02,649 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:02,649 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:02,649 - DEBUG - reusing cookie
+2025-06-12 15:04:02,649 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:02,650 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:02,650 - DEBUG - reusing crumb
+2025-06-12 15:04:02,650 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:02,650 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:02,650 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:02,877 - DEBUG - response code=200
+2025-06-12 15:04:02,877 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:02,878 - DEBUG - Exiting get()
+2025-06-12 15:04:02,878 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:02,878 - DEBUG - Entering get()
+2025-06-12 15:04:02,878 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:02,878 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:02,878 - DEBUG - params={'symbols': 'INCY', 'formatted': 'false'}
+2025-06-12 15:04:02,878 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:02,878 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:02,878 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:02,878 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:02,878 - DEBUG - reusing cookie
+2025-06-12 15:04:02,878 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:02,878 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:02,878 - DEBUG - reusing crumb
+2025-06-12 15:04:02,878 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:02,878 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:02,878 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:03,099 - DEBUG - response code=200
+2025-06-12 15:04:03,099 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:03,099 - DEBUG - Exiting get()
+2025-06-12 15:04:03,099 - DEBUG - Entering get()
+2025-06-12 15:04:03,100 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:03,100 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/INCY?symbol=INCY&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:03,100 - DEBUG - params=None
+2025-06-12 15:04:03,100 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:03,100 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:03,100 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:03,100 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:03,100 - DEBUG - reusing cookie
+2025-06-12 15:04:03,100 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:03,100 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:03,100 - DEBUG - reusing crumb
+2025-06-12 15:04:03,100 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:03,100 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:03,100 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:03,272 - DEBUG - response code=200
+2025-06-12 15:04:03,272 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:03,272 - DEBUG - Exiting get()
+2025-06-12 15:04:03,272 - DEBUG - Entering history()
+2025-06-12 15:04:03,273 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['INCY', 1, 0])
+2025-06-12 15:04:03,273 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:03,273 - DEBUG -   Entering get()
+2025-06-12 15:04:03,273 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:03,273 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/INCY
+2025-06-12 15:04:03,273 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:03,273 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:03,273 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:03,273 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:03,274 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:03,274 - DEBUG - reusing cookie
+2025-06-12 15:04:03,274 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:03,274 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:03,274 - DEBUG - reusing crumb
+2025-06-12 15:04:03,274 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:03,274 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:03,274 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:03,443 - DEBUG - response code=200
+2025-06-12 15:04:03,444 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:03,444 - DEBUG -   Exiting get()
+2025-06-12 15:04:03,444 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:03,444 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:03,444 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['INCY', 'America/New_York'])
+2025-06-12 15:04:03,449 - DEBUG -  Entering history()
+2025-06-12 15:04:03,449 - DEBUG - INCY: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:03,449 - DEBUG -   Entering get()
+2025-06-12 15:04:03,449 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:03,449 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/INCY
+2025-06-12 15:04:03,449 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:03,449 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:03,449 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:03,449 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:03,449 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:03,449 - DEBUG - reusing cookie
+2025-06-12 15:04:03,449 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:03,449 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:03,450 - DEBUG - reusing crumb
+2025-06-12 15:04:03,450 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:03,450 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:03,450 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:03,638 - DEBUG - response code=200
+2025-06-12 15:04:03,638 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:03,638 - DEBUG -   Exiting get()
+2025-06-12 15:04:03,640 - DEBUG - INCY: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:03,642 - DEBUG - INCY: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:03,646 - DEBUG - INCY: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:03,655 - DEBUG - INCY: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:03,656 - DEBUG -  Exiting history()
+2025-06-12 15:04:03,656 - DEBUG - Exiting history()
+2025-06-12 15:04:03,656 - INFO - Successfully fetched data for INCY
+2025-06-12 15:04:03,659 - INFO - Saved individual report: reports/INCY_analysis_20250612_150403.json
+2025-06-12 15:04:03,660 - INFO - INCY: Score 29.7%, 5 triggered signals
+2025-06-12 15:04:04,660 - INFO - Processing MORN (9/18)
+2025-06-12 15:04:04,660 - INFO - Starting analysis for MORN
+2025-06-12 15:04:04,660 - INFO - Fetching data for MORN (attempt 1)
+2025-06-12 15:04:04,660 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/MORN
+2025-06-12 15:04:04,660 - DEBUG - Entering get()
+2025-06-12 15:04:04,660 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:04,660 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/MORN
+2025-06-12 15:04:04,660 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'MORN'}
+2025-06-12 15:04:04,661 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:04,661 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:04,661 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:04,661 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:04,661 - DEBUG - reusing cookie
+2025-06-12 15:04:04,661 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:04,661 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:04,661 - DEBUG - reusing crumb
+2025-06-12 15:04:04,661 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:04,661 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:04,661 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:04,834 - DEBUG - response code=200
+2025-06-12 15:04:04,834 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:04,834 - DEBUG - Exiting get()
+2025-06-12 15:04:04,835 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:04,835 - DEBUG - Entering get()
+2025-06-12 15:04:04,835 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:04,835 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:04,835 - DEBUG - params={'symbols': 'MORN', 'formatted': 'false'}
+2025-06-12 15:04:04,835 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:04,835 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:04,835 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:04,835 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:04,835 - DEBUG - reusing cookie
+2025-06-12 15:04:04,835 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:04,835 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:04,835 - DEBUG - reusing crumb
+2025-06-12 15:04:04,835 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:04,835 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:04,835 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:05,005 - DEBUG - response code=200
+2025-06-12 15:04:05,005 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:05,005 - DEBUG - Exiting get()
+2025-06-12 15:04:05,006 - DEBUG - Entering get()
+2025-06-12 15:04:05,006 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:05,006 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/MORN?symbol=MORN&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:05,006 - DEBUG - params=None
+2025-06-12 15:04:05,006 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:05,006 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:05,006 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:05,006 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:05,006 - DEBUG - reusing cookie
+2025-06-12 15:04:05,006 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:05,006 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:05,006 - DEBUG - reusing crumb
+2025-06-12 15:04:05,006 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:05,006 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:05,006 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:05,199 - DEBUG - response code=200
+2025-06-12 15:04:05,199 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:05,199 - DEBUG - Exiting get()
+2025-06-12 15:04:05,200 - DEBUG - Entering history()
+2025-06-12 15:04:05,200 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['MORN', 1, 0])
+2025-06-12 15:04:05,200 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:05,200 - DEBUG -   Entering get()
+2025-06-12 15:04:05,200 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:05,200 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/MORN
+2025-06-12 15:04:05,200 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:05,200 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:05,201 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:05,201 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:05,201 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:05,201 - DEBUG - reusing cookie
+2025-06-12 15:04:05,201 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:05,201 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:05,201 - DEBUG - reusing crumb
+2025-06-12 15:04:05,201 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:05,201 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:05,201 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:05,418 - DEBUG - response code=200
+2025-06-12 15:04:05,418 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:05,418 - DEBUG -   Exiting get()
+2025-06-12 15:04:05,418 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:05,418 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:05,418 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['MORN', 'America/New_York'])
+2025-06-12 15:04:05,456 - DEBUG -  Entering history()
+2025-06-12 15:04:05,456 - DEBUG - MORN: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:05,456 - DEBUG -   Entering get()
+2025-06-12 15:04:05,456 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:05,456 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/MORN
+2025-06-12 15:04:05,456 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:05,456 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:05,456 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:05,456 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:05,456 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:05,456 - DEBUG - reusing cookie
+2025-06-12 15:04:05,456 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:05,457 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:05,457 - DEBUG - reusing crumb
+2025-06-12 15:04:05,457 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:05,457 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:05,457 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:05,643 - DEBUG - response code=200
+2025-06-12 15:04:05,643 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:05,643 - DEBUG -   Exiting get()
+2025-06-12 15:04:05,645 - DEBUG - MORN: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:05,646 - DEBUG - MORN: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:05,649 - DEBUG - MORN: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:05,656 - DEBUG - MORN: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:05,656 - DEBUG -  Exiting history()
+2025-06-12 15:04:05,656 - DEBUG - Exiting history()
+2025-06-12 15:04:05,657 - INFO - Successfully fetched data for MORN
+2025-06-12 15:04:05,659 - INFO - Saved individual report: reports/MORN_analysis_20250612_150405.json
+2025-06-12 15:04:05,660 - INFO - MORN: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:06,660 - INFO - Processing REG (10/18)
+2025-06-12 15:04:06,660 - INFO - Starting analysis for REG
+2025-06-12 15:04:06,660 - INFO - Fetching data for REG (attempt 1)
+2025-06-12 15:04:06,660 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/REG
+2025-06-12 15:04:06,660 - DEBUG - Entering get()
+2025-06-12 15:04:06,660 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:06,660 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/REG
+2025-06-12 15:04:06,660 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'REG'}
+2025-06-12 15:04:06,661 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:06,661 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:06,661 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:06,661 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:06,661 - DEBUG - reusing cookie
+2025-06-12 15:04:06,661 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:06,661 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:06,661 - DEBUG - reusing crumb
+2025-06-12 15:04:06,661 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:06,661 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:06,661 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:06,835 - DEBUG - response code=200
+2025-06-12 15:04:06,835 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:06,835 - DEBUG - Exiting get()
+2025-06-12 15:04:06,835 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:06,835 - DEBUG - Entering get()
+2025-06-12 15:04:06,836 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:06,836 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:06,836 - DEBUG - params={'symbols': 'REG', 'formatted': 'false'}
+2025-06-12 15:04:06,836 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:06,836 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:06,836 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:06,836 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:06,836 - DEBUG - reusing cookie
+2025-06-12 15:04:06,836 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:06,836 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:06,836 - DEBUG - reusing crumb
+2025-06-12 15:04:06,836 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:06,836 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:06,836 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:07,012 - DEBUG - response code=200
+2025-06-12 15:04:07,012 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:07,012 - DEBUG - Exiting get()
+2025-06-12 15:04:07,013 - DEBUG - Entering get()
+2025-06-12 15:04:07,013 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:07,013 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/REG?symbol=REG&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:07,013 - DEBUG - params=None
+2025-06-12 15:04:07,013 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:07,013 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:07,013 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:07,013 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:07,013 - DEBUG - reusing cookie
+2025-06-12 15:04:07,013 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:07,013 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:07,013 - DEBUG - reusing crumb
+2025-06-12 15:04:07,013 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:07,013 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:07,013 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:07,182 - DEBUG - response code=200
+2025-06-12 15:04:07,182 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:07,182 - DEBUG - Exiting get()
+2025-06-12 15:04:07,182 - DEBUG - Entering history()
+2025-06-12 15:04:07,182 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['REG', 1, 0])
+2025-06-12 15:04:07,183 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:07,183 - DEBUG -   Entering get()
+2025-06-12 15:04:07,183 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:07,183 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/REG
+2025-06-12 15:04:07,183 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:07,183 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:07,183 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:07,183 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:07,183 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:07,183 - DEBUG - reusing cookie
+2025-06-12 15:04:07,183 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:07,183 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:07,183 - DEBUG - reusing crumb
+2025-06-12 15:04:07,183 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:07,183 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:07,183 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:07,387 - DEBUG - response code=200
+2025-06-12 15:04:07,388 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:07,388 - DEBUG -   Exiting get()
+2025-06-12 15:04:07,388 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:07,388 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:07,388 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['REG', 'America/New_York'])
+2025-06-12 15:04:07,423 - DEBUG -  Entering history()
+2025-06-12 15:04:07,423 - DEBUG - REG: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:07,423 - DEBUG -   Entering get()
+2025-06-12 15:04:07,423 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:07,423 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/REG
+2025-06-12 15:04:07,423 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:07,423 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:07,423 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:07,423 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:07,423 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:07,423 - DEBUG - reusing cookie
+2025-06-12 15:04:07,423 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:07,423 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:07,423 - DEBUG - reusing crumb
+2025-06-12 15:04:07,423 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:07,423 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:07,423 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:07,632 - DEBUG - response code=200
+2025-06-12 15:04:07,632 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:07,632 - DEBUG -   Exiting get()
+2025-06-12 15:04:07,633 - DEBUG - REG: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:07,634 - DEBUG - REG: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:07,638 - DEBUG - REG: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:07,646 - DEBUG - REG: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:07,646 - DEBUG -  Exiting history()
+2025-06-12 15:04:07,646 - DEBUG - Exiting history()
+2025-06-12 15:04:07,647 - INFO - Successfully fetched data for REG
+2025-06-12 15:04:07,649 - INFO - Saved individual report: reports/REG_analysis_20250612_150407.json
+2025-06-12 15:04:07,649 - INFO - REG: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:08,650 - INFO - Processing RDY (11/18)
+2025-06-12 15:04:08,650 - INFO - Starting analysis for RDY
+2025-06-12 15:04:08,650 - INFO - Fetching data for RDY (attempt 1)
+2025-06-12 15:04:08,650 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/RDY
+2025-06-12 15:04:08,650 - DEBUG - Entering get()
+2025-06-12 15:04:08,650 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:08,650 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/RDY
+2025-06-12 15:04:08,650 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'RDY'}
+2025-06-12 15:04:08,650 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:08,650 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:08,651 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:08,651 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:08,651 - DEBUG - reusing cookie
+2025-06-12 15:04:08,651 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:08,651 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:08,651 - DEBUG - reusing crumb
+2025-06-12 15:04:08,651 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:08,651 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:08,651 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:08,825 - DEBUG - response code=200
+2025-06-12 15:04:08,825 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:08,825 - DEBUG - Exiting get()
+2025-06-12 15:04:08,825 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:08,825 - DEBUG - Entering get()
+2025-06-12 15:04:08,825 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:08,826 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:08,826 - DEBUG - params={'symbols': 'RDY', 'formatted': 'false'}
+2025-06-12 15:04:08,826 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:08,826 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:08,826 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:08,826 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:08,826 - DEBUG - reusing cookie
+2025-06-12 15:04:08,826 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:08,826 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:08,826 - DEBUG - reusing crumb
+2025-06-12 15:04:08,826 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:08,826 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:08,826 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:08,996 - DEBUG - response code=200
+2025-06-12 15:04:08,996 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:08,996 - DEBUG - Exiting get()
+2025-06-12 15:04:08,997 - DEBUG - Entering get()
+2025-06-12 15:04:08,997 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:08,997 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/RDY?symbol=RDY&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:08,997 - DEBUG - params=None
+2025-06-12 15:04:08,997 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:08,997 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:08,997 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:08,997 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:08,997 - DEBUG - reusing cookie
+2025-06-12 15:04:08,997 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:08,997 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:08,997 - DEBUG - reusing crumb
+2025-06-12 15:04:08,998 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:08,998 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:08,998 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:09,187 - DEBUG - response code=200
+2025-06-12 15:04:09,187 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:09,187 - DEBUG - Exiting get()
+2025-06-12 15:04:09,187 - DEBUG - Entering history()
+2025-06-12 15:04:09,187 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['RDY', 1, 0])
+2025-06-12 15:04:09,188 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:09,188 - DEBUG -   Entering get()
+2025-06-12 15:04:09,188 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:09,188 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/RDY
+2025-06-12 15:04:09,188 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:09,188 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:09,188 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:09,188 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:09,188 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:09,188 - DEBUG - reusing cookie
+2025-06-12 15:04:09,188 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:09,188 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:09,188 - DEBUG - reusing crumb
+2025-06-12 15:04:09,188 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:09,188 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:09,188 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:09,399 - DEBUG - response code=200
+2025-06-12 15:04:09,400 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:09,400 - DEBUG -   Exiting get()
+2025-06-12 15:04:09,400 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:09,400 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:09,400 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['RDY', 'America/New_York'])
+2025-06-12 15:04:09,404 - DEBUG -  Entering history()
+2025-06-12 15:04:09,405 - DEBUG - RDY: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:09,405 - DEBUG -   Entering get()
+2025-06-12 15:04:09,405 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:09,405 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/RDY
+2025-06-12 15:04:09,405 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:09,405 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:09,405 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:09,405 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:09,405 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:09,405 - DEBUG - reusing cookie
+2025-06-12 15:04:09,405 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:09,405 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:09,405 - DEBUG - reusing crumb
+2025-06-12 15:04:09,405 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:09,405 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:09,405 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:09,609 - DEBUG - response code=200
+2025-06-12 15:04:09,609 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:09,610 - DEBUG -   Exiting get()
+2025-06-12 15:04:09,611 - DEBUG - RDY: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:09,612 - DEBUG - RDY: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:09,615 - DEBUG - RDY: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:09,621 - DEBUG - RDY: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:09,621 - DEBUG -  Exiting history()
+2025-06-12 15:04:09,621 - DEBUG - Exiting history()
+2025-06-12 15:04:09,622 - INFO - Successfully fetched data for RDY
+2025-06-12 15:04:09,624 - INFO - Saved individual report: reports/RDY_analysis_20250612_150409.json
+2025-06-12 15:04:09,624 - INFO - RDY: Score 29.7%, 5 triggered signals
+2025-06-12 15:04:10,625 - INFO - Processing YMM (12/18)
+2025-06-12 15:04:10,625 - INFO - Starting analysis for YMM
+2025-06-12 15:04:10,625 - INFO - Fetching data for YMM (attempt 1)
+2025-06-12 15:04:10,625 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/YMM
+2025-06-12 15:04:10,625 - DEBUG - Entering get()
+2025-06-12 15:04:10,625 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:10,625 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/YMM
+2025-06-12 15:04:10,625 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'YMM'}
+2025-06-12 15:04:10,625 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:10,626 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:10,626 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:10,626 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:10,626 - DEBUG - reusing cookie
+2025-06-12 15:04:10,626 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:10,626 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:10,626 - DEBUG - reusing crumb
+2025-06-12 15:04:10,626 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:10,626 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:10,626 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:10,808 - DEBUG - response code=200
+2025-06-12 15:04:10,808 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:10,808 - DEBUG - Exiting get()
+2025-06-12 15:04:10,808 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:10,808 - DEBUG - Entering get()
+2025-06-12 15:04:10,808 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:10,808 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:10,808 - DEBUG - params={'symbols': 'YMM', 'formatted': 'false'}
+2025-06-12 15:04:10,808 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:10,808 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:10,808 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:10,808 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:10,809 - DEBUG - reusing cookie
+2025-06-12 15:04:10,809 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:10,809 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:10,809 - DEBUG - reusing crumb
+2025-06-12 15:04:10,809 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:10,809 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:10,809 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:11,064 - DEBUG - response code=200
+2025-06-12 15:04:11,065 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:11,065 - DEBUG - Exiting get()
+2025-06-12 15:04:11,065 - DEBUG - Entering get()
+2025-06-12 15:04:11,065 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:11,065 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/YMM?symbol=YMM&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:11,065 - DEBUG - params=None
+2025-06-12 15:04:11,065 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:11,065 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:11,066 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:11,066 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:11,066 - DEBUG - reusing cookie
+2025-06-12 15:04:11,066 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:11,066 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:11,066 - DEBUG - reusing crumb
+2025-06-12 15:04:11,066 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:11,066 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:11,066 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:11,239 - DEBUG - response code=200
+2025-06-12 15:04:11,239 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:11,239 - DEBUG - Exiting get()
+2025-06-12 15:04:11,240 - DEBUG - Entering history()
+2025-06-12 15:04:11,240 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['YMM', 1, 0])
+2025-06-12 15:04:11,240 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:11,240 - DEBUG -   Entering get()
+2025-06-12 15:04:11,240 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:11,241 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/YMM
+2025-06-12 15:04:11,241 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:11,241 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:11,241 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:11,241 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:11,241 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:11,241 - DEBUG - reusing cookie
+2025-06-12 15:04:11,241 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:11,241 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:11,241 - DEBUG - reusing crumb
+2025-06-12 15:04:11,241 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:11,241 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:11,241 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:11,411 - DEBUG - response code=200
+2025-06-12 15:04:11,412 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:11,412 - DEBUG -   Exiting get()
+2025-06-12 15:04:11,412 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:11,412 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:11,412 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['YMM', 'America/New_York'])
+2025-06-12 15:04:11,448 - DEBUG -  Entering history()
+2025-06-12 15:04:11,448 - DEBUG - YMM: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:11,448 - DEBUG -   Entering get()
+2025-06-12 15:04:11,448 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:11,448 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/YMM
+2025-06-12 15:04:11,448 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:11,448 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:11,448 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:11,448 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:11,448 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:11,448 - DEBUG - reusing cookie
+2025-06-12 15:04:11,448 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:11,448 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:11,448 - DEBUG - reusing crumb
+2025-06-12 15:04:11,449 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:11,449 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:11,449 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:11,630 - DEBUG - response code=200
+2025-06-12 15:04:11,630 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:11,630 - DEBUG -   Exiting get()
+2025-06-12 15:04:11,631 - DEBUG - YMM: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:11,632 - DEBUG - YMM: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:11,636 - DEBUG - YMM: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:11,642 - DEBUG - YMM: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:11,642 - DEBUG -  Exiting history()
+2025-06-12 15:04:11,642 - DEBUG - Exiting history()
+2025-06-12 15:04:11,643 - INFO - Successfully fetched data for YMM
+2025-06-12 15:04:11,645 - INFO - Saved individual report: reports/YMM_analysis_20250612_150411.json
+2025-06-12 15:04:11,645 - INFO - YMM: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:12,645 - INFO - Processing TXRH (13/18)
+2025-06-12 15:04:12,646 - INFO - Starting analysis for TXRH
+2025-06-12 15:04:12,646 - INFO - Fetching data for TXRH (attempt 1)
+2025-06-12 15:04:12,646 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/TXRH
+2025-06-12 15:04:12,646 - DEBUG - Entering get()
+2025-06-12 15:04:12,646 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:12,646 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/TXRH
+2025-06-12 15:04:12,646 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'TXRH'}
+2025-06-12 15:04:12,646 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:12,646 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:12,646 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:12,646 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:12,646 - DEBUG - reusing cookie
+2025-06-12 15:04:12,646 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:12,646 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:12,646 - DEBUG - reusing crumb
+2025-06-12 15:04:12,646 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:12,646 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:12,646 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:12,832 - DEBUG - response code=200
+2025-06-12 15:04:12,832 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:12,832 - DEBUG - Exiting get()
+2025-06-12 15:04:12,832 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:12,832 - DEBUG - Entering get()
+2025-06-12 15:04:12,832 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:12,832 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:12,832 - DEBUG - params={'symbols': 'TXRH', 'formatted': 'false'}
+2025-06-12 15:04:12,832 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:12,832 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:12,832 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:12,832 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:12,832 - DEBUG - reusing cookie
+2025-06-12 15:04:12,832 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:12,833 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:12,833 - DEBUG - reusing crumb
+2025-06-12 15:04:12,833 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:12,833 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:12,833 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:13,064 - DEBUG - response code=200
+2025-06-12 15:04:13,064 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:13,064 - DEBUG - Exiting get()
+2025-06-12 15:04:13,064 - DEBUG - Entering get()
+2025-06-12 15:04:13,064 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:13,065 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/TXRH?symbol=TXRH&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:13,065 - DEBUG - params=None
+2025-06-12 15:04:13,065 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:13,065 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:13,065 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:13,065 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:13,065 - DEBUG - reusing cookie
+2025-06-12 15:04:13,065 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:13,065 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:13,065 - DEBUG - reusing crumb
+2025-06-12 15:04:13,065 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:13,065 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:13,065 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:13,236 - DEBUG - response code=200
+2025-06-12 15:04:13,236 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:13,236 - DEBUG - Exiting get()
+2025-06-12 15:04:13,236 - DEBUG - Entering history()
+2025-06-12 15:04:13,236 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['TXRH', 1, 0])
+2025-06-12 15:04:13,237 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:13,237 - DEBUG -   Entering get()
+2025-06-12 15:04:13,237 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:13,237 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/TXRH
+2025-06-12 15:04:13,237 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:13,237 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:13,237 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:13,237 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:13,237 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:13,237 - DEBUG - reusing cookie
+2025-06-12 15:04:13,237 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:13,237 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:13,237 - DEBUG - reusing crumb
+2025-06-12 15:04:13,237 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:13,237 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:13,237 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:13,494 - DEBUG - response code=200
+2025-06-12 15:04:13,494 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:13,494 - DEBUG -   Exiting get()
+2025-06-12 15:04:13,494 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:13,494 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:13,495 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['TXRH', 'America/New_York'])
+2025-06-12 15:04:13,499 - DEBUG -  Entering history()
+2025-06-12 15:04:13,499 - DEBUG - TXRH: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:13,499 - DEBUG -   Entering get()
+2025-06-12 15:04:13,499 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:13,499 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/TXRH
+2025-06-12 15:04:13,499 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:13,499 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:13,499 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:13,499 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:13,499 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:13,499 - DEBUG - reusing cookie
+2025-06-12 15:04:13,499 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:13,499 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:13,499 - DEBUG - reusing crumb
+2025-06-12 15:04:13,499 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:13,499 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:13,500 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:13,699 - DEBUG - response code=200
+2025-06-12 15:04:13,699 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:13,699 - DEBUG -   Exiting get()
+2025-06-12 15:04:13,700 - DEBUG - TXRH: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:13,701 - DEBUG - TXRH: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:13,703 - DEBUG - TXRH: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:13,709 - DEBUG - TXRH: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:13,709 - DEBUG -  Exiting history()
+2025-06-12 15:04:13,709 - DEBUG - Exiting history()
+2025-06-12 15:04:13,710 - INFO - Successfully fetched data for TXRH
+2025-06-12 15:04:13,712 - INFO - Saved individual report: reports/TXRH_analysis_20250612_150413.json
+2025-06-12 15:04:13,712 - INFO - TXRH: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:14,712 - INFO - Processing BAH (14/18)
+2025-06-12 15:04:14,712 - INFO - Starting analysis for BAH
+2025-06-12 15:04:14,713 - INFO - Fetching data for BAH (attempt 1)
+2025-06-12 15:04:14,713 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/BAH
+2025-06-12 15:04:14,713 - DEBUG - Entering get()
+2025-06-12 15:04:14,713 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:14,713 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/BAH
+2025-06-12 15:04:14,713 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'BAH'}
+2025-06-12 15:04:14,713 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:14,713 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:14,713 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:14,713 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:14,713 - DEBUG - reusing cookie
+2025-06-12 15:04:14,713 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:14,713 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:14,713 - DEBUG - reusing crumb
+2025-06-12 15:04:14,713 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:14,713 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:14,713 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:14,907 - DEBUG - response code=200
+2025-06-12 15:04:14,907 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:14,907 - DEBUG - Exiting get()
+2025-06-12 15:04:14,907 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:14,907 - DEBUG - Entering get()
+2025-06-12 15:04:14,907 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:14,907 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:14,907 - DEBUG - params={'symbols': 'BAH', 'formatted': 'false'}
+2025-06-12 15:04:14,907 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:14,908 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:14,908 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:14,908 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:14,908 - DEBUG - reusing cookie
+2025-06-12 15:04:14,908 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:14,908 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:14,908 - DEBUG - reusing crumb
+2025-06-12 15:04:14,908 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:14,908 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:14,908 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:15,092 - DEBUG - response code=200
+2025-06-12 15:04:15,092 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:15,092 - DEBUG - Exiting get()
+2025-06-12 15:04:15,093 - DEBUG - Entering get()
+2025-06-12 15:04:15,093 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:15,093 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/BAH?symbol=BAH&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:15,093 - DEBUG - params=None
+2025-06-12 15:04:15,093 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:15,093 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:15,093 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:15,093 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:15,093 - DEBUG - reusing cookie
+2025-06-12 15:04:15,093 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:15,093 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:15,093 - DEBUG - reusing crumb
+2025-06-12 15:04:15,093 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:15,093 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:15,093 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:15,267 - DEBUG - response code=200
+2025-06-12 15:04:15,267 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:15,268 - DEBUG - Exiting get()
+2025-06-12 15:04:15,268 - DEBUG - Entering history()
+2025-06-12 15:04:15,268 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['BAH', 1, 0])
+2025-06-12 15:04:15,268 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:15,268 - DEBUG -   Entering get()
+2025-06-12 15:04:15,268 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:15,268 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/BAH
+2025-06-12 15:04:15,268 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:15,268 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:15,268 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:15,268 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:15,269 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:15,269 - DEBUG - reusing cookie
+2025-06-12 15:04:15,269 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:15,269 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:15,269 - DEBUG - reusing crumb
+2025-06-12 15:04:15,269 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:15,269 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:15,269 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:15,460 - DEBUG - response code=200
+2025-06-12 15:04:15,460 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:15,460 - DEBUG -   Exiting get()
+2025-06-12 15:04:15,461 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:15,461 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:15,461 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['BAH', 'America/New_York'])
+2025-06-12 15:04:15,464 - DEBUG -  Entering history()
+2025-06-12 15:04:15,465 - DEBUG - BAH: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:15,465 - DEBUG -   Entering get()
+2025-06-12 15:04:15,465 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:15,465 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/BAH
+2025-06-12 15:04:15,465 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:15,465 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:15,465 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:15,465 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:15,465 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:15,465 - DEBUG - reusing cookie
+2025-06-12 15:04:15,465 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:15,465 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:15,465 - DEBUG - reusing crumb
+2025-06-12 15:04:15,465 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:15,465 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:15,465 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:15,662 - DEBUG - response code=200
+2025-06-12 15:04:15,662 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:15,662 - DEBUG -   Exiting get()
+2025-06-12 15:04:15,663 - DEBUG - BAH: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:15,664 - DEBUG - BAH: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:15,668 - DEBUG - BAH: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:15,675 - DEBUG - BAH: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:15,676 - DEBUG -  Exiting history()
+2025-06-12 15:04:15,676 - DEBUG - Exiting history()
+2025-06-12 15:04:15,676 - INFO - Successfully fetched data for BAH
+2025-06-12 15:04:15,679 - INFO - Saved individual report: reports/BAH_analysis_20250612_150415.json
+2025-06-12 15:04:15,679 - INFO - BAH: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:16,680 - INFO - Processing CNA (15/18)
+2025-06-12 15:04:16,680 - INFO - Starting analysis for CNA
+2025-06-12 15:04:16,680 - INFO - Fetching data for CNA (attempt 1)
+2025-06-12 15:04:16,680 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/CNA
+2025-06-12 15:04:16,680 - DEBUG - Entering get()
+2025-06-12 15:04:16,680 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:16,680 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/CNA
+2025-06-12 15:04:16,680 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'CNA'}
+2025-06-12 15:04:16,680 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:16,680 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:16,680 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:16,680 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:16,680 - DEBUG - reusing cookie
+2025-06-12 15:04:16,680 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:16,680 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:16,680 - DEBUG - reusing crumb
+2025-06-12 15:04:16,681 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:16,681 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:16,681 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:16,890 - DEBUG - response code=200
+2025-06-12 15:04:16,890 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:16,890 - DEBUG - Exiting get()
+2025-06-12 15:04:16,891 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:16,891 - DEBUG - Entering get()
+2025-06-12 15:04:16,891 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:16,891 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:16,891 - DEBUG - params={'symbols': 'CNA', 'formatted': 'false'}
+2025-06-12 15:04:16,891 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:16,891 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:16,891 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:16,891 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:16,891 - DEBUG - reusing cookie
+2025-06-12 15:04:16,891 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:16,891 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:16,891 - DEBUG - reusing crumb
+2025-06-12 15:04:16,891 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:16,891 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:16,891 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:17,091 - DEBUG - response code=200
+2025-06-12 15:04:17,091 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:17,091 - DEBUG - Exiting get()
+2025-06-12 15:04:17,092 - DEBUG - Entering get()
+2025-06-12 15:04:17,092 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:17,092 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/CNA?symbol=CNA&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:17,092 - DEBUG - params=None
+2025-06-12 15:04:17,092 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:17,092 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:17,092 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:17,092 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:17,092 - DEBUG - reusing cookie
+2025-06-12 15:04:17,092 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:17,092 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:17,092 - DEBUG - reusing crumb
+2025-06-12 15:04:17,092 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:17,092 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:17,092 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:17,366 - DEBUG - response code=200
+2025-06-12 15:04:17,366 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:17,366 - DEBUG - Exiting get()
+2025-06-12 15:04:17,366 - DEBUG - Entering history()
+2025-06-12 15:04:17,366 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['CNA', 1, 0])
+2025-06-12 15:04:17,367 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:17,367 - DEBUG -   Entering get()
+2025-06-12 15:04:17,367 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:17,367 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/CNA
+2025-06-12 15:04:17,367 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:17,367 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:17,367 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:17,367 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:17,367 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:17,367 - DEBUG - reusing cookie
+2025-06-12 15:04:17,367 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:17,367 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:17,367 - DEBUG - reusing crumb
+2025-06-12 15:04:17,367 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:17,367 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:17,367 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:17,575 - DEBUG - response code=200
+2025-06-12 15:04:17,575 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:17,575 - DEBUG -   Exiting get()
+2025-06-12 15:04:17,575 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:17,575 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:17,575 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['CNA', 'America/New_York'])
+2025-06-12 15:04:17,579 - DEBUG -  Entering history()
+2025-06-12 15:04:17,579 - DEBUG - CNA: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:17,579 - DEBUG -   Entering get()
+2025-06-12 15:04:17,579 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:17,579 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/CNA
+2025-06-12 15:04:17,579 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:17,579 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:17,579 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:17,579 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:17,579 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:17,580 - DEBUG - reusing cookie
+2025-06-12 15:04:17,580 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:17,580 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:17,580 - DEBUG - reusing crumb
+2025-06-12 15:04:17,580 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:17,580 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:17,580 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:17,779 - DEBUG - response code=200
+2025-06-12 15:04:17,780 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:17,780 - DEBUG -   Exiting get()
+2025-06-12 15:04:17,781 - DEBUG - CNA: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:17,781 - DEBUG - CNA: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:17,784 - DEBUG - CNA: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:17,792 - DEBUG - CNA: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:17,792 - DEBUG -  Exiting history()
+2025-06-12 15:04:17,792 - DEBUG - Exiting history()
+2025-06-12 15:04:17,792 - INFO - Successfully fetched data for CNA
+2025-06-12 15:04:17,794 - INFO - Saved individual report: reports/CNA_analysis_20250612_150417.json
+2025-06-12 15:04:17,794 - INFO - CNA: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:18,794 - INFO - Processing BXP (16/18)
+2025-06-12 15:04:18,795 - INFO - Starting analysis for BXP
+2025-06-12 15:04:18,795 - INFO - Fetching data for BXP (attempt 1)
+2025-06-12 15:04:18,795 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/BXP
+2025-06-12 15:04:18,795 - DEBUG - Entering get()
+2025-06-12 15:04:18,795 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:18,795 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/BXP
+2025-06-12 15:04:18,795 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'BXP'}
+2025-06-12 15:04:18,795 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:18,795 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:18,795 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:18,795 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:18,795 - DEBUG - reusing cookie
+2025-06-12 15:04:18,795 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:18,795 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:18,795 - DEBUG - reusing crumb
+2025-06-12 15:04:18,795 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:18,795 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:18,795 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:19,025 - DEBUG - response code=200
+2025-06-12 15:04:19,026 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:19,026 - DEBUG - Exiting get()
+2025-06-12 15:04:19,026 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:19,026 - DEBUG - Entering get()
+2025-06-12 15:04:19,026 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:19,026 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:19,026 - DEBUG - params={'symbols': 'BXP', 'formatted': 'false'}
+2025-06-12 15:04:19,026 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:19,026 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:19,026 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:19,026 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:19,026 - DEBUG - reusing cookie
+2025-06-12 15:04:19,026 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:19,026 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:19,026 - DEBUG - reusing crumb
+2025-06-12 15:04:19,026 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:19,026 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:19,026 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:19,199 - DEBUG - response code=200
+2025-06-12 15:04:19,199 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:19,199 - DEBUG - Exiting get()
+2025-06-12 15:04:19,200 - DEBUG - Entering get()
+2025-06-12 15:04:19,200 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:19,200 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/BXP?symbol=BXP&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:19,200 - DEBUG - params=None
+2025-06-12 15:04:19,200 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:19,200 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:19,200 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:19,200 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:19,200 - DEBUG - reusing cookie
+2025-06-12 15:04:19,200 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:19,200 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:19,201 - DEBUG - reusing crumb
+2025-06-12 15:04:19,201 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:19,201 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:19,201 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:19,371 - DEBUG - response code=200
+2025-06-12 15:04:19,371 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:19,371 - DEBUG - Exiting get()
+2025-06-12 15:04:19,371 - DEBUG - Entering history()
+2025-06-12 15:04:19,371 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['BXP', 1, 0])
+2025-06-12 15:04:19,372 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:19,372 - DEBUG -   Entering get()
+2025-06-12 15:04:19,372 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:19,372 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/BXP
+2025-06-12 15:04:19,372 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:19,372 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:19,372 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:19,372 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:19,372 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:19,372 - DEBUG - reusing cookie
+2025-06-12 15:04:19,372 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:19,372 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:19,372 - DEBUG - reusing crumb
+2025-06-12 15:04:19,372 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:19,372 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:19,372 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:19,572 - DEBUG - response code=200
+2025-06-12 15:04:19,572 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:19,572 - DEBUG -   Exiting get()
+2025-06-12 15:04:19,572 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:19,572 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:19,572 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['BXP', 'America/New_York'])
+2025-06-12 15:04:19,580 - DEBUG -  Entering history()
+2025-06-12 15:04:19,580 - DEBUG - BXP: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:19,580 - DEBUG -   Entering get()
+2025-06-12 15:04:19,580 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:19,580 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/BXP
+2025-06-12 15:04:19,580 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:19,580 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:19,580 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:19,580 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:19,580 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:19,580 - DEBUG - reusing cookie
+2025-06-12 15:04:19,581 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:19,581 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:19,581 - DEBUG - reusing crumb
+2025-06-12 15:04:19,581 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:19,581 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:19,581 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:19,794 - DEBUG - response code=200
+2025-06-12 15:04:19,794 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:19,794 - DEBUG -   Exiting get()
+2025-06-12 15:04:19,795 - DEBUG - BXP: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:19,796 - DEBUG - BXP: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:19,799 - DEBUG - BXP: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:19,805 - DEBUG - BXP: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:19,805 - DEBUG -  Exiting history()
+2025-06-12 15:04:19,805 - DEBUG - Exiting history()
+2025-06-12 15:04:19,805 - INFO - Successfully fetched data for BXP
+2025-06-12 15:04:19,808 - INFO - Saved individual report: reports/BXP_analysis_20250612_150419.json
+2025-06-12 15:04:19,808 - INFO - BXP: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:20,808 - INFO - Processing GLPI (17/18)
+2025-06-12 15:04:20,808 - INFO - Starting analysis for GLPI
+2025-06-12 15:04:20,808 - INFO - Fetching data for GLPI (attempt 1)
+2025-06-12 15:04:20,808 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/GLPI
+2025-06-12 15:04:20,808 - DEBUG - Entering get()
+2025-06-12 15:04:20,809 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:20,809 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/GLPI
+2025-06-12 15:04:20,809 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'GLPI'}
+2025-06-12 15:04:20,809 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:20,809 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:20,809 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:20,809 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:20,809 - DEBUG - reusing cookie
+2025-06-12 15:04:20,809 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:20,809 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:20,809 - DEBUG - reusing crumb
+2025-06-12 15:04:20,809 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:20,809 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:20,809 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:20,980 - DEBUG - response code=200
+2025-06-12 15:04:20,981 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:20,981 - DEBUG - Exiting get()
+2025-06-12 15:04:20,981 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:20,981 - DEBUG - Entering get()
+2025-06-12 15:04:20,981 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:20,981 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:20,981 - DEBUG - params={'symbols': 'GLPI', 'formatted': 'false'}
+2025-06-12 15:04:20,981 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:20,981 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:20,981 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:20,981 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:20,981 - DEBUG - reusing cookie
+2025-06-12 15:04:20,981 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:20,981 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:20,982 - DEBUG - reusing crumb
+2025-06-12 15:04:20,982 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:20,982 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:20,982 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:21,159 - DEBUG - response code=200
+2025-06-12 15:04:21,159 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:21,159 - DEBUG - Exiting get()
+2025-06-12 15:04:21,159 - DEBUG - Entering get()
+2025-06-12 15:04:21,160 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:21,160 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/GLPI?symbol=GLPI&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:21,160 - DEBUG - params=None
+2025-06-12 15:04:21,160 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:21,160 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:21,160 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:21,160 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:21,160 - DEBUG - reusing cookie
+2025-06-12 15:04:21,160 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:21,160 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:21,160 - DEBUG - reusing crumb
+2025-06-12 15:04:21,160 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:21,160 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:21,160 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:21,328 - DEBUG - response code=200
+2025-06-12 15:04:21,328 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:21,328 - DEBUG - Exiting get()
+2025-06-12 15:04:21,328 - DEBUG - Entering history()
+2025-06-12 15:04:21,328 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['GLPI', 1, 0])
+2025-06-12 15:04:21,328 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:21,328 - DEBUG -   Entering get()
+2025-06-12 15:04:21,328 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:21,329 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GLPI
+2025-06-12 15:04:21,329 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:21,329 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:21,329 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:21,329 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:21,329 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:21,329 - DEBUG - reusing cookie
+2025-06-12 15:04:21,329 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:21,329 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:21,329 - DEBUG - reusing crumb
+2025-06-12 15:04:21,329 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:21,329 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:21,329 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:21,517 - DEBUG - response code=200
+2025-06-12 15:04:21,517 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:21,517 - DEBUG -   Exiting get()
+2025-06-12 15:04:21,517 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:21,517 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:21,517 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['GLPI', 'America/New_York'])
+2025-06-12 15:04:21,525 - DEBUG -  Entering history()
+2025-06-12 15:04:21,525 - DEBUG - GLPI: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:21,525 - DEBUG -   Entering get()
+2025-06-12 15:04:21,525 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:21,525 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/GLPI
+2025-06-12 15:04:21,525 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:21,525 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:21,525 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:21,525 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:21,525 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:21,525 - DEBUG - reusing cookie
+2025-06-12 15:04:21,525 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:21,526 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:21,526 - DEBUG - reusing crumb
+2025-06-12 15:04:21,526 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:21,526 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:21,526 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:21,718 - DEBUG - response code=200
+2025-06-12 15:04:21,718 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:21,718 - DEBUG -   Exiting get()
+2025-06-12 15:04:21,719 - DEBUG - GLPI: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:21,720 - DEBUG - GLPI: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:21,723 - DEBUG - GLPI: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:21,729 - DEBUG - GLPI: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:21,729 - DEBUG -  Exiting history()
+2025-06-12 15:04:21,729 - DEBUG - Exiting history()
+2025-06-12 15:04:21,729 - INFO - Successfully fetched data for GLPI
+2025-06-12 15:04:21,732 - INFO - Saved individual report: reports/GLPI_analysis_20250612_150421.json
+2025-06-12 15:04:21,732 - INFO - GLPI: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:22,732 - INFO - Processing FTAI (18/18)
+2025-06-12 15:04:22,732 - INFO - Starting analysis for FTAI
+2025-06-12 15:04:22,732 - INFO - Fetching data for FTAI (attempt 1)
+2025-06-12 15:04:22,732 - DEBUG - get_raw_json(): https://query2.finance.yahoo.com/v10/finance/quoteSummary/FTAI
+2025-06-12 15:04:22,732 - DEBUG - Entering get()
+2025-06-12 15:04:22,732 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:22,732 - DEBUG - url=https://query2.finance.yahoo.com/v10/finance/quoteSummary/FTAI
+2025-06-12 15:04:22,732 - DEBUG - params={'modules': 'financialData,quoteType,defaultKeyStatistics,assetProfile,summaryDetail', 'corsDomain': 'finance.yahoo.com', 'formatted': 'false', 'symbol': 'FTAI'}
+2025-06-12 15:04:22,732 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:22,732 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:22,732 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:22,733 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:22,733 - DEBUG - reusing cookie
+2025-06-12 15:04:22,733 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:22,733 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:22,733 - DEBUG - reusing crumb
+2025-06-12 15:04:22,733 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:22,733 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:22,733 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:22,905 - DEBUG - response code=200
+2025-06-12 15:04:22,906 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:22,906 - DEBUG - Exiting get()
+2025-06-12 15:04:22,906 - DEBUG - get_raw_json(): https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:22,906 - DEBUG - Entering get()
+2025-06-12 15:04:22,906 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:22,906 - DEBUG - url=https://query1.finance.yahoo.com/v7/finance/quote?
+2025-06-12 15:04:22,906 - DEBUG - params={'symbols': 'FTAI', 'formatted': 'false'}
+2025-06-12 15:04:22,906 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:22,906 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:22,906 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:22,906 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:22,906 - DEBUG - reusing cookie
+2025-06-12 15:04:22,906 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:22,906 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:22,906 - DEBUG - reusing crumb
+2025-06-12 15:04:22,907 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:22,907 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:22,907 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:23,099 - DEBUG - response code=200
+2025-06-12 15:04:23,099 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:23,100 - DEBUG - Exiting get()
+2025-06-12 15:04:23,100 - DEBUG - Entering get()
+2025-06-12 15:04:23,100 - DEBUG -  Entering _make_request()
+2025-06-12 15:04:23,100 - DEBUG - url=https://query1.finance.yahoo.com/ws/fundamentals-timeseries/v1/finance/timeseries/FTAI?symbol=FTAI&type=trailingPegRatio&period1=1733961600&period2=1749772800
+2025-06-12 15:04:23,100 - DEBUG - params=None
+2025-06-12 15:04:23,100 - DEBUG -   Entering _get_cookie_and_crumb()
+2025-06-12 15:04:23,100 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:23,100 - DEBUG -    Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:23,100 - DEBUG -     Entering _get_cookie_basic()
+2025-06-12 15:04:23,100 - DEBUG - reusing cookie
+2025-06-12 15:04:23,100 - DEBUG -     Exiting _get_cookie_basic()
+2025-06-12 15:04:23,100 - DEBUG -     Entering _get_crumb_basic()
+2025-06-12 15:04:23,101 - DEBUG - reusing crumb
+2025-06-12 15:04:23,101 - DEBUG -     Exiting _get_crumb_basic()
+2025-06-12 15:04:23,101 - DEBUG -    Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:23,101 - DEBUG -   Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:23,284 - DEBUG - response code=200
+2025-06-12 15:04:23,284 - DEBUG -  Exiting _make_request()
+2025-06-12 15:04:23,284 - DEBUG - Exiting get()
+2025-06-12 15:04:23,284 - DEBUG - Entering history()
+2025-06-12 15:04:23,284 - DEBUG - ('SELECT "t1"."key", "t1"."value" FROM "_tz_kv" AS "t1" WHERE ("t1"."key" = ?) LIMIT ? OFFSET ?', ['FTAI', 1, 0])
+2025-06-12 15:04:23,285 - DEBUG -  Entering _fetch_ticker_tz()
+2025-06-12 15:04:23,285 - DEBUG -   Entering get()
+2025-06-12 15:04:23,285 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:23,285 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/FTAI
+2025-06-12 15:04:23,285 - DEBUG - params=frozendict.frozendict({'range': '1d', 'interval': '1d'})
+2025-06-12 15:04:23,285 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:23,285 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:23,285 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:23,285 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:23,285 - DEBUG - reusing cookie
+2025-06-12 15:04:23,285 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:23,285 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:23,285 - DEBUG - reusing crumb
+2025-06-12 15:04:23,285 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:23,285 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:23,285 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:23,467 - DEBUG - response code=200
+2025-06-12 15:04:23,468 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:23,468 - DEBUG -   Exiting get()
+2025-06-12 15:04:23,468 - DEBUG -  Exiting _fetch_ticker_tz()
+2025-06-12 15:04:23,468 - DEBUG - ('BEGIN', None)
+2025-06-12 15:04:23,468 - DEBUG - ('INSERT INTO "_tz_kv" ("key", "value") VALUES (?, ?)', ['FTAI', 'America/New_York'])
+2025-06-12 15:04:23,473 - DEBUG -  Entering history()
+2025-06-12 15:04:23,473 - DEBUG - FTAI: Yahoo GET parameters: {'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:23,473 - DEBUG -   Entering get()
+2025-06-12 15:04:23,473 - DEBUG -    Entering _make_request()
+2025-06-12 15:04:23,473 - DEBUG - url=https://query2.finance.yahoo.com/v8/finance/chart/FTAI
+2025-06-12 15:04:23,473 - DEBUG - params={'range': '5d', 'interval': '1d', 'includePrePost': False, 'events': 'div,splits,capitalGains'}
+2025-06-12 15:04:23,473 - DEBUG -     Entering _get_cookie_and_crumb()
+2025-06-12 15:04:23,473 - DEBUG - cookie_mode = 'basic'
+2025-06-12 15:04:23,473 - DEBUG -      Entering _get_cookie_and_crumb_basic()
+2025-06-12 15:04:23,473 - DEBUG -       Entering _get_cookie_basic()
+2025-06-12 15:04:23,473 - DEBUG - reusing cookie
+2025-06-12 15:04:23,474 - DEBUG -       Exiting _get_cookie_basic()
+2025-06-12 15:04:23,474 - DEBUG -       Entering _get_crumb_basic()
+2025-06-12 15:04:23,474 - DEBUG - reusing crumb
+2025-06-12 15:04:23,474 - DEBUG -       Exiting _get_crumb_basic()
+2025-06-12 15:04:23,474 - DEBUG -      Exiting _get_cookie_and_crumb_basic()
+2025-06-12 15:04:23,474 - DEBUG -     Exiting _get_cookie_and_crumb()
+2025-06-12 15:04:23,659 - DEBUG - response code=200
+2025-06-12 15:04:23,659 - DEBUG -    Exiting _make_request()
+2025-06-12 15:04:23,659 - DEBUG -   Exiting get()
+2025-06-12 15:04:23,660 - DEBUG - FTAI: yfinance received OHLC data: 2025-06-05 13:30:00 -> 2025-06-11 13:30:00
+2025-06-12 15:04:23,662 - DEBUG - FTAI: OHLC after cleaning: 2025-06-05 09:30:00-04:00 -> 2025-06-11 09:30:00-04:00
+2025-06-12 15:04:23,665 - DEBUG - FTAI: OHLC after combining events: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:23,672 - DEBUG - FTAI: yfinance returning OHLC: 2025-06-05 00:00:00-04:00 -> 2025-06-11 00:00:00-04:00
+2025-06-12 15:04:23,672 - DEBUG -  Exiting history()
+2025-06-12 15:04:23,673 - DEBUG - Exiting history()
+2025-06-12 15:04:23,673 - INFO - Successfully fetched data for FTAI
+2025-06-12 15:04:23,677 - INFO - Saved individual report: reports/FTAI_analysis_20250612_150423.json
+2025-06-12 15:04:23,677 - INFO - FTAI: Score 0.0%, 0 triggered signals
+2025-06-12 15:04:23,703 - INFO - Saved summary report: reports/portfolio_summary_20250612_150423.json
+2025-06-12 15:04:23,703 - INFO - Summary report saved to: reports/portfolio_summary_20250612_150423.json
+2025-06-12 15:04:23,703 - INFO - Analysis complete: 18/18 stocks analyzed
+2025-06-12 15:04:23,703 - INFO - Top 5 signal scores:
+2025-06-12 15:04:23,703 - INFO -   1. ILMN: 29.7% (5 signals)
+2025-06-12 15:04:23,703 - INFO -   2. ALGN: 29.7% (5 signals)
+2025-06-12 15:04:23,703 - INFO -   3. SOLV: 29.7% (5 signals)
+2025-06-12 15:04:23,704 - INFO -   4. INCY: 29.7% (5 signals)
+2025-06-12 15:04:23,704 - INFO -   5. RDY: 29.7% (5 signals)
