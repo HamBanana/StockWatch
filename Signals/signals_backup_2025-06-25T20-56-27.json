@@ -1,12 +1,12 @@
 {
   "meta": {
     "v": "4.2",
-    "updated": "2025-06-26",
+    "updated": "2025-06-23",
     "accuracy": "68-73%",
     "fpRate": "8-12%",
     "basedOn": "Analysis of 13+ documented surges: SRM(1283%), NMAX(2550%), GME(2700%), SMMT(583%), MNPR(522%), RBNE(350%), HCTI(222%), HUSA(190%), AMC(121%), AIRO(85%)",
     "lastUpdate": {
-      "date": "2025-06-26",
+      "date": "2025-06-23",
       "source": "DGNX surge analysis",
       "version": "4.2"
     }
@@ -94,7 +94,7 @@
       }
     },
     "corp": {
-      "w": 0.2,
+      "w": 0.19,
       "ai": {
         "w": 0.45,
         "t": [
@@ -567,202 +567,10 @@
           "pure_play": true,
           "first_mover": true
         }
-      },
-      "distressedRestructuring": {
-        "w": 0.2,
-        "t": [
-          70,
-          85,
-          95
-        ],
-        "keywords": [
-          "CFO",
-          "restructuring",
-          "refinancing",
-          "compliance"
-        ],
-        "conditions": {
-          "management_turnover": true,
-          "debt_negotiations": true,
-          "compliance_issues": true
-        }
-      },
-      "desperationCatalyst": {
-        "w": 0.25,
-        "t": [
-          75,
-          90,
-          100
-        ],
-        "description": "Last-resort catalyst for distressed companies",
-        "conditions": {
-          "near_delisting": true,
-          "cash_runway": "< 6 months",
-          "market_cap": "< $50M"
-        }
-      },
-      "preclinicalMilestone": {
-        "w": 0.25,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "description": "Significant preclinical data announcements",
-        "conditions": {
-          "statistical_significance": true,
-          "multiple_mechanisms": true,
-          "ind_enabling_next": true
-        }
-      },
-      "multiModalMechanism": {
-        "w": 0.2,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "description": "Drugs with multiple mechanisms of action",
-        "conditions": {
-          "mechanisms_count": "> 2",
-          "validated_pathways": true,
-          "differentiated_approach": true
-        }
-      },
-      "proprietaryPlatform": {
-        "w": 0.15,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "description": "Proprietary drug discovery platform",
-        "conditions": {
-          "platform_technology": true,
-          "multiple_indications": true,
-          "patent_portfolio": true
-        }
-      },
-      "clinicalDataRelease": {
-        "w": 0.3,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "keywords": [
-          "clinical trial",
-          "Phase 2",
-          "Phase 3",
-          "endpoint",
-          "efficacy"
-        ],
-        "conditions": {
-          "data_quality": "statistically_significant",
-          "trial_size": "> 100_patients"
-        }
-      },
-      "regulatoryValidation": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "keywords": [
-          "FDA",
-          "Fast Track",
-          "breakthrough",
-          "designation"
-        ],
-        "conditions": {
-          "regulatory_agency": "FDA",
-          "designation_type": [
-            "Fast Track",
-            "Breakthrough",
-            "Orphan"
-          ]
-        }
-      },
-      "novelMechanism": {
-        "w": 0.2,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "keywords": [
-          "first-in-class",
-          "novel mechanism",
-          "regulatory T cells",
-          "IL-2"
-        ],
-        "conditions": {
-          "mechanism_validated": true,
-          "competitive_advantage": true
-        }
-      },
-      "conditional_adjustments": {
-        "with_governance": 1.3,
-        "with_small_cap": 1.5
-      },
-      "governanceEnhancement": {
-        "w": 0.2,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "keywords": [
-          "voting trust",
-          "governance",
-          "agreement",
-          "enhancement",
-          "corporate governance"
-        ],
-        "conditions": {
-          "market_cap": "< 500M",
-          "recent_ipo": true
-        },
-        "description": "Corporate governance improvements for small cap companies"
-      },
-      "chineseTechRestructuring": {
-        "w": 0.15,
-        "t": [
-          65,
-          75,
-          85
-        ],
-        "keywords": [
-          "China",
-          "SaaS",
-          "restructuring",
-          "compliance"
-        ],
-        "conditions": {
-          "chinese_company": true,
-          "tech_sector": true,
-          "governance_focus": true
-        },
-        "description": "Chinese tech companies implementing governance restructuring"
-      },
-      "smallCapOperationalImprovement": {
-        "w": 0.18,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "conditions": {
-          "market_cap": "< 200M",
-          "loss_reduction": "> 50%",
-          "recent_improvements": true
-        },
-        "description": "Small cap companies showing operational improvements"
       }
     },
     "biotech": {
-      "w": 0.22,
+      "w": 0.2,
       "clinical": {
         "w": 0.4,
         "t": [
@@ -948,164 +756,6 @@
           "new_indication": true,
           "management_expertise": true
         }
-      },
-      "neuroinflammationBreakthrough": {
-        "w": 0.25,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "description": "Neuroinflammation-focused therapeutic breakthroughs",
-        "conditions": {
-          "therapeutic_area": "neuroinflammation",
-          "statistical_significance": true,
-          "multiple_mechanisms": true,
-          "novel_pathway": true
-        },
-        "keywords": [
-          "neuroinflammation",
-          "NLRP3",
-          "inflammasome",
-          "cytokine",
-          "IL-1β",
-          "IL-6"
-        ]
-      },
-      "alzheimersPipeline": {
-        "w": 0.2,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "description": "Alzheimer's disease-focused drug development",
-        "conditions": {
-          "indication": "Alzheimer's disease",
-          "novel_mechanism": true,
-          "neuroinflammation_focus": true,
-          "oral_administration": true
-        },
-        "keywords": [
-          "Alzheimer's",
-          "neurodegeneration",
-          "amyloid",
-          "tau",
-          "cognitive"
-        ]
-      },
-      "cannabinoidAnalogs": {
-        "w": 0.15,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "description": "Proprietary cannabinoid analog development",
-        "conditions": {
-          "patentable_compounds": true,
-          "new_chemical_entities": true,
-          "cb1_cb2_receptors": true
-        },
-        "keywords": [
-          "cannabinoid",
-          "CB1",
-          "CB2",
-          "analog",
-          "NCE",
-          "patent"
-        ]
-      },
-      "statisticalSignificance": {
-        "w": 0.3,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "description": "Statistically significant preclinical/clinical results",
-        "conditions": {
-          "p_value": "< 0.05",
-          "dose_dependent": true,
-          "multiple_endpoints": true
-        }
-      },
-      "ultraNanoClinical": {
-        "w": 0.35,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "conditions": {
-          "market_cap": "< 50M",
-          "clinical_stage": "Phase 2/3",
-          "statistical_significance": true
-        },
-        "keywords": [
-          "Phase 2",
-          "Phase 3",
-          "primary endpoint",
-          "statistical significance"
-        ]
-      },
-      "platformDrug": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "multiple_indications": true,
-          "novel_mechanism": true,
-          "first_in_class": true
-        },
-        "keywords": [
-          "first-in-class",
-          "platform",
-          "multiple indications"
-        ]
-      },
-      "fdaFastTrack": {
-        "w": 0.2,
-        "t": [
-          70,
-          85,
-          95
-        ],
-        "conditions": {
-          "regulatory_designation": "Fast Track",
-          "breakthrough_therapy": true,
-          "orphan_designation": true
-        },
-        "multiplier": 1.3
-      },
-      "preMarketCatalyst": {
-        "w": 0.3,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "conditions": {
-          "announcement_timing": "pre_market",
-          "clinical_data": true,
-          "statistical_significance": true
-        }
-      },
-      "regulatoryMilestone": {
-        "w": 0.25,
-        "t": [
-          75,
-          90,
-          100
-        ],
-        "conditions": {
-          "fda_designation": true,
-          "regulatory_path": "clear",
-          "commercial_potential": "high"
-        }
       }
     },
     "volume": {
@@ -1134,9 +784,8 @@
         ]
       },
       "conditional_adjustments": {
-        "with_biotech": 1.5,
-        "with_ultra_nano": 1.6,
-        "with_both": 2
+        "with_biotech": 1.4,
+        "pre_catalyst_compression": 1.6
       },
       "haltHistory": {
         "w": 0.15,
@@ -1468,134 +1117,6 @@
           "gap_percent": "> 25%",
           "volume_confirmation": true
         }
-      },
-      "extremeCompression": {
-        "w": 0.3,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "description": "Extreme volume drying up before explosion",
-        "conditions": {
-          "volume_vs_avg": "< 0.2x",
-          "duration_days": "> 1",
-          "followed_by_surge": "> 50%"
-        }
-      },
-      "microCapQuiet": {
-        "w": 0.2,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "description": "Micro-cap pre-catalyst quietness",
-        "conditions": {
-          "market_cap": "< $50M",
-          "volume_decline": "> 50%",
-          "price_stability": true
-        }
-      },
-      "nanoBiotechExplosion": {
-        "w": 0.25,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "description": "Volume explosion in nano-cap biotech",
-        "conditions": {
-          "volume_spike": "> 8x",
-          "market_cap": "< 15M",
-          "biotech_catalyst": true,
-          "statistical_data": true
-        }
-      },
-      "lowVolumePrecursor": {
-        "w": 0.2,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "description": "Extremely low volume before biotech catalyst",
-        "conditions": {
-          "volume_vs_avg": "< 0.3x",
-          "duration_days": "> 5",
-          "beta": "< 0.5",
-          "catalyst_type": "clinical"
-        }
-      },
-      "preClinicalQuiet": {
-        "w": 0.25,
-        "t": [
-          70,
-          85,
-          95
-        ],
-        "description": "Volume compression before clinical catalyst",
-        "conditions": {
-          "days_low_volume": "> 3",
-          "volume_vs_avg": "< 0.7x",
-          "clinical_catalyst_known": true
-        }
-      },
-      "biotechAfterHours": {
-        "w": 0.3,
-        "t": [
-          75,
-          90,
-          100
-        ],
-        "description": "After-hours/pre-market biotech catalyst volume",
-        "conditions": {
-          "announcement_timing": "after_hours_or_premarket",
-          "biotech_sector": true,
-          "volume_spike": "> 5x"
-        }
-      },
-      "ultraNanoExplosion": {
-        "w": 0.35,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "description": "Extreme volume in ultra-nano cap on catalyst",
-        "conditions": {
-          "market_cap": "< 50M",
-          "volume_spike": "> 10x",
-          "fundamental_catalyst": true
-        }
-      },
-      "postIPOVolumeBreakout": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "description": "Volume breakout after post-IPO consolidation",
-        "conditions": {
-          "days_from_ipo": "> 150",
-          "consolidation_period": "> 60",
-          "breakout_volume": "> 2x"
-        }
-      },
-      "lowLiquidityAmplification": {
-        "w": 0.2,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "description": "Low liquidity amplifying price movements",
-        "conditions": {
-          "avg_volume": "< 100k",
-          "market_cap": "< 200M",
-          "catalyst_present": true
-        }
       }
     },
     "tech": {
@@ -1776,73 +1297,6 @@
           "adx": "> 40",
           "breakout_confirmed": true
         }
-      },
-      "distressedBounce": {
-        "w": 0.2,
-        "t": [
-          70,
-          85,
-          95
-        ],
-        "conditions": {
-          "near_all_time_low": true,
-          "price_from_ath": "< 20%",
-          "consolidation_period": "> 30 days"
-        }
-      },
-      "highBetaClinical": {
-        "w": 0.3,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "beta": "> 2.0",
-          "clinical_catalyst": true,
-          "volatility": "> 15%"
-        }
-      },
-      "preCatalystSetup": {
-        "w": 0.25,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "conditions": {
-          "tight_range": "< 15%",
-          "known_catalyst": true,
-          "catalyst_timing": "< 7_days"
-        }
-      },
-      "extremeOversoldRecovery": {
-        "w": 0.3,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "conditions": {
-          "decline_from_high": "> 60%",
-          "recovery_magnitude": "> 50%",
-          "technical_bounce": true
-        },
-        "description": "Recovery from extreme oversold conditions"
-      },
-      "postIPOTechnicalRecovery": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "days_from_ipo": "> 120",
-          "major_support_bounce": true,
-          "consolidation_break": true
-        },
-        "description": "Technical recovery patterns post-IPO"
       }
     },
     "social": {
@@ -2078,7 +1532,7 @@
       }
     },
     "ipo": {
-      "w": 0.18,
+      "w": 0.16,
       "underpricing": {
         "w": 0.6,
         "t": [
@@ -2102,8 +1556,8 @@
         ]
       },
       "conditional_boost": {
-        "condition": "daysFromIPO between 150-300",
-        "boost_multiplier": 1.4
+        "condition": "daysFromIPO < 120",
+        "boost_multiplier": 1.5
       },
       "recentListing": {
         "w": 0.25,
@@ -2174,52 +1628,10 @@
           "lockup_percent": "> 80%",
           "days_to_expiry": "> 90"
         }
-      },
-      "postIPOGovernance": {
-        "w": 0.2,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "days_from_ipo": "[150, 300]",
-          "governance_improvement": true,
-          "institutional_discovery": true
-        },
-        "description": "Governance improvements during post-IPO discovery phase"
-      },
-      "sixMonthDiscovery": {
-        "w": 0.25,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "conditions": {
-          "days_from_ipo": "[150, 210]",
-          "post_consolidation": true,
-          "volume_increase": true
-        },
-        "description": "Classic 6-month post-IPO institutional discovery pattern"
-      },
-      "postIPORecovery": {
-        "w": 0.2,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "days_from_ipo": "[120, 365]",
-          "recovery_from_low": "> 50%",
-          "below_ipo_price": true
-        },
-        "description": "Recovery from post-IPO consolidation lows"
       }
     },
     "micro": {
-      "w": 0.18,
+      "w": 0.15,
       "lowFloat": {
         "w": 0.65,
         "t": [
@@ -2391,14 +1803,14 @@
       "ultraNanoCap": {
         "w": 0.4,
         "t": [
-          90,
+          80,
           95,
           100
         ],
         "conditions": {
-          "market_cap": "< 50M",
-          "float": "< 15M",
-          "institutional_ownership": "> 50%"
+          "market_cap": "< $50M",
+          "float": "< 10M",
+          "institutional_ownership": "< 20%"
         }
       },
       "biotechNano": {
@@ -2466,145 +1878,6 @@
           "institutional_holdings": "< 30%",
           "retail_dominated": true
         }
-      },
-      "reversesSplitFloat": {
-        "w": 0.35,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "description": "Post-reverse split float squeeze dynamics",
-        "conditions": {
-          "days_from_split": "< 120",
-          "float_reduction": "> 10x",
-          "market_cap": "< $50M",
-          "compliance_pressure": true
-        }
-      },
-      "distressedNano": {
-        "w": 0.25,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "description": "Distressed nano-cap turnaround setup",
-        "conditions": {
-          "market_cap": "< $10M",
-          "near_delisting": true,
-          "management_changes": true,
-          "debt_restructuring": true
-        }
-      },
-      "ultraNanoBiotech": {
-        "w": 0.45,
-        "t": [
-          90,
-          95,
-          100
-        ],
-        "conditions": {
-          "market_cap": "< 10M",
-          "sector": "biotech",
-          "clinical_stage": true,
-          "patent_protection": true
-        }
-      },
-      "oversoldNanoCap": {
-        "w": 0.25,
-        "t": [
-          80,
-          90,
-          95
-        ],
-        "conditions": {
-          "market_cap": "< 15M",
-          "near_52_week_low": "< 20%",
-          "ytd_performance": "< -15%",
-          "catalyst_approaching": true
-        }
-      },
-      "lowVolumeCompression": {
-        "w": 0.2,
-        "t": [
-          75,
-          85,
-          90
-        ],
-        "conditions": {
-          "avg_volume": "< 100K",
-          "beta": "< 0.5",
-          "float": "< 5M",
-          "volume_compression": "> 5 days"
-        }
-      },
-      "cashRunwayStable": {
-        "w": 0.1,
-        "t": [
-          65,
-          75,
-          85
-        ],
-        "conditions": {
-          "cash_months": "> 6",
-          "burn_rate_stable": true,
-          "revenue_generating": true
-        }
-      },
-      "highBetaNano": {
-        "w": 0.3,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "conditions": {
-          "beta": "> 2.5",
-          "market_cap": "< 100M",
-          "volatility": "> 15%"
-        }
-      },
-      "biotechNanoFloat": {
-        "w": 0.35,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "conditions": {
-          "sector": "biotech",
-          "market_cap": "< 75M",
-          "float_percentage": "> 90%"
-        }
-      },
-      "postIPOSmallFloat": {
-        "w": 0.3,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "conditions": {
-          "days_from_ipo": "< 365",
-          "institutional_ownership": "< 30%",
-          "effective_float": "< 50%"
-        },
-        "description": "Post-IPO companies with constrained float"
-      },
-      "chineseMicroCap": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "market_cap": "< 200M",
-          "chinese_company": true,
-          "tech_sector": true
-        },
-        "description": "Chinese micro-cap technology companies"
       }
     }
   },
@@ -2664,36 +1937,6 @@
         "dr": 0.3,
         "min": 0.4,
         "conditions": "bigPharmaPartner && milestones"
-      },
-      "preclinical_breakthrough": {
-        "hl": 7,
-        "dr": 0.25,
-        "min": 0.4,
-        "conditions": "statistical_significance && multiple_mechanisms"
-      },
-      "neuroinflammation_focus": {
-        "hl": 10,
-        "dr": 0.2,
-        "min": 0.5,
-        "conditions": "neuroinflammation_pathway && novel_mechanism"
-      },
-      "ultraNanoClinical": {
-        "hl": 5,
-        "dr": 0.4,
-        "min": 0.3,
-        "conditions": "market_cap < 50M && clinical_success"
-      },
-      "platformValidation": {
-        "hl": 14,
-        "dr": 0.2,
-        "min": 0.6,
-        "conditions": "multiple_indications && regulatory_support"
-      },
-      "fdaDesignation": {
-        "hl": 21,
-        "dr": 0.15,
-        "min": 0.7,
-        "conditions": "regulatory_designation && clear_pathway"
       }
     },
     "treasury": {
@@ -2742,18 +1985,6 @@
           "min": 0.5,
           "conditions": "surgeMagnitude between 100-200%"
         }
-      },
-      "postIPOGovernance": {
-        "hl": 7,
-        "dr": 0.25,
-        "min": 0.4,
-        "conditions": "governance_catalyst && small_cap"
-      },
-      "sixMonthDiscovery": {
-        "hl": 10,
-        "dr": 0.2,
-        "min": 0.5,
-        "conditions": "institutional_discovery_phase"
       }
     },
     "volume": {
@@ -2862,12 +2093,6 @@
         "dr": 0.2,
         "min": 0.6,
         "conditions": "ecosystemPartnership && strategicValue"
-      },
-      "governance_improvement": {
-        "hl": 14,
-        "dr": 0.15,
-        "min": 0.6,
-        "conditions": "small_cap && governance_catalyst"
       }
     },
     "analyst": {
@@ -2892,14 +2117,6 @@
         "dr": 0.15,
         "min": 0.5,
         "conditions": "majorContract && soleSource"
-      }
-    },
-    "ultra_nano": {
-      "clinical_catalyst": {
-        "hl": 3,
-        "dr": 0.4,
-        "min": 0.2,
-        "conditions": "market_cap < 10M && statistical_data"
       }
     }
   },
@@ -3909,333 +3126,6 @@
         "volume_spike": "> 10x",
         "survival_benefit": true
       }
-    },
-    "reverseSplitSqueeze": {
-      "cat": [
-        "micro",
-        "volume",
-        "corp"
-      ],
-      "scores": [
-        90,
-        85,
-        70
-      ],
-      "min_cat": 3,
-      "multiplier": 2.5,
-      "conditions": {
-        "days_from_reverse_split": "< 120",
-        "market_cap": "< $50M",
-        "volume_compression": true,
-        "compliance_pressure": true
-      },
-      "decay": {
-        "type": "aggressive",
-        "half_life": 2,
-        "min_retention": 0.1
-      }
-    },
-    "distressedMicroExplosion": {
-      "cat": [
-        "micro",
-        "volume",
-        "tech"
-      ],
-      "scores": [
-        85,
-        90,
-        75
-      ],
-      "min_cat": 3,
-      "multiplier": 2.8,
-      "conditions": {
-        "market_cap": "< $10M",
-        "near_delisting": true,
-        "volume_spike": "> 10x",
-        "unknown_catalyst": true
-      }
-    },
-    "desperationTurnaround": {
-      "cat": [
-        "corp",
-        "micro",
-        "volume"
-      ],
-      "scores": [
-        80,
-        85,
-        80
-      ],
-      "min_cat": 3,
-      "multiplier": 2.2,
-      "conditions": {
-        "distressed_financials": true,
-        "management_changes": true,
-        "surprise_catalyst": true
-      }
-    },
-    "ultraNanoBiotechExplosion": {
-      "cat": [
-        "biotech",
-        "micro",
-        "volume"
-      ],
-      "scores": [
-        90,
-        95,
-        85
-      ],
-      "min_cat": 3,
-      "multiplier": 3.5,
-      "conditions": {
-        "market_cap": "< 50M",
-        "clinical_catalyst": true,
-        "statistical_significance": true,
-        "volume_spike": "> 5x"
-      },
-      "decay": {
-        "type": "aggressive",
-        "half_life": 3,
-        "min_retention": 0.25
-      }
-    },
-    "neuroinflammationBreakthrough": {
-      "cat": [
-        "biotech",
-        "corp",
-        "volume"
-      ],
-      "scores": [
-        85,
-        80,
-        75
-      ],
-      "min_cat": 3,
-      "multiplier": 3.2,
-      "conditions": {
-        "therapeutic_area": "neuroinflammation",
-        "novel_mechanism": true,
-        "statistical_significance": true
-      },
-      "keyword_requirement": [
-        "neuroinflammation",
-        "inflammasome",
-        "cytokine"
-      ]
-    },
-    "oversoldBiotechCatalyst": {
-      "cat": [
-        "micro",
-        "tech",
-        "biotech"
-      ],
-      "scores": [
-        85,
-        90,
-        80
-      ],
-      "min_cat": 3,
-      "multiplier": 2.8,
-      "conditions": {
-        "near_52_week_low": true,
-        "ytd_decline": "> 15%",
-        "clinical_catalyst": true,
-        "market_cap": "< 25M"
-      }
-    },
-    "proprietaryPlatformValidation": {
-      "cat": [
-        "corp",
-        "biotech",
-        "micro"
-      ],
-      "scores": [
-        75,
-        80,
-        85
-      ],
-      "min_cat": 3,
-      "multiplier": 2.5,
-      "conditions": {
-        "proprietary_technology": true,
-        "multiple_indications": true,
-        "patent_protection": true,
-        "statistical_validation": true
-      }
-    },
-    "platformBiotechValidation": {
-      "cat": [
-        "biotech",
-        "corp",
-        "volume"
-      ],
-      "scores": [
-        85,
-        80,
-        75
-      ],
-      "min_cat": 3,
-      "multiplier": 2.8,
-      "conditions": {
-        "multiple_indications": true,
-        "phase_2_success": true,
-        "regulatory_support": true
-      }
-    },
-    "fdaFastTrackMomentum": {
-      "cat": [
-        "biotech",
-        "corp",
-        "tech"
-      ],
-      "scores": [
-        80,
-        85,
-        70
-      ],
-      "min_cat": 3,
-      "multiplier": 2.2,
-      "conditions": {
-        "fda_designation": true,
-        "clinical_data": true,
-        "high_beta": true
-      }
-    },
-    "preMarketBiotechCatalyst": {
-      "cat": [
-        "biotech",
-        "volume",
-        "corp"
-      ],
-      "scores": [
-        90,
-        85,
-        80
-      ],
-      "min_cat": 3,
-      "multiplier": 2.5,
-      "conditions": {
-        "announcement_timing": "pre_market",
-        "biotech_sector": true,
-        "major_catalyst": true
-      }
-    },
-    "nanoCapHighBeta": {
-      "cat": [
-        "micro",
-        "tech",
-        "volume"
-      ],
-      "scores": [
-        85,
-        80,
-        75
-      ],
-      "min_cat": 2,
-      "multiplier": 2,
-      "conditions": {
-        "market_cap": "< 100M",
-        "beta": "> 2.5",
-        "catalyst_present": true
-      }
-    },
-    "postIPOGovernanceSurge": {
-      "cat": [
-        "ipo",
-        "corp",
-        "micro"
-      ],
-      "scores": [
-        80,
-        75,
-        85
-      ],
-      "min_cat": 3,
-      "multiplier": 2.5,
-      "conditions": {
-        "days_from_ipo": "[150, 365]",
-        "governance_catalyst": true,
-        "small_float": true,
-        "market_cap": "< 200M"
-      },
-      "decay": {
-        "type": "moderate",
-        "half_life": 7,
-        "min_retention": 0.4
-      },
-      "description": "Post-IPO governance improvement with small float dynamics"
-    },
-    "chineseTechRecovery": {
-      "cat": [
-        "corp",
-        "tech",
-        "micro"
-      ],
-      "scores": [
-        70,
-        85,
-        80
-      ],
-      "min_cat": 3,
-      "multiplier": 2.2,
-      "conditions": {
-        "chinese_company": true,
-        "tech_sector": true,
-        "governance_improvement": true,
-        "oversold_recovery": true
-      },
-      "sector_requirement": [
-        "technology",
-        "software"
-      ],
-      "keyword_requirement": [
-        "China",
-        "SaaS",
-        "governance"
-      ],
-      "description": "Chinese tech companies with governance improvements and technical recovery"
-    },
-    "sixMonthIPODiscovery": {
-      "cat": [
-        "ipo",
-        "volume",
-        "tech"
-      ],
-      "scores": [
-        85,
-        75,
-        70
-      ],
-      "min_cat": 3,
-      "multiplier": 2,
-      "conditions": {
-        "days_from_ipo": "[150, 210]",
-        "institutional_discovery": true,
-        "volume_breakout": true,
-        "consolidation_complete": true
-      },
-      "description": "Classic 6-month post-IPO institutional discovery pattern"
-    },
-    "smallCapGovernanceCatalyst": {
-      "cat": [
-        "corp",
-        "micro",
-        "volume"
-      ],
-      "scores": [
-        80,
-        85,
-        70
-      ],
-      "min_cat": 3,
-      "multiplier": 2.3,
-      "conditions": {
-        "market_cap": "< 200M",
-        "governance_catalyst": true,
-        "operational_improvement": true,
-        "low_liquidity": true
-      },
-      "description": "Small cap governance catalyst with liquidity amplification"
     }
   },
   "alerts": {
@@ -4554,119 +3444,6 @@
           "short_interest": "> 25%",
           "strategic_investor": true
         }
-      },
-      "reverse_split_squeeze": {
-        "score": 140,
-        "acc": "60-70%",
-        "fp": "20-25%",
-        "conditions": {
-          "recent_reverse_split": true,
-          "ultra_low_float": true,
-          "catalyst_unknown": true
-        }
-      },
-      "distressed_turnaround": {
-        "score": 160,
-        "acc": "65-75%",
-        "fp": "15-20%",
-        "conditions": {
-          "near_delisting": true,
-          "surprise_catalyst": true,
-          "volume_explosion": true
-        }
-      },
-      "ultra_nano_biotech_catalyst": {
-        "score": 200,
-        "acc": "70-80%",
-        "fp": "15-20%",
-        "conditions": {
-          "market_cap": "< 10M",
-          "biotech_sector": true,
-          "clinical_catalyst": true,
-          "statistical_significance": true
-        }
-      },
-      "neuroinflammation_breakthrough": {
-        "score": 250,
-        "acc": "75-85%",
-        "fp": "12-18%",
-        "conditions": {
-          "therapeutic_area": "neuroinflammation",
-          "novel_mechanism": true,
-          "volume_confirmation": true
-        }
-      },
-      "oversold_nano_biotech": {
-        "score": 180,
-        "acc": "65-75%",
-        "fp": "18-25%",
-        "conditions": {
-          "near_52_week_low": true,
-          "market_cap": "< 15M",
-          "clinical_catalyst": true
-        }
-      },
-      "ultra_nano_biotech_clinical": {
-        "score": 300,
-        "acc": "70-80%",
-        "fp": "10-15%",
-        "conditions": {
-          "market_cap": "< 50M",
-          "biotech_sector": true,
-          "clinical_catalyst": true,
-          "statistical_significance": true
-        }
-      },
-      "platform_drug_validation": {
-        "score": 280,
-        "acc": "65-75%",
-        "fp": "12-18%",
-        "conditions": {
-          "multiple_indications": true,
-          "phase_2_success": true,
-          "regulatory_support": true
-        }
-      },
-      "pre_market_biotech_explosion": {
-        "score": 320,
-        "acc": "75-85%",
-        "fp": "8-12%",
-        "conditions": {
-          "announcement_timing": "pre_market",
-          "biotech_sector": true,
-          "volume_spike": "> 5x",
-          "major_catalyst": true
-        }
-      },
-      "post_ipo_governance": {
-        "score": 140,
-        "acc": "60-70%",
-        "fp": "20-25%",
-        "conditions": {
-          "days_from_ipo": "[150, 300]",
-          "governance_catalyst": true,
-          "market_cap": "< 200M"
-        }
-      },
-      "chinese_tech_recovery": {
-        "score": 160,
-        "acc": "65-75%",
-        "fp": "15-20%",
-        "conditions": {
-          "chinese_company": true,
-          "tech_sector": true,
-          "oversold_recovery": "> 50%"
-        }
-      },
-      "small_cap_governance": {
-        "score": 180,
-        "acc": "70-80%",
-        "fp": "12-18%",
-        "conditions": {
-          "market_cap": "< 200M",
-          "governance_improvement": true,
-          "operational_improvement": true
-        }
       }
     }
   },
@@ -4707,31 +3484,14 @@
       "regulatoryMult": 3,
       "platformMult": 2.8,
       "keywords": [
-        "Phase 2",
         "Phase 3",
         "clinical trial",
-        "endpoint",
-        "efficacy",
         "FDA",
-        "Fast Track",
-        "breakthrough",
-        "first-in-class",
-        "platform"
-      ],
-      "neuroinflammationMult": 3.5,
-      "alzheimersMult": 3.2,
-      "cannabinoidMult": 2.8,
-      "statisticalDataMult": 4,
-      "ultraNanoMultiplier": 4,
-      "clinicalPhase2Multiplier": 3.5,
-      "fdaDesignationMultiplier": 3,
-      "firstInClassMultiplier": 2.8,
-      "platformDrugMultiplier": 2.5,
-      "regulatory_designations": {
-        "fast_track": 1.3,
-        "breakthrough_therapy": 1.5,
-        "orphan_designation": 1.4
-      }
+        "approval",
+        "endpoint",
+        "survival",
+        "efficacy"
+      ]
     },
     "defense": {
       "contractMult": 4.2,
@@ -4775,11 +3535,12 @@
       "recentIPOMult": 3.8,
       "nanoCapMult": 4.5,
       "keywords": [
-        "SaaS",
-        "PaaS",
-        "cloud",
-        "digital transformation",
-        "retail technology"
+        "AI",
+        "artificial intelligence",
+        "defense",
+        "cybersecurity",
+        "biometrics",
+        "decision intelligence"
       ],
       "quantumMult": 3.8,
       "aiIntegrationMult": 3.2,
@@ -4791,10 +3552,7 @@
       "emergingTechMult": 3.2,
       "aiDefenseMult": 4,
       "governmentContractMult": 3.5,
-      "executiveAppointmentMult": 2.8,
-      "chineseSaaSMult": 2.5,
-      "governanceImprovementMult": 2.2,
-      "postIPODiscoveryMult": 2
+      "executiveAppointmentMult": 2.8
     },
     "media": {
       "ipoMult": 4.5,
@@ -4863,10 +3621,7 @@
     },
     "software": {
       "aiPlatformMult": 3.5,
-      "enterpriseAIMult": 3.2,
-      "cloudBasedMult": 2.3,
-      "retailTechMult": 2,
-      "postIPOPatternMult": 2.2
+      "enterpriseAIMult": 3.2
     },
     "infrastructure": {
       "aiDataCenterMult": 4.2,
@@ -5146,111 +3901,6 @@
       "condition": "sectorCatalyst && peersSurging && volumeConfirmation",
       "action": "boost_score",
       "multiplier": 1.7
-    },
-    "reverseSplitOpportunity": {
-      "condition": "daysFromReverseSplit < 120 && marketCap < 50M && volumeCompression",
-      "action": "boost_score",
-      "multiplier": 1.8
-    },
-    "delistingRiskCatalyst": {
-      "condition": "complianceIssues && unknownCatalyst && surgeSize > 50%",
-      "action": "boost_score",
-      "multiplier": 1.5
-    },
-    "microCapExhaustion": {
-      "condition": "volumeRatio < 0.2 && priceNearLow && marketCap < 10M",
-      "action": "boost_score",
-      "multiplier": 1.6
-    },
-    "oversoldBiotechSetup": {
-      "condition": "near_52_week_low && biotech_sector && clinical_catalyst_approaching",
-      "action": "boost_score",
-      "multiplier": 1.8
-    },
-    "nanoBiotechValidation": {
-      "condition": "market_cap < 15M && statistical_significance && volume_confirmation",
-      "action": "boost_score",
-      "multiplier": 2.2
-    },
-    "neuroinflammationFocus": {
-      "condition": "hasKeywords(['neuroinflammation', 'inflammasome', 'NLRP3']) && biotech_sector",
-      "action": "boost_score",
-      "multiplier": 1.6
-    },
-    "lowVolumeCompression": {
-      "condition": "volume_vs_avg < 0.3 && beta < 0.5 && catalyst_type = 'clinical'",
-      "action": "boost_score",
-      "multiplier": 1.4
-    },
-    "cannabinoidAnalogPlatform": {
-      "condition": "hasKeywords(['cannabinoid', 'CB1', 'CB2', 'analog']) && patent_portfolio",
-      "action": "boost_score",
-      "multiplier": 1.3
-    },
-    "multiModalMechanism": {
-      "condition": "mechanisms_count > 2 && validated_pathways && statistical_data",
-      "action": "boost_score",
-      "multiplier": 1.5
-    },
-    "extremeNanoRisk": {
-      "condition": "market_cap < 5M && cash_runway < 6months && no_revenue",
-      "action": "add_warning",
-      "note": "extreme_dilution_risk"
-    },
-    "ultraNanoBiotechBoost": {
-      "condition": "market_cap < 50M && sector == 'biotech' && clinical_catalyst",
-      "action": "boost_score",
-      "multiplier": 2
-    },
-    "cashRunwayValidation": {
-      "condition": "biotech_sector && cash_runway > 18_months",
-      "action": "boost_score",
-      "multiplier": 1.3
-    },
-    "highBetaClinicalAmplifier": {
-      "condition": "beta > 2.5 && clinical_catalyst && statistical_significance",
-      "action": "boost_score",
-      "multiplier": 1.8
-    },
-    "institutionalStabilityBoost": {
-      "condition": "institutional_ownership > 60% && market_cap < 100M",
-      "action": "boost_score",
-      "multiplier": 1.4
-    },
-    "preMarketBiotechBonus": {
-      "condition": "biotech_sector && announcement_timing == 'pre_market' && clinical_data",
-      "action": "boost_score",
-      "multiplier": 1.6
-    },
-    "fdaDesignationMultiplier": {
-      "condition": "has_fda_designation && biotech_sector",
-      "action": "boost_score",
-      "multiplier": 1.5
-    },
-    "reverseSplitRisk": {
-      "condition": "recent_reverse_split && days_since_split < 30",
-      "action": "add_warning",
-      "note": "recent_reverse_split_volatility"
-    },
-    "postIPOGovernanceBoost": {
-      "condition": "daysFromIPO in [150, 300] && governanceCatalyst && marketCap < 200M",
-      "action": "boost_score",
-      "multiplier": 1.5
-    },
-    "chineseTechRecoveryPattern": {
-      "condition": "chineseCompany && techSector && oversoldRecovery > 50%",
-      "action": "boost_score",
-      "multiplier": 1.3
-    },
-    "lowLiquidityRisk": {
-      "condition": "avgVolume < 100k && marketCap < 200M",
-      "action": "add_warning",
-      "note": "high_liquidity_risk"
-    },
-    "postIPOVolatilityWarning": {
-      "condition": "daysFromIPO < 365 && volatility > 25%",
-      "action": "add_warning",
-      "note": "high_post_ipo_volatility"
     }
   },
   "validation": {
@@ -5952,220 +4602,6 @@
           ],
           "expected_magnitude": "200-500%"
         }
-      },
-      "INM": {
-        "surge_metrics": {
-          "date": "2025-06-24",
-          "magnitude": "71-100%",
-          "price_movement": "$2.90 → $4.01",
-          "duration": "single_day"
-        },
-        "pre_conditions": {
-          "market_cap_pre": 4100000,
-          "ytd_performance": "-18% to -27%",
-          "52_week_low": 1.72,
-          "52_week_low_date": "2025-04-07",
-          "beta": 0.27,
-          "avg_volume_10d": "60K-120K",
-          "cash_position": "5.6M",
-          "employee_count": 13
-        },
-        "signals_triggered": {
-          "biotech": {
-            "neuroinflammationBreakthrough": 100,
-            "statisticalSignificance": 95,
-            "alzheimersPipeline": 85,
-            "cannabinoidAnalogs": 80
-          },
-          "micro": {
-            "ultraNanoBiotech": 100,
-            "oversoldNanoCap": 95,
-            "lowVolumeCompression": 90
-          },
-          "volume": {
-            "nanoBiotechExplosion": 100,
-            "lowVolumePrecursor": 95
-          },
-          "corp": {
-            "preclinicalMilestone": 100,
-            "multiModalMechanism": 90,
-            "proprietaryPlatform": 85
-          }
-        },
-        "catalyst_details": {
-          "type": "preclinical_data_announcement",
-          "drug_candidate": "INM-901",
-          "indication": "Alzheimer's_disease",
-          "study_type": "ex_vivo_neuroinflammation",
-          "key_findings": [
-            "NLRP3 inflammasome reduction",
-            "IL-1β significant decrease",
-            "dose-dependent response",
-            "multiple cytokine suppression"
-          ],
-          "statistical_significance": true,
-          "mechanisms": [
-            "neuroinflammation",
-            "neuroprotection",
-            "neurite_extension"
-          ]
-        },
-        "score_calculation": {
-          "raw_score": 79.6,
-          "multipliers_applied": [
-            "ultraNanoBiotechExplosion",
-            "neuroinflammationBreakthrough"
-          ],
-          "final_score": 501.3,
-          "alert_level": "legendary_plus"
-        },
-        "post_surge_behavior": {
-          "sustainability_factors": [
-            "statistical_significance",
-            "multiple_mechanisms",
-            "patent_protection",
-            "oral_administration"
-          ],
-          "risk_factors": [
-            "preclinical_stage",
-            "ultra_nano_volatility",
-            "dilution_risk",
-            "cash_runway"
-          ]
-        }
-      },
-      "NKTR": {
-        "surge_metrics": {
-          "date": "2025-06-24",
-          "magnitude": "156.29%",
-          "price_move": "$9.54 to $24.45",
-          "duration_hours": 8,
-          "after_hours_continuation": "6.01%"
-        },
-        "pre_conditions": {
-          "market_cap_pre": "~42M",
-          "float": "12.04M",
-          "beta": 2.85,
-          "institutional_ownership": "66.88%",
-          "insider_ownership": "2.80%",
-          "volatility_avg": "16.77%",
-          "cash_position": "$220.7M",
-          "reverse_split": "June 2025"
-        },
-        "signals_triggered": {
-          "biotech": {
-            "ultraNanoClinical": 100,
-            "platformDrug": 90,
-            "fdaFastTrack": 85,
-            "preMarketCatalyst": 95
-          },
-          "micro": {
-            "ultraNanoCap": 100,
-            "highBetaNano": 95,
-            "biotechNanoFloat": 90
-          },
-          "volume": {
-            "ultraNanoExplosion": 100,
-            "biotechAfterHours": 95,
-            "preClinicalQuiet": 80
-          },
-          "corp": {
-            "clinicalDataRelease": 100,
-            "regulatoryValidation": 85,
-            "novelMechanism": 80
-          }
-        },
-        "catalyst_details": {
-          "type": "Phase 2b clinical results",
-          "drug": "rezpegaldesleukin (REZPEG)",
-          "indication": "moderate-to-severe atopic dermatitis",
-          "trial_size": "393 patients",
-          "endpoints": "primary and secondary met",
-          "statistical_significance": true,
-          "announcement_time": "8:15 AM ET"
-        },
-        "score_calculation": {
-          "raw_score": 280,
-          "multipliers_applied": [
-            "ultraNanoBiotechExplosion",
-            "platformBiotechValidation",
-            "preMarketBiotechCatalyst"
-          ],
-          "final_score": 392,
-          "alert_level": "legendary"
-        }
-      },
-      "YAAS": {
-        "surge_metrics": {
-          "period": "May-June 2025",
-          "magnitude": "65.71%",
-          "low_to_peak": "83.54%",
-          "duration_days": 30
-        },
-        "pre_conditions": {
-          "ipo_date": "2024-12-20",
-          "days_from_ipo": 156,
-          "market_cap_pre": "~60M",
-          "market_cap_post": "~94M",
-          "all_time_low": 1.58,
-          "pre_surge_price": 1.75,
-          "float_estimate": "small",
-          "beta": 1.09,
-          "volatility": "14.73%"
-        },
-        "signals_triggered": {
-          "ipo": {
-            "postIPOGovernance": 85,
-            "sixMonthDiscovery": 80,
-            "postIPORecovery": 90
-          },
-          "corp": {
-            "governanceEnhancement": 85,
-            "smallCapOperationalImprovement": 75
-          },
-          "micro": {
-            "postIPOSmallFloat": 90,
-            "chineseMicroCap": 80
-          },
-          "tech": {
-            "extremeOversoldRecovery": 95,
-            "postIPOTechnicalRecovery": 85
-          },
-          "volume": {
-            "postIPOVolumeBreakout": 75,
-            "lowLiquidityAmplification": 85
-          }
-        },
-        "catalyst_details": {
-          "type": "governance_improvement",
-          "announcement": "Voting Trust Agreement",
-          "date": "2025-05-01",
-          "sector": "Chinese_SaaS",
-          "timing": "post_IPO_discovery"
-        },
-        "score_calculation": {
-          "raw_score": 195,
-          "multipliers_applied": [
-            "postIPOGovernanceSurge",
-            "chineseTechRecovery"
-          ],
-          "final_score": 292,
-          "alert_level": "ultra"
-        },
-        "post_surge_behavior": {
-          "consolidation_range": "2.80-3.00",
-          "resistance_levels": [
-            3,
-            3.5,
-            4.25
-          ],
-          "support_levels": [
-            2.5,
-            2,
-            1.75
-          ],
-          "current_trend": "consolidating_gains"
-        }
       }
     }
   },
@@ -6332,76 +4768,6 @@
         "beta": "> 3.0",
         "volatility_30d": "> 30%"
       }
-    },
-    "postSplitNano": {
-      "range": [
-        100000,
-        2000000
-      ],
-      "multiplier": 4,
-      "conditions": {
-        "recent_reverse_split": true,
-        "days_from_split": "< 120"
-      },
-      "volatility_expectation": "> 300%"
-    },
-    "distressedMicro": {
-      "range": [
-        0,
-        5000000
-      ],
-      "multiplier": 3.5,
-      "conditions": {
-        "market_cap": "< $10M",
-        "compliance_issues": true
-      }
-    },
-    "ultraNanoBiotech": {
-      "range": [
-        5000000,
-        15000000
-      ],
-      "multiplier": 4,
-      "conditions": {
-        "sector": "biotech",
-        "market_cap": "< 75M",
-        "institutional_ownership": "> 50%"
-      }
-    },
-    "highBetaLowFloat": {
-      "range": [
-        10000000,
-        25000000
-      ],
-      "multiplier": 3.2,
-      "conditions": {
-        "beta": "> 2.5",
-        "volatility": "> 15%"
-      }
-    },
-    "postIPOConstrained": {
-      "range": [
-        20000000,
-        60000000
-      ],
-      "multiplier": 2.5,
-      "conditions": {
-        "days_from_ipo": "< 365",
-        "institutional_ownership": "< 40%"
-      },
-      "volatility_expectation": "> 25%"
-    },
-    "chineseMicroFloat": {
-      "range": [
-        30000000,
-        100000000
-      ],
-      "multiplier": 2.2,
-      "conditions": {
-        "chinese_company": true,
-        "tech_sector": true
-      },
-      "volatility_expectation": "> 20%"
     }
   },
   "technicalIndicators": {
@@ -6708,121 +5074,6 @@
         "low_float": true
       },
       "score_boost": 20
-    },
-    "reverseSplitSetup": {
-      "weight": 0.25,
-      "detection": {
-        "recent_split": "< 120 days",
-        "price_stability": "< 20% range",
-        "volume_decline": "> 50%"
-      },
-      "score_boost": 25
-    },
-    "distressedConsolidation": {
-      "weight": 0.2,
-      "detection": {
-        "near_multi_year_low": true,
-        "tight_range": "< 15%",
-        "declining_volume": true,
-        "duration": "> 14 days"
-      },
-      "score_boost": 20
-    },
-    "extremeOversoldBiotech": {
-      "weight": 0.25,
-      "detection": {
-        "ytd_performance": "< -15%",
-        "near_52_week_low": "< 25%",
-        "sector": "biotech",
-        "clinical_catalyst": "approaching"
-      },
-      "score_boost": 25
-    },
-    "lowVolatilityCompression": {
-      "weight": 0.2,
-      "detection": {
-        "beta": "< 0.5",
-        "volume_vs_avg": "< 0.5x",
-        "duration_days": "> 5",
-        "market_cap": "< 15M"
-      },
-      "score_boost": 20
-    },
-    "nanoBiotechMomentum": {
-      "weight": 0.3,
-      "detection": {
-        "market_cap": "< 10M",
-        "volume_spike": "> 5x",
-        "clinical_news": true,
-        "statistical_significance": true
-      },
-      "score_boost": 35
-    },
-    "preClinicalCompression": {
-      "weight": 0.25,
-      "detection": {
-        "range_percent": "< 15%",
-        "volume_vs_avg": "< 0.7x",
-        "duration_days": "> 3",
-        "clinical_catalyst_approaching": true
-      },
-      "score_boost": 20
-    },
-    "highBetaBiotechSetup": {
-      "weight": 0.3,
-      "detection": {
-        "beta": "> 2.5",
-        "biotech_sector": true,
-        "clinical_catalyst": true,
-        "market_cap": "< 200M"
-      },
-      "score_boost": 25
-    },
-    "institutionalBacking": {
-      "weight": 0.2,
-      "detection": {
-        "institutional_ownership": "> 60%",
-        "market_cap": "< 100M",
-        "recent_accumulation": true
-      },
-      "score_boost": 15
-    },
-    "fdaDesignationMomentum": {
-      "weight": 0.25,
-      "detection": {
-        "fda_designation": true,
-        "biotech_sector": true,
-        "clinical_progress": true
-      },
-      "score_boost": 20
-    },
-    "postIPORecoveryPattern": {
-      "weight": 0.2,
-      "detection": {
-        "days_from_ipo": "[120, 365]",
-        "decline_from_ipo": "> 40%",
-        "recovery_from_low": "> 50%",
-        "consolidation_break": true
-      },
-      "score_boost": 18
-    },
-    "governanceCatalystMomentum": {
-      "weight": 0.15,
-      "detection": {
-        "governance_announcement": true,
-        "price_reaction": "> 10%",
-        "volume_confirmation": true
-      },
-      "score_boost": 15
-    },
-    "lowLiquidityBreakout": {
-      "weight": 0.18,
-      "detection": {
-        "avg_volume": "< 200k",
-        "breakout_volume": "> 2x",
-        "price_breakout": "> 15%"
-      },
-      "score_boost": 20
     }
   },
   "volumePatterns": {
@@ -7009,73 +5260,6 @@
         "detection": "volume doubles daily for 3+ days",
         "weight": 0.4,
         "predictive_value": "extreme"
-      },
-      "microCapExhaustion": {
-        "description": "Extreme volume exhaustion in micro-caps",
-        "detection": "volume < 0.2x average for 1+ days",
-        "weight": 0.35,
-        "predictive_value": "very high",
-        "market_cap_requirement": "< $50M"
-      },
-      "preReversalQuiet": {
-        "description": "Quietness before major reversal",
-        "detection": "volume < 0.3x with price near lows",
-        "weight": 0.25,
-        "predictive_value": "high"
-      },
-      "nanoBiotechQuiet": {
-        "description": "Extremely low volume in nano biotech before catalyst",
-        "detection": "volume < 0.3x avg for 5+ days in <15M market cap biotech",
-        "weight": 0.3,
-        "predictive_value": "very high"
-      },
-      "statisticalDataExplosion": {
-        "description": "Volume explosion on statistically significant data",
-        "detection": "volume > 8x with statistical significance announcement",
-        "weight": 0.35,
-        "predictive_value": "very high"
-      },
-      "neuroinflammationCatalyst": {
-        "description": "Volume spike on neuroinflammation breakthrough",
-        "detection": "neuroinflammation keywords + volume > 5x + biotech",
-        "weight": 0.25,
-        "predictive_value": "high"
-      },
-      "preClinicalQuiet": {
-        "description": "Volume compression before clinical data release",
-        "detection": "3+ days < 0.7x avg volume before known catalyst",
-        "weight": 0.3,
-        "predictive_value": "very high"
-      },
-      "biotechAfterHoursSpike": {
-        "description": "After-hours/pre-market biotech catalyst volume explosion",
-        "detection": "biotech sector + after hours news + volume > 5x",
-        "weight": 0.35,
-        "predictive_value": "very high"
-      },
-      "ultraNanoMomentum": {
-        "description": "Extreme volume in ultra-nano cap on fundamental catalyst",
-        "detection": "market cap < 50M + volume > 10x + clinical catalyst",
-        "weight": 0.4,
-        "predictive_value": "extreme"
-      },
-      "postIPOVolumeExpansion": {
-        "description": "Volume expansion after post-IPO consolidation",
-        "detection": "days_from_ipo > 150 && volume > 2x avg && consolidation_complete",
-        "weight": 0.25,
-        "predictive_value": "high"
-      },
-      "governanceAnnouncementVolume": {
-        "description": "Volume spike on governance announcements",
-        "detection": "governance_news && volume > 3x && price_reaction > 5%",
-        "weight": 0.2,
-        "predictive_value": "medium"
-      },
-      "lowLiquidityAmplification": {
-        "description": "Price amplification due to low liquidity",
-        "detection": "avg_volume < 100k && price_move > 20% && catalyst_present",
-        "weight": 0.3,
-        "predictive_value": "high"
       }
     }
   },
@@ -7199,21 +5383,16 @@
       ],
       "base_multiplier": 4.5,
       "clinical_boost": 6,
-      "partnership_boost": 7,
-      "statistical_significance_boost": 7,
-      "volatility_factor": 3.5,
-      "fda_designation_boost": 5.5
+      "partnership_boost": 7
     },
     "nano_biotech": {
       "range": [
         50000000,
-        100000000
+        150000000
       ],
-      "base_multiplier": 3.8,
+      "base_multiplier": 3.5,
       "clinical_boost": 4.5,
-      "partnership_boost": 5,
-      "fda_designation_boost": 4,
-      "volatility_factor": 2.8
+      "partnership_boost": 5
     },
     "micro_biotech": {
       "range": [
@@ -7272,59 +5451,6 @@
       "partnership_mult": 4,
       "ecosystem_mult": 3.5,
       "scaling_bonus": 1.3
-    },
-    "distressed_nano": {
-      "range": [
-        0,
-        10000000
-      ],
-      "base_multiplier": 4.5,
-      "compliance_boost": 5,
-      "reverse_split_boost": 5.5,
-      "volatility_factor": 4
-    },
-    "ultra_nano_biotech_extreme": {
-      "range": [
-        0,
-        5000000
-      ],
-      "base_multiplier": 6,
-      "clinical_boost": 8,
-      "statistical_significance_boost": 10,
-      "volatility_factor": 4
-    },
-    "nano_biotech_clinical": {
-      "range": [
-        15000000,
-        50000000
-      ],
-      "base_multiplier": 3.5,
-      "clinical_boost": 4.5,
-      "statistical_significance_boost": 5,
-      "volatility_factor": 2.8
-    },
-    "chinese_micro": {
-      "range": [
-        50000000,
-        200000000
-      ],
-      "base_multiplier": 2.5,
-      "governance_boost": 3,
-      "tech_sector_boost": 2.8,
-      "post_ipo_boost": 2.2
-    },
-    "post_ipo_small": {
-      "range": [
-        50000000,
-        300000000
-      ],
-      "base_multiplier": 2.2,
-      "discovery_phase_boost": 2.8,
-      "governance_boost": 2.5,
-      "volatility_factor": 2,
-      "conditions": {
-        "days_from_ipo": "< 365"
-      }
     }
   },
   "catalystScoring": {
