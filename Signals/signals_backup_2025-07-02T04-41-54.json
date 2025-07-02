@@ -51,19 +51,13 @@
   },
   "signals": {
     "treasury": {
-      "w": 0.26,
+      "w": 0.24,
       "crypto": {
-        "w": 0.4,
+        "w": 0.55,
         "t": [
           85,
           95,
           100
-        ],
-        "keywords": [
-          "bitcoin",
-          "ethereum",
-          "crypto",
-          "digital asset"
         ]
       },
       "advisor": {
@@ -79,43 +73,6 @@
           60,
           80
         ]
-      },
-      "ethereumTreasury": {
-        "w": 0.35,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "keywords": [
-          "ethereum",
-          "ETH",
-          "staking",
-          "DeFi",
-          "stablecoin"
-        ],
-        "conditions": {
-          "eth_focus": true,
-          "treasury_strategy": true,
-          "yield_generation": true
-        }
-      },
-      "treasuryPivot": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "keywords": [
-          "treasury strategy",
-          "reserve asset",
-          "MicroStrategy model"
-        ],
-        "conditions": {
-          "strategic_shift": true,
-          "institutional_backing": true
-        }
       }
     },
     "geopolitical": {
@@ -137,7 +94,7 @@
       }
     },
     "corp": {
-      "w": 0.22,
+      "w": 0.21,
       "ai": {
         "w": 0.45,
         "t": [
@@ -269,8 +226,8 @@
         }
       },
       "conditional_boost": {
-        "condition": "special_dividend + micro_cap",
-        "boost_multiplier": 1.8
+        "condition": "government_contracts + ai_sector",
+        "boost_multiplier": 2
       },
       "aiInfrastructurePivot": {
         "w": 0.35,
@@ -746,9 +703,8 @@
         }
       },
       "conditional_adjustments": {
-        "with_celebrity_executive": 1.4,
-        "with_vc_validation": 1.3,
-        "with_both": 1.8
+        "with_treasury_innovation": 1.4,
+        "with_dual_business_model": 1.3
       },
       "governanceEnhancement": {
         "w": 0.2,
@@ -873,128 +829,6 @@
           "defensive_component": true
         },
         "description": "Companies with exposure to multiple sectors"
-      },
-      "celebrityExecutive": {
-        "w": 0.25,
-        "t": [
-          75,
-          90,
-          100
-        ],
-        "description": "High-profile executive appointment with media presence",
-        "conditions": {
-          "media_presence": true,
-          "industry_recognition": true,
-          "social_influence": true
-        },
-        "examples": [
-          "Tom Lee",
-          "Michael Saylor",
-          "Jack Dorsey"
-        ]
-      },
-      "tierOneVCParticipation": {
-        "w": 0.2,
-        "t": [
-          70,
-          85,
-          95
-        ],
-        "description": "Top-tier venture capital participation",
-        "tier_one_vcs": [
-          "Founders Fund",
-          "Pantera Capital",
-          "Galaxy Digital",
-          "Andreessen Horowitz",
-          "Digital Currency Group"
-        ],
-        "conditions": {
-          "multiple_tier_one": true,
-          "strategic_round": true
-        }
-      },
-      "cryptoStrategyPivot": {
-        "w": 0.3,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "keywords": [
-          "crypto treasury",
-          "digital asset strategy",
-          "blockchain pivot"
-        ],
-        "conditions": {
-          "business_model_change": true,
-          "crypto_focus": true,
-          "institutional_grade": true
-        }
-      },
-      "specialDividend": {
-        "w": 0.3,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "conditions": {
-          "dividend_type": "special_or_liquidating",
-          "asset_linked": true,
-          "exceeds_25_percent_rule": true
-        },
-        "keywords": [
-          "special dividend",
-          "liquidating dividend",
-          "asset sale",
-          "preferred stock"
-        ]
-      },
-      "strategicAlternatives": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "advisor_engaged": true,
-          "strategic_review": true,
-          "asset_sale_process": true
-        },
-        "keywords": [
-          "strategic alternatives",
-          "strategic review",
-          "asset sale",
-          "merger",
-          "spin-off"
-        ]
-      },
-      "distressedTurnaround": {
-        "w": 0.2,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "conditions": {
-          "financial_distress": true,
-          "strategic_investment": true,
-          "cost_optimization": true
-        }
-      },
-      "reverseSplitRecovery": {
-        "w": 0.15,
-        "t": [
-          65,
-          75,
-          85
-        ],
-        "conditions": {
-          "recent_reverse_split": "< 90 days",
-          "catalyst_post_split": true,
-          "nasdaq_compliance": true
-        }
       }
     },
     "biotech": {
@@ -1405,7 +1239,7 @@
       }
     },
     "volume": {
-      "w": 0.23,
+      "w": 0.25,
       "explosive": {
         "w": 0.45,
         "t": [
@@ -1430,9 +1264,9 @@
         ]
       },
       "conditional_adjustments": {
-        "with_after_hours_catalyst": 1.4,
-        "with_micro_cap": 1.3,
-        "with_both": 1.7
+        "with_biotech": 1.5,
+        "with_ultra_nano": 1.6,
+        "with_both": 2
       },
       "haltHistory": {
         "w": 0.15,
@@ -1936,79 +1770,6 @@
           "volume_confirmation": true
         },
         "description": "Technical pattern completion with volume"
-      },
-      "afterHoursTreasury": {
-        "w": 0.2,
-        "t": [
-          75,
-          90,
-          100
-        ],
-        "description": "After-hours treasury strategy announcement",
-        "conditions": {
-          "announcement_timing": "after_hours",
-          "treasury_related": true,
-          "volume_spike": "> 50x"
-        }
-      },
-      "cryptoCatalystVolume": {
-        "w": 0.25,
-        "t": [
-          80,
-          95,
-          100
-        ],
-        "description": "Volume explosion on crypto strategy catalyst",
-        "conditions": {
-          "crypto_catalyst": true,
-          "volume_vs_float": "> 1000%",
-          "sustained_interest": "> 2 days"
-        }
-      },
-      "afterHoursSpecialDiv": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "description": "After-hours special dividend announcement impact",
-        "conditions": {
-          "announcement_timing": "after_hours",
-          "special_dividend": true,
-          "next_day_gap": "> 10%"
-        }
-      },
-      "corporateActionVolume": {
-        "w": 0.2,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "description": "Volume response to corporate actions",
-        "conditions": {
-          "corporate_action": [
-            "dividend",
-            "split",
-            "spin-off"
-          ],
-          "volume_vs_avg": "> 3x"
-        }
-      },
-      "microCapCatalystResponse": {
-        "w": 0.3,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "description": "Micro cap volume amplification on catalysts",
-        "conditions": {
-          "market_cap": "< $50M",
-          "catalyst_present": true,
-          "volume_spike": "> 5x"
-        }
       }
     },
     "tech": {
@@ -2285,32 +2046,6 @@
           "range_expansion": "> 15%",
           "momentum_confirmation": true
         }
-      },
-      "postDistressRecovery": {
-        "w": 0.25,
-        "t": [
-          70,
-          80,
-          90
-        ],
-        "conditions": {
-          "recent_52_week_low": "< 60 days",
-          "oversold_recovery": true,
-          "catalyst_confirmation": true
-        }
-      },
-      "reverseSplitTechnicals": {
-        "w": 0.2,
-        "t": [
-          65,
-          75,
-          85
-        ],
-        "conditions": {
-          "post_reverse_split": "< 90 days",
-          "price_recovery": "> 50%",
-          "volume_confirmation": true
-        }
       }
     },
     "social": {
@@ -2543,34 +2278,6 @@
           "technology_trending": true,
           "sector_rotation": true
         }
-      },
-      "cryptoTreasuryHype": {
-        "w": 0.35,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "indicators": [
-          "ethereum exposure",
-          "treasury strategy",
-          "crypto twitter"
-        ],
-        "description": "Social media excitement around crypto treasury strategies"
-      },
-      "celebrityCEOEffect": {
-        "w": 0.3,
-        "t": [
-          70,
-          85,
-          95
-        ],
-        "indicators": [
-          "media coverage",
-          "financial influencer",
-          "cnbc appearances"
-        ],
-        "description": "Social amplification from celebrity CEO appointment"
       }
     },
     "ipo": {
@@ -2598,8 +2305,8 @@
         ]
       },
       "conditional_boost": {
-        "condition": "daysFromIPO < 60 && cryptoExposure",
-        "boost_multiplier": 2
+        "condition": "daysFromIPO between 150-300",
+        "boost_multiplier": 1.4
       },
       "recentListing": {
         "w": 0.25,
@@ -2712,35 +2419,6 @@
           "below_ipo_price": true
         },
         "description": "Recovery from post-IPO consolidation lows"
-      },
-      "cryptoIPOTiming": {
-        "w": 0.25,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "conditions": {
-          "days_range": [
-            0,
-            60
-          ],
-          "crypto_exposure": true,
-          "market_timing": "favorable"
-        }
-      },
-      "smallFloatIPO": {
-        "w": 0.2,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "days_from_ipo": "< 90",
-          "float": "< 50M",
-          "retail_accessible": true
-        }
       }
     },
     "micro": {
@@ -3159,45 +2837,6 @@
           "float": "< 20M"
         },
         "description": "Low float stocks maintaining compliance"
-      },
-      "ultraMicroCap": {
-        "w": 0.4,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "conditions": {
-          "market_cap": "< $25M",
-          "float_percentage": "< 20%",
-          "institutional_ownership": "< 15%"
-        }
-      },
-      "postReverseSplitDynamics": {
-        "w": 0.3,
-        "t": [
-          80,
-          90,
-          95
-        ],
-        "conditions": {
-          "days_since_reverse_split": "< 60",
-          "split_ratio": "> 10:1",
-          "share_count_reduction": "> 80%"
-        }
-      },
-      "distressedMicroCap": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "market_cap": "< $50M",
-          "recent_52_week_low": "< 30 days",
-          "financial_distress": true
-        }
       }
     }
   },
@@ -3310,19 +2949,7 @@
     "treasury": {
       "hl": 21,
       "dr": 0.05,
-      "min": 0.8,
-      "crypto_treasury": {
-        "hl": 7,
-        "dr": 0.25,
-        "min": 0.4,
-        "conditions": "institutional backing + celebrity executive"
-      },
-      "ethereum_strategy": {
-        "hl": 5,
-        "dr": 0.3,
-        "min": 0.35,
-        "conditions": "first mover advantage"
-      }
+      "min": 0.8
     },
     "geopolitical": {
       "hl": 7,
@@ -3503,18 +3130,6 @@
         "dr": 0.15,
         "min": 0.6,
         "conditions": "small_cap && governance_catalyst"
-      },
-      "special_dividend": {
-        "hl": 7,
-        "dr": 0.25,
-        "min": 0.4,
-        "conditions": "record_date_dependent"
-      },
-      "strategic_alternatives": {
-        "hl": 14,
-        "dr": 0.15,
-        "min": 0.6,
-        "conditions": "process_dependent"
       }
     },
     "analyst": {
@@ -3547,20 +3162,6 @@
         "dr": 0.4,
         "min": 0.2,
         "conditions": "market_cap < 10M && statistical_data"
-      }
-    },
-    "celebrity_executive": {
-      "hl": 10,
-      "dr": 0.2,
-      "min": 0.5,
-      "conditions": "sustained media presence"
-    },
-    "micro": {
-      "ultra_micro_catalyst": {
-        "hl": 3,
-        "dr": 0.4,
-        "min": 0.25,
-        "conditions": "extreme_volatility"
       }
     }
   },
@@ -5027,204 +4628,6 @@
         "southeast_asia",
         "emerging_markets"
       ]
-    },
-    "cryptoTreasuryExplosion": {
-      "cat": [
-        "treasury",
-        "ipo",
-        "micro",
-        "volume"
-      ],
-      "scores": [
-        85,
-        80,
-        90,
-        85
-      ],
-      "min_cat": 4,
-      "multiplier": 3.2,
-      "conditions": {
-        "crypto_treasury": true,
-        "days_from_ipo": "< 90",
-        "low_float": "< 50M",
-        "volume_spike": "> 50x"
-      },
-      "decay": {
-        "type": "aggressive",
-        "half_life": 4,
-        "min_retention": 0.25
-      }
-    },
-    "ethereumTreasuryPioneer": {
-      "cat": [
-        "treasury",
-        "corp",
-        "volume"
-      ],
-      "scores": [
-        90,
-        85,
-        80
-      ],
-      "min_cat": 3,
-      "multiplier": 2.8,
-      "conditions": {
-        "ethereum_focus": true,
-        "first_mover": true,
-        "institutional_validation": true
-      },
-      "sector_requirement": [
-        "technology",
-        "crypto",
-        "fintech"
-      ]
-    },
-    "celebrityCEOCatalyst": {
-      "cat": [
-        "corp",
-        "social",
-        "volume"
-      ],
-      "scores": [
-        80,
-        75,
-        70
-      ],
-      "min_cat": 3,
-      "multiplier": 2.5,
-      "conditions": {
-        "celebrity_appointment": true,
-        "media_presence": true,
-        "volume_confirmation": true
-      }
-    },
-    "vcValidatedTreasury": {
-      "cat": [
-        "corp",
-        "treasury",
-        "micro"
-      ],
-      "scores": [
-        85,
-        80,
-        85
-      ],
-      "min_cat": 3,
-      "multiplier": 2.6,
-      "conditions": {
-        "tier_one_vc": true,
-        "treasury_strategy": true,
-        "small_market_cap": "< 500M"
-      }
-    },
-    "ipoTreasuryMomentum": {
-      "cat": [
-        "ipo",
-        "treasury",
-        "volume",
-        "social"
-      ],
-      "scores": [
-        85,
-        90,
-        85,
-        75
-      ],
-      "min_cat": 4,
-      "multiplier": 3.5,
-      "conditions": {
-        "days_from_ipo": "< 60",
-        "treasury_announcement": true,
-        "volume_explosion": "> 100x",
-        "social_amplification": true
-      },
-      "decay": {
-        "type": "explosive",
-        "half_life": 3,
-        "min_retention": 0.2
-      }
-    },
-    "specialDividendMicroCap": {
-      "cat": [
-        "corp",
-        "micro",
-        "volume"
-      ],
-      "scores": [
-        90,
-        95,
-        80
-      ],
-      "min_cat": 3,
-      "multiplier": 2.5,
-      "conditions": {
-        "special_dividend": true,
-        "market_cap": "< $50M",
-        "after_hours_announcement": true
-      },
-      "decay": {
-        "type": "aggressive",
-        "half_life": 5,
-        "min_retention": 0.3
-      }
-    },
-    "strategicAlternativesCatalyst": {
-      "cat": [
-        "corp",
-        "micro",
-        "tech"
-      ],
-      "scores": [
-        85,
-        80,
-        75
-      ],
-      "min_cat": 3,
-      "multiplier": 2,
-      "conditions": {
-        "strategic_alternatives": true,
-        "advisor_engagement": true,
-        "distressed_situation": true
-      }
-    },
-    "reverseSplitRecovery": {
-      "cat": [
-        "corp",
-        "tech",
-        "volume"
-      ],
-      "scores": [
-        75,
-        80,
-        70
-      ],
-      "min_cat": 2,
-      "multiplier": 1.8,
-      "conditions": {
-        "recent_reverse_split": "< 90 days",
-        "catalyst_post_split": true,
-        "technical_recovery": true
-      }
-    },
-    "distressedTurnaroundPlay": {
-      "cat": [
-        "corp",
-        "micro",
-        "volume"
-      ],
-      "scores": [
-        80,
-        85,
-        75
-      ],
-      "min_cat": 3,
-      "multiplier": 2.2,
-      "conditions": {
-        "financial_distress": true,
-        "strategic_investment": true,
-        "asset_optimization": true,
-        "market_cap": "< $100M"
-      }
     }
   },
   "alerts": {
@@ -5687,67 +5090,6 @@
           "first_mover_advantage": true,
           "volume_confirmation": true
         }
-      },
-      "crypto_treasury_legendary": {
-        "score": 400,
-        "acc": "75-85%",
-        "fp": "8-12%",
-        "conditions": {
-          "crypto_treasury": true,
-          "celebrity_executive": true,
-          "vc_validation": true,
-          "recent_ipo": "< 90 days"
-        }
-      },
-      "ethereum_treasury_ultra": {
-        "score": 350,
-        "acc": "70-80%",
-        "fp": "10-15%",
-        "conditions": {
-          "ethereum_focus": true,
-          "institutional_backing": true,
-          "volume_explosion": "> 50x"
-        }
-      },
-      "celebrity_ceo_critical": {
-        "score": 200,
-        "acc": "65-75%",
-        "fp": "12-18%",
-        "conditions": {
-          "celebrity_appointment": true,
-          "media_coverage": true,
-          "volume_confirmation": true
-        }
-      },
-      "special_dividend_micro": {
-        "score": 160,
-        "acc": "70-80%",
-        "fp": "15-20%",
-        "conditions": {
-          "special_dividend": true,
-          "market_cap": "< $50M",
-          "after_hours_announcement": true
-        }
-      },
-      "strategic_alternatives": {
-        "score": 140,
-        "acc": "65-75%",
-        "fp": "18-25%",
-        "conditions": {
-          "strategic_review": true,
-          "advisor_engaged": true,
-          "distressed_situation": true
-        }
-      },
-      "reverse_split_recovery": {
-        "score": 120,
-        "acc": "60-70%",
-        "fp": "20-30%",
-        "conditions": {
-          "recent_reverse_split": "< 90 days",
-          "catalyst_present": true,
-          "technical_recovery": true
-        }
       }
     }
   },
@@ -5883,12 +5225,7 @@
       "executiveAppointmentMult": 2.8,
       "chineseSaaSMult": 2.5,
       "governanceImprovementMult": 2.2,
-      "postIPODiscoveryMult": 2,
-      "cryptoPivotMult": 3.2,
-      "blockchainMult": 2.8,
-      "conferencingMult": 2.8,
-      "collaborationMult": 2.5,
-      "distressedTechMult": 3.2
+      "postIPODiscoveryMult": 2
     },
     "media": {
       "ipoMult": 4.5,
@@ -6001,27 +5338,6 @@
       "lateStageAssetMult": 4.5,
       "orphanIndicationMult": 4,
       "bigPharmaPartnerMult": 4.8
-    },
-    "cryptocurrency": {
-      "treasuryMult": 4.5,
-      "ethereumFocusMult": 3.8,
-      "defiExposureMult": 3.2,
-      "keywords": [
-        "crypto",
-        "ethereum",
-        "bitcoin",
-        "DeFi",
-        "staking"
-      ]
-    },
-    "fintech": {
-      "cryptoTreasuryMult": 3.5,
-      "digitalAssetMult": 3
-    },
-    "distressed_situations": {
-      "specialDividendMult": 3.5,
-      "strategicAlternativesMult": 2.8,
-      "turnaroundMult": 2.5
     }
   },
   "filters": {
@@ -6397,51 +5713,6 @@
       "condition": "reverse_split < 90_days && volume_compression && technical_setup",
       "action": "boost_score",
       "multiplier": 1.8
-    },
-    "cryptoTreasuryValidation": {
-      "condition": "hasKeywords(['treasury', 'ethereum', 'crypto']) && institutionalBacking",
-      "action": "boost_score",
-      "multiplier": 1.8
-    },
-    "celebrityExecutiveBoost": {
-      "condition": "executiveAppointment && mediaPresence && industryInfluence",
-      "action": "boost_score",
-      "multiplier": 1.6
-    },
-    "recentIPOCrypto": {
-      "condition": "daysFromIPO < 60 && cryptoExposure && volumeSpike > 50x",
-      "action": "boost_score",
-      "multiplier": 2
-    },
-    "tierOneVCValidation": {
-      "condition": "hasTierOneVC && cryptoFocus && strategicRound",
-      "action": "boost_score",
-      "multiplier": 1.5
-    },
-    "afterHoursTreasuryNews": {
-      "condition": "announcementTiming == 'after_hours' && treasuryStrategy",
-      "action": "boost_score",
-      "multiplier": 1.4
-    },
-    "specialDividendValidation": {
-      "condition": "hasSpecialDividend && afterHoursAnnouncement && microCap",
-      "action": "boost_score",
-      "multiplier": 1.8
-    },
-    "reverseSplitRecoveryBoost": {
-      "condition": "daysSinceReverseSplit < 90 && catalyst && technicalRecovery",
-      "action": "boost_score",
-      "multiplier": 1.5
-    },
-    "distressedSituationFilter": {
-      "condition": "revenueDecline > 30% && strategicAlternatives",
-      "action": "boost_score",
-      "multiplier": 1.4
-    },
-    "microCapAfterHoursTrap": {
-      "condition": "marketCap < 25M && afterHours && !fundamentalSupport",
-      "action": "add_warning",
-      "note": "extreme_volatility_risk"
     }
   },
   "validation": {
@@ -7418,153 +6689,6 @@
           "geographic_arbitrage": "Malaysia operations",
           "post_split_dynamics": "1:10 split concentration"
         }
-      },
-      "BMNR": {
-        "surge_metrics": {
-          "date": "2025-06-30",
-          "magnitude": "695%",
-          "low_to_peak": "35,900%",
-          "duration_hours": 8,
-          "continued_surge": "1,048% multi-day"
-        },
-        "pre_conditions": {
-          "ipo_date": "2025-06-05",
-          "days_from_ipo": 25,
-          "market_cap_pre": "~26M",
-          "float_estimate": "< 50M",
-          "avg_volume_30d": 1000000,
-          "price_range_7d": "15%",
-          "crypto_exposure": true
-        },
-        "signals_triggered": {
-          "treasury": {
-            "crypto": 100,
-            "ethereumTreasury": 95,
-            "treasuryPivot": 90
-          },
-          "ipo": {
-            "recentListing": 95,
-            "cryptoIPOTiming": 100,
-            "smallFloatIPO": 90
-          },
-          "corp": {
-            "celebrityExecutive": 100,
-            "tierOneVCParticipation": 95,
-            "cryptoStrategyPivot": 95,
-            "strategicInvestment": 90
-          },
-          "volume": {
-            "explosive": 100,
-            "afterHoursTreasury": 100,
-            "cryptoCatalystVolume": 100,
-            "dollarVolumeExplosion": 100
-          },
-          "micro": {
-            "lowFloat": 90,
-            "ipoFloat": 95
-          },
-          "social": {
-            "cryptoTreasuryHype": 90,
-            "celebrityCEOEffect": 95,
-            "retailFOMO": 85
-          }
-        },
-        "catalyst_details": {
-          "type": "ethereum_treasury_strategy",
-          "announcement": "$250M private placement for ETH treasury",
-          "executive": "Tom Lee appointed Chairman",
-          "investors": [
-            "Founders Fund",
-            "Pantera Capital",
-            "Galaxy Digital"
-          ],
-          "timing": "after_hours",
-          "strategic_shift": "Bitcoin mining to Ethereum treasury"
-        },
-        "score_calculation": {
-          "raw_score": 320,
-          "multipliers_applied": [
-            "cryptoTreasuryExplosion",
-            "ipoTreasuryMomentum"
-          ],
-          "final_score": 448,
-          "alert_level": "legendary+"
-        },
-        "post_surge_behavior": {
-          "continued_momentum": "+63% next day",
-          "sustained_volume": "multi-day interest",
-          "media_coverage": "extensive",
-          "current_trend": "consolidating gains"
-        }
-      },
-      "CLRO": {
-        "surge_metrics": {
-          "date": "2025-07-01",
-          "magnitude": "16.35%",
-          "price_movement": "$5.75 to $6.69",
-          "duration_hours": 6.5,
-          "volume_impact": "elevated"
-        },
-        "pre_conditions": {
-          "market_cap": "9.57M",
-          "reverse_split_date": "2025-06-02",
-          "days_since_split": 29,
-          "split_ratio": "1:15",
-          "52_week_low": "$0.29",
-          "recent_low_date": "2025-06-02",
-          "financial_distress": true,
-          "strategic_review": true
-        },
-        "signals_triggered": {
-          "corp": {
-            "specialDividend": 95,
-            "strategicAlternatives": 85,
-            "distressedTurnaround": 80,
-            "reverseSplitRecovery": 75
-          },
-          "micro": {
-            "ultraMicroCap": 100,
-            "postReverseSplitDynamics": 90,
-            "distressedMicroCap": 95
-          },
-          "volume": {
-            "afterHoursSpecialDiv": 85,
-            "corporateActionVolume": 80,
-            "microCapCatalystResponse": 90
-          },
-          "tech": {
-            "postDistressRecovery": 80,
-            "reverseSplitTechnicals": 75
-          }
-        },
-        "catalyst_details": {
-          "type": "special_stock_dividend",
-          "announcement_date": "2025-06-30",
-          "announcement_time": "after_market_close",
-          "dividend_structure": "Class A Redeemable Preferred Stock",
-          "ratio": "1:1",
-          "record_date": "2025-07-11",
-          "payment_date": "2025-07-18",
-          "asset_sale_linked": true
-        },
-        "score_calculation": {
-          "raw_score": 192,
-          "multipliers_applied": [
-            "specialDividendMicroCap",
-            "distressedTurnaroundPlay"
-          ],
-          "final_score": 230,
-          "alert_level": "high"
-        },
-        "post_surge_behavior": {
-          "consolidation_range": "$6.50-$7.00",
-          "record_date_factor": "potential additional buying",
-          "risk_factors": [
-            "asset sale execution",
-            "financial distress",
-            "low liquidity"
-          ]
-        }
       }
     }
   },
@@ -8284,61 +7408,6 @@
         "volume_healthy": true
       },
       "score_boost": 20
-    },
-    "cryptoTreasuryMomentum": {
-      "weight": 0.25,
-      "detection": {
-        "crypto_announcement": true,
-        "volume_vs_avg": "> 50x",
-        "price_breakout": "> 100%",
-        "sustained_interest": "> 2 days"
-      },
-      "score_boost": 30
-    },
-    "celebrityExecutiveImpact": {
-      "weight": 0.2,
-      "detection": {
-        "high_profile_appointment": true,
-        "media_coverage": true,
-        "social_amplification": true
-      },
-      "score_boost": 25
-    },
-    "vcValidationSignal": {
-      "weight": 0.18,
-      "detection": {
-        "tier_one_participation": true,
-        "strategic_significance": true,
-        "institutional_credibility": true
-      },
-      "score_boost": 20
-    },
-    "specialDividendMomentum": {
-      "weight": 0.25,
-      "detection": {
-        "special_dividend_announced": true,
-        "record_date_approaching": "< 14 days",
-        "volume_increase": "> 3x"
-      },
-      "score_boost": 25
-    },
-    "postReverseSplitSetup": {
-      "weight": 0.2,
-      "detection": {
-        "days_since_reverse_split": "< 90",
-        "price_recovery": "> 50%",
-        "catalyst_presence": true
-      },
-      "score_boost": 20
-    },
-    "distressedRecoverySignal": {
-      "weight": 0.22,
-      "detection": {
-        "near_52_week_low": "< 30 days",
-        "strategic_alternatives": true,
-        "insider_investment": true
-      },
-      "score_boost": 22
     }
   },
   "volumePatterns": {
@@ -8610,42 +7679,6 @@
         "detection": "volume > 10% of float && price_movement > 15%",
         "weight": 0.35,
         "predictive_value": "very high"
-      },
-      "treasuryAnnouncement": {
-        "description": "Massive volume spike on treasury strategy announcement",
-        "detection": "100x+ volume on crypto treasury news",
-        "weight": 0.35,
-        "predictive_value": "very high"
-      },
-      "afterHoursCryptoNews": {
-        "description": "After-hours crypto catalyst creating gap potential",
-        "detection": "after_hours announcement + gap_up > 50%",
-        "weight": 0.3,
-        "predictive_value": "high"
-      },
-      "ethereumTreasuryFlow": {
-        "description": "Volume flow following Ethereum treasury announcement",
-        "detection": "sustained volume > 10x for 3+ days",
-        "weight": 0.25,
-        "predictive_value": "high"
-      },
-      "afterHoursSpecialDiv": {
-        "description": "Volume surge following after-hours special dividend announcement",
-        "detection": "special_dividend && after_hours && gap_up > 10%",
-        "weight": 0.3,
-        "predictive_value": "high"
-      },
-      "corporateActionResponse": {
-        "description": "Volume response to major corporate actions",
-        "detection": "corporate_action && volume > 3x && price_confirm",
-        "weight": 0.25,
-        "predictive_value": "medium-high"
-      },
-      "microCapCatalystAmplification": {
-        "description": "Amplified volume response in micro cap situations",
-        "detection": "market_cap < 50M && catalyst && volume > 5x",
-        "weight": 0.35,
-        "predictive_value": "very high"
       }
     }
   },
@@ -8908,47 +7941,6 @@
       "recent_split_boost": 4,
       "compliance_boost": 3.8,
       "volatility_factor": 2.8
-    },
-    "crypto_nano": {
-      "range": [
-        0,
-        100000000
-      ],
-      "base_multiplier": 4.5,
-      "crypto_treasury_boost": 6,
-      "ethereum_focus_boost": 5.5,
-      "volatility_factor": 4
-    },
-    "crypto_micro": {
-      "range": [
-        100000000,
-        500000000
-      ],
-      "base_multiplier": 3.5,
-      "crypto_treasury_boost": 4.5,
-      "ethereum_focus_boost": 4,
-      "volatility_factor": 3
-    },
-    "ultra_micro": {
-      "range": [
-        0,
-        25000000
-      ],
-      "base_multiplier": 4.5,
-      "special_situation_boost": 6,
-      "volatility_factor": 3.5
-    },
-    "distressed_micro": {
-      "range": [
-        0,
-        50000000
-      ],
-      "base_multiplier": 3.5,
-      "turnaround_boost": 4.5,
-      "conditions": {
-        "financial_distress": true,
-        "strategic_process": true
-      }
     }
   },
   "catalystScoring": {
@@ -9097,22 +8089,6 @@
         "base_score": 30,
         "multiple_indications": 40,
         "mechanism_confirmation": 35
-      },
-      "ethereum_treasury_strategy": {
-        "base_score": 50,
-        "with_celebrity_executive": 70,
-        "with_vc_backing": 65,
-        "first_mover_bonus": 20
-      },
-      "crypto_treasury_pivot": {
-        "base_score": 40,
-        "institutional_validation": 55,
-        "media_amplification": 50
-      },
-      "celebrity_executive_crypto": {
-        "base_score": 35,
-        "media_presence_bonus": 20,
-        "industry_influence_bonus": 15
       }
     },
     "timing_multipliers": {
@@ -9125,10 +8101,7 @@
       "multiple_catalysts": 1.5,
       "social_amplification": 1.4,
       "weekend": 1.2,
-      "after_market": 1.3,
-      "after_market_ethereum": 1.6,
-      "crypto_market_strength": 1.4,
-      "social_media_viral": 1.5
+      "after_market": 1.3
     },
     "sector_multipliers": {
       "biotech_clinical": 1.4,
