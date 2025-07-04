@@ -1,12 +1,12 @@
 {
   "meta": {
     "v": "4.2",
-    "updated": "2025-07-04",
+    "updated": "2025-07-02",
     "accuracy": "68-73%",
     "fpRate": "8-12%",
     "basedOn": "Analysis of 13+ documented surges: SRM(1283%), NMAX(2550%), GME(2700%), SMMT(583%), MNPR(522%), RBNE(350%), HCTI(222%), HUSA(190%), AMC(121%), AIRO(85%)",
     "lastUpdate": {
-      "date": "2025-07-04",
+      "date": "2025-07-02",
       "source": "DGNX surge analysis",
       "version": "4.2"
     }
@@ -137,7 +137,7 @@
       }
     },
     "corp": {
-      "w": 0.2,
+      "w": 0.22,
       "ai": {
         "w": 0.45,
         "t": [
