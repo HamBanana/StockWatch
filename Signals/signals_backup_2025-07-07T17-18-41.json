@@ -998,7 +998,7 @@
       }
     },
     "biotech": {
-      "w": 0.28,
+      "w": 0.22,
       "clinical": {
         "w": 0.4,
         "t": [
@@ -1402,86 +1402,10 @@
           "days_since_compliance": "< 120",
           "delisting_risk_removed": true
         }
-      },
-      "ultraNanoFDAMilestone": {
-        "w": 0.45,
-        "t": [
-          95,
-          98,
-          100
-        ],
-        "conditions": {
-          "market_cap": "< 10M",
-          "fda_milestone": [
-            "orphan_designation",
-            "breakthrough_therapy",
-            "fast_track"
-          ],
-          "clinical_validation": true
-        },
-        "keywords": [
-          "orphan drug",
-          "FDA designation",
-          "breakthrough therapy",
-          "fast track"
-        ]
-      },
-      "allTimeLowClinicalCatalyst": {
-        "w": 0.35,
-        "t": [
-          90,
-          95,
-          100
-        ],
-        "conditions": {
-          "days_from_ath_low": "< 10",
-          "clinical_catalyst": true,
-          "biotech_sector": true,
-          "market_cap": "< 50M"
-        },
-        "score_boost": 40
-      },
-      "postHolidayBiotechCatalyst": {
-        "w": 0.25,
-        "t": [
-          80,
-          90,
-          95
-        ],
-        "conditions": {
-          "market_break_days": "> 3",
-          "announcement_timing": "first_day_back",
-          "biotech_catalyst": true
-        },
-        "multiplier": 2.2
-      },
-      "clinicalValidationPublication": {
-        "w": 0.3,
-        "t": [
-          85,
-          92,
-          100
-        ],
-        "conditions": {
-          "peer_reviewed_publication": [
-            "Nature Medicine",
-            "Nature",
-            "Science",
-            "NEJM"
-          ],
-          "clinical_data": "statistically_significant",
-          "response_rate": "> 30%"
-        },
-        "keywords": [
-          "Nature Medicine",
-          "published",
-          "peer-reviewed",
-          "clinical trial"
-        ]
       }
     },
     "volume": {
-      "w": 0.25,
+      "w": 0.23,
       "explosive": {
         "w": 0.45,
         "t": [
@@ -2085,48 +2009,6 @@
           "catalyst_present": true,
           "volume_spike": "> 5x"
         }
-      },
-      "postHolidayExplosion": {
-        "w": 0.3,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "conditions": {
-          "market_break": "> 3_days",
-          "announcement_first_day": true,
-          "volume_spike": "> 10x",
-          "low_float": "< 25M"
-        },
-        "description": "Volume explosion after extended market break"
-      },
-      "ultraQuietBeforeCatalyst": {
-        "w": 0.35,
-        "t": [
-          80,
-          90,
-          100
-        ],
-        "conditions": {
-          "volume_vs_avg": "< 0.5x",
-          "duration_days": "> 3",
-          "known_catalyst_approaching": true,
-          "market_cap": "< 50M"
-        }
-      },
-      "allTimeLowVolumeReversal": {
-        "w": 0.4,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "conditions": {
-          "ath_low_within_days": "< 7",
-          "volume_reversal": "> 5x",
-          "catalyst_present": true
-        }
       }
     },
     "tech": {
@@ -2428,33 +2310,6 @@
           "post_reverse_split": "< 90 days",
           "price_recovery": "> 50%",
           "volume_confirmation": true
-        }
-      },
-      "extremeOversoldATLRecovery": {
-        "w": 0.4,
-        "t": [
-          90,
-          95,
-          100
-        ],
-        "conditions": {
-          "rsi": "< 25",
-          "ath_low_within_days": "< 10",
-          "catalyst_aligned": true,
-          "volume_confirmation": true
-        }
-      },
-      "postHolidayGapUp": {
-        "w": 0.25,
-        "t": [
-          75,
-          85,
-          95
-        ],
-        "conditions": {
-          "gap_up": "> 50%",
-          "market_break": "> 3_days",
-          "catalyst_news": true
         }
       }
     },
@@ -2889,7 +2744,7 @@
       }
     },
     "micro": {
-      "w": 0.22,
+      "w": 0.18,
       "lowFloat": {
         "w": 0.65,
         "t": [
@@ -3342,47 +3197,6 @@
           "market_cap": "< $50M",
           "recent_52_week_low": "< 30 days",
           "financial_distress": true
-        }
-      },
-      "ultraNanoExtreme": {
-        "w": 0.5,
-        "t": [
-          95,
-          98,
-          100
-        ],
-        "conditions": {
-          "market_cap": "< 10M",
-          "float": "< 15M",
-          "employee_count": "< 10",
-          "recent_reverse_split": "< 365_days"
-        }
-      },
-      "allTimeLowFloat": {
-        "w": 0.35,
-        "t": [
-          90,
-          95,
-          100
-        ],
-        "conditions": {
-          "ath_low_within_days": "< 10",
-          "float": "< 25M",
-          "volume_compression": true
-        }
-      },
-      "postSplitUltraNano": {
-        "w": 0.4,
-        "t": [
-          85,
-          95,
-          100
-        ],
-        "conditions": {
-          "reverse_split_ratio": "> 1:10",
-          "days_since_split": "< 180",
-          "market_cap": "< 15M",
-          "compliance_regained": true
         }
       }
     }
@@ -5536,100 +5350,6 @@
         "no_fundamental_support": true,
         "extreme_moves": "> 200%"
       }
-    },
-    "ultraNanoFDAExplosion": {
-      "cat": [
-        "biotech",
-        "micro",
-        "volume"
-      ],
-      "scores": [
-        95,
-        100,
-        85
-      ],
-      "min_cat": 3,
-      "multiplier": 4.5,
-      "conditions": {
-        "market_cap": "< 10M",
-        "fda_milestone": true,
-        "clinical_validation": true,
-        "float": "< 15M"
-      },
-      "decay": {
-        "type": "aggressive",
-        "half_life": 4,
-        "min_retention": 0.2
-      }
-    },
-    "allTimeLowCatalystSurge": {
-      "cat": [
-        "biotech",
-        "tech",
-        "volume"
-      ],
-      "scores": [
-        90,
-        95,
-        90
-      ],
-      "min_cat": 3,
-      "multiplier": 3.8,
-      "conditions": {
-        "days_from_ath_low": "< 10",
-        "catalyst_present": true,
-        "volume_explosion": "> 10x",
-        "oversold_recovery": true
-      }
-    },
-    "postHolidayNanoCatalyst": {
-      "cat": [
-        "micro",
-        "volume",
-        "biotech"
-      ],
-      "scores": [
-        85,
-        90,
-        85
-      ],
-      "min_cat": 3,
-      "multiplier": 3.2,
-      "conditions": {
-        "market_break": "> 3_days",
-        "market_cap": "< 50M",
-        "announcement_timing": "monday_morning",
-        "catalyst_type": [
-          "regulatory",
-          "clinical",
-          "partnership"
-        ]
-      }
-    },
-    "ultraNanoOrphanDesignation": {
-      "cat": [
-        "biotech",
-        "micro",
-        "volume"
-      ],
-      "scores": [
-        100,
-        95,
-        85
-      ],
-      "min_cat": 3,
-      "multiplier": 5,
-      "conditions": {
-        "market_cap": "< 15M",
-        "orphan_drug_designation": true,
-        "clinical_data_validation": true,
-        "rare_disease_focus": true
-      },
-      "decay": {
-        "type": "sustained",
-        "half_life": 7,
-        "min_retention": 0.4
-      }
     }
   },
   "alerts": {
@@ -6218,45 +5938,6 @@
           "circuit_breakers": "> 5",
           "social_viral": true,
           "extreme_volatility": "> 150%"
-        }
-      },
-      "ultra_nano_fda_extreme": {
-        "score": 200,
-        "acc": "90-95%",
-        "fp": "5-8%",
-        "conditions": {
-          "market_cap": "< 10M",
-          "fda_milestone": true,
-          "clinical_validation": true
-        }
-      },
-      "all_time_low_catalyst": {
-        "score": 180,
-        "acc": "85-92%",
-        "fp": "8-12%",
-        "conditions": {
-          "days_from_ath_low": "< 10",
-          "catalyst_present": true,
-          "biotech_sector": true
-        }
-      },
-      "post_holiday_nano_catalyst": {
-        "score": 160,
-        "acc": "80-88%",
-        "fp": "10-15%",
-        "conditions": {
-          "market_break": "> 3_days",
-          "market_cap": "< 50M",
-          "monday_morning_catalyst": true
-        }
-      },
-      "legendary_plus": {
-        "score": 2000,
-        "acc": "95-98%",
-        "fp": "2-5%",
-        "conditions": {
-          "multiple_extreme_factors": true,
-          "perfect_storm_setup": true
         }
       }
     }
@@ -7086,36 +6767,6 @@
       "condition": "viral_posts > 10 && mainstream_attention && cant_stop_laughing",
       "action": "boost_score",
       "multiplier": 1.4
-    },
-    "allTimeLowProximityBoost": {
-      "condition": "days_from_ath_low < 10 && catalyst_present && biotech_sector",
-      "action": "boost_score",
-      "multiplier": 2.5
-    },
-    "postHolidayWeekendAmplifier": {
-      "condition": "market_break > 3_days && announcement_first_day && low_float",
-      "action": "boost_score",
-      "multiplier": 2
-    },
-    "ultraNanoFDAValidation": {
-      "condition": "market_cap < 10M && fda_designation && clinical_validation",
-      "action": "boost_score",
-      "multiplier": 3.5
-    },
-    "extremeOversoldCatalyst": {
-      "condition": "rsi < 25 && ath_low_within_week && fundamental_catalyst",
-      "action": "boost_score",
-      "multiplier": 2.8
-    },
-    "postReverseSplitStabilization": {
-      "condition": "reverse_split < 365_days && compliance_regained && catalyst_present",
-      "action": "boost_score",
-      "multiplier": 2.2
-    },
-    "holidayPentUpDemand": {
-      "condition": "market_break > 3_days && low_float < 25M && major_catalyst",
-      "action": "boost_score",
-      "multiplier": 1.8
     }
   },
   "validation": {
@@ -8344,64 +7995,6 @@
           "liquidity_risk": 95,
           "overall_risk": "extreme"
         }
-      },
-      "MBIO": {
-        "surge_metrics": {
-          "date": "2025-07-07",
-          "magnitude": "114.29%",
-          "catalyst": "FDA_Orphan_Drug_Designation",
-          "duration_hours": 6.5,
-          "volume_multiplier": "15-20x"
-        },
-        "pre_conditions": {
-          "market_cap_pre": 5210000,
-          "ath_low_date": "2025-07-01",
-          "days_from_ath_low": 6,
-          "holiday_weekend": "July_4_Independence_Day",
-          "announcement_timing": "Monday_8:30AM",
-          "float_estimate": "< 15M",
-          "beta": 2.24,
-          "employee_count": 6
-        },
-        "catalyst_details": {
-          "type": "FDA_Orphan_Drug_Designation",
-          "drug": "MB-101",
-          "indication": "recurrent_astrocytoma_glioblastoma",
-          "clinical_validation": "Nature_Medicine_publication",
-          "response_rate": "50%",
-          "complete_responses": "2_patients_7.5_and_66_months"
-        },
-        "signals_triggered": {
-          "biotech": {
-            "ultraNanoFDAMilestone": 100,
-            "allTimeLowClinicalCatalyst": 95,
-            "clinicalValidationPublication": 92
-          },
-          "micro": {
-            "ultraNanoExtreme": 100,
-            "allTimeLowFloat": 95,
-            "postSplitUltraNano": 85
-          },
-          "volume": {
-            "postHolidayExplosion": 95,
-            "ultraQuietBeforeCatalyst": 90,
-            "allTimeLowVolumeReversal": 100
-          },
-          "tech": {
-            "extremeOversoldATLRecovery": 100,
-            "postHolidayGapUp": 85
-          }
-        },
-        "score_calculation": {
-          "raw_score": 390,
-          "multipliers_applied": [
-            "ultraNanoFDAExplosion",
-            "allTimeLowCatalystSurge",
-            "postHolidayNanoCatalyst"
-          ],
-          "final_score": 2156,
-          "alert_level": "legendary_plus"
-        }
       }
     }
   },
@@ -9253,36 +8846,6 @@
         "trading_meme_characteristics": true
       },
       "score_boost": 35
-    },
-    "allTimeLowRecoverySignal": {
-      "weight": 0.4,
-      "detection": {
-        "days_from_ath_low": "< 10",
-        "volume_reversal": "> 5x",
-        "catalyst_present": true,
-        "oversold_readings": "rsi < 25"
-      },
-      "score_boost": 40
-    },
-    "postHolidayMomentum": {
-      "weight": 0.3,
-      "detection": {
-        "market_break_days": "> 3",
-        "pent_up_demand_indicators": true,
-        "announcement_timing": "first_trading_day",
-        "gap_up": "> 25%"
-      },
-      "score_boost": 30
-    },
-    "ultraNanoVolatilityExpansion": {
-      "weight": 0.35,
-      "detection": {
-        "market_cap": "< 10M",
-        "intraday_range": "> 50%",
-        "volume_explosion": "> 15x",
-        "catalyst_driven": true
-      },
-      "score_boost": 35
     }
   },
   "volumePatterns": {
@@ -9917,27 +9480,6 @@
         "financial_distress": true,
         "strategic_process": true
       }
-    },
-    "ultra_nano_extreme": {
-      "range": [
-        0,
-        10000000
-      ],
-      "base_multiplier": 5.5,
-      "fda_milestone_boost": 7,
-      "ath_low_boost": 6,
-      "post_holiday_boost": 4.5,
-      "volatility_factor": 4.5
-    },
-    "nano_biotech_fda": {
-      "range": [
-        10000000,
-        50000000
-      ],
-      "base_multiplier": 4,
-      "fda_milestone_boost": 5,
-      "clinical_validation_boost": 4.5,
-      "volatility_factor": 3.5
     }
   },
   "catalystScoring": {

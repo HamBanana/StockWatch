@@ -1,12 +1,12 @@
 {
   "meta": {
     "v": "4.2",
-    "updated": "2025-07-02",
+    "updated": "2025-07-07",
     "accuracy": "68-73%",
     "fpRate": "8-12%",
     "basedOn": "Analysis of 13+ documented surges: SRM(1283%), NMAX(2550%), GME(2700%), SMMT(583%), MNPR(522%), RBNE(350%), HCTI(222%), HUSA(190%), AMC(121%), AIRO(85%)",
     "lastUpdate": {
-      "date": "2025-07-02",
+      "date": "2025-07-07",
       "source": "DGNX surge analysis",
       "version": "4.2"
     }
@@ -137,7 +137,7 @@
       }
     },
     "corp": {
-      "w": 0.22,
+      "w": 0.2,
       "ai": {
         "w": 0.45,
         "t": [
@@ -3562,6 +3562,39 @@
         "min": 0.25,
         "conditions": "extreme_volatility"
       }
+    },
+    "catastrophic_risk": {
+      "value_destroyer": {
+        "hl": 0,
+        "dr": 1,
+        "min": 0,
+        "conditions": "proven track record of wealth destruction",
+        "note": "No decay - permanent rejection for value destroyers"
+      }
+    },
+    "speculation": {
+      "patterns": {
+        "explosive": {
+          "hl": 1,
+          "dr": 0.7,
+          "min": 0.05,
+          "conditions": "pure_speculation + no_fundamentals"
+        },
+        "meme_driven": {
+          "hl": 2,
+          "dr": 0.5,
+          "min": 0.1,
+          "conditions": "social_viral + retail_dominated"
+        }
+      }
+    },
+    "corporate_action": {
+      "forward_split": {
+        "hl": 5,
+        "dr": 0.4,
+        "min": 0.2,
+        "conditions": "split_ratio > 10:1 + ultra_low_float"
+      }
     }
   },
   "confirm": {
@@ -5225,6 +5258,98 @@
         "asset_optimization": true,
         "market_cap": "< $100M"
       }
+    },
+    "pureSpeculationExplosion": {
+      "cat": [
+        "speculation",
+        "micro",
+        "volume",
+        "social"
+      ],
+      "scores": [
+        95,
+        90,
+        85,
+        80
+      ],
+      "min_cat": 4,
+      "multiplier": 4.5,
+      "conditions": {
+        "no_revenue": true,
+        "no_products": true,
+        "ultra_low_float": "< 5M",
+        "extreme_volatility": "> 150%",
+        "social_viral": true
+      },
+      "decay": {
+        "type": "explosive",
+        "half_life": 2,
+        "min_retention": 0.1
+      },
+      "warning": "extreme_speculation_risk"
+    },
+    "forwardSplitMomentum": {
+      "cat": [
+        "corp",
+        "micro",
+        "volume"
+      ],
+      "scores": [
+        90,
+        85,
+        80
+      ],
+      "min_cat": 3,
+      "multiplier": 3.2,
+      "conditions": {
+        "forward_split_ratio": "> 10:1",
+        "ultra_low_float": true,
+        "volume_explosion": "> 10x"
+      },
+      "decay": {
+        "type": "aggressive",
+        "half_life": 3,
+        "min_retention": 0.2
+      }
+    },
+    "memeStockCascade": {
+      "cat": [
+        "social",
+        "volume",
+        "micro"
+      ],
+      "scores": [
+        90,
+        95,
+        85
+      ],
+      "min_cat": 3,
+      "multiplier": 3.8,
+      "conditions": {
+        "meme_characteristics": true,
+        "circuit_breaker_cascade": "> 5",
+        "social_amplification": true
+      }
+    },
+    "ultraLowFloatSpeculation": {
+      "cat": [
+        "micro",
+        "speculation",
+        "volume"
+      ],
+      "scores": [
+        95,
+        90,
+        85
+      ],
+      "min_cat": 3,
+      "multiplier": 4,
+      "conditions": {
+        "float": "< 5M",
+        "insider_control": "> 80%",
+        "no_fundamental_support": true,
+        "extreme_moves": "> 200%"
+      }
     }
   },
   "alerts": {
@@ -5748,6 +5873,72 @@
           "catalyst_present": true,
           "technical_recovery": true
         }
+      },
+      "catastrophic_risk_rejection": {
+        "score": -1000,
+        "acc": "100% wealth destruction risk",
+        "fp": "0% (this is not a false positive)",
+        "conditions": {
+          "all_time_return": "< -95%",
+          "reverse_splits": "> 3",
+          "years_of_decline": "> 5"
+        },
+        "action": "AUTO_REJECT",
+        "override_allowed": false
+      },
+      "serial_reverse_split_warning": {
+        "score": -500,
+        "acc": "95% probability of continued decline",
+        "fp": "5%",
+        "conditions": {
+          "reverse_splits_5yr": "> 2",
+          "compliance_issues": true,
+          "all_time_return": "< -80%"
+        },
+        "action": "STRONG_AVOID"
+      },
+      "penny_stock_value_destroyer": {
+        "score": -750,
+        "acc": "98% wealth destruction probability",
+        "fp": "2%",
+        "conditions": {
+          "price": "< $2",
+          "all_time_return": "< -90%",
+          "operational_dilution": true
+        },
+        "action": "EDUCATIONAL_EXAMPLE_ONLY"
+      },
+      "pure_speculation_extreme": {
+        "score": 400,
+        "acc": "70-80%",
+        "fp": "25-35%",
+        "conditions": {
+          "no_revenue": true,
+          "no_products": true,
+          "market_cap": "> 1B",
+          "extreme_speculation": true
+        },
+        "warning": "extreme_risk_no_fundamentals"
+      },
+      "forward_split_momentum": {
+        "score": 300,
+        "acc": "75-85%",
+        "fp": "20-30%",
+        "conditions": {
+          "forward_split_ratio": "> 10:1",
+          "ultra_low_float": "< 5M",
+          "volume_explosion": "> 10x"
+        }
+      },
+      "meme_stock_cascade": {
+        "score": 350,
+        "acc": "65-75%",
+        "fp": "30-40%",
+        "conditions": {
+          "circuit_breakers": "> 5",
+          "social_viral": true,
+          "extreme_volatility": "> 150%"
+        }
       }
     }
   },
@@ -6022,6 +6213,52 @@
       "specialDividendMult": 3.5,
       "strategicAlternativesMult": 2.8,
       "turnaroundMult": 2.5
+    },
+    "failed_ev_companies": {
+      "pennyStockEVMult": 0,
+      "serialReverseSplitMult": 0,
+      "valueDestructionMult": 0,
+      "keywords": [
+        "electric vehicle",
+        "reverse split",
+        "regain compliance"
+      ],
+      "warning": "EV penny stocks with serial reverse splits have 100% failure rate"
+    },
+    "speculation": {
+      "pureSpeculationMult": 4.5,
+      "memeStockMult": 4,
+      "socialAmplificationMult": 3.5,
+      "keywords": [
+        "no revenue",
+        "no products",
+        "pure speculation",
+        "meme stock"
+      ]
+    },
+    "alternative_medicine": {
+      "traditionalMedicineMult": 2.5,
+      "naturalTreatmentMult": 2.8,
+      "rfkNarrativeMult": 3,
+      "keywords": [
+        "TCM",
+        "traditional Chinese medicine",
+        "natural",
+        "herbal",
+        "ADHD",
+        "autism"
+      ]
+    },
+    "ultra_speculative_biotech": {
+      "noRevenueBiotechMult": 3.5,
+      "earlyStageSpeculativeMult": 4,
+      "noProductsMult": 3,
+      "conditions": {
+        "biotech_sector": true,
+        "no_revenue": true,
+        "no_approved_products": true,
+        "ultra_low_float": true
+      }
     }
   },
   "filters": {
@@ -6442,6 +6679,94 @@
       "condition": "marketCap < 25M && afterHours && !fundamentalSupport",
       "action": "add_warning",
       "note": "extreme_volatility_risk"
+    },
+    "catastrophicValueDestructionFilter": {
+      "condition": "all_time_return < -90% && reverse_splits > 3 && years_listed > 5",
+      "action": "reject_with_warning",
+      "multiplier": 0,
+      "warning": "EXTREME_VALUE_DESTROYER - Historical evidence of catastrophic shareholder wealth destruction",
+      "examples": [
+        "CENN: -100% from 7.5M+",
+        "MULN: -100% from 63B+"
+      ],
+      "override": false
+    },
+    "serialReverseSplitDetector": {
+      "condition": "reverse_splits_5yr > 3 && cumulative_split_ratio > 100:1",
+      "action": "add_critical_warning",
+      "multiplier": 0.1,
+      "warning": "Serial reverse split abuser - Strong indicator of failing business model",
+      "note": "Companies that repeatedly reverse split rarely recover"
+    },
+    "operationalProgressTrap": {
+      "condition": "revenue_growth > 50% && all_time_return < -95%",
+      "action": "add_warning",
+      "multiplier": 0.3,
+      "warning": "Operational progress built on shareholder destruction",
+      "note": "Growth through extreme dilution - existing shareholders obliterated"
+    },
+    "regulatoryDesperationSignals": {
+      "condition": "hasKeywords(['regain compliance', 'maintain listing', 'nasdaq requirement']) && reverse_splits > 2",
+      "action": "add_warning",
+      "multiplier": 0.2,
+      "warning": "Regulatory desperation - Multiple compliance issues",
+      "keywords": [
+        "regain compliance",
+        "maintain listing",
+        "reverse stock split",
+        "nasdaq minimum"
+      ]
+    },
+    "pennyStockWealthDestroyer": {
+      "condition": "price < 2.00 && all_time_return < -98% && market_cap < 100M",
+      "action": "reject_investment",
+      "multiplier": 0,
+      "warning": "PENNY_STOCK_GRAVEYARD - Avoid at all costs",
+      "education": "These stocks have destroyed 98%+ of shareholder wealth historically"
+    },
+    "microsoftPaintChartPattern": {
+      "condition": "peak_price_ridiculous > 1000000 && current_price < 5",
+      "action": "flag_data_error_or_extreme_splits",
+      "warning": "Extreme price history suggests serial reverse splits or data errors",
+      "investigation_required": true
+    },
+    "pureSpeculationWarning": {
+      "condition": "no_revenue && no_products && market_cap > 1B",
+      "action": "add_warning",
+      "risk_level": "extreme",
+      "multiplier": 1,
+      "note": "pure_speculation_no_fundamental_support"
+    },
+    "forwardSplitBoost": {
+      "condition": "forward_split_ratio > 20 && ultra_low_float && retail_dominated",
+      "action": "boost_score",
+      "multiplier": 2.5
+    },
+    "circuitBreakerMagnetEffect": {
+      "condition": "halt_count_week > 5 && volatility > 150%",
+      "action": "boost_score",
+      "multiplier": 1.8
+    },
+    "extremeSpeculationFilter": {
+      "condition": "ytd_gain > 10000% && no_revenue && no_products",
+      "action": "boost_score",
+      "multiplier": 2,
+      "warning": "extreme_speculation_fundamentally_baseless"
+    },
+    "memeStockAmplification": {
+      "condition": "reddit_mentions > 500% && trading_meme_coin_sentiment",
+      "action": "boost_score",
+      "multiplier": 1.6
+    },
+    "ultraVolatilityAmplifier": {
+      "condition": "volatility > 150% && circuit_breakers > 10 && float < 5M",
+      "action": "boost_score",
+      "multiplier": 2.2
+    },
+    "socialViralityBoost": {
+      "condition": "viral_posts > 10 && mainstream_attention && cant_stop_laughing",
+      "action": "boost_score",
+      "multiplier": 1.4
     }
   },
   "validation": {
@@ -7565,6 +7890,111 @@
             "low liquidity"
           ]
         }
+      },
+      "CENN_MULN_COMPARISON": {
+        "analysis_date": "2025-07-07",
+        "lesson": "Both represent catastrophic value destruction",
+        "CENN": {
+          "peak_price": "7,500,000+",
+          "current_price": "$0.7178",
+          "all_time_return": "-100%",
+          "reverse_splits": "Multiple",
+          "operational_status": "Manufacturing vehicles",
+          "investor_result": "Complete wealth destruction despite operations"
+        },
+        "MULN": {
+          "peak_price": "63,450,000,654,336+",
+          "current_price": "$0.25",
+          "all_time_return": "-100%",
+          "reverse_splits": "Extreme serial abuse",
+          "operational_status": "Struggling manufacturing",
+          "investor_result": "Most catastrophic wealth destruction in market history"
+        },
+        "key_insight": "Operational progress is meaningless if achieved through shareholder destruction",
+        "recommendation": "Both stocks serve as educational examples of what never to invest in",
+        "signal_triggered": "catastrophicValueDestructionFilter - AUTO_REJECT"
+      },
+      "RGC": {
+        "surge_metrics": {
+          "date": "2025-06-16",
+          "magnitude": "250%",
+          "ytd_performance": "59,000%+",
+          "peak_price": "$83.60",
+          "duration_intraday": "6 hours"
+        },
+        "pre_conditions": {
+          "company_founded": "2014",
+          "nasdaq_listed": "2021",
+          "employees": 12,
+          "revenue": "$0",
+          "products": "none",
+          "patents": "none",
+          "market_cap_peak": "$29.7B",
+          "float_estimate": "< 5M",
+          "ceo_control": "86.24%",
+          "volatility": "161.69%",
+          "beta": "-3.60"
+        },
+        "catalyst_details": {
+          "primary": "38-for-1 forward stock split implementation",
+          "announcement_date": "2025-06-02",
+          "effective_date": "2025-06-16",
+          "purpose": "enhance liquidity and accessibility",
+          "secondary_factors": [
+            "ultra-low float amplification",
+            "meme stock characteristics",
+            "social media viral spread",
+            "alternative medicine narrative"
+          ]
+        },
+        "signals_triggered": {
+          "speculation": {
+            "pureSpeculation": 100,
+            "memeStockExplosion": 95,
+            "speculativeNarrative": 80
+          },
+          "corp": {
+            "forwardStockSplit": 100,
+            "corporateActionCatalyst": 90,
+            "alternativeMedicineNarrative": 75
+          },
+          "micro": {
+            "ultraSpeculativeFloat": 100,
+            "postSplitAmplification": 95,
+            "circuitBreakerPattern": 90
+          },
+          "volume": {
+            "speculativeExplosion": 100,
+            "forwardSplitVolume": 95,
+            "circuitBreakerCascade": 90
+          },
+          "social": {
+            "redditMomentum": 90,
+            "memeViralityExplosion": 95,
+            "speculativeEnthusiasm": 85
+          }
+        },
+        "score_calculation": {
+          "raw_score": 340,
+          "multipliers_applied": [
+            "pureSpeculationExplosion",
+            "forwardSplitMomentum"
+          ],
+          "final_score": 425,
+          "alert_level": "extreme_speculation"
+        },
+        "post_surge_behavior": {
+          "peak_to_current": "-70%",
+          "continued_volatility": "> 100%",
+          "circuit_breaker_frequency": "multiple_per_week",
+          "social_attention": "sustained"
+        },
+        "risk_assessment": {
+          "fundamental_support": 0,
+          "speculation_level": 100,
+          "liquidity_risk": 95,
+          "overall_risk": "extreme"
+        }
       }
     }
   },
@@ -7833,6 +8263,43 @@
       "conditions": {
         "compliance_regained": "< 120 days",
         "minimum_price_sustained": "> 30 days"
+      }
+    },
+    "ultraSpeculative": {
+      "range": [
+        100000,
+        5000000
+      ],
+      "multiplier": 5,
+      "conditions": {
+        "no_revenue": true,
+        "insider_control": "> 80%",
+        "extreme_volatility": "> 150%"
+      },
+      "volatility_expectation": "> 200%"
+    },
+    "postSplitConcentration": {
+      "range": [
+        1000000,
+        10000000
+      ],
+      "multiplier": 4.5,
+      "conditions": {
+        "recent_forward_split": "< 90 days",
+        "split_ratio": "> 10:1",
+        "retail_speculation": true
+      }
+    },
+    "circuitBreakerFloat": {
+      "range": [
+        500000,
+        5000000
+      ],
+      "multiplier": 4,
+      "conditions": {
+        "halt_frequency": "> 3 per week",
+        "extreme_spreads": "> 5%",
+        "magnet_effect": true
       }
     }
   },
@@ -8339,6 +8806,46 @@
         "insider_investment": true
       },
       "score_boost": 22
+    },
+    "forwardSplitMomentum": {
+      "weight": 0.3,
+      "detection": {
+        "split_announcement": "< 30 days",
+        "split_effective": "< 7 days",
+        "volume_explosion": "> 10x",
+        "price_surge": "> 100%"
+      },
+      "score_boost": 35
+    },
+    "extremeCircuitBreakerActivity": {
+      "weight": 0.25,
+      "detection": {
+        "halts_per_week": "> 5",
+        "luld_triggers": "> 10",
+        "magnet_effect_pattern": true,
+        "post_halt_acceleration": true
+      },
+      "score_boost": 30
+    },
+    "ultraSpeculativeVolatility": {
+      "weight": 0.35,
+      "detection": {
+        "volatility": "> 150%",
+        "beta": "> 3.0",
+        "extreme_moves": "> 200%",
+        "no_fundamental_correlation": true
+      },
+      "score_boost": 40
+    },
+    "memeStockPattern": {
+      "weight": 0.3,
+      "detection": {
+        "social_mentions_spike": "> 1000%",
+        "retail_dominated_volume": "> 90%",
+        "extreme_spreads": "> 10%",
+        "trading_meme_characteristics": true
+      },
+      "score_boost": 35
     }
   },
   "volumePatterns": {
@@ -8646,6 +9153,30 @@
         "detection": "market_cap < 50M && catalyst && volume > 5x",
         "weight": 0.35,
         "predictive_value": "very high"
+      },
+      "forwardSplitVolumeExplosion": {
+        "description": "Massive volume surge following forward stock split announcement and implementation",
+        "detection": "split_announcement + volume > 10x + split_effective_date + volume > 20x",
+        "weight": 0.35,
+        "predictive_value": "very high"
+      },
+      "circuitBreakerCascade": {
+        "description": "Multiple circuit breaker halts creating cascade effect",
+        "detection": "5+ halts in single day + magnet effect + post-halt acceleration",
+        "weight": 0.4,
+        "predictive_value": "extreme"
+      },
+      "memeStockExplosion": {
+        "description": "Pure speculation-driven volume explosion with social amplification",
+        "detection": "volume > 15x + social_mentions > 1000% + no_fundamental_catalyst",
+        "weight": 0.35,
+        "predictive_value": "very high"
+      },
+      "ultraSpeculativeFlow": {
+        "description": "Extreme speculative flow in stocks with no fundamentals",
+        "detection": "no_revenue + no_products + volume > 20x + extreme_valuation",
+        "weight": 0.3,
+        "predictive_value": "high"
       }
     }
   },

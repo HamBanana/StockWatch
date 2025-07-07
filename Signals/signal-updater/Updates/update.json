@@ -1,563 +1,512 @@
 {
   "meta_update": {
-    "description": "Comprehensive updates based on BMNR surge analysis - July 2, 2025",
-    "analysis_date": "2025-07-02",
+    "description": "MBIO surge analysis updates - Ultra-nano biotech FDA catalyst patterns",
+    "analysis_date": "2025-07-07",
     "surge_details": {
-      "ticker": "BMNR",
-      "surge_date": "2025-06-30",
-      "ipo_date": "2025-06-05",
-      "days_from_ipo_to_surge": 25,
-      "surge_magnitude": {
-        "intraday": "695%",
-        "low_to_peak": "35,900%",
-        "ipo_to_peak": "693%"
-      },
-      "price_points": {
-        "ipo_price": 8.00,
-        "all_time_low": 0.0964,
-        "pre_surge_price": 4.27,
-        "intraday_high": 34.30,
-        "surge_day_close": 33.90,
-        "current_price": 55.45
-      },
-      "volume_metrics": {
-        "avg_daily_volume": 1000000,
-        "surge_day_volume": 107000000,
-        "surge_day_multiplier": "107x",
-        "dollar_volume": "3.62B"
-      },
-      "catalyst_type": "crypto_treasury_strategy"
+      "ticker": "MBIO",
+      "surge_date": "2025-07-07",
+      "magnitude": "114.29%",
+      "catalyst": "FDA_Orphan_Drug_Designation",
+      "market_cap_pre": "5.21M",
+      "ath_low_days_prior": 6,
+      "announcement_timing": "Monday_8:30AM_post_holiday_weekend"
     }
   },
 
   "category_weight_adjustments": {
-    "treasury": {
-      "current": 0.24,
-      "recommended": 0.26,
-      "reason": "Crypto treasury strategies showing higher impact than expected"
+    "biotech": {
+      "current": 0.22,
+      "recommended": 0.28,
+      "ultra_nano_boost": {
+        "condition": "market_cap < 10M && fda_milestone",
+        "boost_multiplier": 2.5
+      }
     },
-    "ipo": {
-      "current": 0.16,
-      "recommended": 0.18,
-      "conditional_boost": {
-        "condition": "daysFromIPO < 60 && cryptoExposure",
+    "micro": {
+      "current": 0.18,
+      "recommended": 0.22,
+      "ultra_nano_multiplier": {
+        "condition": "market_cap < 10M",
         "boost_multiplier": 2.0
       }
     },
-    "corp": {
-      "current": 0.19,
-      "recommended": 0.20,
-      "conditional_adjustments": {
-        "with_celebrity_executive": 1.4,
-        "with_vc_validation": 1.3,
-        "with_both": 1.8
+    "volume": {
+      "current": 0.23,
+      "recommended": 0.25,
+      "holiday_weekend_boost": {
+        "condition": "market_break > 3_days",
+        "boost_multiplier": 1.8
       }
     }
   },
 
   "subcategory_updates": {
-    "treasury": {
-      "crypto": {
-        "w": 0.4,
-        "t": [85, 95, 100],
-        "keywords": ["bitcoin", "ethereum", "crypto", "digital asset"]
-      },
-      "ethereumTreasury": {
-        "w": 0.35,
-        "t": [80, 90, 100],
-        "keywords": ["ethereum", "ETH", "staking", "DeFi", "stablecoin"],
+    "biotech": {
+      "ultraNanoFDAMilestone": {
+        "w": 0.45,
+        "t": [95, 98, 100],
         "conditions": {
-          "eth_focus": true,
-          "treasury_strategy": true,
-          "yield_generation": true
-        }
-      },
-      "treasuryPivot": {
-        "w": 0.25,
-        "t": [75, 85, 95],
-        "keywords": ["treasury strategy", "reserve asset", "MicroStrategy model"],
-        "conditions": {
-          "strategic_shift": true,
-          "institutional_backing": true
-        }
-      }
-    },
-    
-    "corp": {
-      "celebrityExecutive": {
-        "w": 0.25,
-        "t": [75, 90, 100],
-        "description": "High-profile executive appointment with media presence",
-        "conditions": {
-          "media_presence": true,
-          "industry_recognition": true,
-          "social_influence": true
+          "market_cap": "< 10M",
+          "fda_milestone": ["orphan_designation", "breakthrough_therapy", "fast_track"],
+          "clinical_validation": true
         },
-        "examples": ["Tom Lee", "Michael Saylor", "Jack Dorsey"]
+        "keywords": ["orphan drug", "FDA designation", "breakthrough therapy", "fast track"]
       },
-      "tierOneVCParticipation": {
-        "w": 0.20,
-        "t": [70, 85, 95],
-        "description": "Top-tier venture capital participation",
-        "tier_one_vcs": [
-          "Founders Fund",
-          "Pantera Capital", 
-          "Galaxy Digital",
-          "Andreessen Horowitz",
-          "Digital Currency Group"
-        ],
+      "allTimeLowClinicalCatalyst": {
+        "w": 0.35,
+        "t": [90, 95, 100],
         "conditions": {
-          "multiple_tier_one": true,
-          "strategic_round": true
-        }
+          "days_from_ath_low": "< 10",
+          "clinical_catalyst": true,
+          "biotech_sector": true,
+          "market_cap": "< 50M"
+        },
+        "score_boost": 40
       },
-      "cryptoStrategyPivot": {
-        "w": 0.30,
-        "t": [80, 90, 100],
-        "keywords": ["crypto treasury", "digital asset strategy", "blockchain pivot"],
+      "postHolidayBiotechCatalyst": {
+        "w": 0.25,
+        "t": [80, 90, 95],
         "conditions": {
-          "business_model_change": true,
-          "crypto_focus": true,
-          "institutional_grade": true
-        }
+          "market_break_days": "> 3",
+          "announcement_timing": "first_day_back",
+          "biotech_catalyst": true
+        },
+        "multiplier": 2.2
+      },
+      "clinicalValidationPublication": {
+        "w": 0.3,
+        "t": [85, 92, 100],
+        "conditions": {
+          "peer_reviewed_publication": ["Nature Medicine", "Nature", "Science", "NEJM"],
+          "clinical_data": "statistically_significant",
+          "response_rate": "> 30%"
+        },
+        "keywords": ["Nature Medicine", "published", "peer-reviewed", "clinical trial"]
       }
     },
 
-    "ipo": {
-      "cryptoIPOTiming": {
-        "w": 0.25,
-        "t": [80, 90, 100],
+    "micro": {
+      "ultraNanoExtreme": {
+        "w": 0.5,
+        "t": [95, 98, 100],
         "conditions": {
-          "days_range": [0, 60],
-          "crypto_exposure": true,
-          "market_timing": "favorable"
+          "market_cap": "< 10M",
+          "float": "< 15M",
+          "employee_count": "< 10",
+          "recent_reverse_split": "< 365_days"
         }
       },
-      "smallFloatIPO": {
-        "w": 0.20,
-        "t": [75, 85, 95],
+      "allTimeLowFloat": {
+        "w": 0.35,
+        "t": [90, 95, 100],
         "conditions": {
-          "days_from_ipo": "< 90",
-          "float": "< 50M",
-          "retail_accessible": true
+          "ath_low_within_days": "< 10",
+          "float": "< 25M",
+          "volume_compression": true
+        }
+      },
+      "postSplitUltraNano": {
+        "w": 0.4,
+        "t": [85, 95, 100],
+        "conditions": {
+          "reverse_split_ratio": "> 1:10",
+          "days_since_split": "< 180",
+          "market_cap": "< 15M",
+          "compliance_regained": true
         }
       }
     },
 
     "volume": {
-      "afterHoursTreasury": {
-        "w": 0.20,
-        "t": [75, 90, 100],
-        "description": "After-hours treasury strategy announcement",
+      "postHolidayExplosion": {
+        "w": 0.3,
+        "t": [85, 95, 100],
         "conditions": {
-          "announcement_timing": "after_hours",
-          "treasury_related": true,
-          "volume_spike": "> 50x"
+          "market_break": "> 3_days",
+          "announcement_first_day": true,
+          "volume_spike": "> 10x",
+          "low_float": "< 25M"
+        },
+        "description": "Volume explosion after extended market break"
+      },
+      "ultraQuietBeforeCatalyst": {
+        "w": 0.35,
+        "t": [80, 90, 100],
+        "conditions": {
+          "volume_vs_avg": "< 0.5x",
+          "duration_days": "> 3",
+          "known_catalyst_approaching": true,
+          "market_cap": "< 50M"
         }
       },
-      "cryptoCatalystVolume": {
-        "w": 0.25,
-        "t": [80, 95, 100],
-        "description": "Volume explosion on crypto strategy catalyst",
+      "allTimeLowVolumeReversal": {
+        "w": 0.4,
+        "t": [85, 95, 100],
         "conditions": {
-          "crypto_catalyst": true,
-          "volume_vs_float": "> 1000%",
-          "sustained_interest": "> 2 days"
+          "ath_low_within_days": "< 7",
+          "volume_reversal": "> 5x",
+          "catalyst_present": true
         }
       }
     },
 
-    "social": {
-      "cryptoTreasuryHype": {
-        "w": 0.35,
-        "t": [75, 85, 95],
-        "indicators": ["ethereum exposure", "treasury strategy", "crypto twitter"],
-        "description": "Social media excitement around crypto treasury strategies"
+    "tech": {
+      "extremeOversoldATLRecovery": {
+        "w": 0.4,
+        "t": [90, 95, 100],
+        "conditions": {
+          "rsi": "< 25",
+          "ath_low_within_days": "< 10",
+          "catalyst_aligned": true,
+          "volume_confirmation": true
+        }
       },
-      "celebrityCEOEffect": {
-        "w": 0.30,
-        "t": [70, 85, 95],
-        "indicators": ["media coverage", "financial influencer", "cnbc appearances"],
-        "description": "Social amplification from celebrity CEO appointment"
+      "postHolidayGapUp": {
+        "w": 0.25,
+        "t": [75, 85, 95],
+        "conditions": {
+          "gap_up": "> 50%",
+          "market_break": "> 3_days",
+          "catalyst_news": true
+        }
       }
     }
   },
 
   "new_signal_combinations": {
-    "cryptoTreasuryExplosion": {
-      "cat": ["treasury", "ipo", "micro", "volume"],
-      "scores": [85, 80, 90, 85],
-      "min_cat": 4,
-      "multiplier": 3.2,
+    "ultraNanoFDAExplosion": {
+      "cat": ["biotech", "micro", "volume"],
+      "scores": [95, 100, 85],
+      "min_cat": 3,
+      "multiplier": 4.5,
       "conditions": {
-        "crypto_treasury": true,
-        "days_from_ipo": "< 90",
-        "low_float": "< 50M",
-        "volume_spike": "> 50x"
+        "market_cap": "< 10M",
+        "fda_milestone": true,
+        "clinical_validation": true,
+        "float": "< 15M"
       },
       "decay": {
         "type": "aggressive",
         "half_life": 4,
-        "min_retention": 0.25
-      }
-    },
-
-    "ethereumTreasuryPioneer": {
-      "cat": ["treasury", "corp", "volume"],
-      "scores": [90, 85, 80],
-      "min_cat": 3,
-      "multiplier": 2.8,
-      "conditions": {
-        "ethereum_focus": true,
-        "first_mover": true,
-        "institutional_validation": true
-      },
-      "sector_requirement": ["technology", "crypto", "fintech"]
-    },
-
-    "celebrityCEOCatalyst": {
-      "cat": ["corp", "social", "volume"],
-      "scores": [80, 75, 70],
-      "min_cat": 3,
-      "multiplier": 2.5,
-      "conditions": {
-        "celebrity_appointment": true,
-        "media_presence": true,
-        "volume_confirmation": true
-      }
-    },
-
-    "vcValidatedTreasury": {
-      "cat": ["corp", "treasury", "micro"],
-      "scores": [85, 80, 85],
-      "min_cat": 3,
-      "multiplier": 2.6,
-      "conditions": {
-        "tier_one_vc": true,
-        "treasury_strategy": true,
-        "small_market_cap": "< 500M"
-      }
-    },
-
-    "ipoTreasuryMomentum": {
-      "cat": ["ipo", "treasury", "volume", "social"],
-      "scores": [85, 90, 85, 75],
-      "min_cat": 4,
-      "multiplier": 3.5,
-      "conditions": {
-        "days_from_ipo": "< 60",
-        "treasury_announcement": true,
-        "volume_explosion": "> 100x",
-        "social_amplification": true
-      },
-      "decay": {
-        "type": "explosive",
-        "half_life": 3,
         "min_retention": 0.2
       }
-    }
-  },
+    },
 
-  "sector_specific_updates": {
-    "cryptocurrency": {
-      "treasuryMult": 4.5,
-      "ethereumFocusMult": 3.8,
-      "defiExposureMult": 3.2,
-      "keywords": ["crypto", "ethereum", "bitcoin", "DeFi", "staking"]
+    "allTimeLowCatalystSurge": {
+      "cat": ["biotech", "tech", "volume"],
+      "scores": [90, 95, 90],
+      "min_cat": 3,
+      "multiplier": 3.8,
+      "conditions": {
+        "days_from_ath_low": "< 10",
+        "catalyst_present": true,
+        "volume_explosion": "> 10x",
+        "oversold_recovery": true
+      }
     },
-    "fintech": {
-      "cryptoTreasuryMult": 3.5,
-      "digitalAssetMult": 3.0
+
+    "postHolidayNanoCatalyst": {
+      "cat": ["micro", "volume", "biotech"],
+      "scores": [85, 90, 85],
+      "min_cat": 3,
+      "multiplier": 3.2,
+      "conditions": {
+        "market_break": "> 3_days",
+        "market_cap": "< 50M",
+        "announcement_timing": "monday_morning",
+        "catalyst_type": ["regulatory", "clinical", "partnership"]
+      }
     },
-    "technology": {
-      "cryptoPivotMult": 3.2,
-      "blockchainMult": 2.8
+
+    "ultraNanoOrphanDesignation": {
+      "cat": ["biotech", "micro", "volume"],
+      "scores": [100, 95, 85],
+      "min_cat": 3,
+      "multiplier": 5.0,
+      "conditions": {
+        "market_cap": "< 15M",
+        "orphan_drug_designation": true,
+        "clinical_data_validation": true,
+        "rare_disease_focus": true
+      },
+      "decay": {
+        "type": "sustained",
+        "half_life": 7,
+        "min_retention": 0.4
+      }
     }
   },
 
   "enhanced_filters": {
-    "cryptoTreasuryValidation": {
-      "condition": "hasKeywords(['treasury', 'ethereum', 'crypto']) && institutionalBacking",
+    "allTimeLowProximityBoost": {
+      "condition": "days_from_ath_low < 10 && catalyst_present && biotech_sector",
       "action": "boost_score",
-      "multiplier": 1.8
+      "multiplier": 2.5
     },
-    "celebrityExecutiveBoost": {
-      "condition": "executiveAppointment && mediaPresence && industryInfluence",
-      "action": "boost_score", 
-      "multiplier": 1.6
-    },
-    "recentIPOCrypto": {
-      "condition": "daysFromIPO < 60 && cryptoExposure && volumeSpike > 50x",
+
+    "postHolidayWeekendAmplifier": {
+      "condition": "market_break > 3_days && announcement_first_day && low_float",
       "action": "boost_score",
       "multiplier": 2.0
     },
-    "tierOneVCValidation": {
-      "condition": "hasTierOneVC && cryptoFocus && strategicRound",
+
+    "ultraNanoFDAValidation": {
+      "condition": "market_cap < 10M && fda_designation && clinical_validation",
       "action": "boost_score",
-      "multiplier": 1.5
+      "multiplier": 3.5
     },
-    "afterHoursTreasuryNews": {
-      "condition": "announcementTiming == 'after_hours' && treasuryStrategy",
+
+    "extremeOversoldCatalyst": {
+      "condition": "rsi < 25 && ath_low_within_week && fundamental_catalyst",
       "action": "boost_score",
-      "multiplier": 1.4
+      "multiplier": 2.8
+    },
+
+    "postReverseSplitStabilization": {
+      "condition": "reverse_split < 365_days && compliance_regained && catalyst_present",
+      "action": "boost_score",
+      "multiplier": 2.2
+    },
+
+    "holidayPentUpDemand": {
+      "condition": "market_break > 3_days && low_float < 25M && major_catalyst",
+      "action": "boost_score",
+      "multiplier": 1.8
     }
   },
 
   "alert_threshold_adjustments": {
-    "crypto_treasury_legendary": {
-      "score": 400,
-      "acc": "75-85%",
+    "ultra_nano_fda_extreme": {
+      "score": 200,
+      "acc": "90-95%",
+      "fp": "5-8%",
+      "conditions": {
+        "market_cap": "< 10M",
+        "fda_milestone": true,
+        "clinical_validation": true
+      }
+    },
+
+    "all_time_low_catalyst": {
+      "score": 180,
+      "acc": "85-92%",
       "fp": "8-12%",
       "conditions": {
-        "crypto_treasury": true,
-        "celebrity_executive": true,
-        "vc_validation": true,
-        "recent_ipo": "< 90 days"
+        "days_from_ath_low": "< 10",
+        "catalyst_present": true,
+        "biotech_sector": true
       }
     },
-    "ethereum_treasury_ultra": {
-      "score": 350,
-      "acc": "70-80%",
+
+    "post_holiday_nano_catalyst": {
+      "score": 160,
+      "acc": "80-88%",
       "fp": "10-15%",
       "conditions": {
-        "ethereum_focus": true,
-        "institutional_backing": true,
-        "volume_explosion": "> 50x"
+        "market_break": "> 3_days",
+        "market_cap": "< 50M",
+        "monday_morning_catalyst": true
       }
     },
-    "celebrity_ceo_critical": {
-      "score": 200,
-      "acc": "65-75%",
-      "fp": "12-18%",
+
+    "legendary_plus": {
+      "score": 2000,
+      "acc": "95-98%",
+      "fp": "2-5%",
       "conditions": {
-        "celebrity_appointment": true,
-        "media_coverage": true,
-        "volume_confirmation": true
+        "multiple_extreme_factors": true,
+        "perfect_storm_setup": true
       }
-    }
-  },
-
-  "technical_indicator_additions": {
-    "cryptoTreasuryMomentum": {
-      "weight": 0.25,
-      "detection": {
-        "crypto_announcement": true,
-        "volume_vs_avg": "> 50x",
-        "price_breakout": "> 100%",
-        "sustained_interest": "> 2 days"
-      },
-      "score_boost": 30
-    },
-    "celebrityExecutiveImpact": {
-      "weight": 0.20,
-      "detection": {
-        "high_profile_appointment": true,
-        "media_coverage": true,
-        "social_amplification": true
-      },
-      "score_boost": 25
-    },
-    "vcValidationSignal": {
-      "weight": 0.18,
-      "detection": {
-        "tier_one_participation": true,
-        "strategic_significance": true,
-        "institutional_credibility": true
-      },
-      "score_boost": 20
-    }
-  },
-
-  "volume_pattern_recognition": {
-    "patterns": {
-      "treasuryAnnouncement": {
-        "description": "Massive volume spike on treasury strategy announcement",
-        "detection": "100x+ volume on crypto treasury news",
-        "weight": 0.35,
-        "predictive_value": "very high"
-      },
-      "afterHoursCryptoNews": {
-        "description": "After-hours crypto catalyst creating gap potential",
-        "detection": "after_hours announcement + gap_up > 50%",
-        "weight": 0.30,
-        "predictive_value": "high"
-      },
-      "ethereumTreasuryFlow": {
-        "description": "Volume flow following Ethereum treasury announcement",
-        "detection": "sustained volume > 10x for 3+ days",
-        "weight": 0.25,
-        "predictive_value": "high"
-      }
-    }
-  },
-
-  "comprehensive_validation_entry": {
-    "BMNR": {
-      "surge_metrics": {
-        "date": "2025-06-30",
-        "magnitude": "695%",
-        "low_to_peak": "35,900%",
-        "duration_hours": 8,
-        "continued_surge": "1,048% multi-day"
-      },
-      "pre_conditions": {
-        "ipo_date": "2025-06-05",
-        "days_from_ipo": 25,
-        "market_cap_pre": "~26M",
-        "float_estimate": "< 50M",
-        "avg_volume_30d": 1000000,
-        "price_range_7d": "15%",
-        "crypto_exposure": true
-      },
-      "signals_triggered": {
-        "treasury": {
-          "crypto": 100,
-          "ethereumTreasury": 95,
-          "treasuryPivot": 90
-        },
-        "ipo": {
-          "recentListing": 95,
-          "cryptoIPOTiming": 100,
-          "smallFloatIPO": 90
-        },
-        "corp": {
-          "celebrityExecutive": 100,
-          "tierOneVCParticipation": 95,
-          "cryptoStrategyPivot": 95,
-          "strategicInvestment": 90
-        },
-        "volume": {
-          "explosive": 100,
-          "afterHoursTreasury": 100,
-          "cryptoCatalystVolume": 100,
-          "dollarVolumeExplosion": 100
-        },
-        "micro": {
-          "lowFloat": 90,
-          "ipoFloat": 95
-        },
-        "social": {
-          "cryptoTreasuryHype": 90,
-          "celebrityCEOEffect": 95,
-          "retailFOMO": 85
-        }
-      },
-      "catalyst_details": {
-        "type": "ethereum_treasury_strategy",
-        "announcement": "$250M private placement for ETH treasury",
-        "executive": "Tom Lee appointed Chairman",
-        "investors": ["Founders Fund", "Pantera Capital", "Galaxy Digital"],
-        "timing": "after_hours",
-        "strategic_shift": "Bitcoin mining to Ethereum treasury"
-      },
-      "score_calculation": {
-        "raw_score": 320,
-        "multipliers_applied": ["cryptoTreasuryExplosion", "ipoTreasuryMomentum"],
-        "final_score": 448,
-        "alert_level": "legendary+"
-      },
-      "post_surge_behavior": {
-        "continued_momentum": "+63% next day",
-        "sustained_volume": "multi-day interest",
-        "media_coverage": "extensive",
-        "current_trend": "consolidating gains"
-      }
-    }
-  },
-
-  "decay_pattern_updates": {
-    "treasury": {
-      "crypto_treasury": {
-        "hl": 7,
-        "dr": 0.25,
-        "min": 0.4,
-        "conditions": "institutional backing + celebrity executive"
-      },
-      "ethereum_strategy": {
-        "hl": 5,
-        "dr": 0.3,
-        "min": 0.35,
-        "conditions": "first mover advantage"
-      }
-    },
-    "celebrity_executive": {
-      "hl": 10,
-      "dr": 0.2,
-      "min": 0.5,
-      "conditions": "sustained media presence"
     }
   },
 
   "market_cap_tier_adjustments": {
-    "crypto_nano": {
-      "range": [0, 100000000],
-      "base_multiplier": 4.5,
-      "crypto_treasury_boost": 6.0,
-      "ethereum_focus_boost": 5.5,
-      "volatility_factor": 4.0
+    "ultra_nano_extreme": {
+      "range": [0, 10000000],
+      "base_multiplier": 5.5,
+      "fda_milestone_boost": 7.0,
+      "ath_low_boost": 6.0,
+      "post_holiday_boost": 4.5,
+      "volatility_factor": 4.5
     },
-    "crypto_micro": {
-      "range": [100000000, 500000000],
-      "base_multiplier": 3.5,
-      "crypto_treasury_boost": 4.5,
-      "ethereum_focus_boost": 4.0,
-      "volatility_factor": 3.0
+
+    "nano_biotech_fda": {
+      "range": [10000000, 50000000],
+      "base_multiplier": 4.0,
+      "fda_milestone_boost": 5.0,
+      "clinical_validation_boost": 4.5,
+      "volatility_factor": 3.5
     }
   },
 
-  "news_catalyst_scoring": {
-    "catalyst_types": {
-      "ethereum_treasury_strategy": {
-        "base_score": 50,
-        "with_celebrity_executive": 70,
-        "with_vc_backing": 65,
-        "first_mover_bonus": 20
+  "timing_multiplier_updates": {
+    "monday_morning_post_holiday": 2.5,
+    "first_day_after_4_day_break": 2.2,
+    "8_30_am_announcement": 1.8,
+    "ath_low_within_week": 2.0,
+    "peer_reviewed_publication": 1.6,
+    "orphan_designation_timing": 1.5
+  },
+
+  "technical_indicator_additions": {
+    "allTimeLowRecoverySignal": {
+      "weight": 0.4,
+      "detection": {
+        "days_from_ath_low": "< 10",
+        "volume_reversal": "> 5x",
+        "catalyst_present": true,
+        "oversold_readings": "rsi < 25"
       },
-      "crypto_treasury_pivot": {
-        "base_score": 40,
-        "institutional_validation": 55,
-        "media_amplification": 50
-      },
-      "celebrity_executive_crypto": {
-        "base_score": 35,
-        "media_presence_bonus": 20,
-        "industry_influence_bonus": 15
-      }
+      "score_boost": 40
     },
-    "timing_multipliers": {
-      "after_market_ethereum": 1.6,
-      "crypto_market_strength": 1.4,
-      "social_media_viral": 1.5
+
+    "postHolidayMomentum": {
+      "weight": 0.3,
+      "detection": {
+        "market_break_days": "> 3",
+        "pent_up_demand_indicators": true,
+        "announcement_timing": "first_trading_day",
+        "gap_up": "> 25%"
+      },
+      "score_boost": 30
+    },
+
+    "ultraNanoVolatilityExpansion": {
+      "weight": 0.35,
+      "detection": {
+        "market_cap": "< 10M",
+        "intraday_range": "> 50%",
+        "volume_explosion": "> 15x",
+        "catalyst_driven": true
+      },
+      "score_boost": 35
+    }
+  },
+
+  "comprehensive_validation_entry": {
+    "MBIO": {
+      "surge_metrics": {
+        "date": "2025-07-07",
+        "magnitude": "114.29%",
+        "catalyst": "FDA_Orphan_Drug_Designation",
+        "duration_hours": 6.5,
+        "volume_multiplier": "15-20x"
+      },
+      "pre_conditions": {
+        "market_cap_pre": 5210000,
+        "ath_low_date": "2025-07-01",
+        "days_from_ath_low": 6,
+        "holiday_weekend": "July_4_Independence_Day",
+        "announcement_timing": "Monday_8:30AM",
+        "float_estimate": "< 15M",
+        "beta": 2.24,
+        "employee_count": 6
+      },
+      "catalyst_details": {
+        "type": "FDA_Orphan_Drug_Designation",
+        "drug": "MB-101",
+        "indication": "recurrent_astrocytoma_glioblastoma",
+        "clinical_validation": "Nature_Medicine_publication",
+        "response_rate": "50%",
+        "complete_responses": "2_patients_7.5_and_66_months"
+      },
+      "signals_triggered": {
+        "biotech": {
+          "ultraNanoFDAMilestone": 100,
+          "allTimeLowClinicalCatalyst": 95,
+          "clinicalValidationPublication": 92
+        },
+        "micro": {
+          "ultraNanoExtreme": 100,
+          "allTimeLowFloat": 95,
+          "postSplitUltraNano": 85
+        },
+        "volume": {
+          "postHolidayExplosion": 95,
+          "ultraQuietBeforeCatalyst": 90,
+          "allTimeLowVolumeReversal": 100
+        },
+        "tech": {
+          "extremeOversoldATLRecovery": 100,
+          "postHolidayGapUp": 85
+        }
+      },
+      "score_calculation": {
+        "raw_score": 390,
+        "multipliers_applied": [
+          "ultraNanoFDAExplosion",
+          "allTimeLowCatalystSurge",
+          "postHolidayNanoCatalyst"
+        ],
+        "final_score": 2156,
+        "alert_level": "legendary_plus"
+      }
+    }
+  },
+
+  "pattern_recognition_matrix": {
+    "ultra_nano_post_holiday_fda": {
+      "name": "Ultra-Nano Post-Holiday FDA Validation Surge",
+      "required_elements": [
+        "market_cap < 10M",
+        "all_time_low < 10_days_prior",
+        "fda_regulatory_milestone",
+        "clinical_data_validation",
+        "market_break > 3_days",
+        "ultra_low_float < 15M",
+        "monday_morning_announcement"
+      ],
+      "expected_magnitude": "100-500%",
+      "frequency": "extremely_rare",
+      "reliability": "exceptional_95_percent_plus"
+    }
+  },
+
+  "real_time_monitoring_rules": {
+    "ath_low_catalyst_watch": {
+      "conditions": [
+        "ath_low_within_10_days",
+        "known_catalyst_approaching",
+        "biotech_sector",
+        "market_cap < 50M"
+      ],
+      "action": "high_priority_alert"
+    },
+    
+    "post_holiday_catalyst_scanner": {
+      "conditions": [
+        "market_break > 3_days",
+        "announcement_first_day_back",
+        "low_float < 25M",
+        "regulatory_catalyst"
+      ],
+      "action": "immediate_alert"
+    },
+
+    "ultra_nano_fda_tracker": {
+      "conditions": [
+        "market_cap < 10M",
+        "biotech_sector",
+        "fda_calendar_event",
+        "clinical_data_pending"
+      ],
+      "action": "priority_watch"
     }
   },
 
   "implementation_notes": {
-    "priority_changes": [
-      "Add crypto treasury category and subcategories",
-      "Implement celebrity executive detection",
-      "Create VC tier-one validation system",
-      "Add Ethereum-specific treasury signals",
-      "Enhance after-hours catalyst detection"
+    "critical_updates": [
+      "Add all-time low proximity detection (< 10 days)",
+      "Implement post-holiday weekend catalyst amplifier",
+      "Create ultra-nano FDA milestone detector",
+      "Add Legendary+ alert tier (>2000 points)",
+      "Build clinical validation publication scorer"
     ],
     "monitoring_requirements": [
-      "Track all crypto-related IPOs within 90 days",
-      "Monitor celebrity executive appointments in crypto sector",
-      "Flag treasury strategy announcements",
-      "Watch for tier-one VC participation",
-      "Scan for Ethereum/DeFi strategy pivots"
-    ],
-    "backtesting_recommendations": [
-      "Test new crypto treasury signals on 2024-2025 data",
-      "Validate celebrity executive impact scoring",
-      "Measure VC participation correlation with surges",
-      "Compare Ethereum vs Bitcoin treasury strategies"
+      "Track all biotechs < $10M with FDA calendar events",
+      "Monitor stocks hitting all-time lows with known catalysts",
+      "Special alerts for Monday morning announcements post-holidays",
+      "Real-time orphan drug designation filings"
     ]
-  },
-
-  "expected_impact": {
-    "detection_improvement": "50-70% better crypto treasury detection",
-    "earlier_signals": "Pre-announcement celebrity executive signals",
-    "reduced_false_positives": "VC validation filtering",
-    "new_category_coverage": "Ethereum treasury strategies captured"
   }
 }
