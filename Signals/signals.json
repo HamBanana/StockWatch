@@ -1,12 +1,12 @@
 {
   "meta": {
     "v": "4.2",
-    "updated": "2025-07-07",
+    "updated": "2025-07-08",
     "accuracy": "68-73%",
     "fpRate": "8-12%",
     "basedOn": "Analysis of 13+ documented surges: SRM(1283%), NMAX(2550%), GME(2700%), SMMT(583%), MNPR(522%), RBNE(350%), HCTI(222%), HUSA(190%), AMC(121%), AIRO(85%)",
     "lastUpdate": {
-      "date": "2025-07-07",
+      "date": "2025-07-08",
       "source": "DGNX surge analysis",
       "version": "4.2"
     }
@@ -2127,6 +2127,48 @@
           "volume_reversal": "> 5x",
           "catalyst_present": true
         }
+      },
+      "currencyConfusionVolume": {
+        "w": 0.15,
+        "t": [
+          75,
+          90,
+          100
+        ],
+        "description": "Volume spikes from ticker symbol confusion",
+        "conditions": {
+          "ticker_currency_similarity": true,
+          "volume_vs_avg": "> 20x",
+          "algorithmic_trading_indicators": true
+        }
+      },
+      "relatedPartyAmplification": {
+        "w": 0.1,
+        "t": [
+          60,
+          80,
+          95
+        ],
+        "description": "Artificial volume amplification",
+        "conditions": {
+          "related_party_structure": true,
+          "volume_vs_float": "> 500%",
+          "suspicious_timing": true
+        }
+      },
+      "extremeSpeculativeVolume": {
+        "w": 0.25,
+        "t": [
+          80,
+          95,
+          100
+        ],
+        "description": "Volume indicating pure speculation",
+        "conditions": {
+          "volume_vs_avg": "> 50x",
+          "no_fundamental_catalyst": true,
+          "retail_dominated": true
+        }
       }
     },
     "tech": {
@@ -2716,10 +2758,38 @@
           "cnbc appearances"
         ],
         "description": "Social amplification from celebrity CEO appointment"
+      },
+      "tickerMisunderstanding": {
+        "w": 0.3,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "description": "Social confusion about ticker meaning",
+        "indicators": [
+          "currency_confusion",
+          "search_volume_spike",
+          "social_media_confusion"
+        ]
+      },
+      "extremeSpeculation": {
+        "w": 0.25,
+        "t": [
+          75,
+          90,
+          100
+        ],
+        "description": "Pure speculative social momentum",
+        "indicators": [
+          "divorced_from_fundamentals",
+          "exponential_gains",
+          "retail_fomo"
+        ]
       }
     },
     "ipo": {
-      "w": 0.18,
+      "w": 0.22,
       "underpricing": {
         "w": 0.6,
         "t": [
@@ -2886,10 +2956,53 @@
           "float": "< 50M",
           "retail_accessible": true
         }
+      },
+      "manipulationRisk": {
+        "w": 0.15,
+        "t": [
+          40,
+          60,
+          80
+        ],
+        "description": "Negative signal for manipulation risk",
+        "conditions": {
+          "related_party_underwriter": true,
+          "no_analyst_coverage": true,
+          "controversial_management": true
+        },
+        "penalty_signal": true
+      },
+      "floatMisrepresentation": {
+        "w": 0.2,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "description": "When apparent float differs from tradeable float",
+        "conditions": {
+          "reported_float": "> 50%",
+          "effective_float": "< 25%",
+          "parent_lockup": "> 75%"
+        }
+      },
+      "tickerConfusionIPO": {
+        "w": 0.15,
+        "t": [
+          75,
+          90,
+          100
+        ],
+        "description": "IPO with confusing ticker symbol",
+        "conditions": {
+          "ticker_confusion_potential": true,
+          "recent_ipo": "< 30 days",
+          "retail_accessible": true
+        }
       }
     },
     "micro": {
-      "w": 0.22,
+      "w": 0.18,
       "lowFloat": {
         "w": 0.65,
         "t": [
@@ -2978,16 +3091,17 @@
         }
       },
       "ipoFloatSqueeze": {
-        "w": 0.35,
+        "w": 0.3,
         "t": [
           80,
-          90,
+          95,
           100
         ],
+        "description": "IPO with extreme float constraint dynamics",
         "conditions": {
-          "days_from_ipo": "< 90",
-          "free_float": "< 20%",
-          "retail_dominated": true
+          "days_from_ipo": "< 60",
+          "float_percentage": "< 25%",
+          "parent_control": "> 80%"
         }
       },
       "highVolatilityFloat": {
@@ -3384,6 +3498,33 @@
           "market_cap": "< 15M",
           "compliance_regained": true
         }
+      },
+      "extremeLowFloat": {
+        "w": 0.35,
+        "t": [
+          85,
+          95,
+          100
+        ],
+        "description": "Float below 15% of total shares",
+        "conditions": {
+          "float_percentage": "< 15%",
+          "institutional_lockup": "> 70%"
+        }
+      },
+      "manipulationVulnerability": {
+        "w": 0.2,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "description": "Structure vulnerable to price manipulation",
+        "conditions": {
+          "low_institutional_ownership": "< 30%",
+          "minimal_analyst_coverage": true,
+          "related_party_control": true
+        }
       }
     }
   },
@@ -3762,15 +3903,15 @@
       "patterns": {
         "explosive": {
           "hl": 1,
-          "dr": 0.7,
+          "dr": 0.8,
           "min": 0.05,
-          "conditions": "pure_speculation + no_fundamentals"
+          "conditions": "manipulation_driven"
         },
-        "meme_driven": {
+        "unsustainable": {
           "hl": 2,
-          "dr": 0.5,
+          "dr": 0.6,
           "min": 0.1,
-          "conditions": "social_viral + retail_dominated"
+          "conditions": "fundamentally_disconnected"
         }
       }
     },
@@ -3780,6 +3921,14 @@
         "dr": 0.4,
         "min": 0.2,
         "conditions": "split_ratio > 10:1 + ultra_low_float"
+      }
+    },
+    "ipo_manipulation": {
+      "immediate": {
+        "hl": 0.5,
+        "dr": 0.9,
+        "min": 0.02,
+        "conditions": "related_party_structure && extreme_surge"
       }
     }
   },
@@ -5630,6 +5779,93 @@
         "half_life": 7,
         "min_retention": 0.4
       }
+    },
+    "ultraLowFloatIPOMeme": {
+      "cat": [
+        "ipo",
+        "micro",
+        "speculation",
+        "volume"
+      ],
+      "scores": [
+        85,
+        95,
+        90,
+        85
+      ],
+      "min_cat": 4,
+      "multiplier": 4.5,
+      "conditions": {
+        "days_from_ipo": "< 45",
+        "public_float": "< 20%",
+        "ticker_confusion": true,
+        "volume_explosion": "> 25x"
+      },
+      "decay": {
+        "type": "explosive",
+        "half_life": 2,
+        "min_retention": 0.1
+      },
+      "description": "HKD-style ultra-low float IPO with speculative confusion"
+    },
+    "relatedPartyManipulation": {
+      "cat": [
+        "ipo",
+        "speculation",
+        "volume"
+      ],
+      "scores": [
+        70,
+        80,
+        75
+      ],
+      "min_cat": 3,
+      "multiplier": 2.8,
+      "conditions": {
+        "related_party_underwriter": true,
+        "suspicious_structure": true,
+        "minimal_coverage": true
+      },
+      "warning_level": "extreme_risk"
+    },
+    "tickerConfusionExplosion": {
+      "cat": [
+        "speculation",
+        "volume",
+        "social"
+      ],
+      "scores": [
+        85,
+        90,
+        80
+      ],
+      "min_cat": 3,
+      "multiplier": 3.2,
+      "conditions": {
+        "ticker_confusion": true,
+        "currency_similarity": true,
+        "retail_volume": "> 80%"
+      }
+    },
+    "asianIPOAnomaly": {
+      "cat": [
+        "ipo",
+        "speculation",
+        "micro"
+      ],
+      "scores": [
+        75,
+        85,
+        80
+      ],
+      "min_cat": 3,
+      "multiplier": 2.5,
+      "conditions": {
+        "asian_origin": true,
+        "us_listing": true,
+        "unusual_structure": true,
+        "warrant_compensation": true
+      }
     }
   },
   "alerts": {
@@ -6258,6 +6494,36 @@
           "multiple_extreme_factors": true,
           "perfect_storm_setup": true
         }
+      },
+      "ultra_speculation_extreme": {
+        "score": 200,
+        "acc": "40-60%",
+        "fp": "30-40%",
+        "conditions": {
+          "speculation_category": "> 80",
+          "manipulation_risk": "extreme"
+        },
+        "warning": "EXTREME RISK - Potential manipulation"
+      },
+      "ticker_confusion_surge": {
+        "score": 250,
+        "acc": "60-75%",
+        "fp": "25-35%",
+        "conditions": {
+          "ticker_confusion": true,
+          "volume_explosion": "> 20x",
+          "recent_ipo": "< 30 days"
+        }
+      },
+      "related_party_anomaly": {
+        "score": 180,
+        "acc": "50-70%",
+        "fp": "35-45%",
+        "conditions": {
+          "related_party_structure": true,
+          "ultra_low_float": true
+        },
+        "trading_recommendation": "AVOID - Educational study only"
       }
     }
   },
@@ -7116,6 +7382,42 @@
       "condition": "market_break > 3_days && low_float < 25M && major_catalyst",
       "action": "boost_score",
       "multiplier": 1.8
+    },
+    "extremeManipulationRisk": {
+      "condition": "relatedPartyUnderwriter && ultraLowFloat && noAnalystCoverage && controversialManagement",
+      "action": "add_warning",
+      "warning_level": "extreme",
+      "note": "HIGH MANIPULATION RISK - Extreme caution advised"
+    },
+    "fundamentalDisconnect": {
+      "condition": "marketCap > 100x_revenue && surge > 1000% && revenue < 50M",
+      "action": "add_warning",
+      "warning_level": "high",
+      "note": "Extreme valuation disconnect from fundamentals"
+    },
+    "tickerConfusionDetection": {
+      "condition": "ticker_similar_to_currency && volume > 20x && recent_ipo",
+      "action": "boost_score",
+      "multiplier": 2,
+      "add_warning": "Potential ticker symbol confusion driving volume"
+    },
+    "floatDeceptionFilter": {
+      "condition": "apparent_float > 50% && effective_float < 25% && parent_control > 75%",
+      "action": "boost_score",
+      "multiplier": 1.8,
+      "add_warning": "True float much lower than apparent"
+    },
+    "unsustainableSpeculation": {
+      "condition": "surge > 5000% && no_fundamental_catalyst && days_from_ipo < 30",
+      "action": "add_warning",
+      "warning_level": "extreme",
+      "note": "Unsustainable speculation - extreme gap risk"
+    },
+    "relatedPartyWarning": {
+      "condition": "underwriter_affiliation && minimal_institutional_coverage",
+      "action": "reduce_sustainability_score",
+      "multiplier": 0.5,
+      "add_warning": "Related party underwriting increases manipulation risk"
     }
   },
   "validation": {

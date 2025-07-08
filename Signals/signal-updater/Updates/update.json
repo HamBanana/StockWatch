@@ -1,512 +1,526 @@
 {
   "meta_update": {
-    "description": "MBIO surge analysis updates - Ultra-nano biotech FDA catalyst patterns",
-    "analysis_date": "2025-07-07",
+    "description": "HKD 2022 surge analysis updates - ultra-low float IPO meme pattern recognition",
+    "analysis_date": "2025-07-08",
     "surge_details": {
-      "ticker": "MBIO",
-      "surge_date": "2025-07-07",
-      "magnitude": "114.29%",
-      "catalyst": "FDA_Orphan_Drug_Designation",
-      "market_cap_pre": "5.21M",
-      "ath_low_days_prior": 6,
-      "announcement_timing": "Monday_8:30AM_post_holiday_weekend"
+      "ticker": "HKD",
+      "surge_date": "2022-07-15 to 2022-08-02",
+      "ipo_date": "2022-07-15",
+      "days_from_ipo_to_peak": 18,
+      "surge_magnitude": {
+        "intraday": "32000%",
+        "ipo_to_peak": "21000%",
+        "peak_market_cap": "$400B"
+      },
+      "price_points": {
+        "ipo_price": 7.80,
+        "peak_price": 1679.00,
+        "current_range": "2-6"
+      },
+      "float_metrics": {
+        "ads_issued": 16000000,
+        "parent_ownership": "88.7%",
+        "effective_public_float": "< 20%"
+      }
     }
   },
 
   "category_weight_adjustments": {
-    "biotech": {
-      "current": 0.22,
-      "recommended": 0.28,
-      "ultra_nano_boost": {
-        "condition": "market_cap < 10M && fda_milestone",
-        "boost_multiplier": 2.5
-      }
+    "ipo": {
+      "current": 0.15,
+      "recommended": 0.22,
+      "reason": "IPO timing crucial for extreme float squeeze patterns"
     },
     "micro": {
-      "current": 0.18,
-      "recommended": 0.22,
-      "ultra_nano_multiplier": {
-        "condition": "market_cap < 10M",
-        "boost_multiplier": 2.0
-      }
+      "current": 0.12,
+      "recommended": 0.18,
+      "reason": "Ultra-low float dynamics more critical than previously modeled"
     },
-    "volume": {
-      "current": 0.23,
-      "recommended": 0.25,
-      "holiday_weekend_boost": {
-        "condition": "market_break > 3_days",
-        "boost_multiplier": 1.8
+    "speculation": {
+      "current": 0,
+      "recommended": 0.12,
+      "reason": "New category needed for manipulation/confusion patterns"
+    }
+  },
+
+  "new_category": {
+    "speculation": {
+      "w": 0.12,
+      "description": "Patterns driven by confusion, manipulation, or extreme speculation",
+      "tickerConfusion": {
+        "w": 0.3,
+        "t": [70, 85, 95],
+        "description": "Ticker symbol confusion with currencies or commodities",
+        "conditions": {
+          "ticker_similarity": ["currency_codes", "commodity_symbols"],
+          "volume_spike": "> 10x",
+          "no_fundamental_catalyst": true
+        },
+        "examples": ["HKD/Hong Kong Dollar"]
+      },
+      "relatedPartyIPO": {
+        "w": 0.25,
+        "t": [60, 75, 90],
+        "description": "IPO underwritten by related parties",
+        "conditions": {
+          "underwriter_affiliation": true,
+          "days_from_ipo": "< 60",
+          "suspicious_structure": true
+        },
+        "warning": "High manipulation risk"
+      },
+      "asianUSListing": {
+        "w": 0.2,
+        "t": [50, 70, 85],
+        "description": "Asian companies with unusual US listing structures",
+        "conditions": {
+          "origin_country": ["China", "Hong Kong", "Malaysia", "Singapore"],
+          "unusual_structure": true,
+          "warrant_compensation": true
+        }
+      },
+      "ultraLowFloatIPO": {
+        "w": 0.25,
+        "t": [80, 95, 100],
+        "description": "IPO with extremely constrained public float",
+        "conditions": {
+          "public_float_percentage": "< 20%",
+          "days_from_ipo": "< 45",
+          "parent_control": "> 80%"
+        }
       }
     }
   },
 
   "subcategory_updates": {
-    "biotech": {
-      "ultraNanoFDAMilestone": {
-        "w": 0.45,
-        "t": [95, 98, 100],
+    "ipo": {
+      "manipulationRisk": {
+        "w": 0.15,
+        "t": [40, 60, 80],
+        "description": "Negative signal for manipulation risk",
         "conditions": {
-          "market_cap": "< 10M",
-          "fda_milestone": ["orphan_designation", "breakthrough_therapy", "fast_track"],
-          "clinical_validation": true
+          "related_party_underwriter": true,
+          "no_analyst_coverage": true,
+          "controversial_management": true
         },
-        "keywords": ["orphan drug", "FDA designation", "breakthrough therapy", "fast track"]
+        "penalty_signal": true
       },
-      "allTimeLowClinicalCatalyst": {
-        "w": 0.35,
-        "t": [90, 95, 100],
+      "floatMisrepresentation": {
+        "w": 0.2,
+        "t": [70, 85, 95],
+        "description": "When apparent float differs from tradeable float",
         "conditions": {
-          "days_from_ath_low": "< 10",
-          "clinical_catalyst": true,
-          "biotech_sector": true,
-          "market_cap": "< 50M"
-        },
-        "score_boost": 40
+          "reported_float": "> 50%",
+          "effective_float": "< 25%",
+          "parent_lockup": "> 75%"
+        }
       },
-      "postHolidayBiotechCatalyst": {
-        "w": 0.25,
-        "t": [80, 90, 95],
+      "tickerConfusionIPO": {
+        "w": 0.15,
+        "t": [75, 90, 100],
+        "description": "IPO with confusing ticker symbol",
         "conditions": {
-          "market_break_days": "> 3",
-          "announcement_timing": "first_day_back",
-          "biotech_catalyst": true
-        },
-        "multiplier": 2.2
-      },
-      "clinicalValidationPublication": {
-        "w": 0.3,
-        "t": [85, 92, 100],
-        "conditions": {
-          "peer_reviewed_publication": ["Nature Medicine", "Nature", "Science", "NEJM"],
-          "clinical_data": "statistically_significant",
-          "response_rate": "> 30%"
-        },
-        "keywords": ["Nature Medicine", "published", "peer-reviewed", "clinical trial"]
+          "ticker_confusion_potential": true,
+          "recent_ipo": "< 30 days",
+          "retail_accessible": true
+        }
       }
     },
-
+    
     "micro": {
-      "ultraNanoExtreme": {
-        "w": 0.5,
-        "t": [95, 98, 100],
-        "conditions": {
-          "market_cap": "< 10M",
-          "float": "< 15M",
-          "employee_count": "< 10",
-          "recent_reverse_split": "< 365_days"
-        }
-      },
-      "allTimeLowFloat": {
+      "extremeLowFloat": {
         "w": 0.35,
-        "t": [90, 95, 100],
+        "t": [85, 95, 100],
+        "description": "Float below 15% of total shares",
         "conditions": {
-          "ath_low_within_days": "< 10",
-          "float": "< 25M",
-          "volume_compression": true
+          "float_percentage": "< 15%",
+          "institutional_lockup": "> 70%"
         }
       },
-      "postSplitUltraNano": {
-        "w": 0.4,
-        "t": [85, 95, 100],
-        "conditions": {
-          "reverse_split_ratio": "> 1:10",
-          "days_since_split": "< 180",
-          "market_cap": "< 15M",
-          "compliance_regained": true
-        }
-      }
-    },
-
-    "volume": {
-      "postHolidayExplosion": {
+      "ipoFloatSqueeze": {
         "w": 0.3,
-        "t": [85, 95, 100],
+        "t": [80, 95, 100],
+        "description": "IPO with extreme float constraint dynamics",
         "conditions": {
-          "market_break": "> 3_days",
-          "announcement_first_day": true,
-          "volume_spike": "> 10x",
-          "low_float": "< 25M"
-        },
-        "description": "Volume explosion after extended market break"
-      },
-      "ultraQuietBeforeCatalyst": {
-        "w": 0.35,
-        "t": [80, 90, 100],
-        "conditions": {
-          "volume_vs_avg": "< 0.5x",
-          "duration_days": "> 3",
-          "known_catalyst_approaching": true,
-          "market_cap": "< 50M"
+          "days_from_ipo": "< 60",
+          "float_percentage": "< 25%",
+          "parent_control": "> 80%"
         }
       },
-      "allTimeLowVolumeReversal": {
-        "w": 0.4,
-        "t": [85, 95, 100],
+      "manipulationVulnerability": {
+        "w": 0.2,
+        "t": [70, 85, 95],
+        "description": "Structure vulnerable to price manipulation",
         "conditions": {
-          "ath_low_within_days": "< 7",
-          "volume_reversal": "> 5x",
-          "catalyst_present": true
+          "low_institutional_ownership": "< 30%",
+          "minimal_analyst_coverage": true,
+          "related_party_control": true
         }
       }
     },
-
-    "tech": {
-      "extremeOversoldATLRecovery": {
-        "w": 0.4,
-        "t": [90, 95, 100],
+    
+    "volume": {
+      "currencyConfusionVolume": {
+        "w": 0.15,
+        "t": [75, 90, 100],
+        "description": "Volume spikes from ticker symbol confusion",
         "conditions": {
-          "rsi": "< 25",
-          "ath_low_within_days": "< 10",
-          "catalyst_aligned": true,
-          "volume_confirmation": true
+          "ticker_currency_similarity": true,
+          "volume_vs_avg": "> 20x",
+          "algorithmic_trading_indicators": true
         }
       },
-      "postHolidayGapUp": {
-        "w": 0.25,
-        "t": [75, 85, 95],
+      "relatedPartyAmplification": {
+        "w": 0.1,
+        "t": [60, 80, 95],
+        "description": "Artificial volume amplification",
         "conditions": {
-          "gap_up": "> 50%",
-          "market_break": "> 3_days",
-          "catalyst_news": true
+          "related_party_structure": true,
+          "volume_vs_float": "> 500%",
+          "suspicious_timing": true
         }
+      },
+      "extremeSpeculativeVolume": {
+        "w": 0.25,
+        "t": [80, 95, 100],
+        "description": "Volume indicating pure speculation",
+        "conditions": {
+          "volume_vs_avg": "> 50x",
+          "no_fundamental_catalyst": true,
+          "retail_dominated": true
+        }
+      }
+    },
+    
+    "social": {
+      "tickerMisunderstanding": {
+        "w": 0.3,
+        "t": [70, 85, 95],
+        "description": "Social confusion about ticker meaning",
+        "indicators": [
+          "currency_confusion",
+          "search_volume_spike",
+          "social_media_confusion"
+        ]
+      },
+      "extremeSpeculation": {
+        "w": 0.25,
+        "t": [75, 90, 100],
+        "description": "Pure speculative social momentum",
+        "indicators": [
+          "divorced_from_fundamentals",
+          "exponential_gains",
+          "retail_fomo"
+        ]
       }
     }
   },
 
   "new_signal_combinations": {
-    "ultraNanoFDAExplosion": {
-      "cat": ["biotech", "micro", "volume"],
-      "scores": [95, 100, 85],
-      "min_cat": 3,
+    "ultraLowFloatIPOMeme": {
+      "cat": ["ipo", "micro", "speculation", "volume"],
+      "scores": [85, 95, 90, 85],
+      "min_cat": 4,
       "multiplier": 4.5,
       "conditions": {
-        "market_cap": "< 10M",
-        "fda_milestone": true,
-        "clinical_validation": true,
-        "float": "< 15M"
+        "days_from_ipo": "< 45",
+        "public_float": "< 20%",
+        "ticker_confusion": true,
+        "volume_explosion": "> 25x"
       },
       "decay": {
-        "type": "aggressive",
-        "half_life": 4,
-        "min_retention": 0.2
-      }
+        "type": "explosive",
+        "half_life": 2,
+        "min_retention": 0.1
+      },
+      "description": "HKD-style ultra-low float IPO with speculative confusion"
     },
-
-    "allTimeLowCatalystSurge": {
-      "cat": ["biotech", "tech", "volume"],
-      "scores": [90, 95, 90],
+    
+    "relatedPartyManipulation": {
+      "cat": ["ipo", "speculation", "volume"],
+      "scores": [70, 80, 75],
       "min_cat": 3,
-      "multiplier": 3.8,
+      "multiplier": 2.8,
       "conditions": {
-        "days_from_ath_low": "< 10",
-        "catalyst_present": true,
-        "volume_explosion": "> 10x",
-        "oversold_recovery": true
-      }
+        "related_party_underwriter": true,
+        "suspicious_structure": true,
+        "minimal_coverage": true
+      },
+      "warning_level": "extreme_risk"
     },
-
-    "postHolidayNanoCatalyst": {
-      "cat": ["micro", "volume", "biotech"],
-      "scores": [85, 90, 85],
+    
+    "tickerConfusionExplosion": {
+      "cat": ["speculation", "volume", "social"],
+      "scores": [85, 90, 80],
       "min_cat": 3,
       "multiplier": 3.2,
       "conditions": {
-        "market_break": "> 3_days",
-        "market_cap": "< 50M",
-        "announcement_timing": "monday_morning",
-        "catalyst_type": ["regulatory", "clinical", "partnership"]
+        "ticker_confusion": true,
+        "currency_similarity": true,
+        "retail_volume": "> 80%"
       }
     },
-
-    "ultraNanoOrphanDesignation": {
-      "cat": ["biotech", "micro", "volume"],
-      "scores": [100, 95, 85],
+    
+    "asianIPOAnomaly": {
+      "cat": ["ipo", "speculation", "micro"],
+      "scores": [75, 85, 80],
       "min_cat": 3,
-      "multiplier": 5.0,
+      "multiplier": 2.5,
       "conditions": {
-        "market_cap": "< 15M",
-        "orphan_drug_designation": true,
-        "clinical_data_validation": true,
-        "rare_disease_focus": true
-      },
-      "decay": {
-        "type": "sustained",
-        "half_life": 7,
-        "min_retention": 0.4
+        "asian_origin": true,
+        "us_listing": true,
+        "unusual_structure": true,
+        "warrant_compensation": true
       }
     }
   },
 
   "enhanced_filters": {
-    "allTimeLowProximityBoost": {
-      "condition": "days_from_ath_low < 10 && catalyst_present && biotech_sector",
-      "action": "boost_score",
-      "multiplier": 2.5
+    "extremeManipulationRisk": {
+      "condition": "relatedPartyUnderwriter && ultraLowFloat && noAnalystCoverage && controversialManagement",
+      "action": "add_warning",
+      "warning_level": "extreme",
+      "note": "HIGH MANIPULATION RISK - Extreme caution advised"
     },
-
-    "postHolidayWeekendAmplifier": {
-      "condition": "market_break > 3_days && announcement_first_day && low_float",
-      "action": "boost_score",
-      "multiplier": 2.0
+    
+    "fundamentalDisconnect": {
+      "condition": "marketCap > 100x_revenue && surge > 1000% && revenue < 50M",
+      "action": "add_warning", 
+      "warning_level": "high",
+      "note": "Extreme valuation disconnect from fundamentals"
     },
-
-    "ultraNanoFDAValidation": {
-      "condition": "market_cap < 10M && fda_designation && clinical_validation",
+    
+    "tickerConfusionDetection": {
+      "condition": "ticker_similar_to_currency && volume > 20x && recent_ipo",
       "action": "boost_score",
-      "multiplier": 3.5
+      "multiplier": 2.0,
+      "add_warning": "Potential ticker symbol confusion driving volume"
     },
-
-    "extremeOversoldCatalyst": {
-      "condition": "rsi < 25 && ath_low_within_week && fundamental_catalyst",
+    
+    "floatDeceptionFilter": {
+      "condition": "apparent_float > 50% && effective_float < 25% && parent_control > 75%",
       "action": "boost_score",
-      "multiplier": 2.8
+      "multiplier": 1.8,
+      "add_warning": "True float much lower than apparent"
     },
-
-    "postReverseSplitStabilization": {
-      "condition": "reverse_split < 365_days && compliance_regained && catalyst_present",
-      "action": "boost_score",
-      "multiplier": 2.2
+    
+    "unsustainableSpeculation": {
+      "condition": "surge > 5000% && no_fundamental_catalyst && days_from_ipo < 30",
+      "action": "add_warning",
+      "warning_level": "extreme",
+      "note": "Unsustainable speculation - extreme gap risk"
     },
+    
+    "relatedPartyWarning": {
+      "condition": "underwriter_affiliation && minimal_institutional_coverage",
+      "action": "reduce_sustainability_score",
+      "multiplier": 0.5,
+      "add_warning": "Related party underwriting increases manipulation risk"
+    }
+  },
 
-    "holidayPentUpDemand": {
-      "condition": "market_break > 3_days && low_float < 25M && major_catalyst",
-      "action": "boost_score",
-      "multiplier": 1.8
+  "new_risk_categories": {
+    "manipulation_risk": {
+      "levels": {
+        "low": {
+          "score_range": [0, 30],
+          "characteristics": ["institutional_coverage", "reputable_underwriter"]
+        },
+        "moderate": {
+          "score_range": [31, 60], 
+          "characteristics": ["some_red_flags", "limited_coverage"]
+        },
+        "high": {
+          "score_range": [61, 85],
+          "characteristics": ["related_parties", "controversial_background"]
+        },
+        "extreme": {
+          "score_range": [86, 100],
+          "characteristics": ["hkd_pattern", "multiple_red_flags"]
+        }
+      }
+    },
+    
+    "sustainability_risk": {
+      "levels": {
+        "sustainable": {
+          "characteristics": ["fundamental_support", "institutional_buying"],
+          "expected_decay": "slow"
+        },
+        "momentum_dependent": {
+          "characteristics": ["technical_only", "some_fundamental"],
+          "expected_decay": "moderate"
+        },
+        "speculation_driven": {
+          "characteristics": ["divorced_from_fundamentals", "retail_driven"],
+          "expected_decay": "fast"
+        },
+        "manipulation_driven": {
+          "characteristics": ["hkd_pattern", "structural_issues"],
+          "expected_decay": "explosive"
+        }
+      }
     }
   },
 
   "alert_threshold_adjustments": {
-    "ultra_nano_fda_extreme": {
+    "ultra_speculation_extreme": {
       "score": 200,
-      "acc": "90-95%",
-      "fp": "5-8%",
+      "acc": "40-60%",
+      "fp": "30-40%",
       "conditions": {
-        "market_cap": "< 10M",
-        "fda_milestone": true,
-        "clinical_validation": true
-      }
-    },
-
-    "all_time_low_catalyst": {
-      "score": 180,
-      "acc": "85-92%",
-      "fp": "8-12%",
-      "conditions": {
-        "days_from_ath_low": "< 10",
-        "catalyst_present": true,
-        "biotech_sector": true
-      }
-    },
-
-    "post_holiday_nano_catalyst": {
-      "score": 160,
-      "acc": "80-88%",
-      "fp": "10-15%",
-      "conditions": {
-        "market_break": "> 3_days",
-        "market_cap": "< 50M",
-        "monday_morning_catalyst": true
-      }
-    },
-
-    "legendary_plus": {
-      "score": 2000,
-      "acc": "95-98%",
-      "fp": "2-5%",
-      "conditions": {
-        "multiple_extreme_factors": true,
-        "perfect_storm_setup": true
-      }
-    }
-  },
-
-  "market_cap_tier_adjustments": {
-    "ultra_nano_extreme": {
-      "range": [0, 10000000],
-      "base_multiplier": 5.5,
-      "fda_milestone_boost": 7.0,
-      "ath_low_boost": 6.0,
-      "post_holiday_boost": 4.5,
-      "volatility_factor": 4.5
-    },
-
-    "nano_biotech_fda": {
-      "range": [10000000, 50000000],
-      "base_multiplier": 4.0,
-      "fda_milestone_boost": 5.0,
-      "clinical_validation_boost": 4.5,
-      "volatility_factor": 3.5
-    }
-  },
-
-  "timing_multiplier_updates": {
-    "monday_morning_post_holiday": 2.5,
-    "first_day_after_4_day_break": 2.2,
-    "8_30_am_announcement": 1.8,
-    "ath_low_within_week": 2.0,
-    "peer_reviewed_publication": 1.6,
-    "orphan_designation_timing": 1.5
-  },
-
-  "technical_indicator_additions": {
-    "allTimeLowRecoverySignal": {
-      "weight": 0.4,
-      "detection": {
-        "days_from_ath_low": "< 10",
-        "volume_reversal": "> 5x",
-        "catalyst_present": true,
-        "oversold_readings": "rsi < 25"
+        "speculation_category": "> 80",
+        "manipulation_risk": "extreme"
       },
-      "score_boost": 40
-    },
-
-    "postHolidayMomentum": {
-      "weight": 0.3,
-      "detection": {
-        "market_break_days": "> 3",
-        "pent_up_demand_indicators": true,
-        "announcement_timing": "first_trading_day",
-        "gap_up": "> 25%"
-      },
-      "score_boost": 30
-    },
-
-    "ultraNanoVolatilityExpansion": {
-      "weight": 0.35,
-      "detection": {
-        "market_cap": "< 10M",
-        "intraday_range": "> 50%",
-        "volume_explosion": "> 15x",
-        "catalyst_driven": true
-      },
-      "score_boost": 35
-    }
-  },
-
-  "comprehensive_validation_entry": {
-    "MBIO": {
-      "surge_metrics": {
-        "date": "2025-07-07",
-        "magnitude": "114.29%",
-        "catalyst": "FDA_Orphan_Drug_Designation",
-        "duration_hours": 6.5,
-        "volume_multiplier": "15-20x"
-      },
-      "pre_conditions": {
-        "market_cap_pre": 5210000,
-        "ath_low_date": "2025-07-01",
-        "days_from_ath_low": 6,
-        "holiday_weekend": "July_4_Independence_Day",
-        "announcement_timing": "Monday_8:30AM",
-        "float_estimate": "< 15M",
-        "beta": 2.24,
-        "employee_count": 6
-      },
-      "catalyst_details": {
-        "type": "FDA_Orphan_Drug_Designation",
-        "drug": "MB-101",
-        "indication": "recurrent_astrocytoma_glioblastoma",
-        "clinical_validation": "Nature_Medicine_publication",
-        "response_rate": "50%",
-        "complete_responses": "2_patients_7.5_and_66_months"
-      },
-      "signals_triggered": {
-        "biotech": {
-          "ultraNanoFDAMilestone": 100,
-          "allTimeLowClinicalCatalyst": 95,
-          "clinicalValidationPublication": 92
-        },
-        "micro": {
-          "ultraNanoExtreme": 100,
-          "allTimeLowFloat": 95,
-          "postSplitUltraNano": 85
-        },
-        "volume": {
-          "postHolidayExplosion": 95,
-          "ultraQuietBeforeCatalyst": 90,
-          "allTimeLowVolumeReversal": 100
-        },
-        "tech": {
-          "extremeOversoldATLRecovery": 100,
-          "postHolidayGapUp": 85
-        }
-      },
-      "score_calculation": {
-        "raw_score": 390,
-        "multipliers_applied": [
-          "ultraNanoFDAExplosion",
-          "allTimeLowCatalystSurge",
-          "postHolidayNanoCatalyst"
-        ],
-        "final_score": 2156,
-        "alert_level": "legendary_plus"
-      }
-    }
-  },
-
-  "pattern_recognition_matrix": {
-    "ultra_nano_post_holiday_fda": {
-      "name": "Ultra-Nano Post-Holiday FDA Validation Surge",
-      "required_elements": [
-        "market_cap < 10M",
-        "all_time_low < 10_days_prior",
-        "fda_regulatory_milestone",
-        "clinical_data_validation",
-        "market_break > 3_days",
-        "ultra_low_float < 15M",
-        "monday_morning_announcement"
-      ],
-      "expected_magnitude": "100-500%",
-      "frequency": "extremely_rare",
-      "reliability": "exceptional_95_percent_plus"
-    }
-  },
-
-  "real_time_monitoring_rules": {
-    "ath_low_catalyst_watch": {
-      "conditions": [
-        "ath_low_within_10_days",
-        "known_catalyst_approaching",
-        "biotech_sector",
-        "market_cap < 50M"
-      ],
-      "action": "high_priority_alert"
+      "warning": "EXTREME RISK - Potential manipulation"
     },
     
-    "post_holiday_catalyst_scanner": {
-      "conditions": [
-        "market_break > 3_days",
-        "announcement_first_day_back",
-        "low_float < 25M",
-        "regulatory_catalyst"
-      ],
-      "action": "immediate_alert"
+    "ticker_confusion_surge": {
+      "score": 250,
+      "acc": "60-75%", 
+      "fp": "25-35%",
+      "conditions": {
+        "ticker_confusion": true,
+        "volume_explosion": "> 20x",
+        "recent_ipo": "< 30 days"
+      }
     },
-
-    "ultra_nano_fda_tracker": {
-      "conditions": [
-        "market_cap < 10M",
-        "biotech_sector",
-        "fda_calendar_event",
-        "clinical_data_pending"
-      ],
-      "action": "priority_watch"
+    
+    "related_party_anomaly": {
+      "score": 180,
+      "acc": "50-70%",
+      "fp": "35-45%", 
+      "conditions": {
+        "related_party_structure": true,
+        "ultra_low_float": true
+      },
+      "trading_recommendation": "AVOID - Educational study only"
     }
   },
 
-  "implementation_notes": {
-    "critical_updates": [
-      "Add all-time low proximity detection (< 10 days)",
-      "Implement post-holiday weekend catalyst amplifier",
-      "Create ultra-nano FDA milestone detector",
-      "Add Legendary+ alert tier (>2000 points)",
-      "Build clinical validation publication scorer"
-    ],
-    "monitoring_requirements": [
-      "Track all biotechs < $10M with FDA calendar events",
-      "Monitor stocks hitting all-time lows with known catalysts",
-      "Special alerts for Monday morning announcements post-holidays",
-      "Real-time orphan drug designation filings"
-    ]
+  "decay_pattern_updates": {
+    "speculation": {
+      "explosive": {
+        "hl": 1,
+        "dr": 0.8,
+        "min": 0.05,
+        "conditions": "manipulation_driven"
+      },
+      "unsustainable": {
+        "hl": 2,
+        "dr": 0.6,
+        "min": 0.1,
+        "conditions": "fundamentally_disconnected"
+      }
+    },
+    
+    "ipo_manipulation": {
+      "immediate": {
+        "hl": 0.5,
+        "dr": 0.9,
+        "min": 0.02,
+        "conditions": "related_party_structure && extreme_surge"
+      }
+    }
+  },
+
+  "validation_entry": {
+    "HKD": {
+      "surge_metrics": {
+        "date": "2022-08-02",
+        "magnitude": "32000%",
+        "ipo_to_peak": "21000%", 
+        "duration_days": 18,
+        "peak_market_cap": "400B"
+      },
+      "pre_conditions": {
+        "ipo_date": "2022-07-15",
+        "days_from_ipo": 18,
+        "float_estimate": "< 20%",
+        "parent_ownership": "88.7%",
+        "revenue_annual": "25M",
+        "underwriter": "AMTD Global Markets (related party)"
+      },
+      "signals_triggered": {
+        "ipo": {
+          "recentListing": 100,
+          "floatMisrepresentation": 100,
+          "manipulationRisk": 100
+        },
+        "micro": {
+          "extremeLowFloat": 100,
+          "ipoFloatSqueeze": 100
+        },
+        "speculation": {
+          "tickerConfusion": 100,
+          "relatedPartyIPO": 95,
+          "ultraLowFloatIPO": 100
+        },
+        "volume": {
+          "extremeSpeculativeVolume": 100,
+          "currencyConfusionVolume": 95
+        },
+        "social": {
+          "tickerMisunderstanding": 90,
+          "extremeSpeculation": 100
+        }
+      },
+      "pattern_matched": "ultraLowFloatIPOMeme",
+      "final_score": 1478,
+      "alert_level": "LEGENDARY++",
+      "risk_classification": "EXTREME - Avoid",
+      "manipulation_risk": "EXTREME",
+      "sustainability": "NONE - Pure speculation"
+    }
+  },
+
+  "trading_guidelines": {
+    "extreme_risk_patterns": {
+      "position_sizing": "Maximum 1-2% of portfolio",
+      "time_horizon": "Day trading only",
+      "stop_loss": "Impossible due to gap risk",
+      "liquidity_warning": "May be unable to exit",
+      "margin_usage": "NEVER use margin or leverage"
+    },
+    
+    "manipulation_indicators": {
+      "red_flags": [
+        "Related party underwriting",
+        "Controversial management",
+        "Extreme valuation disconnect",
+        "Minimal institutional coverage",
+        "Ticker symbol confusion"
+      ],
+      "action": "Treat as pure speculation/gambling"
+    }
+  },
+
+  "sector_updates": {
+    "chinese_ipos": {
+      "risk_multiplier": 1.8,
+      "manipulation_score_boost": 25,
+      "additional_warnings": ["Regulatory risk", "Accounting standards", "Related party complexity"]
+    },
+    
+    "asian_us_listings": {
+      "warrant_structure_penalty": -30,
+      "due_diligence_requirement": "Enhanced",
+      "pattern_recognition": "Similar to ATXG, STBX, MEGL"
+    }
+  },
+
+  "implementation_priority": [
+    "Add speculation category immediately",
+    "Implement manipulation risk warnings", 
+    "Add ticker confusion detection",
+    "Enhance IPO float analysis",
+    "Create extreme risk trading guidelines"
+  ],
+
+  "backtesting_notes": {
+    "hkd_pattern_recognition": "Should score 1400+ with new system",
+    "similar_patterns": ["ATXG 2022", "STBX 2022", "MEGL 2022"],
+    "expected_accuracy": "60-70% for detection, 40-50% for timing",
+    "risk_warning_critical": "System must warn of manipulation risk"
   }
 }
