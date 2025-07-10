@@ -1,12 +1,12 @@
 {
   "meta": {
     "v": "4.2",
-    "updated": "2025-07-08",
+    "updated": "2025-07-10",
     "accuracy": "68-73%",
     "fpRate": "8-12%",
     "basedOn": "Analysis of 13+ documented surges: SRM(1283%), NMAX(2550%), GME(2700%), SMMT(583%), MNPR(522%), RBNE(350%), HCTI(222%), HUSA(190%), AMC(121%), AIRO(85%)",
     "lastUpdate": {
-      "date": "2025-07-08",
+      "date": "2025-07-10",
       "source": "DGNX surge analysis",
       "version": "4.2"
     }
@@ -137,7 +137,7 @@
       }
     },
     "corp": {
-      "w": 0.2,
+      "w": 0.25,
       "ai": {
         "w": 0.45,
         "t": [
@@ -995,6 +995,110 @@
           "catalyst_post_split": true,
           "nasdaq_compliance": true
         }
+      },
+      "strategicAlternativesUltraNano": {
+        "w": 0.35,
+        "t": [
+          80,
+          90,
+          100
+        ],
+        "conditions": {
+          "market_cap": "< 50M",
+          "cash_position": "> 0.5x market_cap",
+          "recent_asset_sales": true,
+          "operational_restructuring": true
+        },
+        "description": "Ultra-nano cap companies with strategic alternatives characteristics",
+        "keywords": [
+          "strategic alternatives",
+          "asset sale",
+          "operational restructuring",
+          "balance sheet optimization"
+        ]
+      },
+      "mediaConsolidationTarget": {
+        "w": 0.25,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "conditions": {
+          "sector": "media",
+          "regional_dominance": true,
+          "quality_brand": true,
+          "defensive_characteristics": true
+        },
+        "description": "Media companies positioned for consolidation",
+        "keywords": [
+          "media",
+          "newspaper",
+          "journalism",
+          "regional",
+          "consolidation"
+        ]
+      },
+      "cashRichUltraNano": {
+        "w": 0.3,
+        "t": [
+          75,
+          85,
+          95
+        ],
+        "conditions": {
+          "market_cap": "< 50M",
+          "cash_to_market_cap": "> 100%",
+          "zero_debt": true,
+          "operational_efficiency": true
+        },
+        "description": "Ultra-nano caps with excessive cash relative to market cap",
+        "keywords": [
+          "cash rich",
+          "zero debt",
+          "balance sheet",
+          "operational efficiency"
+        ]
+      },
+      "familyControlledLegacy": {
+        "w": 0.2,
+        "t": [
+          65,
+          80,
+          90
+        ],
+        "conditions": {
+          "family_controlled": true,
+          "legacy_business": true,
+          "strategic_flexibility": true
+        },
+        "description": "Family-controlled legacy businesses with strategic flexibility",
+        "keywords": [
+          "family controlled",
+          "legacy",
+          "heritage",
+          "strategic decision"
+        ]
+      },
+      "assetOptimization": {
+        "w": 0.25,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "conditions": {
+          "recent_asset_sales": true,
+          "balance_sheet_improvement": true,
+          "operational_streamlining": true
+        },
+        "description": "Companies optimizing assets and operations for strategic alternatives",
+        "keywords": [
+          "asset sale",
+          "facility sale",
+          "operational streamlining",
+          "balance sheet optimization"
+        ]
       }
     },
     "biotech": {
@@ -2169,6 +2273,34 @@
           "no_fundamental_catalyst": true,
           "retail_dominated": true
         }
+      },
+      "strategicAlternativesAnnouncement": {
+        "w": 0.3,
+        "t": [
+          80,
+          95,
+          100
+        ],
+        "description": "Volume explosion following strategic alternatives announcement",
+        "conditions": {
+          "strategic_alternatives_news": true,
+          "volume_spike": "> 5x",
+          "price_reaction": "> 100%"
+        }
+      },
+      "acquisitionRumor": {
+        "w": 0.25,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "description": "Volume increase on acquisition speculation",
+        "conditions": {
+          "acquisition_speculation": true,
+          "volume_increase": "> 3x",
+          "price_premium": "> 50%"
+        }
       }
     },
     "tech": {
@@ -3002,7 +3134,7 @@
       }
     },
     "micro": {
-      "w": 0.18,
+      "w": 0.22,
       "lowFloat": {
         "w": 0.65,
         "t": [
@@ -3525,6 +3657,49 @@
           "minimal_analyst_coverage": true,
           "related_party_control": true
         }
+      },
+      "ultraNanoStrategicValue": {
+        "w": 0.4,
+        "t": [
+          85,
+          95,
+          100
+        ],
+        "conditions": {
+          "market_cap": "< 50M",
+          "strategic_assets": true,
+          "acquisition_target": true,
+          "premium_brand": true
+        },
+        "description": "Ultra-nano caps with strategic value for acquirers"
+      },
+      "cashRichMicroCap": {
+        "w": 0.35,
+        "t": [
+          80,
+          90,
+          100
+        ],
+        "conditions": {
+          "cash_exceeds_market_cap": true,
+          "debt_free": true,
+          "operational_efficiency": true
+        },
+        "description": "Micro-caps with cash positions exceeding market capitalization"
+      },
+      "defensiveUltraNano": {
+        "w": 0.25,
+        "t": [
+          70,
+          85,
+          95
+        ],
+        "conditions": {
+          "beta": "< 0.5",
+          "defensive_sector": true,
+          "stable_operations": true
+        },
+        "description": "Defensive ultra-nano caps with stable characteristics"
       }
     }
   },
@@ -3838,10 +4013,16 @@
         "conditions": "record_date_dependent"
       },
       "strategic_alternatives": {
-        "hl": 14,
-        "dr": 0.15,
-        "min": 0.6,
-        "conditions": "process_dependent"
+        "hl": 1,
+        "dr": 0.9,
+        "min": 0.1,
+        "conditions": "acquisition_announcement"
+      },
+      "asset_optimization": {
+        "hl": 7,
+        "dr": 0.2,
+        "min": 0.4,
+        "conditions": "operational_restructuring"
       }
     },
     "analyst": {
@@ -3888,6 +4069,12 @@
         "dr": 0.4,
         "min": 0.25,
         "conditions": "extreme_volatility"
+      },
+      "ultra_nano_strategic": {
+        "hl": 3,
+        "dr": 0.4,
+        "min": 0.2,
+        "conditions": "strategic_alternatives"
       }
     },
     "catastrophic_risk": {
@@ -5866,6 +6053,89 @@
         "unusual_structure": true,
         "warrant_compensation": true
       }
+    },
+    "ultraNanoStrategicAlternatives": {
+      "cat": [
+        "corp",
+        "micro",
+        "volume"
+      ],
+      "scores": [
+        85,
+        95,
+        70
+      ],
+      "min_cat": 3,
+      "multiplier": 3,
+      "conditions": {
+        "market_cap": "< 50M",
+        "strategic_alternatives": true,
+        "cash_rich": true,
+        "operational_optimization": true
+      },
+      "decay": {
+        "type": "event_driven",
+        "half_life": 1,
+        "min_retention": 0.1
+      },
+      "description": "Ultra-nano cap strategic alternatives explosion pattern"
+    },
+    "mediaConsolidationPlay": {
+      "cat": [
+        "corp",
+        "micro",
+        "volume"
+      ],
+      "scores": [
+        80,
+        85,
+        75
+      ],
+      "min_cat": 3,
+      "multiplier": 2.5,
+      "conditions": {
+        "media_sector": true,
+        "consolidation_target": true,
+        "quality_brand": true,
+        "regional_dominance": true
+      },
+      "description": "Media consolidation acquisition target"
+    },
+    "cashRichAcquisitionTarget": {
+      "cat": [
+        "corp",
+        "micro"
+      ],
+      "scores": [
+        80,
+        90
+      ],
+      "min_cat": 2,
+      "multiplier": 2.8,
+      "conditions": {
+        "cash_exceeds_market_cap": true,
+        "debt_free": true,
+        "strategic_value": true
+      },
+      "description": "Cash-rich companies attractive to acquirers"
+    },
+    "familyControlledExit": {
+      "cat": [
+        "corp",
+        "micro"
+      ],
+      "scores": [
+        75,
+        80
+      ],
+      "min_cat": 2,
+      "multiplier": 2.2,
+      "conditions": {
+        "family_controlled": true,
+        "legacy_business": true,
+        "strategic_alternatives": true
+      },
+      "description": "Family-controlled legacy business strategic exit"
     }
   },
   "alerts": {
@@ -6524,6 +6794,36 @@
           "ultra_low_float": true
         },
         "trading_recommendation": "AVOID - Educational study only"
+      },
+      "ultra_nano_strategic": {
+        "score": 200,
+        "acc": "70-80%",
+        "fp": "10-15%",
+        "conditions": {
+          "market_cap": "< 50M",
+          "strategic_alternatives": true,
+          "cash_rich": true
+        }
+      },
+      "media_consolidation": {
+        "score": 180,
+        "acc": "65-75%",
+        "fp": "12-18%",
+        "conditions": {
+          "media_sector": true,
+          "consolidation_target": true,
+          "quality_brand": true
+        }
+      },
+      "cash_rich_acquisition": {
+        "score": 190,
+        "acc": "70-80%",
+        "fp": "10-15%",
+        "conditions": {
+          "cash_exceeds_market_cap": true,
+          "debt_free": true,
+          "strategic_value": true
+        }
       }
     }
   },
@@ -6672,6 +6972,17 @@
       "optCap": [
         100000000,
         1000000000
+      ],
+      "consolidationMult": 2.5,
+      "qualityBrandMult": 2.2,
+      "regionalDominanceMult": 2,
+      "keywords": [
+        "newspaper",
+        "journalism",
+        "media",
+        "publishing",
+        "digital",
+        "Pulitzer"
       ]
     },
     "quantum_computing": {
@@ -6746,7 +7057,9 @@
     },
     "communications": {
       "dataInfrastructureMult": 3.2,
-      "scalingMult": 2.5
+      "scalingMult": 2.5,
+      "consolidationMult": 2,
+      "infrastructureMult": 1.8
     },
     "emerging_technology": {
       "breakthroughMult": 3.5,
@@ -6844,6 +7157,17 @@
         "no_approved_products": true,
         "ultra_low_float": true
       }
+    },
+    "publishing": {
+      "consolidationMult": 2.3,
+      "digitalTransformationMult": 2,
+      "keywords": [
+        "newspaper",
+        "digital",
+        "subscription",
+        "advertising",
+        "circulation"
+      ]
     }
   },
   "filters": {
@@ -7418,6 +7742,31 @@
       "action": "reduce_sustainability_score",
       "multiplier": 0.5,
       "add_warning": "Related party underwriting increases manipulation risk"
+    },
+    "ultraNanoStrategicValue": {
+      "condition": "marketCap < 50M && cashPosition > marketCap && assetSales",
+      "action": "boost_score",
+      "multiplier": 2
+    },
+    "mediaConsolidationCatalyst": {
+      "condition": "sector == 'media' && regionalDominance && qualityBrand",
+      "action": "boost_score",
+      "multiplier": 1.5
+    },
+    "cashRichTarget": {
+      "condition": "cashToMarketCap > 1.0 && debtFree && marketCap < 100M",
+      "action": "boost_score",
+      "multiplier": 1.8
+    },
+    "familyControlledFlexibility": {
+      "condition": "familyControlled && legacyBusiness && strategicFlexibility",
+      "action": "boost_score",
+      "multiplier": 1.4
+    },
+    "operationalOptimization": {
+      "condition": "recentAssetSales && operationalRestructuring && balanceSheetImprovement",
+      "action": "boost_score",
+      "multiplier": 1.6
     }
   },
   "validation": {
@@ -8704,6 +9053,59 @@
           "final_score": 2156,
           "alert_level": "legendary_plus"
         }
+      },
+      "DALN": {
+        "surge_metrics": {
+          "date": "2025-07-10",
+          "catalyst": "Hearst acquisition announcement",
+          "premium": "219%",
+          "pre_surge_price": 4.39,
+          "acquisition_price": 14,
+          "market_cap_pre": 23500000
+        },
+        "pre_conditions": {
+          "market_cap": 23500000,
+          "cash_position": 44200000,
+          "debt": 0,
+          "sector": "media",
+          "recent_asset_sale": "Plano facility $43.5M",
+          "operational_restructuring": true,
+          "family_controlled": true,
+          "quality_brand": "9-time Pulitzer winner"
+        },
+        "signals_triggered": {
+          "corp": {
+            "strategicAlternativesUltraNano": 100,
+            "mediaConsolidationTarget": 95,
+            "cashRichUltraNano": 100,
+            "familyControlledLegacy": 85,
+            "assetOptimization": 95
+          },
+          "micro": {
+            "ultraNanoStrategicValue": 100,
+            "cashRichMicroCap": 100,
+            "defensiveUltraNano": 90
+          },
+          "volume": {
+            "strategicAlternativesAnnouncement": 100,
+            "acquisitionRumor": 85
+          }
+        },
+        "catalyst_details": {
+          "type": "acquisition_announcement",
+          "acquirer": "Hearst",
+          "premium": "219%",
+          "strategic_rationale": "Media consolidation, quality journalism brand, North Texas market"
+        },
+        "score_calculation": {
+          "raw_score": 275,
+          "multipliers_applied": [
+            "ultraNanoStrategicAlternatives",
+            "mediaConsolidationPlay"
+          ],
+          "final_score": 412,
+          "alert_level": "legendary"
+        }
       }
     }
   },
@@ -9916,6 +10318,24 @@
         "detection": "no_revenue + no_products + volume > 20x + extreme_valuation",
         "weight": 0.3,
         "predictive_value": "high"
+      },
+      "strategicAlternativesRumor": {
+        "description": "Volume increase on strategic alternatives speculation",
+        "detection": "volume > 3x && strategic_alternatives_keywords",
+        "weight": 0.25,
+        "predictive_value": "high"
+      },
+      "acquisitionAnnouncement": {
+        "description": "Massive volume spike on acquisition news",
+        "detection": "volume > 10x && acquisition_news && price_gap > 100%",
+        "weight": 0.35,
+        "predictive_value": "very high"
+      },
+      "assetSaleCompletion": {
+        "description": "Volume reaction to asset sale completion",
+        "detection": "asset_sale_completion && volume > 2x",
+        "weight": 0.2,
+        "predictive_value": "medium"
       }
     }
   },
@@ -10240,6 +10660,42 @@
       "fda_milestone_boost": 5,
       "clinical_validation_boost": 4.5,
       "volatility_factor": 3.5
+    },
+    "ultra_nano_strategic": {
+      "range": [
+        0,
+        50000000
+      ],
+      "base_multiplier": 4,
+      "strategic_alternatives_boost": 6,
+      "cash_rich_boost": 5,
+      "media_consolidation_boost": 4.5,
+      "volatility_factor": 3,
+      "acquisition_premium_expectation": "> 100%"
+    },
+    "cash_rich_nano": {
+      "range": [
+        0,
+        100000000
+      ],
+      "base_multiplier": 3.5,
+      "cash_multiplier": 4,
+      "conditions": {
+        "cash_to_market_cap": "> 100%",
+        "debt_free": true
+      }
+    },
+    "defensive_ultra_nano": {
+      "range": [
+        0,
+        50000000
+      ],
+      "base_multiplier": 3,
+      "defensive_boost": 2.5,
+      "conditions": {
+        "beta": "< 0.5",
+        "stable_operations": true
+      }
     }
   },
   "catalystScoring": {

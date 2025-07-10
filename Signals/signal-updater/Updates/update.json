@@ -1,526 +1,440 @@
 {
   "meta_update": {
-    "description": "HKD 2022 surge analysis updates - ultra-low float IPO meme pattern recognition",
-    "analysis_date": "2025-07-08",
+    "description": "Strategic alternatives and ultra-nano cap acquisition signals based on DALN/Hearst acquisition analysis - July 10, 2025",
+    "analysis_date": "2025-07-10",
     "surge_details": {
-      "ticker": "HKD",
-      "surge_date": "2022-07-15 to 2022-08-02",
-      "ipo_date": "2022-07-15",
-      "days_from_ipo_to_peak": 18,
-      "surge_magnitude": {
-        "intraday": "32000%",
-        "ipo_to_peak": "21000%",
-        "peak_market_cap": "$400B"
-      },
-      "price_points": {
-        "ipo_price": 7.80,
-        "peak_price": 1679.00,
-        "current_range": "2-6"
-      },
-      "float_metrics": {
-        "ads_issued": 16000000,
-        "parent_ownership": "88.7%",
-        "effective_public_float": "< 20%"
-      }
+      "ticker": "DALN",
+      "surge_date": "2025-07-10",
+      "catalyst": "Hearst acquisition announcement",
+      "premium": "219%",
+      "pre_surge_price": 4.39,
+      "acquisition_price": 14.00,
+      "market_cap_pre": 23500000
     }
   },
 
   "category_weight_adjustments": {
-    "ipo": {
-      "current": 0.15,
-      "recommended": 0.22,
-      "reason": "IPO timing crucial for extreme float squeeze patterns"
+    "corp": {
+      "current": 0.22,
+      "recommended": 0.25,
+      "reason": "Strategic alternatives and acquisition activity more impactful than modeled"
     },
     "micro": {
-      "current": 0.12,
-      "recommended": 0.18,
-      "reason": "Ultra-low float dynamics more critical than previously modeled"
-    },
-    "speculation": {
-      "current": 0,
-      "recommended": 0.12,
-      "reason": "New category needed for manipulation/confusion patterns"
-    }
-  },
-
-  "new_category": {
-    "speculation": {
-      "w": 0.12,
-      "description": "Patterns driven by confusion, manipulation, or extreme speculation",
-      "tickerConfusion": {
-        "w": 0.3,
-        "t": [70, 85, 95],
-        "description": "Ticker symbol confusion with currencies or commodities",
-        "conditions": {
-          "ticker_similarity": ["currency_codes", "commodity_symbols"],
-          "volume_spike": "> 10x",
-          "no_fundamental_catalyst": true
-        },
-        "examples": ["HKD/Hong Kong Dollar"]
-      },
-      "relatedPartyIPO": {
-        "w": 0.25,
-        "t": [60, 75, 90],
-        "description": "IPO underwritten by related parties",
-        "conditions": {
-          "underwriter_affiliation": true,
-          "days_from_ipo": "< 60",
-          "suspicious_structure": true
-        },
-        "warning": "High manipulation risk"
-      },
-      "asianUSListing": {
-        "w": 0.2,
-        "t": [50, 70, 85],
-        "description": "Asian companies with unusual US listing structures",
-        "conditions": {
-          "origin_country": ["China", "Hong Kong", "Malaysia", "Singapore"],
-          "unusual_structure": true,
-          "warrant_compensation": true
-        }
-      },
-      "ultraLowFloatIPO": {
-        "w": 0.25,
-        "t": [80, 95, 100],
-        "description": "IPO with extremely constrained public float",
-        "conditions": {
-          "public_float_percentage": "< 20%",
-          "days_from_ipo": "< 45",
-          "parent_control": "> 80%"
-        }
-      }
+      "current": 0.18,
+      "recommended": 0.22,
+      "reason": "Ultra-nano cap dynamics create extreme acquisition premiums"
     }
   },
 
   "subcategory_updates": {
-    "ipo": {
-      "manipulationRisk": {
-        "w": 0.15,
-        "t": [40, 60, 80],
-        "description": "Negative signal for manipulation risk",
+    "corp": {
+      "strategicAlternativesUltraNano": {
+        "w": 0.35,
+        "t": [80, 90, 100],
         "conditions": {
-          "related_party_underwriter": true,
-          "no_analyst_coverage": true,
-          "controversial_management": true
+          "market_cap": "< 50M",
+          "cash_position": "> 0.5x market_cap",
+          "recent_asset_sales": true,
+          "operational_restructuring": true
         },
-        "penalty_signal": true
+        "description": "Ultra-nano cap companies with strategic alternatives characteristics",
+        "keywords": ["strategic alternatives", "asset sale", "operational restructuring", "balance sheet optimization"]
       },
-      "floatMisrepresentation": {
-        "w": 0.2,
+      "mediaConsolidationTarget": {
+        "w": 0.25,
         "t": [70, 85, 95],
-        "description": "When apparent float differs from tradeable float",
         "conditions": {
-          "reported_float": "> 50%",
-          "effective_float": "< 25%",
-          "parent_lockup": "> 75%"
-        }
+          "sector": "media",
+          "regional_dominance": true,
+          "quality_brand": true,
+          "defensive_characteristics": true
+        },
+        "description": "Media companies positioned for consolidation",
+        "keywords": ["media", "newspaper", "journalism", "regional", "consolidation"]
       },
-      "tickerConfusionIPO": {
-        "w": 0.15,
-        "t": [75, 90, 100],
-        "description": "IPO with confusing ticker symbol",
+      "cashRichUltraNano": {
+        "w": 0.30,
+        "t": [75, 85, 95],
         "conditions": {
-          "ticker_confusion_potential": true,
-          "recent_ipo": "< 30 days",
-          "retail_accessible": true
-        }
+          "market_cap": "< 50M",
+          "cash_to_market_cap": "> 100%",
+          "zero_debt": true,
+          "operational_efficiency": true
+        },
+        "description": "Ultra-nano caps with excessive cash relative to market cap",
+        "keywords": ["cash rich", "zero debt", "balance sheet", "operational efficiency"]
+      },
+      "familyControlledLegacy": {
+        "w": 0.20,
+        "t": [65, 80, 90],
+        "conditions": {
+          "family_controlled": true,
+          "legacy_business": true,
+          "strategic_flexibility": true
+        },
+        "description": "Family-controlled legacy businesses with strategic flexibility",
+        "keywords": ["family controlled", "legacy", "heritage", "strategic decision"]
+      },
+      "assetOptimization": {
+        "w": 0.25,
+        "t": [70, 85, 95],
+        "conditions": {
+          "recent_asset_sales": true,
+          "balance_sheet_improvement": true,
+          "operational_streamlining": true
+        },
+        "description": "Companies optimizing assets and operations for strategic alternatives",
+        "keywords": ["asset sale", "facility sale", "operational streamlining", "balance sheet optimization"]
       }
     },
     
     "micro": {
-      "extremeLowFloat": {
-        "w": 0.35,
+      "ultraNanoStrategicValue": {
+        "w": 0.40,
         "t": [85, 95, 100],
-        "description": "Float below 15% of total shares",
         "conditions": {
-          "float_percentage": "< 15%",
-          "institutional_lockup": "> 70%"
-        }
+          "market_cap": "< 50M",
+          "strategic_assets": true,
+          "acquisition_target": true,
+          "premium_brand": true
+        },
+        "description": "Ultra-nano caps with strategic value for acquirers"
       },
-      "ipoFloatSqueeze": {
-        "w": 0.3,
-        "t": [80, 95, 100],
-        "description": "IPO with extreme float constraint dynamics",
+      "cashRichMicroCap": {
+        "w": 0.35,
+        "t": [80, 90, 100],
         "conditions": {
-          "days_from_ipo": "< 60",
-          "float_percentage": "< 25%",
-          "parent_control": "> 80%"
-        }
+          "cash_exceeds_market_cap": true,
+          "debt_free": true,
+          "operational_efficiency": true
+        },
+        "description": "Micro-caps with cash positions exceeding market capitalization"
       },
-      "manipulationVulnerability": {
-        "w": 0.2,
+      "defensiveUltraNano": {
+        "w": 0.25,
         "t": [70, 85, 95],
-        "description": "Structure vulnerable to price manipulation",
         "conditions": {
-          "low_institutional_ownership": "< 30%",
-          "minimal_analyst_coverage": true,
-          "related_party_control": true
-        }
+          "beta": "< 0.5",
+          "defensive_sector": true,
+          "stable_operations": true
+        },
+        "description": "Defensive ultra-nano caps with stable characteristics"
       }
     },
-    
+
     "volume": {
-      "currencyConfusionVolume": {
-        "w": 0.15,
-        "t": [75, 90, 100],
-        "description": "Volume spikes from ticker symbol confusion",
-        "conditions": {
-          "ticker_currency_similarity": true,
-          "volume_vs_avg": "> 20x",
-          "algorithmic_trading_indicators": true
-        }
-      },
-      "relatedPartyAmplification": {
-        "w": 0.1,
-        "t": [60, 80, 95],
-        "description": "Artificial volume amplification",
-        "conditions": {
-          "related_party_structure": true,
-          "volume_vs_float": "> 500%",
-          "suspicious_timing": true
-        }
-      },
-      "extremeSpeculativeVolume": {
-        "w": 0.25,
+      "strategicAlternativesAnnouncement": {
+        "w": 0.30,
         "t": [80, 95, 100],
-        "description": "Volume indicating pure speculation",
+        "description": "Volume explosion following strategic alternatives announcement",
         "conditions": {
-          "volume_vs_avg": "> 50x",
-          "no_fundamental_catalyst": true,
-          "retail_dominated": true
+          "strategic_alternatives_news": true,
+          "volume_spike": "> 5x",
+          "price_reaction": "> 100%"
         }
-      }
-    },
-    
-    "social": {
-      "tickerMisunderstanding": {
-        "w": 0.3,
-        "t": [70, 85, 95],
-        "description": "Social confusion about ticker meaning",
-        "indicators": [
-          "currency_confusion",
-          "search_volume_spike",
-          "social_media_confusion"
-        ]
       },
-      "extremeSpeculation": {
+      "acquisitionRumor": {
         "w": 0.25,
-        "t": [75, 90, 100],
-        "description": "Pure speculative social momentum",
-        "indicators": [
-          "divorced_from_fundamentals",
-          "exponential_gains",
-          "retail_fomo"
-        ]
+        "t": [70, 85, 95],
+        "description": "Volume increase on acquisition speculation",
+        "conditions": {
+          "acquisition_speculation": true,
+          "volume_increase": "> 3x",
+          "price_premium": "> 50%"
+        }
       }
     }
   },
 
   "new_signal_combinations": {
-    "ultraLowFloatIPOMeme": {
-      "cat": ["ipo", "micro", "speculation", "volume"],
-      "scores": [85, 95, 90, 85],
-      "min_cat": 4,
-      "multiplier": 4.5,
+    "ultraNanoStrategicAlternatives": {
+      "cat": ["corp", "micro", "volume"],
+      "scores": [85, 95, 70],
+      "min_cat": 3,
+      "multiplier": 3.0,
       "conditions": {
-        "days_from_ipo": "< 45",
-        "public_float": "< 20%",
-        "ticker_confusion": true,
-        "volume_explosion": "> 25x"
+        "market_cap": "< 50M",
+        "strategic_alternatives": true,
+        "cash_rich": true,
+        "operational_optimization": true
       },
       "decay": {
-        "type": "explosive",
-        "half_life": 2,
+        "type": "event_driven",
+        "half_life": 1,
         "min_retention": 0.1
       },
-      "description": "HKD-style ultra-low float IPO with speculative confusion"
+      "description": "Ultra-nano cap strategic alternatives explosion pattern"
     },
     
-    "relatedPartyManipulation": {
-      "cat": ["ipo", "speculation", "volume"],
-      "scores": [70, 80, 75],
-      "min_cat": 3,
-      "multiplier": 2.8,
-      "conditions": {
-        "related_party_underwriter": true,
-        "suspicious_structure": true,
-        "minimal_coverage": true
-      },
-      "warning_level": "extreme_risk"
-    },
-    
-    "tickerConfusionExplosion": {
-      "cat": ["speculation", "volume", "social"],
-      "scores": [85, 90, 80],
-      "min_cat": 3,
-      "multiplier": 3.2,
-      "conditions": {
-        "ticker_confusion": true,
-        "currency_similarity": true,
-        "retail_volume": "> 80%"
-      }
-    },
-    
-    "asianIPOAnomaly": {
-      "cat": ["ipo", "speculation", "micro"],
-      "scores": [75, 85, 80],
+    "mediaConsolidationPlay": {
+      "cat": ["corp", "micro", "volume"],
+      "scores": [80, 85, 75],
       "min_cat": 3,
       "multiplier": 2.5,
       "conditions": {
-        "asian_origin": true,
-        "us_listing": true,
-        "unusual_structure": true,
-        "warrant_compensation": true
+        "media_sector": true,
+        "consolidation_target": true,
+        "quality_brand": true,
+        "regional_dominance": true
+      },
+      "description": "Media consolidation acquisition target"
+    },
+    
+    "cashRichAcquisitionTarget": {
+      "cat": ["corp", "micro"],
+      "scores": [80, 90],
+      "min_cat": 2,
+      "multiplier": 2.8,
+      "conditions": {
+        "cash_exceeds_market_cap": true,
+        "debt_free": true,
+        "strategic_value": true
+      },
+      "description": "Cash-rich companies attractive to acquirers"
+    },
+    
+    "familyControlledExit": {
+      "cat": ["corp", "micro"],
+      "scores": [75, 80],
+      "min_cat": 2,
+      "multiplier": 2.2,
+      "conditions": {
+        "family_controlled": true,
+        "legacy_business": true,
+        "strategic_alternatives": true
+      },
+      "description": "Family-controlled legacy business strategic exit"
+    }
+  },
+
+  "sector_specific_updates": {
+    "media": {
+      "consolidationMult": 2.5,
+      "qualityBrandMult": 2.2,
+      "regionalDominanceMult": 2.0,
+      "keywords": ["newspaper", "journalism", "media", "publishing", "digital", "Pulitzer"]
+    },
+    "publishing": {
+      "consolidationMult": 2.3,
+      "digitalTransformationMult": 2.0,
+      "keywords": ["newspaper", "digital", "subscription", "advertising", "circulation"]
+    },
+    "communications": {
+      "consolidationMult": 2.0,
+      "infrastructureMult": 1.8
+    }
+  },
+
+  "market_cap_tier_adjustments": {
+    "ultra_nano_strategic": {
+      "range": [0, 50000000],
+      "base_multiplier": 4.0,
+      "strategic_alternatives_boost": 6.0,
+      "cash_rich_boost": 5.0,
+      "media_consolidation_boost": 4.5,
+      "volatility_factor": 3.0,
+      "acquisition_premium_expectation": "> 100%"
+    },
+    "cash_rich_nano": {
+      "range": [0, 100000000],
+      "base_multiplier": 3.5,
+      "cash_multiplier": 4.0,
+      "conditions": {
+        "cash_to_market_cap": "> 100%",
+        "debt_free": true
+      }
+    },
+    "defensive_ultra_nano": {
+      "range": [0, 50000000],
+      "base_multiplier": 3.0,
+      "defensive_boost": 2.5,
+      "conditions": {
+        "beta": "< 0.5",
+        "stable_operations": true
       }
     }
   },
 
   "enhanced_filters": {
-    "extremeManipulationRisk": {
-      "condition": "relatedPartyUnderwriter && ultraLowFloat && noAnalystCoverage && controversialManagement",
-      "action": "add_warning",
-      "warning_level": "extreme",
-      "note": "HIGH MANIPULATION RISK - Extreme caution advised"
-    },
-    
-    "fundamentalDisconnect": {
-      "condition": "marketCap > 100x_revenue && surge > 1000% && revenue < 50M",
-      "action": "add_warning", 
-      "warning_level": "high",
-      "note": "Extreme valuation disconnect from fundamentals"
-    },
-    
-    "tickerConfusionDetection": {
-      "condition": "ticker_similar_to_currency && volume > 20x && recent_ipo",
+    "ultraNanoStrategicValue": {
+      "condition": "marketCap < 50M && cashPosition > marketCap && assetSales",
       "action": "boost_score",
-      "multiplier": 2.0,
-      "add_warning": "Potential ticker symbol confusion driving volume"
+      "multiplier": 2.0
     },
-    
-    "floatDeceptionFilter": {
-      "condition": "apparent_float > 50% && effective_float < 25% && parent_control > 75%",
+    "mediaConsolidationCatalyst": {
+      "condition": "sector == 'media' && regionalDominance && qualityBrand",
       "action": "boost_score",
-      "multiplier": 1.8,
-      "add_warning": "True float much lower than apparent"
+      "multiplier": 1.5
     },
-    
-    "unsustainableSpeculation": {
-      "condition": "surge > 5000% && no_fundamental_catalyst && days_from_ipo < 30",
-      "action": "add_warning",
-      "warning_level": "extreme",
-      "note": "Unsustainable speculation - extreme gap risk"
+    "cashRichTarget": {
+      "condition": "cashToMarketCap > 1.0 && debtFree && marketCap < 100M",
+      "action": "boost_score",
+      "multiplier": 1.8
     },
-    
-    "relatedPartyWarning": {
-      "condition": "underwriter_affiliation && minimal_institutional_coverage",
-      "action": "reduce_sustainability_score",
-      "multiplier": 0.5,
-      "add_warning": "Related party underwriting increases manipulation risk"
-    }
-  },
-
-  "new_risk_categories": {
-    "manipulation_risk": {
-      "levels": {
-        "low": {
-          "score_range": [0, 30],
-          "characteristics": ["institutional_coverage", "reputable_underwriter"]
-        },
-        "moderate": {
-          "score_range": [31, 60], 
-          "characteristics": ["some_red_flags", "limited_coverage"]
-        },
-        "high": {
-          "score_range": [61, 85],
-          "characteristics": ["related_parties", "controversial_background"]
-        },
-        "extreme": {
-          "score_range": [86, 100],
-          "characteristics": ["hkd_pattern", "multiple_red_flags"]
-        }
-      }
+    "familyControlledFlexibility": {
+      "condition": "familyControlled && legacyBusiness && strategicFlexibility",
+      "action": "boost_score",
+      "multiplier": 1.4
     },
-    
-    "sustainability_risk": {
-      "levels": {
-        "sustainable": {
-          "characteristics": ["fundamental_support", "institutional_buying"],
-          "expected_decay": "slow"
-        },
-        "momentum_dependent": {
-          "characteristics": ["technical_only", "some_fundamental"],
-          "expected_decay": "moderate"
-        },
-        "speculation_driven": {
-          "characteristics": ["divorced_from_fundamentals", "retail_driven"],
-          "expected_decay": "fast"
-        },
-        "manipulation_driven": {
-          "characteristics": ["hkd_pattern", "structural_issues"],
-          "expected_decay": "explosive"
-        }
-      }
+    "operationalOptimization": {
+      "condition": "recentAssetSales && operationalRestructuring && balanceSheetImprovement",
+      "action": "boost_score",
+      "multiplier": 1.6
     }
   },
 
   "alert_threshold_adjustments": {
-    "ultra_speculation_extreme": {
+    "ultra_nano_strategic": {
       "score": 200,
-      "acc": "40-60%",
-      "fp": "30-40%",
+      "acc": "70-80%",
+      "fp": "10-15%",
       "conditions": {
-        "speculation_category": "> 80",
-        "manipulation_risk": "extreme"
-      },
-      "warning": "EXTREME RISK - Potential manipulation"
-    },
-    
-    "ticker_confusion_surge": {
-      "score": 250,
-      "acc": "60-75%", 
-      "fp": "25-35%",
-      "conditions": {
-        "ticker_confusion": true,
-        "volume_explosion": "> 20x",
-        "recent_ipo": "< 30 days"
+        "market_cap": "< 50M",
+        "strategic_alternatives": true,
+        "cash_rich": true
       }
     },
-    
-    "related_party_anomaly": {
+    "media_consolidation": {
       "score": 180,
-      "acc": "50-70%",
-      "fp": "35-45%", 
+      "acc": "65-75%",
+      "fp": "12-18%",
       "conditions": {
-        "related_party_structure": true,
-        "ultra_low_float": true
+        "media_sector": true,
+        "consolidation_target": true,
+        "quality_brand": true
+      }
+    },
+    "cash_rich_acquisition": {
+      "score": 190,
+      "acc": "70-80%",
+      "fp": "10-15%",
+      "conditions": {
+        "cash_exceeds_market_cap": true,
+        "debt_free": true,
+        "strategic_value": true
+      }
+    }
+  },
+
+  "volume_pattern_recognition": {
+    "patterns": {
+      "strategicAlternativesRumor": {
+        "description": "Volume increase on strategic alternatives speculation",
+        "detection": "volume > 3x && strategic_alternatives_keywords",
+        "weight": 0.25,
+        "predictive_value": "high"
       },
-      "trading_recommendation": "AVOID - Educational study only"
+      "acquisitionAnnouncement": {
+        "description": "Massive volume spike on acquisition news",
+        "detection": "volume > 10x && acquisition_news && price_gap > 100%",
+        "weight": 0.35,
+        "predictive_value": "very high"
+      },
+      "assetSaleCompletion": {
+        "description": "Volume reaction to asset sale completion",
+        "detection": "asset_sale_completion && volume > 2x",
+        "weight": 0.20,
+        "predictive_value": "medium"
+      }
+    }
+  },
+
+  "comprehensive_validation_entry": {
+    "DALN": {
+      "surge_metrics": {
+        "date": "2025-07-10",
+        "catalyst": "Hearst acquisition announcement",
+        "premium": "219%",
+        "pre_surge_price": 4.39,
+        "acquisition_price": 14.00,
+        "market_cap_pre": 23500000
+      },
+      "pre_conditions": {
+        "market_cap": 23500000,
+        "cash_position": 44200000,
+        "debt": 0,
+        "sector": "media",
+        "recent_asset_sale": "Plano facility $43.5M",
+        "operational_restructuring": true,
+        "family_controlled": true,
+        "quality_brand": "9-time Pulitzer winner"
+      },
+      "signals_triggered": {
+        "corp": {
+          "strategicAlternativesUltraNano": 100,
+          "mediaConsolidationTarget": 95,
+          "cashRichUltraNano": 100,
+          "familyControlledLegacy": 85,
+          "assetOptimization": 95
+        },
+        "micro": {
+          "ultraNanoStrategicValue": 100,
+          "cashRichMicroCap": 100,
+          "defensiveUltraNano": 90
+        },
+        "volume": {
+          "strategicAlternativesAnnouncement": 100,
+          "acquisitionRumor": 85
+        }
+      },
+      "catalyst_details": {
+        "type": "acquisition_announcement",
+        "acquirer": "Hearst",
+        "premium": "219%",
+        "strategic_rationale": "Media consolidation, quality journalism brand, North Texas market"
+      },
+      "score_calculation": {
+        "raw_score": 275,
+        "multipliers_applied": ["ultraNanoStrategicAlternatives", "mediaConsolidationPlay"],
+        "final_score": 412,
+        "alert_level": "legendary"
+      }
     }
   },
 
   "decay_pattern_updates": {
-    "speculation": {
-      "explosive": {
+    "corp": {
+      "strategic_alternatives": {
         "hl": 1,
-        "dr": 0.8,
-        "min": 0.05,
-        "conditions": "manipulation_driven"
-      },
-      "unsustainable": {
-        "hl": 2,
-        "dr": 0.6,
-        "min": 0.1,
-        "conditions": "fundamentally_disconnected"
-      }
-    },
-    
-    "ipo_manipulation": {
-      "immediate": {
-        "hl": 0.5,
         "dr": 0.9,
-        "min": 0.02,
-        "conditions": "related_party_structure && extreme_surge"
+        "min": 0.1,
+        "conditions": "acquisition_announcement"
+      },
+      "asset_optimization": {
+        "hl": 7,
+        "dr": 0.2,
+        "min": 0.4,
+        "conditions": "operational_restructuring"
+      }
+    },
+    "micro": {
+      "ultra_nano_strategic": {
+        "hl": 3,
+        "dr": 0.4,
+        "min": 0.2,
+        "conditions": "strategic_alternatives"
       }
     }
   },
 
-  "validation_entry": {
-    "HKD": {
-      "surge_metrics": {
-        "date": "2022-08-02",
-        "magnitude": "32000%",
-        "ipo_to_peak": "21000%", 
-        "duration_days": 18,
-        "peak_market_cap": "400B"
-      },
-      "pre_conditions": {
-        "ipo_date": "2022-07-15",
-        "days_from_ipo": 18,
-        "float_estimate": "< 20%",
-        "parent_ownership": "88.7%",
-        "revenue_annual": "25M",
-        "underwriter": "AMTD Global Markets (related party)"
-      },
-      "signals_triggered": {
-        "ipo": {
-          "recentListing": 100,
-          "floatMisrepresentation": 100,
-          "manipulationRisk": 100
-        },
-        "micro": {
-          "extremeLowFloat": 100,
-          "ipoFloatSqueeze": 100
-        },
-        "speculation": {
-          "tickerConfusion": 100,
-          "relatedPartyIPO": 95,
-          "ultraLowFloatIPO": 100
-        },
-        "volume": {
-          "extremeSpeculativeVolume": 100,
-          "currencyConfusionVolume": 95
-        },
-        "social": {
-          "tickerMisunderstanding": 90,
-          "extremeSpeculation": 100
-        }
-      },
-      "pattern_matched": "ultraLowFloatIPOMeme",
-      "final_score": 1478,
-      "alert_level": "LEGENDARY++",
-      "risk_classification": "EXTREME - Avoid",
-      "manipulation_risk": "EXTREME",
-      "sustainability": "NONE - Pure speculation"
-    }
-  },
-
-  "trading_guidelines": {
-    "extreme_risk_patterns": {
-      "position_sizing": "Maximum 1-2% of portfolio",
-      "time_horizon": "Day trading only",
-      "stop_loss": "Impossible due to gap risk",
-      "liquidity_warning": "May be unable to exit",
-      "margin_usage": "NEVER use margin or leverage"
-    },
-    
-    "manipulation_indicators": {
-      "red_flags": [
-        "Related party underwriting",
-        "Controversial management",
-        "Extreme valuation disconnect",
-        "Minimal institutional coverage",
-        "Ticker symbol confusion"
-      ],
-      "action": "Treat as pure speculation/gambling"
-    }
-  },
-
-  "sector_updates": {
-    "chinese_ipos": {
-      "risk_multiplier": 1.8,
-      "manipulation_score_boost": 25,
-      "additional_warnings": ["Regulatory risk", "Accounting standards", "Related party complexity"]
-    },
-    
-    "asian_us_listings": {
-      "warrant_structure_penalty": -30,
-      "due_diligence_requirement": "Enhanced",
-      "pattern_recognition": "Similar to ATXG, STBX, MEGL"
-    }
-  },
-
-  "implementation_priority": [
-    "Add speculation category immediately",
-    "Implement manipulation risk warnings", 
-    "Add ticker confusion detection",
-    "Enhance IPO float analysis",
-    "Create extreme risk trading guidelines"
-  ],
-
-  "backtesting_notes": {
-    "hkd_pattern_recognition": "Should score 1400+ with new system",
-    "similar_patterns": ["ATXG 2022", "STBX 2022", "MEGL 2022"],
-    "expected_accuracy": "60-70% for detection, 40-50% for timing",
-    "risk_warning_critical": "System must warn of manipulation risk"
+  "implementation_notes": {
+    "priority_changes": [
+      "Add ultra-nano strategic alternatives detection",
+      "Implement cash-rich acquisition target signals",
+      "Add media consolidation pattern recognition",
+      "Create family-controlled business exit signals"
+    ],
+    "monitoring_requirements": [
+      "Track ultra-nano caps with cash > market cap",
+      "Monitor media sector consolidation activity",
+      "Flag asset sale completion events",
+      "Scan for strategic alternatives announcements"
+    ],
+    "backtesting_recommendations": [
+      "Test on historical media acquisitions",
+      "Validate ultra-nano cap acquisition patterns",
+      "Measure cash-rich target detection accuracy",
+      "Compare strategic alternatives signal effectiveness"
+    ]
   }
 }
