@@ -1,0 +1,121 @@
+{
+  "meta": {
+    "v": "4.2",
+    "updated": "2025-07-07",
+    "accuracy": "68-73%",
+    "fpRate": "8-12%"
+  },
+  "caps": {
+    "nano": { "min": 1000000, "max": 25000000, "mult": 6 },
+    "micro": { "min": 25000000, "max": 75000000, "mult": 4 },
+    "small": { "min": 75000000, "max": 500000000, "mult": 2.5 },
+    "mid": { "min": 500000000, "max": 2000000000, "mult": 1.5 }
+  },
+  "float": {
+    "min": 10000000,
+    "max": 150000000,
+    "optimal": [1500000, 50000000],
+    "ultraLow": 2000000
+  },
+  "vol": {
+    "minDaily": 2000000,
+    "sustain": 2.5,
+    "surge": 15,
+    "explosive": 50,
+    "preAccum": 3
+  },
+  "signals": {
+    "treasury": {
+      "w": 0.26,
+      "crypto": { "w": 0.4, "t": [85, 95, 100] },
+      "advisor": { "w": 0.3, "t": [70, 90] },
+      "blockchain": { "w": 0.15, "t": [60, 80] },
+      "ethereumTreasury": { "w": 0.35, "t": [80, 90, 100] },
+      "treasuryPivot": { "w": 0.25, "t": [75, 85, 95] }
+    },
+    "geopolitical": {
+      "w": 0.15,
+      "energy": { "w": 0.6, "t": [80, 95, 100] },
+      "defense": { "w": 0.4, "t": [75, 90] }
+    },
+    "corp": {
+      "w": 0.2,
+      "ai": { "w": 0.45, "t": [70, 90, 100] },
+      "acquisition": { "w": 0.35, "t": [65, 85] },
+      "pivot": { "w": 0.2, "t": [60, 80] }
+    },
+    "biotech": {
+      "w": 0.28,
+      "clinical": { "w": 0.4, "t": [85, 95, 100] },
+      "fda": { "w": 0.3, "t": [80, 95] },
+      "insider": { "w": 0.2, "t": [75, 90] },
+      "licensing": { "w": 0.1, "t": [70, 85] }
+    },
+    "volume": {
+      "w": 0.25,
+      "explosive": { "w": 0.45, "t": [75, 90, 100] },
+      "preAccum": { "w": 0.35, "t": [65, 85, 95] },
+      "compression": { "w": 0.2, "t": [55, 75] }
+    },
+    "tech": {
+      "w": 0.15,
+      "kdj": { "w": 0.4, "t": [70, 85, 100] },
+      "oversold": { "w": 0.35, "t": [60, 80, 95] },
+      "momentum": { "w": 0.25, "t": [55, 75] }
+    },
+    "social": {
+      "w": 0.14,
+      "influencer": { "w": 0.5, "t": [75, 90, 100] },
+      "meme": { "w": 0.35, "t": [65, 85] },
+      "viral": { "w": 0.15, "t": [60, 80] }
+    },
+    "ipo": {
+      "w": 0.18,
+      "underpricing": { "w": 0.6, "t": [70, 85, 100] },
+      "timing": { "w": 0.25, "t": [60, 80] },
+      "insider": { "w": 0.15, "t": [65, 85] }
+    },
+    "micro": {
+      "w": 0.22,
+      "lowFloat": { "w": 0.65, "t": [75, 90, 100] },
+      "shortSqueeze": { "w": 0.35, "t": [60, 85] }
+    }
+  },
+  "confirm": {
+    "minCat": 2,
+    "minScore": 150,
+    "legendary": { "cat": ["treasury", "volume", "social"], "scores": [90, 75, 70] },
+    "ultra": { "cat": ["geopolitical", "volume", "micro"], "scores": [85, 70, 60] },
+    "biotech": { "cat": ["biotech", "volume"], "scores": [85, 60] },
+    "ipo": { "cat": ["ipo", "volume"], "scores": [75, 50] }
+  },
+  "alerts": {
+    "legendary": { "score": 380, "acc": "85-90%", "fp": "3-5%" },
+    "ultra": { "score": 290, "acc": "75-82%", "fp": "5-8%" },
+    "critical": { "score": 210, "acc": "68-73%", "fp": "8-12%" },
+    "high": { "score": 160, "acc": "58-65%", "fp": "12-16%" }
+  },
+  "sectors": {
+    "entertainment": { "cryptoMult": 5.5, "advisorMult": 4.5 },
+    "energy": { "geopoliticalMult": 4.5, "conflictMult": 4 },
+    "biotech": { "clinicalMult": 3.8, "fdaMult": 3.5 },
+    "defense": { "contractMult": 4.2, "govMult": 5.2 },
+    "technology": { "aiMult": 3.8, "platformMult": 2.8 },
+    "quantum_computing": { "baseMult": 3.5, "catalystMult": 5 }
+  },
+  "filters": {
+    "volRevert": { "condition": "vol>20x && nextVol<3x && !news", "multiplier": 0.5 },
+    "manipulation": { "condition": "extremeVol && priceRev>60%", "multiplier": 0.4 },
+    "overbought": { "condition": "rsi>80 && !catalyst", "multiplier": 0.6 },
+    "fakeBreakout": { "condition": "technicalOnly && !volConfirm", "multiplier": 0.5 }
+  },
+  "decay": {
+    "tech": { "hl": 4, "dr": 0.4, "min": 0.2 },
+    "vol": { "hl": 2, "dr": 0.3, "min": 0.3 },
+    "biotech": { "hl": 14, "dr": 0.1, "min": 0.7 },
+    "treasury": { "hl": 21, "dr": 0.05, "min": 0.8 },
+    "geopolitical": { "hl": 7, "dr": 0.2, "min": 0.5 },
+    "social": { "hl": 3, "dr": 0.5, "min": 0.2 },
+    "ipo": { "hl": 1, "dr": 0.8, "min": 0.1 }
+  }
+}
